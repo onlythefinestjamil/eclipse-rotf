@@ -1,0 +1,50 @@
+# Unreal Engine binaries
+Binaries/
+Built/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# Game assets (large binary files - synced via build)
+*.uasset
+*.umap
+*.glb
+*.gltf
+*.fbx
+*.obj
+*.ma
+*.mb
+*.tga
+*.png
+*.jpg
+*.mp3
+*.wav
+*.ogg
+*.bcsw
+*.baked
+
+# Project files
+*.exe
+*.pdb
+*.ilk
+*.lib
+*.sdf
+*.opensdf
+*.user
+*.uservcers
+*.datetime
+*.log
+*.log.*
+
+# Local overrides
+LocalBuild/
+*.-build
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# OS
+.DS_Store
+Thumbs.db

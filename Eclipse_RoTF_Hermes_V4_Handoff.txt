@@ -1,0 +1,3993 @@
+
+===== PAGE 1 =====
+M O M E N T U M L A B S / E C L I P S E
+T H E A R T O F A F R A C T U R E D W O R L D
+ECLIPSE: REALMS
+OF THE FRACTURED
+H E R M E S M A S T E R H A N D O F F / V 4
+Definitive art-direction, character/ancestry design, spells, environments, combat fidelity,
+armor, weapons, conversation decisions, executable AI prompts and production quality gates.
+Original AI concept exploration. The project values the diverse Black hero roster and dramatic environment silhouettes; these are mood boards, not
+production meshes.
+N OV E M B E R 4 , 2 0 2 6 • P R E P R O D U C T I O N • W I N D O W S P C / X BOX S E R I E S X | S / P L AY S TAT I O N 5 TA R G E T S
+
+===== PAGE 2 =====
+R E A D T H I S F I R S T
+How Hermes must use this handoff
+This PDF starts with a new, authoritative art and implementation addendum and then includes the prior
+61-page V3 production bible unchanged as an archival appendix. V4 resolves or flags earlier conflicts; for
+topics not superseded here, V3 remains a design reference. Nothing in this document certifies that a playable
+game, console access, 3D models, or finished visual effects already exist.
+Governing priority: Deliver a cohesive original, visually astonishing yet playable dark-fantasy game.
+The user wants an Elden Ring-caliber sense of beauty, mystery, physicality and detail, not copied
+FromSoftware assets, locations, characters, signature weapons, maps or animations.
+Direction locked: cinematic realistic dark fantasy, aged natural materials, rare supernatural color,
+extraordinary silhouette design, lived-in ruins and visually legible combat.
+Direction rejected: recent weapon catalog images looked too much like WoW, with excessive gold trim,
+symmetry, inflated weapons and always-on neon glows; do not reproduce that look.
+Character creation locked: a complete Black avatar experience with deep skin-tone variation, locs,
+freeform locs, braids, twists, cornrows, Afros, fades, waves and high-quality hair physics.
+Production requirement: every concept must be expressed as an engine-ready asset spec with sources,
+scale, geometry, materials, UVs, rig, FX, collision, LODs and tests.
+Combat priority: fluid action chains, intentional timing, cast bars, hybrid short GCD / individual
+cooldowns, manual critical windows and defensive execution, CC diminishing-return UI built in.
+Community/PvP/PvE: 1v1 / 2v2 / 3v3 / 5v5 arenas, battlegrounds, 5-player dungeons, 10-player
+dungeons and raids, separate PvE / PvP ranking systems, loot rarity, talent trees and set bonuses.
+• 
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+2
+
+===== PAGE 3 =====
+D E C I S I O N & R E Q U I R E M E N T S L O G
+Thread archive: what was asked, accepted
+and rejected
+This is a structured reconstruction of the full project discussion available in this conversation, not a
+literal platform chat export. It preserves user requests and decisions; the earlier design work is reproduced in
+full in the V3 appendix.
+Conversation topic
+Preserved intent / decision
+Initial vision
+Blend World of Warcraft: Midnight, Elden Ring and Elden Ring
+Nightreign into an original story-driven game targeting
+Windows PC, Xbox Series X|S and PS5. Organize the idea so
+Hermes can research and build it.
+Combat flow
+Combine Elden Ring action control with WoW ability depth;
+implement animation chaining, combo fluidity, a hybrid global
+cooldown model and cast bars; no input-eating or mechanical
+clunk.
+In-game tracking
+Build the UI and telemetry so players need no add-ons for CC
+diminishing returns, cooldowns, procs, encounter timers,
+ranks and combat analysis.
+Control philosophy
+Manual control can reward precision with critical-hit windows
+and successful defensive mitigation; these must be bounded,
+deliberate mechanics balanced for PvP.
+Race experimentation
+Explore the Lunarian / Aetherborn concept with a muscular
+silhouette, fracture marks and spectral energy wings that
+match the luminous skin markings.
+PvP priority
+Include 1v1, 2v2, 3v3 and 5v5 arenas, competitive
+battlegrounds, meaningful class synergies, counters and
+matchmaking.
+Loot, power and class depth
+Require rarity tiers, set bonuses, skill ranks, talent trees,
+specializations, equipment affixes, crafting, upgrades and
+extensive loot progression.
+Grouping and rankings
+Support 5-person and 10-person PvE activities, dungeon/raid
+group coordination, distinct PvE/PvP ladders and progression.
+Afrocentric identity
+Ensure Black men with dreadlocks and other textured styles
+are fully supported across selectable races/classes, alongside
+detailed dark skin materials and a diverse world population.
+Hermes and Momentum Labs
+Create detailed handoff PDFs and prompts; plan a Coming
+Soon project page and follower registration on Momentum
+Labs web/app without claiming unreleased features are ready.
+Weapons: first iteration
+Initial bright class weapon infographic was rejected as too
+WoW-like. Successive ornate charts were still too bright,
+symmetrical, icon-like and busy.
+MOMENTUM LABS / ECLIPSE V4
+3
+
+===== PAGE 4 =====
+Conversation topic
+Preserved intent / decision
+Weapons: revised target
+Use weathered relic craftsmanship, restraint, grounded metal/
+wood/stone construction, unsettling originality and a few
+close-up hero weapons with no infographic clutter.
+Current visual requirement
+Make the environments, spell effects, faces, hair, fighting
+animations, armor, weapons and entire aesthetic as
+impressive in quality and craft as Elden Ring, while inventing
+the distinctive Eclipse visual identity.
+Final packaging
+Supply a single consolidated PDF for Hermes with specific
+execution prompts, not vague inspiration, and preserve the
+earlier 61-page bible.
+Canonicalization needed
+V3 contains two different ancestry naming tables. Keep all candidates in an alias registry and propose
+one canonical roster with redirects, rather than deleting anything silently. The Lunarian/Aetherborn
+muscular, energy-wing concept remains in scope as an optional Aetherkin/Aetherborn lineage until
+formally approved.
+MOMENTUM LABS / ECLIPSE V4
+4
+
+===== PAGE 5 =====
+A R T D I R E C T I O N L O C K
+The visual constitution: elegance through
+restraint
+Eclipse must achieve the sense of monumental beauty associated with elite dark-fantasy games through 
+authored composition, precise craftsmanship, contrast, texture, storytelling and controlled
+magical spectacle. High polygon counts and expensive particles do not automatically create beauty.
+Axis
+Must deliver
+Avoid
+Silhouette
+Recognizable forms in flat black at
+distance: asymmetry, distinct massing,
+purposeful outline.
+Generic spiky armor, identical
+silhouettes, repeated triangular
+ornaments.
+Material truth
+Forged edges, tool marks, variable
+thickness, stitching, oxidation, scratches
+with plausible causes.
+Mirror chrome everywhere, arbitrary
+scratches and uniform dirt overlays.
+Color
+Stone, ash, oxidized iron, umber, indigo;
+one chosen magical accent per visual
+idea.
+Every object glowing red/purple/gold
+simultaneously.
+Scale
+Small readable human against a
+colossal structure; depth, distant
+landmarks and negative space.
+Constant screen-filling decorations,
+unreadable architectural noise.
+Magic
+Visually consequential, staged effects:
+ember light, scattering ash, surface
+frost, reactive shadows.
+Default particle explosions and opaque
+screen flashes.
+Animation
+Weight, anticipation, follow-through,
+contact and recovery with context-
+dependent exceptions.
+Floaty movement, sliding feet, visually
+disconnected hits.
+UI
+Legible hierarchy, contextual detail,
+accessibility and consistent taxonomy.
+High-ornament UI permanently covering
+the world.
+Quality target: a still frame should invite close inspection; a moving gameplay clip should preserve
+readability, rhythm and physical presence; a GPU profile should reveal sustainable performance rather than an
+unshippable demo.
+MOMENTUM LABS / ECLIPSE V4
+5
+
+===== PAGE 6 =====
+W O R L D B E A U T Y S Y S T E M
+Environment art: macro, meso, micro
+Three scales of world composition
+Macro (30-300 seconds of travel): silhouette the skyline; one strong landmark per vista; terrain layers,
+waterways, elevation, framing, color temperature, weather fronts, route anticipation, hidden verticality.
+Create compositions players recognize from afar.
+Meso (3-30 seconds of exploration): architectural language, traversable gates, broken bridges,
+shrines, inhabited market textures, roads, foliage masses, navigation cues, ambient creatures, sound
+zones and encounter geometry.
+Micro (0-3 seconds of close inspection): chisel marks on stone, copper corrosion, sculpted reliefs,
+textile weave, boot wear, moss rooting in mortar, jewelry patina, hand-written shrine script and regional
+craft signatures.
+Six region-specific visual bibles
+SOLARA / THE CROWNLANDS
+Black limestone, warm tarnished brass, ochre street dust, white-gold light on old metal; layered citadels,
+crowded trade avenues and reservoirs; architecture bears scars from eclipsed solar rites.
+Hero shot: a loc-haired Black knight stands at a rain-glazed gate; the black-iron cathedral and distant
+farmland frame a silent eclipse.
+VAELWOOD / LIVING WILDS
+Enormous trees with believable growth plates, translucent resin, fungi, leaf scatter, ancestral stone
+observatories, rope-and-root engineering, low mist and living biome sound.
+Hero shot: a root bridge spirals around a tree wider than a city plaza, with sunshafts and slow-moving pollen.
+MORVATH / ASH DOMINION
+Basalt citadels, volcanic glass, sooty bronze, orange furnace pockets in charcoal landscapes, ash eddies,
+mining scars, chain elevators, heat distortion.
+Hero shot: a dwarfed traveler passes an abandoned colossal foundry whose chimneys exhale memory-
+charged vapor.
+AETHERIS / SHATTERED SKY
+Levitation structures must have visible logic: tension rings, broken aqueducts, unstable anchor pylons, cloud
+shadows and gravity fractures; only select fracture seams glow.
+Hero shot: a muscular dark-skinned Aetherborn with controlled energy wings stands on a broken floating
+viaduct.
+NHALOR / FORGOTTEN NORTH
+Blue-gray glacial rock, sculpted ice stratification, matte fur and metal, frost on seams, frozen observatories,
+light scattering through ice and strong silhouettes in whiteouts.
+1. 
+2. 
+3. 
+MOMENTUM LABS / ECLIPSE V4
+6
+
+===== PAGE 7 =====
+Hero shot: a massive face carved in a glacier reveals an entire lost stairway after a blizzard.
+UMBRYSS / HOLLOW REALM
+Slow temporal distortion, double exposure at breach edges, black wet stone, dim violet subsurface fault
+lighting, impossible geometry only where it supports navigable logic.
+Hero shot: a ruined throne room appears twice in different centuries, linked by a thin luminous fracture.
+Environment dressing rules
+Every region needs a reference board of real-world geology, historic construction techniques, biome
+ecology, cultural craft and original supernatural motifs.
+Make traversal readable via silhouette, lighting, material contrast, landmark placement and sound, without
+painting arrows on every surface.
+Use handmade hero locations and modular kits for repeated buildings; ensure every modular seam is art-
+directed in prominent frames.
+Author progression variants: peaceful / damaged / occupied / fractured; use level/data layers only with
+tested quest-state persistence.
+Vegetation is not wallpaper: foliage bending, debris lift, leaf motion and shadow responses react to wind,
+weather and select attacks.
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+7
+
+===== PAGE 8 =====
+R E A L -T I M E W O R L D R E S P O N S E
+Lighting, weather and physical spell
+interaction
+Lighting
+Cinematography: low-key ambient fill, controlled value grouping, motivated emissive sources, indirect
+bounce and silhouette rim lighting.
+Hero vistas: morning haze, late-day amber, storm steel-blue, eclipse penumbra, night starlight. Avoid
+perpetual blackness; support readable gameplay.
+Balance surface roughness so iron, velvet, leather, skin, wet stone and glass never share the same overly
+glossy response.
+Use Lumen for selected dynamic GI/reflections after validating the chosen engine version and target
+hardware. Prepare alternate scalability paths where needed.
+Reaction matrix
+Action
+Visual response
+Gameplay rule / limit
+Flame sword impacts wood
+Localized warm illumination, sparks, ash
+flecks, scorch decals, subtle smoke.
+Fire may ignite authored flammable
+props; no unconstrained whole-world
+burning.
+Frost blast on wet stone
+Frost mask creeps over cracks; mist
+rolls; crystals catch moonlight.
+Surface hazard only when an ability
+explicitly creates it.
+Lightning strikes puddle
+Brief reflection, branching filaments,
+steam, audio crack.
+Conductivity comes from designed tags/
+volumes; deterministic server
+calculation.
+Heavy hammer hits masonry
+Dust, chip debris, radial crack material,
+short camera impulse.
+Destructibility only on tagged breakable
+objects; cosmetic fragments client-side.
+Void cut through air
+Edge refraction, afterimage, restrained
+particulate trail; ambient shadow shift.
+Temporary hit volume has transparent,
+readable edge.
+Wind pressure wave
+Grass leans, cloth lifts, particles stream,
+dust band follows direction.
+Environmental feedback with scalable
+visual fidelity.
+Blood/poison
+Darker moisture, restrained droplets,
+color-coded affliction marker.
+Separate PvP accessibility options and
+effect-intensity sliders.
+Never confuse simulated visuals with game rules: replicated gameplay events drive cosmetic
+Niagara effects; local particles must not decide hits, loot, CC or damage.
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+8
+
+===== PAGE 9 =====
+R A C E , S K I N , H A I R A N D FA C E
+Character creation: all people can be the
+hero
+Ancestry, biological features, complexion, hair, culture, voice, body type, class and alignment are 
+independent selections wherever anatomy permits. Do not place all dark-skinned people in one faction or
+biome. Black rulers, scientists, thieves, merchants, sages, gods and everyday citizens must appear
+throughout the realms.
+Non-negotiable Black customization matrix
+Area
+Minimum production scope
+Review standard
+Complexion
+Deep ebony through light brown, warm/
+cool/neutral undertones, melanin-aware
+SSS response, adjustable shine,
+freckles, scars, vitiligo.
+Rendered in daylight, blue moon,
+campfire, spell red/purple and interior
+bounce lighting; never gray or chalky.
+Head and face
+Multiple Black facial archetypes plus
+independent brow, nose bridge, tip, lip,
+jaw, cheekbone, eyelid and beard
+morphs.
+No caricature; maintain likeness across
+expressions; real silhouette diversity.
+Locs
+Starter, mature, freeform, semi-
+freeform, long, short, thick, thin, high-
+top, half-up, tied-back, decorated.
+Stable scalp anchors, collision with back
+armor; believable clump mass and
+movement.
+Braids/twists
+Cornrows, box braids, knotless braids,
+two-strand twists, rope twists, flat
+twists, bantu knots.
+Parts and strands match scalp topology;
+accessories avoid clipping.
+Afros/coils/fades
+Rounded Afro, tapered Afro, TWA, twist-
+out, coil-out, sponge twists, waves, skin
+fade, burst fade, temple fade.
+Fine curl detail must read at hero zoom
+and preserve volume at gameplay
+distance.
+Accessories
+Beads, cuffs, wraps, clips, ties and
+ornament motifs tied to Eclipse cultures.
+Color variants, physics/collision rules,
+avoid arbitrary cultural appropriation.
+Helmets
+Full visor, open crown, coif, hood,
+helmets with hair aperture.
+Choose occlusion, modified hairstyle
+variant or cloth bulge; never simply
+delete locs without feedback.
+Technical asset requirement
+Build morph-compatible heads and a common base rig for humanoid ancestries, with species-specific rig
+exceptions documented.
+Use groom strands/cards/mesh hair based on hardware and style; model locs and braids as intentional
+clumps with authored skeletal or strand motion, not loose straight-hair grooming.
+Maintain 3D hair silhouette at distances where it defines identity; validate hair-card LOD pop, scalp
+coverage, cloth collision and shadowing.
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+9
+
+===== PAGE 10 =====
+Create facial FACS-like expression targets / ARKit-compatible mapping where appropriate; implement
+eyebrow, jaw and lip shape tests under dialogue lighting.
+Capture minimum five views per model: front / three-quarter / side / back / gameplay distance, plus skin
+and material close-ups.
+Accepted foundation: original diverse hero concepts with locs, coils, twists, braids, living environments and dramatic framing. Use
+only as aesthetic exploration, not as automatically approved game geometry.
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+10
+
+===== PAGE 11 =====
+P L AYA B L E R A C E M O D E L D E S I G N
+Ancestries, silhouettes and the Aetherborn
+direction
+Canon proposal for the eight races named in the V3 expansion. V3's alternate names must be mapped to
+these as aliases until creative approval; new race names are provisional and never overwrite established lore
+without a decision record.
+Ancestry
+Identity and body direction
+Signature original detail
+Seven Crowns Human
+Grounded body shapes, varied regional
+textiles, many facial archetypes; the
+widest culturally diverse base roster.
+Subtle living-sun scar or rune jewelry;
+not universal or mandatory.
+Vaelborn
+Slender or strong forest-linked
+humanoids, bark-like ceremonial tools,
+distinctive but plausible ears.
+Living vein markings and leaf
+metalwork, variable brightness.
+Ashforged
+Basalt/obsidian motifs, heat-worn metal
+ornaments, volcanic physiology with
+flexible skin tone.
+Magma microfractures, never an
+overglowing lava body by default.
+Aetherkin
+Sky-born proportions, luminous fracture
+tracery, energy-based celestial
+appendages.
+Lunarian/Aetherborn variant: muscular
+Black male; energy wings formed from
+matching skin fracture marks.
+Nhalori
+Coldland ancestry with sculptural
+layered textiles, carved stones, fur and
+distinct ceremonial hair wrapping.
+Icy rune patterns; diverse complexion
+and hair independent of homeland.
+Umbri
+Void-touched people with optional
+prismatic markings, eye luminosity and
+shadow contrast.
+Avoid coding any race as inherently evil;
+multiple skin hues.
+Tauranid
+Horned humanoids with powerful frames
+and expressive ear/horn variations; rig
+exceptions documented.
+Ceremonial carved horn sleeves and
+asymmetrical protective plating.
+Saurathi
+Scaled draconic humanoids, horn ridges,
+tails and specially fitted armors; varied
+scale textures.
+Matte scale/ceramic iridescence, no
+default plastic gloss.
+Aetherborn / Lunarian hero production brief
+Create a muscular Black male Aetherborn with deep, warm-brown skin and meticulously modeled
+shoulder-length locs, a calm but formidable face, dense wing-muscle/upper-back anatomy, and handcrafted
+segmented dark-iron armor. His fracture markings are luminous veins embedded in the skin, not flat painted
+tattoos; during flight, each line extends into skeletal light-ribs that unfold as translucent energy wings,
+refracting light and shedding subtle fragments. The wings retract fully when grounded and their glow respects
+dark-skin shading, nearby armor and weather. They must not obscure gameplay camera, hit silhouettes, PvP
+telegraphs or allied spell effects.
+MOMENTUM LABS / ECLIPSE V4
+11
+
+===== PAGE 12 =====
+C L A S S M O D E L S
+Eight class identities and 24 visual
+specializations
+Vanguard | Warlord / Bulwark / Earthshaker
+Base silhouette: Heavy blackened steel, load-bearing straps, scars earned from siege warfare; broad
+grounded stance. Spec differentiation: Warlord wears commander cloth; Bulwark full angular shield
+harness; Earthshaker exposed forge-metal impact joints.
+Umbral Assassin | Nightblade / Venom Weaver / Veil Dancer
+Base silhouette: Flexible hardened leather, hidden blade sockets and movement silhouette; elegance
+without superhero shine. Spec differentiation: Nightblade matte blade ribs; Venom Weaver glass serum
+containers; Veil Dancer trailing split cloth.
+Arcanist | Pyromancer / Stormcaller / Spellblade
+Base silhouette: Layered textile, engraved copper, hand-polished focus gemstones, believable wand/
+weapon grips. Spec differentiation: Pyromancer kiln-glass embers; Stormcaller coil-lattice rods; Spellblade
+plated forearms.
+Soulbinder | Choirkeeper / Hexwright / Spirit Shepherd
+Base silhouette: Aged ritual fabric, bone-white ceramic, carved beads, reliquaries and worn silver
+fastenings. Spec differentiation: Choirkeeper lantern halo; Hexwright thorns and seals; Spirit Shepherd
+protective ancestry knots.
+Wildwarden | Beastmaster / Thornstalker / Grovecaller
+Base silhouette: Wood with stress-grain, hardened bark, layered leather and restrained natural plant growth.
+Spec differentiation: Beastmaster trophies; Thornstalker split bramble blades; Grovecaller spore-etched
+ceremonial mantle.
+Templar | Inquisitor / Dawnkeeper / Oath Sentinel
+Base silhouette: Austere sacred geometry, thick hand-hammered metal, linen, weathered pilgrimage
+symbols. Spec differentiation: Inquisitor anti-void visor; Dawnkeeper light-worn cloth; Oath Sentinel
+anchored shield bracings.
+Riftwalker | Chronoblade / Nullweaver / Gatekeeper
+Base silhouette: Broken temporal detailing, offset seams, iridescent fracture edges and mostly solid
+purposeful steel. Spec differentiation: Chronoblade segmented saber; Nullweaver orbit anchors;
+Gatekeeper portal braces.
+Dreadknight | Blood Reaver / Grave Warden / Ruin Sovereign
+Base silhouette: Burial iron, charred silver, black leather, ritual weapon wear and controlled red fracture
+cores. Spec differentiation: Blood Reaver execution straps; Grave Warden funerary plates; Ruin Sovereign
+crown-like broken helm.
+Outfit validation: Every spec needs base gear, rare class set, raid set and pinnacle artifact outfit; male/
+female/androgynous body presentations; at least two head silhouettes; back, weapon and spell VFX
+coexistence; no armor clipping through locs or wings.
+MOMENTUM LABS / ECLIPSE V4
+12
+
+===== PAGE 13 =====
+A R M O R D E S I G N & S Y S T E M S
+Armor manufacturing bible and set
+bonuses
+Armor is not just a shiny skin; it must communicate how it was made, who wore it, where it came from and
+why it functions. Build pieces with logical overlaps, articulated joints, proper wear, readable distance
+silhouettes and coherent straps/fastenings. Rare armor might be more minimal than common armor; do not
+require visual inflation by item tier.
+Set
+Class / visual identity
+2-piece
+4-piece
+6-piece
+Bastion of the Eclipse
+Vanguard
+Obsidian plate, bruised
+brass and carved sun-
+relief; a worn
+commander mantle.
+Block efficiency and
+guard stamina return
+Perfect guard counters
+send a short-range
+shockwave
+At low health, activate
+a brief bastion stance;
+PvP tuning reduces
+duration and damage
+immunity.
+Veilreaver Garb
+Umbral Assassin
+Ink-gray cloth, stitched
+protective hide, thin
+crescent blade housings.
+Critical weak-point
+consistency
+Shadow Mark
+interactions refresh
+limited mobility
+Finisher leaves a decoy
+trail with clear PvP
+counterplay.
+Constellation Weave
+Arcanist
+Worn silk with brass orbit
+fasteners, small
+crystalline focal
+elements.
+Resource stability
+Alternating elements
+increases Arc
+Resonance
+One controlled
+secondary echo impact
+after an ultimate.
+The Departed Choir
+Soulbinder
+Ceremonial black linen,
+oxidized chain, etched
+spirit lantern pendants.
+Healing stores a small
+spirit reserve
+Cleanses place brief
+recovery ward
+Overheal becomes
+limited protective veil
+with PvP caps.
+Heartwood Huntsman
+Wildwarden
+Dark oiled leather, living
+grain bow limbs and
+beadwork.
+Tracking and critical
+weak-point accuracy
+Beast attacks mark
+enemy for cooperative
+follow-up
+A root sanctuary forms
+briefly on major ability,
+with visible boundary.
+Oath of the Hollow Sun
+Templar
+Matte off-white cloth,
+iron reliquary panels, dull
+gold scripture engraving.
+Guarded ally
+protection
+Interrupts grant
+cleansing radiance
+Judgment seals create
+a party-sized
+mitigation field.
+Elsewhen Shroud
+Riftwalker
+Graphite plates
+separated by aligned
+fracture slits, smoke-
+indigo cloth.
+Dash recovery
+efficiency
+Returning blades apply
+spatial seam
+Ultimate creates a
+timed, traversable ally
+gate with strict range
+and limits.
+Mourning Sovereign
+Dreadknight
+Grave iron, cracked dark
+stone, red-black softened
+leather.
+Threat and controlled
+sustain
+Blood Debt converts to
+a shield or damage
+Execute triggers a
+modest dread field,
+reduced in PvP.
+MOMENTUM LABS / ECLIPSE V4
+13
+
+===== PAGE 14 =====
+Set
+Class / visual identity
+2-piece
+4-piece
+6-piece
+Warden of the Foundry
+Cross-class heavy
+Ash-scored industrial
+armor, rivets, faceplate
+with heat-pitted bloom.
+Fire resistance
+Breaks grant short
+forged shield
+Forged shield pulses
+damage to authored
+construct enemies.
+Oracle of the Vesper
+Gate
+Cross-class caster
+Mottled indigo robe, lens
+rings, layered silver
+hand-stitching.
+Cast stability
+Successful timed
+casting charges next
+utility spell
+A small afterimage
+remains as a non-
+damaging distraction.
+Thorn-Crowned Pilgrim
+Cross-class light
+Woven bark and
+hardened thread with
+rare green mineral.
+Endurance and
+evasive stamina
+Dodging through
+hazard grants
+temporary
+regeneration
+Nature resistance aura
+after group interrupt.
+Nhalori Remembrance
+Cross-class medium
+Slate wool, ice-white
+armor panels, fur with
+believable grooming.
+Frost resilience
+Staggered enemies
+generate a minor
+tactical shield
+A defensive snow halo
+reflects projectiles only
+during a clear window.
+Balance constraint: all set bonuses are proposed mechanics, not final numbers. No passive reward may
+guarantee endless CC immunity, unavoidable burst or permanent healing denial in ranked PvP. Build a
+PvE/PvP modifier layer and audit every bonus.
+MOMENTUM LABS / ECLIPSE V4
+14
+
+===== PAGE 15 =====
+S I G N AT U R E A R S E N A L
+Weapon design: physical relics, not
+glowing icons
+The user rejected multiple bright symmetrical infographic iterations. Instead present one hero weapon per
+image at high resolution, with separate side/front/detail render sheets. The weapon must look like an object
+manufactured, repaired and carried across centuries. Use asymmetry with intent, varied steel finish, elegant
+negative space, ergonomic handles and unusual but viable action silhouettes.
+Vanguard / Sunbreaker, Bastion Greatblade
+Modeling brief: Wedge-like slab of tempered blacksteel with a rough solar fracture line; modest brazed brass
+collar; real grip and counterweight.
+Playable identity: A grounded heavy attack builds Momentum; guarded counter into frontal impact with
+controlled dust and metal fragments.
+Vanguard / Oathwall of Serakar
+Modeling brief: Narrowed fortress shield, beaten relief and repaired shield rim; matching practical sword.
+Playable identity: Perfect blocks build Oath Charges; shield planting creates a short directionally readable
+ally barrier.
+Umbral Assassin / Veilfang Twin Daggers
+Modeling brief: One straight, one hooked edge; blackened pattern-welded metal, rubbed leather and tiny
+embedded violet seam.
+Playable identity: Directional flanking mark and timed cross-cut; no automatic stealth reset without
+restrictions.
+Umbral Assassin / Widow's Spiral
+Modeling brief: Weathered iron chain sickle with a weighted counterhandle and folding hooked edge.
+Playable identity: Tether positioning tool with visible escape and anti-CC rules.
+Arcanist / Astral Spire of Elyndor
+Modeling brief: Aged nickel-silver and tarnished brass orrery cages orbit a small flawed mineral core.
+Playable identity: Element sequence builds Arc Resonance; spell beam refracts with controlled ground
+impact.
+Arcanist / Tome of the Thirteenth Veil
+Modeling brief: Handbound leather grimoire with rough paper, shifting thin metal seals and ghost-ink.
+Playable identity: Health/mana tradeoff spellcraft, telegraphed void-glyph detonation.
+Soulbinder / Lantern of the Departed Choir
+Modeling brief: Cast-iron lattice, smoked glass, hidden burned prayer inscriptions; a faint internal spirit
+flame.
+Playable identity: Healing stores Echo Essence and sends a procession of restrained ancestral silhouettes.
+MOMENTUM LABS / ECLIPSE V4
+15
+
+===== PAGE 16 =====
+Soulbinder / Griefthorn Crozier
+Modeling brief: Knotted ash wood and bone-white fired ceramic; corroded silver thorn wrap.
+Playable identity: Curse propagation limited by target count and visible decay.
+Wildwarden / Verdant Howl
+Modeling brief: Asymmetric self-bow made from ancient living timber with repaired horn reinforcement.
+Playable identity: Repeated precision shots build tracked weakpoint; briar rain affects tagged ground.
+Wildwarden / Fangroot Glaive
+Modeling brief: One short leaf blade and one steel spine; sap-stained handle and mismatched tang repair.
+Playable identity: Melee-to-thrown combo weave with recoverable weapon state.
+Templar / Lightbearer's Verdict
+Modeling brief: Chipped octagonal hammer, substantial shaft, tiny reliquary under a milky glass port.
+Playable identity: Three judged strikes trigger controlled holy splash; impact halo bounded.
+Templar / Penitent Flail
+Modeling brief: Compact studded censer head, real iron chain slack and polished wood-grain shaft.
+Playable identity: Interrupt grants Fervor; short spinning projectile defense.
+Riftwalker / Edge of Elsewhen
+Modeling brief: A sword with small offset fragments floating only millimeters from a full steel central spine.
+Playable identity: Fracture Step leaves a traceable afterimage and spatial echo.
+Riftwalker / Orbit of the Null Gate
+Modeling brief: Twin tungsten-dark metal rings with asymmetrical notches and worn grip inserts.
+Playable identity: Returning blades define a temporary line of spatial pressure.
+Dreadknight / Mourntide, the Black Hunger
+Modeling brief: Brutal single-bitted axe, rain-pitted steel, restrained burgundy iron veins, skull-shaped
+counterweight worn nearly smooth.
+Playable identity: Blood Debt may be used for sustain or burst; execution timing clearly telegraphed.
+Dreadknight / Sable Oathbreaker
+Modeling brief: A corrupted soldier's runeblade with a cracked fuller and sewn leather wrap.
+Playable identity: Stacking Ruin Brand; controlled dread pulse; anti-heal PvP caps.
+Three views per weapon minimum
+1) Neutral studio beauty render, 2) orthographic flat-lit turnaround with callouts for tang/guard/grip/blade
+construction, 3) in-engine combat screenshot showing visual clarity and impacts. Include grip/socket
+positions, scale marker and all material maps.
+MOMENTUM LABS / ECLIPSE V4
+16
+
+===== PAGE 17 =====
+V F X & M A G I C
+Spell visuals: a signature grammar for
+every school
+Seven-phase spell stack
+Intent: character pose and audible inhale/charging language, 100-400 ms as appropriate to skill.
+Cast / charge: particles cohere around the catalyst, not generic random confetti; indicate time remaining
+in cast bar.
+Release: contact point, focal flare, lighting pulse and emitter orientation align to motion and weapon.
+Travel: edge breakup, turbulence, trails, trail width by power, coherent trajectory and target read.
+Contact: collision orientation, decals, physical reaction, material-specific response, hit confirmation.
+Aftermath: residual motes, cooling metal, environmental marks, short-duration hazard edge if
+mechanical.
+Decay: particles stop cleanly, decals fade, collision volumes expire, GPU buffers and events release.
+Spell school palette and signatures
+School
+Color / shape language
+Environment interaction
+Example original spells
+Fire
+Black ember-to-white core;
+orange light reserved for
+temperature hotspots.
+Air heat distortion, soot,
+wood singe, stone scorch; no
+constant screen-wide flames.
+Ember Lance, Cinder Halo,
+Furnace Wake.
+Frost
+Chalk ice-blue, translucent
+gray, mist in shadow.
+Layered ice growth on
+tagged ground,
+condensation, ice fracture
+splinters.
+Glasswinter Spear, Rime
+Bloom, Hollow Glacier.
+Storm
+Pale blue-white branching arc
+and low warm afterflash.
+Puddle illumination, transient
+reflected filaments, ozone
+spark.
+Conductive Brand, Thunder
+Needle, Tempest Anchor.
+Arcane
+Blue mineral luminescence,
+gold-thin geometry,
+refraction.
+Rotating runes, grounded
+glyph projection, shattered
+prism dust.
+Celestial Fracture, Starwell,
+Astrolabe Burst.
+Shadow/Void
+Inky near-black edge, tiny
+violet spectrum, localized
+refraction.
+Shadow displacement, short-
+lived inverse silhouettes,
+fault lines.
+Midnight Carve, Gate
+Collapse, Null Compression.
+Holy/Solar
+Soft ivory fire, ochre halo,
+restrained warm gold.
+Lens diffraction, material
+gilding response, readable
+allied zones.
+Dawnbreak Cleave, Verdict
+Descends, Solstice Shelter.
+Nature
+Resin green and damp-earth
+amber, actual plant
+deformation.
+Roots emerge via animated
+meshes and soil; foliage
+catches wind.
+Briar Rain, Thornwake,
+Greenward Refuge.
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+MOMENTUM LABS / ECLIPSE V4
+17
+
+===== PAGE 18 =====
+School
+Color / shape language
+Environment interaction
+Example original spells
+Soul/Death
+Pale lavender flame, bone-
+white sparks, gray-blue
+afterimage.
+Skeletal silhouettes only
+where narratively important;
+spiritual cloth movement.
+Procession of Souls, Pale
+Covenant, Bound Requiem.
+Blood/Corruption
+Dark coagulated maroon with
+restrained internal ember.
+Damage traces on affected
+targets, no excessive gore
+spam.
+Blood Debt, Harvest of Kings,
+Sanguine Fracture.
+VFX and combat fairness
+A telegraph layer is separate from spectacle; red/blue accessibility alternatives and opacity controls
+required.
+Boss cues must remain visible at 10-player particle density and during ultimate stacking; priority-cull
+unimportant cosmetics.
+An ability must have an effect-cost tier (cheap, standard, hero, raid-critical) with LOD, reduced-emission
+and no-distortion variants.
+Hit detection, movement displacement and interrupts are gameplay authority; particles, decals and
+camera shakes are cosmetic follow-ons.
+Photometric impact is contextual: glow spills onto nearby surfaces and hands when the lighting system
+supports it, but it must never become noisy.
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+18
+
+===== PAGE 19 =====
+A C T I O N + R P G H Y B R I D
+Combat visuals, timing and execution feel
+The game combines deliberate manual combat execution with a deep RPG ability ecosystem. Action
+inputs for dodge, parry, block and light/heavy chains should remain immediate or intentionally committed,
+while major spells and rotational cooldowns are scheduled through a category-aware hybrid GCD. Avoid a
+blanket cooldown on basic movement/defense.
+Layer
+Expected behavior
+Required HUD / telemetry
+Input
+Client immediate feedback for local
+actions; server validates outcomes.
+Buffer combos briefly with visible
+release windows.
+Input buffer/latency debug overlay in
+dev mode.
+Combo
+Light-light-heavy chains, branching
+charged finishers, directional special
+moves, weapon-specific recovery.
+Short combo stage indicator where
+useful.
+Crit mastery
+Precision weak-point strikes and perfect
+punish windows can grant deterministic
+critical hits within bounded rules.
+Critical window cue; source in combat
+log.
+Defense
+Perfect parry/guard/dodge creates
+bounded damage mitigation or riposte
+opportunity.
+Defensive success cue; damage avoided
+and stamina costs.
+Cast bars
+Show spell progress, interruptible state,
+channel ticks, resource costs, school
+lockout if applicable.
+Cast/channel bars on player, target,
+focus, party where permitted.
+Hybrid GCD
+Spell/skill category lockouts with clearly
+defined exceptions for basic strikes,
+parries, dodges and emergency
+defensives.
+Animated action lockout indicator; per-
+ability true cooldown.
+Crowd control
+CC categories and DR timers with fixed,
+auditable mechanics; PvP-specific caps
+and immunities.
+Enemy DR badges, expiry clock,
+interrupt tracker, team CC history.
+Stagger/poise
+Telegraphed posture damage and
+vulnerability; bosses can resist or
+phase-lock.
+Visible posture meter where
+appropriate, accessible cues.
+10-player combat
+Priority layer for boss telegraphs, group-
+soak warnings, cleave directions and
+visible safe space.
+Raid frames, role assignments,
+cooldown planning, mechanic timeline.
+Animation frame-spec template
+AbilityID: GAA_Vanguard_DawnbreakCleave
+InputCategory: WeaponArt
+Anticipation: 0.18s (prototype tuning value)
+ActiveWindow: 0.12s (prototype tuning value)
+Recovery: 0.38s (prototype tuning value)
+MOMENTUM LABS / ECLIPSE V4
+19
+
+===== PAGE 20 =====
+ComboBuffer: 0.12s before recover end
+IFrames: NONE
+SuperArmor: LIMITED, explicit frame range
+VFXCue: GC_Solar_Impact_Large
+SFXCue: SC_Sunbreaker_StoneImpact
+Hitbox: server-authored sweep; debug draw enabled
+Camera: optional small amplitude impulse, reduced-motion compliant
+PvPModifier: authored damage/poise rules; no unreadable one-shot
+Tests: 30/60/120 fps; 20/80/150ms RTT; 2/5/10-player scenes
+Timing values above are design placeholders until motion capture and playtest data exist; no number should
+be treated as a shipping constant.
+MOMENTUM LABS / ECLIPSE V4
+20
+
+===== PAGE 21 =====
+3 D P R O D U C T I O N P I P E L I N E
+Animation and model delivery contract
+Production path
+Gather references and original silhouette thumbnails. Approve only the silhouettes and construction logic,
+not surface detail.
+Generate high-resolution front/side/back orthographic turnaround, expression sheet, material callouts and
+scale diagram. Separate each item from background.
+Sculpt hero model with anatomy and structure; build game mesh, clean topology, proper deformation
+loops and UVs.
+Bake normal/curvature/AO as appropriate; author PBR basecolor, normal, ORM/roughness-metallic and
+emissive maps with documented channels.
+Rig: shared skeleton where possible; species-specific secondary bones (tails, ears, wings, loc clumps,
+capes) with consistent animation sockets.
+Animate locomotion, combat stances, attacks, hit reactions, facial performance, equipment and cloth;
+implement contact and foot locking.
+Import into Unreal; validate materials under five calibrated lighting conditions and views; set physics,
+collision, LOD, nanite applicability and texture streaming.
+Test with all supported hairstyles, body morphs and armor swaps; repair clipping; profile under combat VFX
+load; commit with asset metadata.
+Required 3D deliverable bundle
+/Game/Eclipse/Characters/{Ancestry}/{Class}/
+    SKM_Character_Base.uasset
+    SK_Character_Skeleton.uasset
+    ABP_Character_Locomotion.uasset
+    CR_Character_ControlRig.uasset
+    DA_Character_Identity.uasset
+    MAT_Skin_Variants/*
+    HAIR/{StyleID}/[groom or card/mesh variants, physics, LOD]
+    ARMOR/{SetID}/[6 modular pieces + dye/fit profiles]
+    ANIM/[idle, locomotion, sprint, dodge, guard, parry, hit, death, abilities]
+    QA/[turnaround, neutral lighting, gameplay screenshots, performance logs]
+/source_art/{AssetID}/[.blend or .ma or .max, FBX/glTF, texture sources]
+/LICENSES_ASSET_REGISTER.csv
+Treat this as an illustrative directory contract. If Hermes cannot actually author rigged, importable files, it
+must create a source-ready task and identify the needed DCC tool or artist instead of claiming completion.
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+8. 
+MOMENTUM LABS / ECLIPSE V4
+21
+
+===== PAGE 22 =====
+G A M E P L AY C O N T E N T
+5-player / 10-player PvE and arena
+readability
+PvE
+5-player dungeons: purpose-built encounters with room-scale tactical cues, compact boss cameras,
+clear tank threat, healer line-of-sight and dungeon-reward bands.
+10-player dungeons: two subgroups of five where mechanics may require simultaneous split-path
+actions, shared team cooldowns and explicit reunion triggers.
+10-player raids: group assignments, phase cinematics that do not obscure essential mechanics, boss
+limb/weapon silhouette emphasis, controlled particle overlap.
+Ranked PvE: separate dungeon clear rating, raid progression and expedition ratings, anti-exploit
+verification, role-aware contribution analytics.
+Accessibility: color-agnostic line/shape coding, text alerts, configurable audio, reduced flash and reduced
+camera motion modes.
+PvP
+Competitive brackets: 1v1, 2v2, 3v3, 5v5 arena; optional 10v10 battleground to start; future larger
+formats by network/load testing.
+Weapon visibility: core animations, telegraph windups, attack direction and target orientation must read
+clearly against character armor and effects.
+Skill synergy: cross-class setup/follow-up (stagger+spell, root+aimed shot, ward+counterburst) must
+each have defensive answers.
+Ranked balance: normalized PvP power budgets, rating/MMR by bracket, DR tracker, anti-cheat, anti-win-
+trading and spectator delay.
+Aesthetic exception: permit a competitive VFX preset that reduces nonessential flash/glow/debris
+without concealing actual gameplay state.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+22
+
+===== PAGE 23 =====
+E Q U I P M E N T S Y S T E M
+Loot, rarity and cosmetic evolution
+Rarity determines property budgets, item rules and discovery presentation, not a mandatory escalation from
+credible steel to absurd neon geometry. The rarest items may be terrifyingly quiet: a plain black blade with
+impossible shadow, or weathered rings that bend starlight only during a weapon art.
+Tier
+Visual standard
+Game/system implication
+Common
+Serviceable forged materials, plausible
+repairs, minimal ornament.
+Simple base values; one readable family
+identity.
+Uncommon
+Better craft, visible regional markings,
+cleaner finishing.
+Small modifier and crafting hooks.
+Rare
+Distinct shape and named material
+origin; subtle inlays.
+Affix choices and one class synergy.
+Epic
+Recognizable curated story design,
+selected emissive focus.
+Deeper talent/set interactions.
+Legendary
+Named provenance, truly unique
+silhouette or ability, bespoke sound.
+One constrained unique effect with PvP
+override.
+Mythic
+Myth-linked craftsmanship and quest
+evolution, remarkable but restrained.
+Optional branch and rare upgrade
+components.
+Relic
+World-changing icon: an original artifact
+with elegant ancient design.
+Narrative unlock and bespoke weapon
+art, clearly tested in all modes.
+Equipment data contract
+itemId, rarity, family, classRestrictions, slot, weightClass,
+physicalDamage, elementalDamage, postureDamage, staminaCost,
+attributeScaling, criticalRules, affixPoolId, setId,
+uniqueEffectTags[], weaponArtId, craftingRecipeId,
+upgradeBranches[], skinVariantId, materialProfileId,
+PvEModifiers, PvPOverrides, lootSource, dropWeights,
+serverValidationRules, visualBudgetTier, assetPackagePath
+MOMENTUM LABS / ECLIPSE V4
+23
+
+===== PAGE 24 =====
+S T O R Y A R T D I R E C T I O N
+Narrative set pieces worth making
+beautiful
+Sequence
+Hero visual
+Production proof
+Prologue: The Last Dawn
+Black male hero with shoulder-length
+locs looks out across the Solara capital
+as fragments of daylight fall upward.
+First attack interrupts a silent sunrise;
+local bystanders have individual lives
+and reactions.
+Prove mixed crowd rigs, sky event light
+and readable three-way combat.
+Act I: Kingdoms of Ash
+Traveling artisan village; a boss is
+revealed as the guardian of an
+abandoned forge. Dynamic ash passes
+over detailed handmade monuments
+and broken siege tools.
+Prove biome storytelling and material
+aging.
+Act II: The Seven Thrones
+Find a cathedral of celestial machinery:
+rotating brass rings and weathered
+stone show a civilization that learned to
+worship time.
+Prove scale and spatial storytelling
+without decorative overload.
+Act III: War of the Fractured
+Two faction armies meet at the Aetheris
+causeway; players can save a civilian
+settlement rather than attack.
+Prove faction aesthetic distinction and
+LOD scalability.
+Act IV: The God Beneath Time
+The world momentarily contains two
+historical versions of the same city; only
+the fracture edges glow.
+Prove artistic world-state transformation
+and gameplay navigation.
+Act V: The Final Convergence
+A lonely throne beneath a broken sun;
+the player character remains visually
+readable while reality folds behind the
+final boss.
+Prove final-boss telegraphs against
+maximum cinematic spectacle.
+MOMENTUM LABS / ECLIPSE V4
+24
+
+===== PAGE 25 =====
+Q U A L I T Y A S S U R A N C E
+Art direction scoring and release gates
+Every hero asset scored 0-5 in each category
+Metric
+What a 5/5 requires
+Reject on
+Originality
+Distinct silhouette, provenance and
+construction without copyrighted asset
+copying.
+Direct duplication, generic fantasy
+kitbash identity.
+Craftsmanship
+Up-close construction withstands
+inspection.
+Implausible handles, armor overlap or
+texture shortcuts.
+Material realism
+Metal, cloth, skin, hair and stone
+respond differently under light.
+Plastic-looking skin, uniform glossy
+armor.
+Animation feel
+Anticipation, hit contact, follow-through
+and root motion agree.
+Sliding, floaty release, desynced hit
+VFX.
+Spell spectacle
+Memorable 7-phase visual stack with
+local lighting and environment contact.
+Screen-filling fog that hides gameplay.
+Readability
+At gameplay zoom, class, attack and
+target mechanics identifiable.
+Indistinguishable silhouettes or hidden
+telegraphs.
+Representation
+Black characters and varied ancestry/
+body/hair options look equally polished.
+Missing texture support, loc clipping,
+ashy skin.
+Performance
+Hardware-target profile within measured
+budget with fallback LOD.
+Only works in offline screenshot render.
+Integration
+Named asset IDs, valid materials/rig/
+animation/physics/replication hooks.
+An isolated image with no producible 3D
+plan.
+Gate: Creative approval requires an average of at least 4/5 with no score below 3; engineering approval
+independently requires passing runtime tests. Numeric criteria are a proposal to calibrate during vertical slice.
+Runtime screenshot and video test matrix
+Screens: beauty camera, shoulder gameplay, near-camera, far-camera, bright sun, eclipse, moon, firelight,
+spells active, 10-player particle load.
+Video: 20-second combat against regular enemy, 20-second boss phase, dodge/parry timing, hit reactions,
+FPS capture and VFX density toggles.
+Hardware: PC high + medium, PC controller, target PS5/Xbox only with approved development access; no
+untested console performance claims.
+Performance: establish 60 fps goal (16.67 ms frame budget) where supportable; profile 30 fps (33.33 ms)
+quality modes separately if selected; optimize GPU/CPU, memory and streaming.
+Network: lag and packet loss tests on combat replication, projectile timing, VFX cues and death/respawn.
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+25
+
+===== PAGE 26 =====
+H E R M E S O P E R AT I N G P L A N
+Production team and first 30-day
+assignment
+Workstream
+First assets to produce
+Evidence for accepted completion
+Game/Art Director
+Approve visual constitution and reject
+WoW-like weapon catalog styles.
+Signed reference board, silhouettes and
+naming conventions.
+Environment Lead
+One Solara 300m playable hero path
+with vista, village, ruins and checkpoint.
+Playable packaged scene, source
+meshes, high/medium screenshots.
+Character Lead
+Two human hero bases incl. deep-brown
+skin, 8 authentic hair styles, one
+Aetherborn variant.
+Turnarounds, rig exports and in-engine
+hair collision test.
+Weapon Lead
+Sunbreaker, Veilfang and Astral Spire
+hero low/high models.
+Construction sheets, UV/PBR, sockets,
+gameplay read screenshots.
+Animation Lead
+Locomotion, first attack combo, parry,
+dodge, one cast and two enemy
+reactions.
+Montage and contact sheet video,
+controller test.
+VFX Lead
+Fire hit, frost contact, lightning chain
+and void fracture, with effect LOD.
+Niagara samples with lighting/wet
+surface tests and GPU budget.
+Combat Lead
+GAS pilot with action chain, cast bar, DR
+tracking and telegraph cues.
+2-client test results and automation
+script.
+QA/Build Lead
+CI, asset import automation, perf
+baseline and issue log.
+Artifact hashes, engine build logs,
+repeatable test scene.
+Sequencing
+Week 1: inspect actual repository, Unreal version, GPU, DCC licenses and source art; map V3 names;
+approve a one-page visual manifesto.
+Week 2: build Solara blockout, character baseline skin/hair test, Sunbreaker high/low concept and simple
+functional combat controller.
+Week 3: integrate one hero environment, one textured rig, attack animation and first reactive spell impact;
+run first GPU profile.
+Week 4: complete playable 5-10-minute scene with saved progression, a brief quest, two enemies and one
+mini-boss; record 3 gameplay videos and fail-list.
+1. 
+2. 
+3. 
+4. 
+MOMENTUM LABS / ECLIPSE V4
+26
+
+===== PAGE 27 =====
+P R I M A R Y A C T I O N P R O M P T
+Copy-paste master prompt for Hermes
+You are the cross-disciplinary Game Director, Art Director, Technical Art Director, Principal Unreal Engine
+Engineer, Character Director, Combat Animation Director and AI Agent Orchestrator for MOMENTUM LABS'
+original game ECLIPSE: REALMS OF THE FRACTURED.
+Instructions and source control
+READ FIRST: The attached V4 PDF begins with new controlling specifications and includes the entire earlier V3
+production bible. Inspect all pages and attached reference art. Preserve earlier requirements unless explicitly
+superseded. Read the thread decision log. Do not claim any asset, playable build, console access or test exists
+without verifying it.
+Mission
+MISSION: Build a visually exceptional, narratively distinctive, technically solid original dark-fantasy action RPG
+whose ENVIRONMENTS, CHARACTER FACES AND HAIR, ARMOR, WEAPONS, SPELLS AND COMBAT all meet a
+single uncompromising art-quality standard. Use Elden Ring for the emotional benchmark of environmental
+grandeur, intimidating scale, mature craftsmanship, discovery and physical combat impact, but NEVER copy
+its proprietary art, weapons, animations, story, characters, locations or visual assets; equally, avoid the bright
+oversized symmetric WOW item-icon aesthetic that was rejected in our concept iterations.
+ORIGINAL ECLIPSE IDENTITY: Fractured celestial architecture, a fallen civilization recorded in stone and metal,
+damaged time rings, black iron with bruised brass, faded funeral cloth, deep-rooted ancient woods, weathered
+basalt and pale fracture-light. Maintain material truth, strong silhouettes, restrained rare magic and region-
+specific geology/craft. Every costume or object should have a plausible maker, function, age and physical
+construction.
+WORLD: Create Solara, Vaelwood, Morvath, Aetheris, Nhalor and Umbryss art bibles. For every region supply
+macro/meso/micro composition, architecture kit, color script, weather/lighting plan, flora/fauna plan, landmark
+map, storytelling props, traversal-readability sheet and 3 hero vistas. First build a small polished Solara scene,
+not an empty giant open world. Make materials react to light, weather, footprints, impacts, fire, frost, lightning
+and fracture magic using bounded authored interactions.
+CHARACTERS: Support all authorized ancestries/classes, deep-brown/Black skin with accurate undertones and
+shader behavior, and authentic Afrocentric hairstyles: freeform/mature/high-top locs, box/knotless braids,
+cornrows, two-strand twists, Bantu knots, Afros, coils, waves and fades. Include diverse faces, body types and
+voices without racial/class restrictions. A muscular Black male Aetherborn/Lunarian with fracture-color ENERGY
+WINGS is a priority concept. Produce head morphs, facial expressions, hands, skin materials, hair physics,
+cloth, armor fit and LODs. Test in moonlight, sunlight, fire and colored magic, plus helmets and PvP view
+distance.
+CLASSES: Vanguard, Umbral Assassin, Arcanist, Soulbinder, Wildwarden, Templar, Riftwalker and Dreadknight;
+three visually and mechanically distinct specializations each, for a planned 24. Propose class-specific base,
+rare and signature artifact outfits with original shapes. Gear sets have 2/4/6-piece bonuses with separate PvP
+balance modifiers. Every class must be identifiable in silhouette at gameplay distance.
+WEAPONS: Build faithful-looking practical dark-fantasy RELICS, not poster inventory icons. Present a weapon
+alone at neutral scale, three-quarter beauty, four-view orthographic sheet, grip/blade close-ups, material
+study, then gameplay demonstration. Use hand-forged iron and steel, aged leather, woven wraps, integral
+MOMENTUM LABS / ECLIPSE V4
+27
+
+===== PAGE 28 =====
+tangs, asymmetrical geometry and very limited carefully chosen glow. Start with Vanguard Sunbreaker,
+Umbral Veilfang and Arcanist Astral Spire. Make their weapon arts visible and readable, with timing/collision/
+counterplay data.
+SPELLS: Every major spell gets seven stages: intent, charging/cast, release, travel, contact, aftermath and
+decay, each with VFX, sound, material interaction and gameplay cue plan. Local light and shadows must react
+where feasible, plus decals, puddle response, scorch, frost growth, foliage movement and dust, all with
+performance-scalable implementations. Do not clutter combat, hide bosses or grant cosmetic particle effects
+gameplay authority. Build low/medium/high VFX presets and reduced-flash accessibility.
+COMBAT: Elden Ring-like deliberate physicality combined with WoW-like class depth and a custom hybrid
+cooldown model. Light/heavy combos, dodge, block, parry, guard counter, posture, stamina, casting,
+channels, individual cooldowns, limited ability-category GCD, combo buffering and recovery windows. Reward
+manual weak-point precision and perfect defense with bounded critical opportunities and mitigation.
+Multiplayer server remains authoritative. Design cast bars, target/focus frames, threat, cooldowns, CC
+diminished returns, mechanic timers and combat analytics BUILT IN so no third-party addons are required. PvP
+clarity overrides visual spectacle.
+CONTENT: Preserve 1v1, 2v2, 3v3 and 5v5 arena, 10v10 battleground, 5-player dungeons, 10-player dungeon
+events/raids, seasonal PvE dungeon/raid/expedition rankings, PvP per-bracket ladders, solo story, co-op, loot
+rarity, talent trees and class synergies. Preserve original branching main story and meaningful faction
+decisions.
+ENGINEERING: Use Unreal Engine 5, C++/Blueprint and Gameplay Ability System, motion systems as
+appropriate, Niagara, World Partition/Data Layers, Nanite where suitable, Lumen where performance permits
+and groom/mesh hair as needed. Choose stable versions only after inspecting installed tools. Build traceable
+asset IDs and data-driven systems. No hard-coded values hidden in particle Blueprints. Validate on packaged
+Windows builds first; target Xbox and PS5 after platform authorization, access and certification planning.
+REQUIRED OUTPUTS PER FEATURE: A short creative brief; original front/side/back views; scale sheet; high/low
+mesh or explicit production task; PBR texture maps; material/shader graph; skeleton/animation plan; collision
+and sockets; VFX and sound cues; gameplay data contract; LOD/scalability; performance budget; screenshots
+at gameplay distance; licensing provenance; reproducible build/test results and acceptance checklist. If any
+asset cannot be generated or tested, label it DESIGN ONLY and explain exact blocker.
+AGENT WORKFLOW: Split teams into Environment, Character/Hair, Weapons, Armor, Spell/VFX, Animation/
+Combat, Multiplayer, Narrative and QA/Performance. Assign one owner per asset; use source control branches,
+non-overlapping files and integration gates. Maintain the decision register, feature backlog, task
+dependencies and evidence log. Never overwrite existing Momentum Labs projects. Research technical
+uncertainty using Epic's current official documentation and record links.
+Immediate execution
+START NOW: 1) audit workspace and V3 content; 2) reconcile ancestry name aliases without dropping any; 3)
+generate the Art Constitution, Asset Registry and first 10 original thumbnail/turnaround briefs; 4) build an in-
+engine playable Solara beauty corridor; 5) implement one polished character with true Black skin/hair,
+Sunbreaker weapon, three responsive combat actions and one fire/frost environmental impact; 6) compile and
+test; 7) return only verified results, missing assets and a prioritized next sprint.
+QUALITY GATES: Every proposed hero asset must be assessed for originality, craftsmanship, material truth,
+legibility, representation, animation, FX, integration and measured performance. A still render is never proof
+of a working 3D asset. A cinematic is never proof of gameplay. A test plan is never proof a test passed.
+MOMENTUM LABS / ECLIPSE V4
+28
+
+===== PAGE 29 =====
+T A S K PA C K
+Twelve specialized AI prompts
+Use these as independent assignments with named owners. Replace brace variables with a specific asset brief
+and attach the V4 handoff. Do not ask one agent to generate all assets in one pass.
+P01 - Original environment hero vista
+Design a production-viable original Unreal Engine 5 environment for the Eclipse region {REGION}, with an
+unforgettable landmark and rich traversable depth. Make a photorealistic dark-fantasy vista: weathered
+geology, structurally credible ancient architecture, vegetation ecology, micro-material wear, and lighting that
+describes history. Generate wide master shot, human-scale travel shot, close-up material studies, and top-
+down blockout. Define architecture module list, modular trim sheet, PBR texture requirements, Lumen/Nanite
+suitability, World Partition cells, collision, cover, climb anchors, fog/weather state, gameplay signage and
+60fps optimization approach. Explain what the place means in the story. Do not imitate any identifiable Elden
+Ring location.
+P02 - Black hero / 3D character
+Design a new Eclipse {ANCESTRY} {CLASS} as a true game-ready 3D hero with deep warm-brown skin,
+unique non-stereotyped face proportions, authentic {HAIRSTYLE}, anatomically plausible layered equipment
+and a confident silhouette. Show full-body front/side/back, three-quarter face/skin closeup, hair construction/
+parting and scalp sheet, hand and armor details, and neutral/PvP lighting tests. Specify mesh topology zones,
+UV sets, PBR + subsurface parameters, groom or braid/loc geometry, physics/LOD strategies, facial
+blendshapes, rig/weapon sockets, armor and helmet collision rules and Unreal import naming. Keep culturally
+informed design original and refined, not generic European fantasy reskinned.
+P03 - Aetherborn / Lunarian energy wings
+Design a powerful original Eclipse Aetherborn, a muscular Black male with shoulder-length locs, mature face,
+deep melanin-rich skin and fracture-pattern luminous veins. His ENERGY WINGS are extensions of the identical
+fracture hue/pattern on his skin: translucent structural light ribs, controllable filaments and small floating
+fracture fragments, not bird feathers. Create closed/half-open/flight wing states, frontal/side/back and
+gameplay scale, movement animation, wind reaction, helmet/armor clipping, network VFX replication and
+reduced-effects modes. The wings retract and never cover boss telegraphs. The character remains an original
+playable ancestry variant, not an imitation of a named franchise character.
+P04 - Dark fantasy artifact weapon
+Create one original Eclipse artifact weapon: {WEAPON}. No character portrait, no UI, no rarity bar, no collage;
+one weapon large against neutral smoky studio background. The silhouette must be powerful, unusual,
+plausibly forged and asymmetrical with realistic thickness, genuine weight, repaired metal, tool marks, grip
+ergonomics and restrained supernatural motif. Supply beauty view, 4 orthographic views, large closeups of
+blade/grip/tang/pommel, exploded construction, PBR reference, 3D dimension sheet, wielding pose and
+gameplay readability clip. Magic should emerge from an exact structural feature only during its weapon art,
+not coat every edge in neon. Identify original world history and two counters to its special attack.
+P05 - Class armor and bonus
+Design an original 6-piece Eclipse armor set for {CLASS}/{SPEC} with visual ancestry, manufacturing logic,
+functional articulation, textile grain, repaired ornament, differentiated helmet and gloves, material wear and
+deliberate silhouette at combat distance. Include six individual gear pieces, front/back character turnaround,
+MOMENTUM LABS / ECLIPSE V4
+29
+
+===== PAGE 30 =====
+cloth-motion spec, body-morph fitting, dark-skin shader validation, hair/helmet configurations, rare/legendary
+visual branches and 2/4/6-piece effects with PvE/PvP modifier rules. Avoid luminous clutter; show the armor
+under neutral studio, rainy night and active combat lighting.
+P06 - Spell VFX seven-stage pipeline
+Design and implement Eclipse spell {SPELL} for {CLASS} as a 7-stage real-time Niagara effect: intention
+pose, charge/cast bar, release, travel, collision, environment aftereffect, decay. Supply storyboard, timing
+sheet, particle emitter structure, ribbons/meshes/flipbooks, decal, local light interaction, wet ground/foliage/
+stone responses, sound/haptics, clear telegraph and accessibility mode. Define actual server-authoritative
+Gameplay Ability effects and the purely cosmetic Gameplay Cue. Profile in 1v1, 5-player PvE and 10-player
+raid, providing low/medium/high FX versions. Visual must feel magical and physically present but not blind the
+camera.
+P07 - Action combat animation polish
+Create a functional Unreal animation and combat spec for {CLASS} using {WEAPON}: idle, combat stance,
+walk/sprint/strafe, lock-on turn, dodge, parry, guard, light-light-heavy chain, charged attack, perfect punish
+and hit reactions. Show montage timeline, anticipation/active/recovery, root motion, blend policies, foot IK,
+weapon trace paths, contact sync, impact camera/audio and combo buffer. Explain hybrid GCD exemptions for
+action moves and cast bar timing for skills. Include deterministic manual weak-point crit and perfect-guard
+mitigation windows with PvP caps. Test 30/60/120fps and latency cases.
+P08 - Dungeon/raid spectacle
+Plan a cinematic but playable Eclipse encounter for either a FIVE-person dungeon or TEN-person raid, with a
+colossal original boss and stunning surrounding architecture. Deliver arena layout, camera-safe collision,
+telegraph contrast, damage/event readability, boss animation phases, foot/weapon material impacts, light/
+sound cues, mechanic timeline, role assignments, party frame HUD, performance budget at ten player effects,
+and accessible reduced VFX. Cinematic spectacle cannot obscure soak rings, frontal cleaves or target
+selection.
+P09 - PvP readability and rank presentation
+Create an original Eclipse PvP arena art kit and HUD for 1v1/2v2/3v3/5v5, plus 10v10 battleground. Include
+clean sight lines, fair collision and pillars, class silhouette readability, enemy cast bars, cooldowns, DR timers
+and team composition display. Arena cosmetics and spell glows must never hide key ability signals. Design
+PvP rating divisions and prestige cosmetics without gameplay advantage. Benchmark network and VFX load.
+P10 - QA art audit
+Audit the provided Eclipse art and Unreal scene against V4 quality gates: original silhouettes, plausible
+material construction, realistic skin across melanin tones, authentic coils/locs/braids, armor-hair clipping,
+action contact quality, spell phase readability, geography/architecture cohesion, memory/streaming and FPS.
+Return evidence per asset: screenshot location, video timestamp, mesh/texture files, actual GPU/CPU stats,
+bugs and a pass/fail verdict. Do not label speculative concepts implemented.
+P11 - Original race lineup
+Produce eight entirely original Eclipse ancestry models, matching the canonical roster after resolving aliases
+in V3, plus a focused Aetherborn/Lunarian energy-wing option. Each race needs male/female/neutral body
+variants, multiple deep and light complexions where physiologically plausible, distinctive faces and hair
+options, silhouettes, skeleton/physics exceptions, culture and costume logic, armor compatibility, 3D front/
+back/side turnarounds, idle animation and acceptance criteria. Place dark-skinned heroes across the roster,
+never as a token single race.
+MOMENTUM LABS / ECLIPSE V4
+30
+
+===== PAGE 31 =====
+P12 - Cinematic story asset
+Storyboard one Eclipse campaign beat {STORY_BEAT}: opening establishing landscape shot, character
+closeup with authentic hair/skin, quiet environmental storytelling, boss reveal and playable combat transition.
+Use original fracture-celestial iconography, controlled lighting, mature expressive performance, clean
+silhouette, physically constructed props, diegetic sound and player-choice consequence. Deliver animatic
+timings, Level Sequence plan, gameplay handoff and performance/scalability considerations. Avoid
+unskippable cutscenes that cover critical combat inputs.
+MOMENTUM LABS / ECLIPSE V4
+31
+
+===== PAGE 32 =====
+S T R U C T U R E D H A N D O F F
+Data model, export format and asset
+governance
+Store each asset spec as a machine-readable record. The example below is a model schema, not proof of
+completed assets.
+{
+  "assetId": "ECL_WPN_VGD_SUNBREAKER_001",
+  "status": "design_only",
+  "owner": "WeaponLead",
+  "ancestry": null,
+  "class": "Vanguard",
+  "visualTags": ["ancient_relic", "blacksteel", "restrained_solar"],
+  "references": ["V4 Art Constitution", "Sunbreaker brief"],
+  "targetPlatform": ["Windows", "Xbox Series", "PS5"],
+  "requires": ["turnaround", "game_mesh", "UV", "PBR", "socket", "LOD"],
+  "sourceModel": null,
+  "ueAssetPath": null,
+  "weaponArt": "DA_VGD_DawnbreakCleave",
+  "materialBudget": {"uniqueMaterialSlotsMax": 4, "status": "proposed"},
+  "qualityScores": {},
+  "verifiedTests": [],
+  "issues": [],
+  "licenseAndProvenance": "original_design",
+  "approvedBy": null
+}
+Folder structure
+ECLIPSE/
+  _MASTER/Decision_Log.md, Accepted_References.md, Rejected_References.md
+  _RESEARCH/Unreal_References.md, Legal_IP_Register.md
+  ART/Environment/{Region}/, Character/{Ancestry}/, Hair/, Armor/, Weapons/
+  VFX/{School}/{Spell}/, ANIM/{Class}/, AUDIO/
+  DESIGN/Story/, Classes/, Combat/, PvP/, PvE/, Loot/, Ratings/
+  ENGINE/Unreal_Project/, Source/, Config/, Automation/
+  QA/Visual_Gates/, GPU_Profiles/, Import_Tests/, Playtest_Videos/
+  SITE/MomentumLabs_ComingSoon/, Privacy_Consent_Notes/
+  DELIVERY/Weekly_Builds/, Evidence_Log.csv
+Coming Soon public page
+Under Momentum Labs publish Eclipse: Realms of the Fractured - In Preproduction. Show approved
+concept art, original world hook, PC/Xbox/PS5 as target platforms, opt-in follow form, privacy language, visible
+development milestones, artwork subject to change, and no fictional gameplay footage. Confirm branding and
+trademarks before a public launch. Follower collection requires consent and a secure subscription backend.
+MOMENTUM LABS / ECLIPSE V4
+32
+
+===== PAGE 33 =====
+S O U R C E R E G I S T E R
+External technical references and reading
+list
+Official Epic documentation checked November 2026. Tool descriptions vary by Unreal Engine version and
+target GPU; Hermes must verify exact support before implementing.
+Unreal Engine Nanite Virtualized Geometry
+https://dev.epicgames.com/documentation/en-us/unreal-engine/nanite-in-unreal-engine
+Unreal Engine Lumen global illumination and reflections
+https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-global-illumination-and-reflections-in-unreal-engine
+Unreal Engine Lumen performance / technical details
+https://dev.epicgames.com/documentation/en-us/unreal-engine/lumen-technical-details-in-unreal-engine
+Unreal Engine Hair Rendering and Simulation
+https://dev.epicgames.com/documentation/unreal-engine/hair-rendering-and-simulation-in-unreal-engine
+Unreal Engine Groom Setup
+https://dev.epicgames.com/documentation/unreal-engine/setting-up-a-project-for-grooms-in-unreal-engine
+Unreal Engine Niagara visual effects
+https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-visual-effects-in-niagara-for-unreal-engine
+Unreal Engine Gameplay Ability System
+https://dev.epicgames.com/documentation/unreal-engine/understanding-the-unreal-engine-gameplay-ability-system
+Unreal Engine World Partition
+https://dev.epicgames.com/documentation/unreal-engine/world-partition-in-unreal-engine
+Unreal Engine Data Layers
+https://dev.epicgames.com/documentation/unreal-engine/world-partition---data-layers-in-unreal-engine
+Unreal Engine Game Animation Sample
+https://dev.epicgames.com/documentation/en-us/unreal-engine/game-animation-sample-project-in-unreal-engine
+Unreal Engine Control Rig Full-Body IK
+https://dev.epicgames.com/documentation/unreal-engine/control-rig-full-body-ik-in-unreal-engine
+Unreal Engine performance profiling
+https://dev.epicgames.com/documentation/unreal-engine/introduction-to-performance-profiling-and-configuration-in-unreal-engine
+Copyright and art-reference practice
+Reference Elden Ring and World of Warcraft for high-level game design, navigation and quality analysis only.
+Do not copy their assets, trademarked names for fictional in-game content, recognizable armor/weapon
+silhouettes, boss choreography, places, character likenesses, icons or audio. Maintain an attribution/license
+register for every acquired asset. Class systems, materials and color languages must be genuinely original.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+33
+
+===== PAGE 34 =====
+D O N O T C A L L I T D O N E U N T I L . . .
+Final handoff checklist
+Hermes has ingested all pages, indexed the V3 appendix and separately versioned V4 decisions.
+The race naming conflicts and Aetherborn/Lunarian variant are mapped explicitly with design decisions.
+The original accepted diverse-character collage is labeled inspiration; rejected bright WoW-style weapon
+posters are classified as anti-references.
+The first Solara hero vista has a playable greybox, asset list, lighting study, performance plan and
+narrative context.
+A deep-brown character with actual loc geometry and helmet fit is previewed in engine, not just depicted
+as an image.
+Sunbreaker has an original construction sheet, dimension spec, importable mesh or a clearly identified
+blocker.
+One spell demonstrates start-to-finish reaction stages and bounded environmental response.
+A melee strike demonstrates anticipation/contact/recovery and distinct defensive windows.
+At least one packaged Windows build runs and is reported with reproduction instructions and evidence, or
+the blocker is stated explicitly.
+Next sprint tasks are ordered by dependency, assigned to owners, recorded in source control and bounded
+to the vertical slice.
+Creative North Star: Every ruin should tell a story; every spell should touch the world; every weapon
+should feel forged, weighted and earned; every character should be someone a real player can see
+themselves in; every battle should remain beautiful when played, not only when posed.
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+• 
+MOMENTUM LABS / ECLIPSE V4
+34
+
+===== PAGE 35 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+1
+ECLIPSE: REALMS OF THE
+FRACTURED
+MOMENTUM LABS • HERMES / MELENE / FORGE HANDOFF • MASTER EXPANSION V3 • NOVEMBER 2026
+Production-oriented systems bible, original character art direction, PvE/PvP ranking, party scaling, raid structure,
+progression, loot, class synergies, encounters, and executable AI agent prompts.
+This expansion is followed by the previous 37-page illustrated production bible as an appendix. All concepts are
+original design proposals, not implemented or verified game features. Generated visual concepts are references, not
+production-ready 3D meshes.
+Critical directive: preserve Black characters, full skin-tone range and authentic textured hairstyles across selectable
+ancestries; do not limit the player to Caucasian-coded presets or European fantasy defaults.
+
+===== PAGE 36 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+2
+01 | Product decisions and immutable requirements
+This page supersedes narrower prototype assumptions from previous iterations. All player counts are targets
+subject to performance testing; user-selected numbers are preserved exactly.
+System
+Required design decision
+Party size
+1–4 story co-op; 5-person dungeon parties; 10-player dungeon events and raids; scalable open-world
+parties and public events.
+PvP
+Separate 1v1, 2v2, 3v3 and 5v5 ranked arena ladders; battlegrounds with seasonal ratings and unranked
+onboarding.
+PvE
+Separate dungeon challenge rating, raid progression rating and seasonal aggregate PvE rank; role-based
+performance evidence.
+Character creation
+Multiple fantasy ancestries, full tone range, Afrocentric hairstyles, distinct faces, multiple body types and
+inclusive customization without class locks.
+Equipment
+Seven-tier rarity, rarity-independent item level, intrinsic traits, curated affixes, unique sets, 2-/4-/6-piece
+bonuses, cosmetics and PvP tuning.
+Engine
+Unreal Engine 5, Gameplay Ability System, server authority, data assets, automated build tests; Windows
+prototype then console pathways.
+Originality
+No copied WoW/Elden Ring maps, boss patterns, models, class names, interfaces, loot art or animations;
+reference mechanics and produce original execution.
+Build discipline
+Deliver a working vertical slice before large-world production; each feature has IDs, specifications, owners,
+acceptance criteria, and dependency gates.
+Definition of done for a system
+• Designed: requirements, constraints, UX flows, data definitions and explicit open questions exist.
+• Implemented: assets/code are integrated into a runnable branch; source paths and build identifier are recorded.
+• Verified: automated and manual test results include hardware, network conditions, screenshots or recorded
+evidence.
+• Release candidate: localization, accessibility, telemetry, performance, crossplay policy, security and regression
+tests are complete.
+02 | Mode matrix and party architecture
+Separate party, match, instance, raid, social guild and account entities. A ten-player event must not be
+implemented by hardcoding ten clients into a five-player dungeon controller.
+Mode
+Size
+Team / role shape
+Progression
+Campaign
+1–4
+Flexible; scaling; narrative host + choice vote
+Story choices, character XP
+Standard dungeon
+5
+1 defender / 1 support / 3 flexible recommended, not
+class-locked
+Dungeon loot, reputation
+Heroic dungeon
+5
+Role-check + optional flexible queue
+Dungeon rating
+
+===== PAGE 37 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+3
+Mode
+Size
+Team / role shape
+Progression
+Grand dungeon
+10
+2 defenders / 2 supports / 6 damage or hybrid
+Rare sets, seasonal score
+Raid (standard)
+10
+2 defenders / 2–3 supports / 5–6 damage/hybrid
+Raid boss progression
+Fracture expedition
+1–3 initially
+Flexible, role-agnostic modifiers
+Run upgrades + extraction
+Arena
+1v1/2v2/3v
+3/5v5
+Role-aware team-builder; no mandated compositions
+Mode-specific MMR and
+season rank
+Battleground
+10v10
+launch
+target
+Objectives / role distribution
+BG rating and cosmetics
+World boss
+10+
+dynamic
+Contribution-balanced public groups
+World loot and achievements
+Five- and ten-player parties share invitation, ready check, raid markers, permissions, ping wheel, text/voice
+communication, vote-to-kick safeguards, reconnect slots, loot eligibility and group finder. Raid leaders may split ten
+players into two subgroups of five. Each subgroup receives distinct assignment markers, healing visibility and
+proximity tools. Use inclusive role tags (Guard, Sustain, Strike, Control, Flex) instead of rigid class ownership.
+Scaling policy
+• Scale enemy health, mechanics, target pressure and encounter objectives independently; never use health
+multiplication alone.
+• Set minimum/maximum active mechanics per party size and difficulty. Role-based mechanics must have fallback
+alternatives for atypical compositions.
+• No in-combat group-size swapping to exploit scaling; preserve disconnected slots for a timed grace window.
+• Loot allocation and progression must be server-authoritative, idempotent, and auditable.
+03 | Five-player dungeon framework
+Dungeons are compact crafted adventures with trash encounter composition, routes, environmental puzzles,
+minibosses, major bosses and narrative context.
+Difficulty
+Design
+Rewards / restrictions
+Story
+Tutorial telegraphs, checkpoints, optional NPC assist
+Campaign gear, lore, no leaderboard
+Veteran
+More mechanics; coordination encouraged
+Improved crafting and set tokens
+Heroic
+Defined role checks, 2–4 boss fights
+Seasonal rating eligible
+Ascendant tiers
+1–20+
+Increasing enemy levels, rotating affixes, timer
+optional by queue
+Scaled challenge score and exclusive
+cosmetics
+Ironbound
+Optional no-death, restricted checkpoint and
+challenge modifier
+Prestige titles, no irreplaceable power
+
+===== PAGE 38 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+4
+Dungeon specimen: The Weeping Foundry (five players)
+A furnace-city beneath Morvath is turning ancestral memories into living weapons. Route A opens with a rail-yard
+ambush; Route B requires timed cooling-valve synchronization. Boss 1, The Brass Penitent, teaches directional
+shield breaks. Boss 2, Mender of Embers, splits players into two temporal echoes to disable furnaces. Final boss,
+High Smith Vaelor, changes weapon forms based on which production lines survived. Completion awards
+crafted-memory fragments and the Penitent armor family.
+Challenge affixes: Sundered Ground (telegraphed fissures), Oathbound (linked opponents share shields),
+Huntmarked (rotating fixation), and Fading Light (safe zones periodically relocate). Do not stack affixes that create
+unavoidable damage or hide boss mechanics under particles.
+04 | Ten-player raid and grand dungeon framework
+Ten-player content must feel structurally different from five-player dungeons: inter-group coordination,
+simultaneous assignments, positional puzzle phases, multi-role responsibilities, and shared failure recovery.
+Raid specimen: The Cathedral of Unmade Hours
+Wing / boss
+Core mechanics
+10-player assignment
+Gate of Epochs /
+Bellwarden Orun
+Three bells control arena time; wrong order
+duplicates attackers
+2 groups of 5 manage east/west bell arrays
+Hall of Forgotten Kings /
+The Choir of Masks
+Players carry identities; boss targets mirrored
+identities
+2 guards swap; supports cleanse marked
+identities
+Broken Orrery / Seraph of
+the Ninth Path
+Celestial alignments change safe sectors;
+split-phase portal
+5 inside alternate realm; 5 defend core
+Throne of Absence / The
+First Witness
+Three-phase encounter; memory trials; final
+convergence
+All 10 coordinate relic handoffs and final
+burn
+Difficulty and reward policy
+• Discovery, Standard, Heroic and Mythic-like Ascendant are original difficulty labels for Eclipse.
+• Boss power is tied to gear brackets and coordinated execution; avoid mandatory farming of an unrelated
+leaderboard for story access.
+• Boss-lockouts track character, account, season, raid, difficulty and specific reward claim; raids remain replayable
+for practice.
+• Provide personal-loot default and optional organized-group loot council with clear opt-in consent and dispute
+logs.
+• Raid mechanics must explicitly identify failure states, damage thresholds, interrupt priorities, animation tells,
+spectator limitations and recovery windows.
+05 | Separate PvE ranking systems
+Use fair seasonal rankings that reward boss completion, challenge difficulty and reliability without rewarding only
+raw damage, which disadvantages defenders, healers and utility players.
+
+===== PAGE 39 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+5
+Three independent rankings plus one aggregate
+Ladder
+Score inputs
+Fairness rules
+Dungeon Ascendancy
+Rating (DAR)
+Per-dungeon best difficulty, completion time
+relative to par, affix modifier and death penalty
+Seasonal pools; normalize route and
+encounter variants
+Raid Conquest Rating (RCR)
+First boss clears by difficulty, encounter
+execution score, seasonal progress milestones
+No repeated-farm rating inflation; avoid
+DPS-only scoring
+Expedition Mastery (EMR)
+Highest difficulty clears, survival, objectives,
+extraction performance
+Separate solo and grouped boards
+PvE Renown Index (PRI)
+Weighted normalized combination of dungeon,
+raid and expedition achievements
+Aspirational display only; no hard gate to
+essential content
+Illustrative dungeon score algorithm (tune by season)
+Score = baseTierPoints + timingBonus + mechanicBonus + objectiveBonus - avoidableDeathPenalty. Example:
+baseTierPoints = 100 + 20*(tier-1); timingBonus = clamp(100*(parSeconds - runSeconds)/parSeconds, -40, 40);
+mechanicBonus 0–20; objectiveBonus 0–10; death penalty capped at 50. Only the best eligible run per
+dungeon/affix family contributes, to prevent repetition farming. These are prototype values, not claims about WoW
+calculations.
+Keep an immutable run record: score version, party composition, gear snapshot, encounter seed, timestamps,
+server signature, combat log digest, disconnections and anti-cheat flags. Appeals must be possible. Separate
+leaderboard partitions by region and queue type, with global standings where feasible.
+PvE divisions and milestones
+Division
+Illustrative entry points
+Reward
+Wayfarer
+0
+Season badge
+Delver
+600
+Armor dye
+Warden
+1200
+Banner and portrait frame
+Paragon
+1800
+Mount ornament
+Ascendant
+2400
+Visual weapon aura
+Eclipsed
+Top 1% verified
+Prestige title and cosmetic set
+Display rating alongside contextual completions, dungeon names, affixes, role experience and recency. Never
+publicly expose personal identification or raw matchmaking trust score. Separate accessible difficulty progression
+from elite scoreboards.
+06 | PvP ranking and match integrity
+Each arena size is an official first-class queue. Battlegrounds have separate ratings, team strategy and rewards. The
+competitive design is original and must be tested around skill, latency, teamwork and counterplay.
+
+===== PAGE 40 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+6
+Queue
+Match identity
+Special rules
+1v1 Duel
+Individual mechanics, skill timing, class matchup
+Mirror-aware matchmaking; healer sustain cap
+2v2 Pair
+Burst/setup coordination, peeling and support
+Dampening against indefinite stalemates
+3v3 Trio
+Primary esport format candidate; coordinated
+swaps and CC chains
+Full role composition telemetry
+5v5 Warband
+Layered teamfight tactics, split pressure and utility
+Strict visibility/readability budget
+10v10 Battleground
+Objective play, rotations and strategic control
+Objective contribution rated; no kill-only rank
+MMR, displayed rank and seasonal rewards
+Use hidden skill uncertainty (e.g., Glicko-like rating and deviation) separated from visible earned rank; create
+distinct ratings for 1v1, 2v2, 3v3, 5v5 and rated battlegrounds. Match by rating, region, latency, party premade size
+and composition fairness. Queue expansions must be bounded and visible to matchmaking diagnostics. Evaluate
+separate team ratings for fixed rosters only after active population justifies them.
+Season tiers (proposed): Initiate, Challenger, Duelist, Warlord, Exarch, Mythbound and top-percentile Celestial. Give
+exclusive cosmetics, titles, banners, armor effects and mounts; avoid gear power advantages in rated PvP. Publish
+rating decay, placements, inactivity treatment, disconnect penalties and seasonal reset rules.
+Competitive balance and safeguards
+• Normalize effective PvP item-level into a narrow competitive band. PvE raid gear must not dominate ranked PvP;
+keep set fantasy via PvP-specific tuned effects.
+• Crowd control categories: stun, disorient, fear, root, silence and displacement. Define overlap handling,
+diminishing returns, immunities, cleanses and counterplay on a per-ability matrix.
+• Burst damage should have telegraphs and counter-tools; track time-to-kill, healer effective output, noninteractive
+lockouts and win rate by class, composition and skill tier.
+• Require client prediction with server-verified hit authority; latency-aware rewind only where fair; validate
+movement, teleport distances, cooldowns, damage, item states and objective events.
+• Include reporting, blocking, chat moderation, anti-boosting investigation, win-trade detection, spectator delay,
+reconnect grace and clear sanctions/appeals.
+07 | Battleground portfolio
+Launch with two polished battlegrounds, expand to more formats after engagement and balance validation.
+Battleground
+Format / goal
+Novel twist
+Eclipse Standard
+10v10 flag capture; score to 3
+Flag bearer changes gravity pockets and reveals a
+temporary path
+The Five Obelisks
+10v10 five-point control
+At rotating intervals one obelisk shifts realms and must
+be recontested
+Sundering Convoy
+10v10 push payload / defend
+Two alternate routes unlocked via side-objectives
+Ashfall Siege
+10v10 assault/defense structures
+Destructible outer gates and defender resource
+economy
+
+===== PAGE 41 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+7
+Battleground
+Format / goal
+Novel twist
+The Hollow Reliquary
+10v10 relic collection
+Relic weight changes movement and abilities
+Battleground scoreboard: objective captures/defenses, contest time, effective healing, damage contribution,
+interrupts, critical crowd control, deaths and team calls. Never collapse to damage meters. Support premade group
+limits, role suggestions, spawn protection, anti-stall rules, surrender handling and time limits.
+08 | Class and specialization matrix
+Eight launch-planned archetypes, 24 advanced specializations. A class may choose one specialization and hybridize
+through a restricted secondary discipline tree; unrestricted stacking would destroy balance.
+Base class
+Specializations (3)
+Baseline role
+Vanguard
+Aegis Marshal, Siegebreaker, Bannerlord
+Guard / melee
+Umbral Assassin
+Nightblade, Venom Weaver, Shade Dancer
+Mobile striker
+Arcanist
+Storm Savant, Frost Architect, Ember Oracle
+Spell ranged
+Soulbinder
+Grave Covenant, Echo Shepherd, Hex Sovereign
+Summon/control
+Wildwarden
+Thorn Sentinel, Beastheart, Grove Seer
+Nature hybrid
+Templar
+Dawnshield, Star Confessor, Judicator
+Support/guard
+Riftwalker
+Chrono Duelist, Gateweaver, Astral Harrier
+Mobility/control
+Dreadknight
+Blood Oath, Void Reaver, Bone Regent
+Drain/bruiser
+Multi-class rules proposal
+At specialization unlock, equip a primary specialization (full access) and optionally select one complementary
+discipline from another class for three minor passives and one utility skill. Cross-discipline borrowing cannot unlock
+ultimate abilities, hard crowd-control chains, raid-wide invulnerability or full healing kits. Build snapshots are locked
+during rated PvP; respec is available in hubs and pre-instance preparation.
+
+===== PAGE 42 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+8
+Class synergy examples
+Combination
+Triggered interaction
+Counterplay
+Vanguard + Arcanist
+Guard breaks apply Conductive; lightning
+detonates stagger bonus
+Dispel Conductive; dodge
+lightning tell
+Wildwarden + Templar
+Bloom barrier converts small incoming damage to
+delayed healing
+Anti-heal; focus support
+Riftwalker + Assassin
+Gate mark grants one controlled reposition into
+exposed flank
+Interrupt gate; reveal stealth
+Soulbinder + Dreadknight
+Echo brand allows life-drain from marked
+summoned shade
+Destroy shade; cleanse brand
+Vanguard + Wildwarden + Templar
+Bulwark Grove defensive zone grants temporary
+shared resolve
+Displace from zone; attack after
+expiry
+Arcanist + Riftwalker + Assassin
+Stormbound Ambush coordinated combo
+empowers telegraphed finisher
+Break setup, line-of-sight,
+immunity
+Synergy resource design: Convergence stacks 0–3 earned through distinct class-tagged actions within a 6-second
+window; a team can consume stacks for a coordinated effect with 45-second internal cooldown. Scale effect per PvP
+and PvE without making any exact composition mandatory. Team buff categories do not stack additively without
+cap.
+09 | Talent trees, tiers and skill progression
+A structured skill model should be scriptable for agent-generated assets and debuggable in live gameplay.
+Progression proposal
+Layer
+Levels / unlock
+Rules
+Class roots
+Levels 1–20
+Choice between core actives, movement and defense
+Specialization
+Level 20
+Choose 1 of 3 paths; 3 branch lanes each
+Expert techniques
+Levels 21–40
+Ability morphs and multi-role tradeoffs
+Mastery
+Levels 41–60
+Build-defining keystones; no mandatory power inflation
+Ascendant mastery
+Endgame unlocks
+Sidegrades, cosmetics, challenge traits
+Skill ranks: Initiate I–III, Adept I–III, Master I–III and Ascendant I. Every rank must specify numeric changes and
+counterbalancing cost where relevant. Rank progression is bounded to avoid one-shot PvP scaling. For talent nodes
+define ID, prereq, maxRank, pointCost, classRestriction, specRestriction, GameplayTags, PvP overrides, stacking
+group, server events and UI text.
+Complete example branch: Aegis Marshal Vanguard
+• Tier 1: Steel Rhythm (block stamina -5% per rank x3); Shield Discipline (guard stability +4% per rank x3); Vow of
+Protection (ally guard redirect, 12s CD).
+• Tier 2: Counterflame (successful parry empowers next guard counter); Unbroken March (reduced slow while
+protecting ally); Iron Oath (temporary shield after boss stagger).
+
+===== PAGE 43 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+9
+• Tier 3: Bastion Pulse (short-area taunt in PvE; reduced damage debuff in PvP); Fortress Temper (armor converts
+into stagger resistance); Rally Standard (party defensive cooldown).
+• Keystone choice A: Living Fortress (strong stationary guard aura, reduced mobility). Keystone B: Thunder Aegis
+(parry-triggered damage wave, reduced ally guard duration).
+• PvP-specific: taunt cannot force opposing player target; replace with guard-redirection or damage debuff. Display
+this explicitly in tooltip.
+10 | Playable ancestries and inclusive character
+creation
+Ancestry should influence heritage stories, cosmetics, starting locations and minor bounded traits, but not forbid
+skin colors, hairstyles, body types, professions or classes. Avoid racial stat advantages that compel competitive
+selection.
+Ancestry
+Original visual / narrative direction
+Humans of the Seven
+Crowns
+Diverse nations and ethnicities, broad body/face presets, rich cultures
+Vaelborn
+Graceful forest ancestry with distinct ears and facial markings; full tonal range
+Ashforged
+Volcanic lineage, obsidian/gold skin pattern options, horn/stone ornamentation
+Aetherkin
+Skybound humanoids with subtle luminous veining, floating adornments
+Nhalori
+Northern ancestral lineage with varied skin/face/hair choices and ritual textiles
+Umbri
+Void-touched humanoids, optional iridescence, shadow markings and contrast skin
+Tauranid
+Horned titan-descended guardians, multiple builds and head designs
+Saurathi
+Scaled draconic ancestry with horn ridges, tail variants and bipedal armors
+Afrocentric hair library: minimum 30 production styles
+Short: low fade, high fade, temple fade, burst fade, 360 waves, sponge curls, close coils. Medium: rounded Afro,
+tapered Afro, twist-out, finger coils, flat twists, two-strand twists, starter locs, high-top locs, cornrow straight-back,
+intricate cornrow pattern, box braids, knotless braids. Long: thick freeform locs, long traditional locs, loc ponytail, loc
+bun, braided loc crown, shoulder-length twists, extended knotless braids, Fulani-inspired braids, goddess braids,
+halo braids, Bantu knots, curly natural updo, braided undercut. Cultural inspiration is treated respectfully with
+original naming and optional references vetted by artists.
+Technical and QA requirements
+• Skin melanin spectrum, undertones, freckles, scars, vitiligo patterns and complexion controls tested under bright,
+low-key, fire, moon and colored lighting; avoid ashy skin shader response.
+• Detailed head morphs for nose bridge/width, lips, cheeks, jaw, brow and eye shape without ethnicity sliders or
+preset stereotypes.
+• Hair cap compatibility: simulate loc/braid sections as grouped physics chains; support LODs, helmets, hood tuck
+modes and no clipping through armor.
+
+===== PAGE 44 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+10
+• Every ancestry and gender/body presentation has access to the full library where anatomically feasible;
+horned/crested heads receive style adaptation rather than silent removal.
+• Include Black men and women as heroes, rulers, mentors, adversaries, merchants and unnamed civilians, not
+just selectable player skins.
+11 | Original hero and 3D character model briefs
+The generated collage is a visual direction board. Below are actionable briefs for character sheets, sculpting,
+retopology, rigging and final Unreal delivery.
+KHALEM, WARDEN OF ASH
+Model prompt: Black male human Vanguard, warm deep-brown skin, mature face, shoulder-length freeform locs
+with bronze cuffs, charcoal/indigo fur-lined plate, eclipse-sun crest, massive tapered sword. Heroic guardian; broad
+shoulders, facial scar above left brow, confident silhouette; avoid generic European knight helmet. Create front,
+side, back and three-quarter orthographic turnarounds, head close-up, material sheet, color palette, weapon sheet,
+no text baked into textures, neutral A-pose and expressive action pose. Original production-ready design; maintain
+consistent proportions and identifiable silhouette.
+SERA NYX OF THE VEIL
+Model prompt: Black female Umbri Riftwalker, deep umber tone with faint amethyst markings, waist-length
+two-strand twists, layered astral cloth with rigid shoulder fins. Fast temporal mage, graceful asymmetry,
+portal-scarred forearm, violet-gold glyph weapon. Create front, side, back and three-quarter orthographic
+turnarounds, head close-up, material sheet, color palette, weapon sheet, no text baked into textures, neutral A-pose
+and expressive action pose. Original production-ready design; maintain consistent proportions and identifiable
+silhouette.
+AMARA THORNBLOOD
+Model prompt: Black female Vaelborn Wildwarden, natural high-volume Afro, forest-green leather/bronze lamellar,
+carved wooden bow and spirit companions. Wilderness scout; distinct accessories and functional armor, not
+impractical exposed armor. Create front, side, back and three-quarter orthographic turnarounds, head close-up,
+material sheet, color palette, weapon sheet, no text baked into textures, neutral A-pose and expressive action pose.
+Original production-ready design; maintain consistent proportions and identifiable silhouette.
+DARIEN OF THE LAST EMBER
+Model prompt: Black male Ashforged Dreadknight, loc updo, subtle volcanic luminous cracks, blackened scale
+armor, curved colossal blade. Tragic antihero, heavy asymmetric battlewear and ember aura. Create front, side,
+back and three-quarter orthographic turnarounds, head close-up, material sheet, color palette, weapon sheet, no
+text baked into textures, neutral A-pose and expressive action pose. Original production-ready design; maintain
+consistent proportions and identifiable silhouette.
+YAVRIN THE MEMORY SMITH
+Model prompt: Nhalori craftmaster with braided beard and engraved workshop apron. Important NPC who teaches
+forging, affix history, and gear upgrades. Create front, side, back and three-quarter orthographic turnarounds, head
+close-up, material sheet, color palette, weapon sheet, no text baked into textures, neutral A-pose and expressive
+action pose. Original production-ready design; maintain consistent proportions and identifiable silhouette.
+
+===== PAGE 45 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+11
+LUMEN OF THE TWIN SKIES
+Model prompt: Aetherkin Arcanist, pale-gold luminous markings, coiled hair, layered glass/metal robes. Arcane
+scholar, detached floating crystal focus. Create front, side, back and three-quarter orthographic turnarounds, head
+close-up, material sheet, color palette, weapon sheet, no text baked into textures, neutral A-pose and expressive
+action pose. Original production-ready design; maintain consistent proportions and identifiable silhouette.
+3D acceptance: watertight game mesh, skinned skeleton compatible with shared humanoid rig, reviewed
+deformation at shoulders/hips, 4K master textures with lower LOD tiers, PBR
+baseColor/normal/roughness/metallic/AO, equipment socket map, collision capsules, facial rig or blendshapes,
+copyright-clean asset provenance, export testing in Unreal. Polygon/texture budgets should be set from measured
+scene profiles, not arbitrary universal counts.
+12 | Armor families, rarity, stats and upgrades
+Rarity establishes acquisition and design uniqueness, not unconditional combat power. Separate ItemLevel,
+EquipmentSlot, Rarity, AffixBudget, SetFamily, AppearanceID and PvPTuning.
+Rarity
+Original tier label
+Design intent
+1
+Worn
+Starter drops and salvage
+2
+Forged
+Crafting base, one minor trait
+3
+Enchanted
+Uncommon affixes and elemental identity
+4
+Relic
+Build interaction or set fragment
+5
+Mythic
+Rare signature ability variant
+6
+Ascendant
+Encounter-defining curated visuals and effect
+7
+Eclipsed
+Extremely rare prestige evolution; bounded power
+Weapons: straight sword, curved blade, colossal blade, spear, halberd, hammer, axe, twin daggers, bow, crossbow,
+staff, focus, grimoire, shield, catalyst and gauntlet. Weapon archetypes own animation and reach; rare variants
+branch skill interactions without invalidating common upgrades.
+Armor slot system
+Head, shoulders, chest, gloves, belt, legs, boots, cloak, two rings, amulet, trinket, main-hand, off-hand. Visible
+cosmetics overlay combat gear through appearance collections. Set counting should use armor slots only unless a
+set explicitly marks weapon or trinket as participating. Enforce uniqueness, level requirement, durability policy,
+binding category and PvP adjustments.
+13 | Twelve original armor sets and full bonuses
+The following bonuses are design targets; effects are controlled by per-mode tuning tables and balance caps.
+6-piece bonuses should feel spectacular but remain readable in combat.
+Solar Bastion | Vanguard
+Art: Black steel, aged gold eclipsed sun motif.
+• 2p: guard counter grants 5% stamina refund.
+
+===== PAGE 46 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+12
+• 4p: parry creates small ally barrier (20s ICD).
+• 6p: Banner of Dawn: defensive dome 6s, 120s CD.
+Thornweave Covenant | Wildwarden
+Art: Emerald bark-plate, living vines, copper rings.
+• 2p: nature healing +4%.
+• 4p: root detonation grants protection to nearby ally.
+• 6p: Ancestral Grove: plant temporary healing sanctuary.
+Veilstrider Regalia | Umbral Assassin
+Art: Layered smoke cloth, bronze chain, matte dark leather.
+• 2p: perfect dodge adds Momentum.
+• 4p: consuming Momentum briefly reveals marked weakpoint.
+• 6p: Nightfold: clone feint and 1 empowered finisher.
+Crown of Tempests | Arcanist
+Art: Indigo ceramic scales, silver lightning filaments.
+• 2p: chain spell costs reduced after interrupt.
+• 4p: elemental rotation applies Conductive.
+• 6p: Eye of the Storm: stationary channeled maelstrom.
+Ashen Sovereign | Dreadknight
+Art: Cinder-scale plates, volcanic crown, worn obsidian.
+• 2p: blood mark heals slightly on hit.
+• 4p: consuming mark produces brief overshield.
+• 6p: Furnace Heart: bounded berserker transform.
+Gravesong Vestments | Soulbinder
+Art: Bone porcelain accents, black silk, memory glyphs.
+• 2p: summon upkeep reduced.
+• 4p: destroying summoned echo returns resource.
+• 6p: Chorus of the Lost: short spectral formation.
+Judicator of First Light | Templar
+Art: Ivory-gold lamellar, sunburst etched prisms.
+• 2p: healing ally grants Resolve.
+• 4p: block converts some overheal to guard.
+• 6p: Last Benediction: brief party rescue pulse.
+Hourglass Nomad | Riftwalker
+Art: Asymmetric time-glass armor, fine gold spiral.
+
+===== PAGE 47 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+13
+• 2p: gate cooldown reduced after perfect evade.
+• 4p: time anchor releases stagger wave.
+• 6p: Severed Moment: synchronized temporal strike.
+Penitent Foundry | Any heavy
+Art: Rust-black anviled plates and cooling metal seams.
+• 2p: stagger recovery +5%.
+• 4p: block applies nonstacking molten mark.
+• 6p: Foundry Oath: controlled area forge burst.
+Choir of Masks | Any cloth
+Art: White lacquer, violet mask ornament, flowing veils.
+• 2p: status duration on PvE enemies +5%.
+• 4p: cleanses grant temporary ward.
+• 6p: Many Voices: split spell into echoes.
+Reliquary Tracker | Any leather
+Art: Sandstone green scout harness, geometric tassels.
+• 2p: weakpoint detection radius increases.
+• 4p: critical weakpoint hit grants stamina.
+• 6p: Hunter’s Canticle: marked target team damage buff capped.
+Eclipse Sovereign | Any endgame
+Art: Unique black-gold prismatic silhouette with celestial orbit shards.
+• 2p: small all-round utility choice.
+• 4p: one selectable non-stacking keystone.
+• 6p: Realmflare: cosmetic-rich but bounded power surge.
+Set balance and loot protections
+Never force one class to wear a single set: support 2+4 mixed builds; provide alternate non-set items with
+competitive stats; make PvP set bonuses substantially tuned or cosmetic-only. Avoid 6-piece bonuses that eliminate
+counters, allow permanent invulnerability, or overtake core gameplay. Raid sets can be obtained via boss drops plus
+bad-luck-protection tokens.
+14 | Itemization tables, sockets, affixes and economies
+Affixes must be data-defined, tagged by eligible slots and content tiers, weighted and mutually exclusive where
+required.
+Category
+Examples
+Validation
+Primary
+Might, Dexterity, Intellect, Spirit
+One major per item; level budget
+Defense
+Armor, elemental guard, stagger resist
+Hard diminishing-return caps
+
+===== PAGE 48 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+14
+Category
+Examples
+Validation
+Offense
+Precision, crit potency, weakpoint, cast haste
+Nonlinear budget to prevent extremes
+Utility
+Cooldown recovery, stamina recovery,
+movement
+Movement strictly capped in PvP
+Special
+Bleed, burn, frost, echo, summon mastery
+Proc chance and ICD required
+Crafting
+Rune sockets, infusion element, artisan mark
+Predictable preview and reversible paths
+Loot acquisition: scripted quest awards, enemy drops, miniboss drops, boss personal tables, dungeon final chests,
+raid token vendors, crafted items, faction rewards, seasonal PvP vendors, prestige cosmetics and exploration
+secrets. Use weighted tables with guaranteed minimum rewards, weekly caps where necessary, protection against
+duplicates, deterministic seed audit and explicit player-facing odds for rare randomized systems.
+Item example: SB-ARM-042 Solar Bastion Cuirass; slot Chest; rarity Relic; item level 120; base armor 83; Might +14;
+guard stability +8; SetFamily SolarBastion; setCount 1; appearance SolarCuirass03; binding BindOnEquip;
+PvPTuning DefenseScalar=0.92. Numeric values are prototype tuning only.
+Crafting and materials
+• Professions: smithing, runecraft, alchemy, leatherwork, weaving, jewelcraft, engineering and cooking; gathering:
+mining, herbalism, skinning, spirit harvesting.
+• Recipe progression unlocks via factions, exploration and dungeon discoveries; rare materials are traceable and
+anti-dupe protected.
+• Upgrading must show expected item-level increase, materials and cost; implement catch-up systems for late
+joiners.
+• Trade permitted by binding category; use secure server transaction ledger and rollback strategy; no pay-to-win
+item purchases.
+15 | Enemy, boss, dungeon and raid content production
+Every enemy uses a common encounter specification so model art, combat AI, VFX, sound and narrative agents can
+independently coordinate.
+Example boss: Khorez, Keeper of the Seventh Lock
+Narrative: Khorez guards a false relic because his memory was altered by the First Witness. Location: subterranean
+lock chamber, Solara. Phase 1 at 100–70% health: polearm combos, frontal cleave, delayed radial slam. Phase 2 at
+70–35%: twin memory ghosts replicate one previous attack with clear blue tell; players must identify original. Phase
+3 at 35–0%: breakable lock pillars offer defensive cover at cost of constricting arena. Reward: Seventh Lock Key,
+unique spear blueprint, Memory of Khorez quest branch.
+Standard encounter spec fields
+EncounterID, DifficultyID, PlayerCountMin/Max, RoleAssumptions, BossModelAsset, ArenaID, PhaseConditions,
+AbilityIDs, TelegraphFrames, InterruptRules, RequiredObjectInteractions, TargetSelection, Adds, Enrage,
+Checkpoint, RewardTable, NarrativeFlags, AccessibilityTelegraphs, ReplicationTests, PerformanceBudgets,
+FailureTelemetry.
+
+===== PAGE 49 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+15
+Expanded 10-player encounter: The Twin Regents
+Two monarchs occupy overlapping realities. Raid splits into two teams of five, each with a guardian or role-flex
+equivalent. Damage to one regent empowers the other; teams synchronize stagger events within a six-second
+window. Every 60 seconds players swap realms through tagged gates, carrying a memory debuff requiring a
+cleanse. One phase requires three players on each side to channel obelisks while two interrupt elite guards. Team
+progress is reflected in shared arena skybox. Counterplay: readable callouts, ping markers and a 4-second handoff
+margin.
+16 | Game systems inventory checklist
+Hermes must maintain these as Epic/Task IDs, marking Future / Designed / In Progress / Tested / Released. The list
+is deliberately broad; do not turn it into immediate scope.
+Combat & camera
+Third-person navigation • Target lock • Stamina / mana / unique resources • Weapon movesets • Dodge/parry/block
+• Hit reaction / poise • Status effects • Spell projectile collision • Destructibles • Accessibility cues
+Character & inventory
+Ancestries • Face/body morphs • Afrocentric hair library • Hair physics and LOD • Armor attachment • Dyes • Visual
+transmog • Inventory slots • Loadout presets • Weapon crafting
+Progression
+Experience • Class level • Specialization unlock • Talent point economy • Skill ranks • Mastery and respec •
+Reputation • Season journey • Account collections • Bad-luck protection
+PvE
+Quest journal • Dialogue and cinematics • Five-person instances • Ten-person raids • Boss lockouts • Keystone
+challenge variants • Puzzle tools • Public events • World bosses • PvE scoreboards
+PvP
+1v1 ranked • 2v2 ranked • 3v3 ranked • 5v5 ranked • 10v10 battleground • Unranked practice • Matchmaking MMR
+• CC diminishing returns • Class composition analyzer • Anti-cheat
+Online / community
+Accounts • Cross-progression design • Guilds • Parties and raid groups • Group finder • Invites and reconnects •
+Friend/block/report • Text and voice • Trade and auction • Housing and settlements
+Platform / operations
+PC packaging • Gamepad remapping • Console SDK approvals • Save migrations • Dedicated servers • Telemetry •
+Crash reporting • CI builds • Security audit • Localization and accessibility
+Creative / monetization
+Lore codex • World map • Mounts • Companions • Weather/day-night • Soundtrack • Dialogue VO • Season
+cosmetics • Premium expansion planning • Credits and licenses
+
+===== PAGE 50 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+16
+17 | UI wireframe requirements
+Each screen requires controller focus navigation, functional tab order, accessible contrast and scalable font.
+Wireframe design should match original Eclipse iconography, never reproduce WoW frames or Elden Ring menus.
+Character creator
+Left: rotating live 3D avatar and lighting preset; right: ancestry, body, complexion, face morphs, hair category with
+loc/braid thumbnails, cosmetics; bottom: randomize, save preset, undo.
+5-person group finder
+Tabs Dungeon, Grand Dungeon, Raid, PvP; group roles shown as tags, gear eligibility and dungeon rating displayed;
+applicant privacy; ready check modal.
+10-person raid HUD
+Two subgroup grids (5+5), buff/debuff indicators, role-colored status, arena pings, boss castbar, phase objectives,
+dynamic accessibility callouts.
+Talent tree
+Three lanes per specialization; prerequisites, rank pip UI, live tooltip with PvP changes, respec preview and preset
+save.
+Loot inspection
+3D equipment view, base/affix stats, rarity emblem, item level, set piece counts and 2/4/6 effects, compare and
+salvage actions.
+Rank hub
+PvE DAR/RCR/EMR panels; arena 1/2/3/5 ratings; battleground ladder; seasonal history and last verified score; role
+snapshots.
+18 | Technical architecture and data contracts
+Use Unreal Engine 5 C++ foundation, GAS abilities, DataAssets/DataTables and server-owned instance runtime.
+Project architecture should be versioned, continuously buildable, and testable without online deployment for local
+prototype.
+Suggested C++ modules
+EclipseCore (identity, saves, gameplay tags), EclipseCharacters (rigs, ancestries, customization), EclipseCombat
+(GAS, hits, status), EclipseItems (loot, rarity, crafting), EclipseProgression (talent trees, specs), EclipseEncounters
+(bosses, dungeons, raids), EclipseOnline (sessions, parties, dedicated servers), EclipsePvP (queues, ratings, maps),
+EclipseUI (HUD and navigation), EclipseTelemetry (events, metrics).
+
+===== PAGE 51 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+17
+Minimum data entities
+Entity
+Key fields
+Character
+CharacterID, AccountID, AncestryID, BodyMorphPreset, Complexion, HairStyleID, ClassID, SpecID, Level,
+SeasonID
+Ability
+AbilityID, GASClass, Tags, Rank, Cost, Cooldown, Targeting, PvE/PvP override, AnimationID
+Item
+ItemID, FamilyID, Rarity, ItemLevel, Affixes, AppearanceID, SetFamily, Binding, PersistenceVersion
+Encounter
+EncounterID, ModeID, PlayersMinMax, PhaseTable, Objectives, BossAI, LootPool, Timer
+MatchResult
+MatchID, QueueID, Teams, Score, SkillEstimateBeforeAfter, AntiCheatState, Signature
+RatedRun
+RunID, Party, Difficulty, Season, Timer, Deaths, Affixes, ScoreVersion, Validation
+TalentNode
+NodeID, TreeID, RankMax, PointCost, Prereq, EffectIDs, PvPOverride
+Persistence rules: UUIDs, transactional inventory changes, optimistic locking, audit logs and idempotent loot claims.
+Version gameplay and migrations. Anti-cheat and ranking calculations must execute server-side. Console accounts
+and entitlements require provider-specific integration only after approvals.
+Performance and console planning
+Establish measured frame budgets for GPU, render thread, game thread, network serialization and animation, plus
+animation LOD and hair strand simulation fallback. Support Xbox Series X|S and PS5 target profiles,
+hardware-specific memory constraints and performance quality settings. Never claim console compatibility without
+official SDK access and signed builds.
+19 | Production asset pipeline and prompt library
+Every AI-generated concept is a proposed art direction until an artist validates originality, anatomy, topology, UVs
+and rig compatibility. Concept prompts do not directly create functional Unreal game assets.
+P01 | Black Vanguard hero turnaround
+Create original dark-fantasy 3D character concept sheet: Black male warrior, deep warm-brown skin,
+shoulder-length thick freeform locs with gold rings, noble facial features, blackened indigo plate armor with original
+eclipsed-sun filigree, heavy sword and shield. Front side rear 3/4 views, T/A pose, hair closeups, armor separation
+diagram, neutral studio background, consistent anatomy, no borrowed videogame iconography.
+P02 | Black sorceress and textured hair
+Original Black woman Riftwalker mage, rich ebony complexion, layered long rope twists with subtle copper beads,
+face and hair material turnarounds, distinct purple-gold astral robe with practical arm protection, magic focus,
+expression range, full-body A-pose, neutral environment, production concept only.
+P03 | Ancestry lineup
+Original eight-ancestry dark-fantasy character roster in common neutral stances: Seven Crowns human, Vaelborn
+forest person, Ashforged volcanic humanoid, Aetherkin skykin, Nhalori frost lineage, Umbri void lineage, Tauranid
+horned guardian, Saurathi scaled warrior. Each varied skin colors, faces and hair, consistent scale reference,
+dignified original visual languages.
+
+===== PAGE 52 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+18
+P04 | Armor set sheet
+Present an original Solar Bastion six-piece armor sheet in black steel and warm gold eclipsed-sun iconography,
+front/rear and exploded modular pieces for helmet pauldrons cuirass gauntlets greaves boots, PBR material
+annotations, no copyrighted symbols, functionality and silhouette clarity.
+P05 | Heroic raid environment
+Original Cathedral of Unmade Hours, colossal cathedral built around segmented astrolabe, black basalt white gold
+suspended gears, two mirrored time-realms, 10-player boss arena, traversal routes and telegraph-safe flooring,
+atmospheric cinematic concept art plus top-down blockout diagram.
+P06 | Battleground map
+Original 10v10 capture-the-flag battleground called Eclipse Standard: symmetrical strategic routes with vertical
+bridges, center relic pit, flank tunnels, spawn safe zones, visibility lines, objective markers, top-down labeled
+designer map, no copied layouts.
+P07 | Class specialization icons
+24 original ability icons in consistent circular frame system for eight fantasy classes, readable silhouettes and high
+contrast, no words, no references to existing franchise logos, accessible monochrome testing.
+P08 | Unreal rig requirements
+Turn approved concept into model specification: humanoid common skeleton, cloth segments separate, locs in
+configurable grouped spline chains, facial blendshapes, variable skin shader, equipment attachment sockets,
+LOD0–LOD3 plan, Unreal validation test scenes.
+20 | Hermes orchestrator system prompt
+Send the following to Hermes along with this PDF and existing repository links. This is actionable governance, not
+permission to fake progress.
+ROLE: Act as lead technical producer and multi-agent orchestrator for Eclipse under Momentum Labs. Read this V3
+expansion and appended V2 bible in full. Treat both as design proposals; V3 overrides older conflicting player-count
+and ranking requirements. Preserve complete detailed plans rather than truncating to a short prompt. Use original
+IP only.
+• Inventory actual files, installed Unreal version, hardware, repositories, SDK access and asset licenses. Do not
+invent results or make destructive changes without approval.
+• Create feature IDs and dependency graph for CharacterCreator, HairLibrary, CombatCore, FivePlayerDungeon,
+TenPlayerRaid, Arena1/2/3/5, Battleground10, PvERanking, PvPRanking, LootAndSets and CompanionAI.
+• Generate linked GDD/TDD documents, JSON schema drafts, ability catalog, encounter sheets and original art
+briefs; every asset must have provenance and legal/license status.
+• Assign agents to independent modules: Narrative, RacesAndCharacters, Animation, Combat, ClassAndTalents,
+GearAndLoot, PvEContent, PvPSystems, OnlineBackend, UI, Sound, QA, Build and Producer.
+• Require acceptance tests and functional demonstration before moving status from Designed to Implemented;
+include evidence IDs and failed test cases.
+• Prototype a character creator emphasizing Black male face presets and textured loc/braid hairstyles, one
+Vanguard, one small arena, two enemies, one boss and basic gear equip before full game modes.
+
+===== PAGE 53 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+19
+• Then validate five simultaneous multiplayer clients; later ten clients; implement 1v1 and 2v2 first but preserve all
+requested rated queue specs.
+• Maintain milestone progress and blockers; no background promises or misleading build claims. Escalate
+licensing, console approvals and spending decisions for human review.
+Agent task prompts with output contract
+Character Agent
+Directive: Create 8 original ancestry turnarounds, detailed Black male/female heads, 30+ hairstyles, skin shader
+requirements and modular armor interface. Deliver: asset briefs, character data, hair clipping tests. Never
+self-certify without verifiable artifacts.
+Combat Agent
+Directive: Implement one GAS skill chain, blocking, dodge, parry, stagger, health and stamina with deterministic test
+scenarios. Deliver: runnable branch, unit tests, gameplay capture. Never self-certify without verifiable artifacts.
+Progression Agent
+Directive: Define 8x3 specializations, rank tables, synergies, unlocks and respec logic; implement one complete tree
+first. Deliver: schemas, balancing sheet, prototype UI. Never self-certify without verifiable artifacts.
+Loot Agent
+Directive: Implement seven rarity tiers, set counting and 2/4/6 effects, seeded loot table and server-side item
+transaction. Deliver: DataAssets, drop simulation, duplicate-award tests. Never self-certify without verifiable
+artifacts.
+Dungeon Agent
+Directive: Design five-player Foundry and 10-person Cathedral; create greybox of one 5-player encounter. Deliver:
+arena maps, encounter specs, mechanics tests. Never self-certify without verifiable artifacts.
+Competitive Agent
+Directive: Specify 1v1,2v2,3v3,5v5,10v10; build MMR model and test CC DR and PvP stat overrides. Deliver: rating
+simulator, test match telemetry, fairness report. Never self-certify without verifiable artifacts.
+Backend Agent
+Directive: Prototype persistence, lobbies, party roster 5 and 10, reconnection and match result signature. Deliver:
+API contracts, local multiplayer logs, load checks. Never self-certify without verifiable artifacts.
+QA Agent
+Directive: Audit all major race/body/hair combinations, ability bugs, loot fairness, group scaling, server exploit
+vectors. Deliver: test evidence matrix and prioritized defects. Never self-certify without verifiable artifacts.
+21 | Feature dependency and delivery gates
+Prioritize foundational fun and architectural correctness over content volume. AI agents can flesh out systems in
+parallel but should merge only when interfaces and tests are defined.
+
+===== PAGE 54 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+20
+Gate
+Required proof
+Unlocks
+G0: Design
+consistency
+Signed requirements, original IP guardrails, ownership
+Project skeleton
+G1: Solo combat
+PC build, character movement, 2 enemy AI, boss, gear equip
+One 5-player dungeon greybox
+G2: Persistence
+Server-owned inventory/save and migrations
+Loot/progression trials
+G3: Five-player
+Five clients, role UI, synchronized encounters, reconnect
+Dungeon rating / 10-player
+networking
+G4: Ten-player
+Ten clients, subgroup UI, boss handoffs, performance report
+Raid vertical slice
+G5: Competitive
+Valid arena 1v1/2v2, balanced overrides, signed results
+3v3,5v5 and ranked ladders
+G6: Live viability
+Matchmaking load, anti-cheat, exploit tests, monitoring
+Public tests
+G7: Console
+readiness
+Approved platform access, profiling, platform QA
+Platform submission
+22 | Risk register and unsolved decisions
+The following must remain visible rather than silently buried by ambitious feature generation.
+• MMO scope risk: enormous authored content and backend operations; default to shared hubs and instanced
+co-op until funding and retention justify a seamless persistent world.
+• Ten-client performance: hair physics, VFX and replicated combat traffic compete for frame budget; establish
+concurrency/performance tests early.
+• Class balance: 24 specializations multiplied by 1v1,2v2,3v3,5v5 and PvE is a large tuning surface; simulate
+matchup telemetry and phase content rollout.
+• Art throughput: original realistic playable characters require sculpting, rigging, animation, LOD, clothing
+adaptation and human QA; AI pictures are concepts only.
+• Economy exploitation: item duplication, gold inflation, botting and secondary markets; transaction logs and
+security are mandatory.
+• Accessibility: colorblind visual equivalents, readable telegraphs, motion sickness settings, subtitle controls and
+remapping from day one.
+• Monetization: premium plus cosmetic expansions is a default proposal; never gate PvP performance behind
+spending.
+• IP: exclude recognizable game UI, faction names, boss designs, voice imitation, proprietary 3D assets and
+unlicensed music.
+• Console access: PS5/Xbox deployment requires official onboarding, agreements and SDK availability, not just
+Unreal packaging.
+23 | Momentum Labs Coming Soon brief
+Display the project publicly as a work-in-progress with realistic status and opt-in notifications rather than unverified
+platform launch promises.
+
+===== PAGE 55 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+21
+Project: Eclipse: Realms of the Fractured. Label: Concept and preproduction. Platforms: Targeting Windows PC; Xbox
+Series X|S and PS5 exploration pending access and feasibility. Genre: Fantasy action RPG with cooperative
+adventures, arena PvP and evolving character progression. Page sections: hero art, original game premise,
+race/class gallery, 5-player dungeons and 10-player raid goals, PvP queue matrix, devlog, FAQs and interest form.
+Followers: verified email opt-in, consent timestamp, privacy policy link, preference tags (PvP, raids, story, character
+creation, playtest), unsubscribe. Do not state playtest dates or playable features until verified. Optional follow CTA:
+Follow development / Join future playtest interest list.
+24 | Source register and design provenance
+References are for systems analysis; all supplied game-specific lore, names, combat rules, visuals, numeric scores,
+rewards and UI proposals are new designs and must be playtested.
+Blizzard: Mythic+ rating design:
+https://worldofwarcraft.blizzard.com/en-us/news/23686103/learn-about-the-mythic-dungeon-rating-in-chains-of-domination
+Epic Games: Gameplay Ability System overview:
+https://dev.epicgames.com/documentation/en-us/unreal-engine/understanding-the-unreal-engine-gameplay-ability-system
+Epic Games: Using Gameplay Abilities:
+https://dev.epicgames.com/documentation/en-us/unreal-engine/using-gameplay-abilities-in-unreal-engine
+Epic Games: Unreal Engine documentation: https://dev.epicgames.com/documentation/en-us/unreal-engine/
+Xbox developer onboarding: https://developer.microsoft.com/en-us/games/publish/
+PlayStation Partners: https://partners.playstation.net/
+Version policy: V3 supplement governs new features; appended 37-page V2 is retained intact as historic
+foundational material. Where V2 says smaller raids or fewer classes, V3 supersedes. Hermes should create explicit
+architectural decision records for later revisions.
+25 | Initial ability catalog by specialization
+Prototype ability names and categories; all numerical balance values are draft and must be grounded in actual
+combat tests. Every spec should have a damage action, mobility tool, control tool, defense tool, teamwork tool and
+an ultimate.
+Vanguard [Guard / melee]
+Aegis Marshal: Core Aegis Strike; movement Breach Step; control Rally Sigil; defensive Aegis Mantle; synergy
+Breach Convergence; ultimate Aegis Marshal Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Siegebreaker: Core Aegis Strike; movement Breach Step; control Rally Sigil; defensive Aegis Mantle; synergy Breach
+Convergence; ultimate Siegebreaker Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Bannerlord: Core Aegis Strike; movement Breach Step; control Rally Sigil; defensive Aegis Mantle; synergy Breach
+Convergence; ultimate Bannerlord Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP adjustments
+and animation needs separately.
+Umbral Assassin [Mobile striker]
+Nightblade: Core Veil Strike; movement Mark Step; control Escape Sigil; defensive Veil Mantle; synergy Mark
+Convergence; ultimate Nightblade Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP adjustments
+and animation needs separately.
+
+===== PAGE 56 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+22
+Venom Weaver: Core Veil Strike; movement Mark Step; control Escape Sigil; defensive Veil Mantle; synergy Mark
+Convergence; ultimate Venom Weaver Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Shade Dancer: Core Veil Strike; movement Mark Step; control Escape Sigil; defensive Veil Mantle; synergy Mark
+Convergence; ultimate Shade Dancer Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Arcanist [Spell ranged]
+Storm Savant: Core Flux Strike; movement Surge Step; control Ward Sigil; defensive Flux Mantle; synergy Surge
+Convergence; ultimate Storm Savant Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Frost Architect: Core Flux Strike; movement Surge Step; control Ward Sigil; defensive Flux Mantle; synergy Surge
+Convergence; ultimate Frost Architect Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Ember Oracle: Core Flux Strike; movement Surge Step; control Ward Sigil; defensive Flux Mantle; synergy Surge
+Convergence; ultimate Ember Oracle Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Soulbinder [Summon/control]
+Grave Covenant: Core Echo Strike; movement Curse Step; control Bind Sigil; defensive Echo Mantle; synergy Curse
+Convergence; ultimate Grave Covenant Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Echo Shepherd: Core Echo Strike; movement Curse Step; control Bind Sigil; defensive Echo Mantle; synergy Curse
+Convergence; ultimate Echo Shepherd Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Hex Sovereign: Core Echo Strike; movement Curse Step; control Bind Sigil; defensive Echo Mantle; synergy Curse
+Convergence; ultimate Hex Sovereign Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Wildwarden [Nature hybrid]
+Thorn Sentinel: Core Thorn Strike; movement Morph Step; control Bloom Sigil; defensive Thorn Mantle; synergy
+Morph Convergence; ultimate Thorn Sentinel Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Beastheart: Core Thorn Strike; movement Morph Step; control Bloom Sigil; defensive Thorn Mantle; synergy Morph
+Convergence; ultimate Beastheart Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP adjustments
+and animation needs separately.
+Grove Seer: Core Thorn Strike; movement Morph Step; control Bloom Sigil; defensive Thorn Mantle; synergy Morph
+Convergence; ultimate Grove Seer Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Templar [Support/guard]
+Dawnshield: Core Dawn Strike; movement Sentence Step; control Sanctuary Sigil; defensive Dawn Mantle; synergy
+Sentence Convergence; ultimate Dawnshield Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+
+===== PAGE 57 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+23
+Star Confessor: Core Dawn Strike; movement Sentence Step; control Sanctuary Sigil; defensive Dawn Mantle;
+synergy Sentence Convergence; ultimate Star Confessor Ascension. Define five skill ranks, cooldown rules, interrupt
+tags, PvP adjustments and animation needs separately.
+Judicator: Core Dawn Strike; movement Sentence Step; control Sanctuary Sigil; defensive Dawn Mantle; synergy
+Sentence Convergence; ultimate Judicator Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Riftwalker [Mobility/control]
+Chrono Duelist: Core Gate Strike; movement Shift Step; control Anchor Sigil; defensive Gate Mantle; synergy Shift
+Convergence; ultimate Chrono Duelist Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Gateweaver: Core Gate Strike; movement Shift Step; control Anchor Sigil; defensive Gate Mantle; synergy Shift
+Convergence; ultimate Gateweaver Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Astral Harrier: Core Gate Strike; movement Shift Step; control Anchor Sigil; defensive Gate Mantle; synergy Shift
+Convergence; ultimate Astral Harrier Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Dreadknight [Drain/bruiser]
+Blood Oath: Core Ruin Strike; movement Drain Step; control Covenant Sigil; defensive Ruin Mantle; synergy Drain
+Convergence; ultimate Blood Oath Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP adjustments
+and animation needs separately.
+Void Reaver: Core Ruin Strike; movement Drain Step; control Covenant Sigil; defensive Ruin Mantle; synergy Drain
+Convergence; ultimate Void Reaver Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+Bone Regent: Core Ruin Strike; movement Drain Step; control Covenant Sigil; defensive Ruin Mantle; synergy Drain
+Convergence; ultimate Bone Regent Ascension. Define five skill ranks, cooldown rules, interrupt tags, PvP
+adjustments and animation needs separately.
+26 | Sample item drops and reward economy
+Example reward tables demonstrate viable paths and pity systems, not a final live balance commitment.
+Activity
+Example reward pool
+Protection
+Open-world elites
+Forged/Enchanted gear, craft fragments, rare appearance
+No severe streak of zero useful
+drops
+5-player heroic boss
+Relic equipment, runes, set token chance
+Token milestones by dungeon
+family
+10-person raid boss
+Relic/Mythic set piece, unique weapon pattern, prestige
+cosmetics
+Weekly earnable token and
+personal loot
+Ascendant dungeon
+Scaling challenge gear, upgrade mats, title cosmetics
+Score not solely based on loot luck
+Arena seasonal
+Cosmetic transmog, pennants, mounts, PvP currency
+No exclusive combat stat
+advantage
+
+===== PAGE 58 =====
+MOMENTUM LABS  |  ECLIPSE V3 PRODUCTION EXPANSION
+24
+Activity
+Example reward pool
+Protection
+Expedition endboss
+Memory fragments, run mutation unlocks, equipment
+components
+Bounded random pools and
+duplicate conversion
+Rarity generation pseudocode: eligiblePool = filter(items, encounter, level, mode, ownership); rarity =
+weightedRoll(table, difficulty, playerProtectionState); item = seededPick(eligiblePool[rarity]); affixes =
+boundedChooseWithoutReplacement(validAffixes, budget, exclusionTags); serverRecordAward(transactionID, runID,
+characterID, itemInstanceID); commit atomic transaction or rollback. Ensure rare drop claims do not re-roll from
+client packets.
+27 | Production decision log and next design
+expansions
+This is a living bible. Hermes should create structured addenda instead of rewriting working game specifications
+each time a new idea arrives.
+Design batch
+Next output
+Combat math
+Detailed damage formulas, poise thresholds, 80+ ability specs and gamepad animation matrices
+Class balance
+All 24 specialization trees, rank values, matchup tables and anti-synergy test cases
+Character art
+8 ancestry sheets, 16 NPC turnarounds, 30+ hair assets, armor modular fit maps
+Content
+30+ quest outlines, 10 dungeon concepts, 3 10-player raids, 40 bosses, lore encyclopedia
+Online
+Dedicated-server architecture, matchmaking simulation, 10-user load testing and security threat
+model
+UI
+Figma-like screen specifications, accessibility audit, HUD layout and controller navigation graph
+Commercial
+Staffing/budget estimates, licensing matrix, platform applications, release plan and marketing
+materials
+End of V3 expansion. The 37-page prior production bible follows as an appendix. Preserve both documents and
+record subsequent changes as dated editions.
+
+===== PAGE 59 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 1
+ECLIPSE
+REALMS OF THE FRACTURED
+EXPANDED CREATIVE + TECHNICAL PRODUCTION BIBLE
+Prepared for Momentum Labs / Hermes AI orchestration • 1 November 2026
+STATUS: CONCEPT / PREPRODUCTION. Original intellectual property. Nothing in this document implies built
+gameplay, approved console access, or finalized production financing.
+Original exploratory character/world concept collage. AI-assisted visual reference; not final game art or production asset.
+Design pillars: demanding action combat • high-depth competitive PvP • persistent fantasy exploration • highly
+inclusive character creation • player-authored builds • loot with memorable identity • cooperative survival
+expeditions • branching original story.
+
+===== PAGE 60 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 2
+01 | Executive product vision and design decisions
+• Identity: A premium dark-fantasy third-person action RPG with a persistent regional world, optional co-op story,
+session-based arenas and battlegrounds, curated dungeons/raids, and separate fast roguelite expeditions.
+• Inspiration boundary: analyze WoW Midnight, Elden Ring, and Nightreign for their design principles; do not
+reproduce copyrighted places, characters, lore, animations, UI designs, creature shapes, music, or gameplay assets.
+• First platforms: Windows PC production, then Xbox Series X|S and PlayStation 5 subject to partnerships, SDK
+access, certification, and performance testing. Crossplay and cross-progression are goals subject to platform and
+technical approval.
+• Business: initially premium purchase plus expansion model; no pay-to-win, no sold combat power, and transparent
+cosmetic-only additions if any. Monetization is a proposal requiring market research.
+• Foundational rules: all races, complexions, and body types can use all classes; story remains completable solo;
+5v5 arena is a first-class requested mode; separate PvE and PvP tuning; gameplay systems are server-authoritative
+online.
+• Not launch scope: six complete regions, 24 polished specs, 12-player raids, 40v40 warfare, intricate economy,
+esports, and all-platform day-one launch. Preserve these in the future-state vision, but stage implementation.
+Nonnegotiable playable quality bar
+• Skill-based dodge, guard, parry, spellcasting, stagger, targeting and responsive hit feedback
+• Race-complete and Black-hair-complete character creator, checked with actual in-engine previews
+• Full 1v1 and 2v2 vertical-slice matches with server validation before extending to larger ranked brackets
+• Data-driven inventory/loot affixes/talents and tested character persistence
+• One authored, emotionally interesting story quest and a distinct multi-phase boss encounter
+
+===== PAGE 61 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 3
+02 | Research findings and interpretation
+Source
+Verified/observed design input
+Eclipse product interpretation
+WoW Midnight
+Class/spec identities, social retention, raids, dynamic PvE
+endgame, PvP gearing and matchmaking, zones and housing.
+Blizzard Season 2 2026 official news confirms continued PvP
+season and arena training grounds.
+Do not simply copy WoW item/CC rules. Arena formats
+differ between historical versions and modern play.
+Elden Ring
+Weapon timing, posture, deliberate offense/defense,
+exploration through player curiosity, bespoke boss
+readability, environmental storytelling.
+Avoid copying exact bosses, weapon moves, map
+locations, silhouettes or underlying code.
+Nightreign
+Three-player expedition identity, two exploration days before
+final confrontation, variable loot/enemies, class ability
+synergies and persistent meta progression.
+Keep this mode isolated from non-timed open world; make
+solo scaling explicit.
+2026 Blizzard pre-expansion notes describe modified crowd-control diminishing returns, including a 16-second reset
+and immunity after two same-category applications in PvP. Treat this as a reference snapshot, not an immutable
+game-design truth. Our proposed rules must be simulated and playtested.
+Source record: https://worldofwarcraft.blizzard.com/en-us/news/24244455/
+Source record: https://worldofwarcraft.blizzard.com/en-us/news/24294369/les-ombres-s%C3%A9tendent-la-saison-2-de-midnight-com
+mence-le-19-ao%C3%BBt
+Source record: https://www.bandainamcoent.com/games/nightreign/gameplay-guide
+Source record: https://en.bandainamcoent.eu/elden-ring/elden-ring-nightreign
+Source record: https://dev.epicgames.com/documentation/unreal-engine/groom-components-and-assets-in-unreal-engine?lang=en-US
+
+===== PAGE 62 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 4
+03 | Core loops, game modes and retention
+• Exploration: Enter region > scout landmarks > fight/solve > discover secrets > improve build > unlock new
+routes.
+• Story: Accept authored mission > choose approach > experience consequence > advance act > update Echo
+Ledger.
+• Dungeon: Party preparation > mechanics/elite encounters > boss > reward draft/loot > upgrade equipment.
+• Expedition: Choose realm/seed > temporary upgrades > escalating instability > boss > bank approved persistent
+resources.
+• Arena: Select rated/unrated bracket > queue > prep room > timed match > rewards/MMR > replay analysis.
+• Battleground: Queue/party > role assignment > objective rotations > score > rewards > post-match metrics.
+• Crafting: Gather materials > discover recipes > choose stats/appearance > craft > maintain sink economy.
+Mode
+Party
+Rule of play
+Access
+Campaign
+1–4
+Host/party co-op; story remains fully solo-completable
+Core
+Fracture Run
+1–3
+Repeatable timed/untimed variants; authored encounter grammar
+Early expansion
+Arenas
+1v1/2v2/3v3/5v5
+Unrated/ranked; dedicated competitive maps
+Core PvP
+Battleground
+10v10 then
+15v15/20v20
+Objectives not kill count; team tactics
+Staged
+Dungeons
+1–4 / 4–6
+Unique mechanics, boss and rewards
+Core PvE
+Raids
+8–12
+Team coordination and encounters
+Future
+Open events
+Shard limits TBD
+World boss, public quest, faction conflict
+Future
+Housing
+Personal/guild
+Visual customization, social functions
+Future
+
+===== PAGE 63 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 5
+04 | World Bible: cosmology, chronology and
+geography
+• At the Dawn, seven Celestials divided a single impossible universe into the Seven Mandates: Life, Death, Time,
+Memory, Dominion, Chaos, and Creation. Each Mandate imposed a rule of reality.
+• The First Eclipse: their pact broke when the entity beneath Time refused the planned cyclic destruction of the
+mortal realms. Historians disagree about which Celestial betrayed the others.
+• Fractureborn: rare mortals who preserve memory through dimensional edits. This gives players a lore-based
+rationale for alternate timelines, dungeons, respawns and branching content.
+• A World Under Revision: rivers flow toward forgotten cities, factions remember incompatible victories, and relics
+retain fingerprints from futures that have not happened.
+• The Echo Ledger records specific player decisions. Consequences should be authored and finite; no uncontrolled
+generative dialogue should change permanent canon or quest outcomes.
+Chronology: canonical story-era events
+Period
+Event
+Present impact
+Year -3200
+The Seven Mandates established
+Historical ruins and seven relic schools
+-1800
+Solaran Accord founded
+Noble bloodlines and legal conflict
+-900
+The Hollow Chorus invades
+Umbryss exclusion and void rites
+-420
+Great Silence / celestial disappearance
+Religion becomes political
+-53
+Nhalor ice archives excavated
+Conflicting written history
+0
+Second Eclipse opens the story
+Player awakening
++1 onwards
+War of the Fractured
+Branching regional consequences
+
+===== PAGE 64 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 6
+Geography concept: regional relationship map
+Solara
+Nhalor
+Vaelwood
+Morvath
+Aetheris
+Umbryss
+CONCEPT WIREFRAME - NOT AN IMPLEMENTED SCREEN
+• Solara: Gold-and-obsidian trade kingdom, cosmopolitan capital, center of the Accord and first public sanctuary.
+• Vaelwood: Sentient canopy and ancestral memory groves; political split between balance-keepers and exploiters.
+• Morvath: Volcanic industrial dominion; labor rebellions and weapon-forge legends.
+• Aetheris: Skybound mathematicians and gravity engineers; dangerous accessible sky ruins.
+• Nhalor: Frozen memory repositories, contested records and giants beneath the ice.
+• Umbryss: Void-fractured geometry, hostile existential anomalies, high-end narrative reveal.
+
+===== PAGE 65 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 7
+05 | Races, origins, representation and body
+customization
+RACE, HERITAGE, COMPLEXION, BODY, VOICE, CULTURE, AND CLASS ARE DISTINCT CHOICES. Human avatars must
+represent Black players faithfully: rich dark skin tones with accurate undertones and lighting, authentic textured
+hairstyles, protective styles, and proportionally appropriate facial choices without stereotypes or stat penalties.
+Playable ancestry
+Identity / silhouette
+Customization caveat
+Human
+Broad global range; all complexions, facial traits, hairstyles
+No forced ethnic templates; full spectrum
+Aelari
+Tall luminous forest/sky humanoids, pointed ears
+Dark-skinned variants, textured hair supported
+Duskborn
+Shadow-marked humanoids with optional glyphs
+No race locked to villainous ethics
+Stonekin
+Stone-and-flesh ancestral beings
+Rich pigments, sculpted or fiber hair options
+Kharun
+Horned desert/volcanic civilization
+Horns compatible with braids and locs
+Tideborn
+Amphibious coastal humanoids
+Scales, fins and expressive facial rigs
+Veyran
+Feline-adjacent wild descendants
+Mane and braid variants; avoid caricature
+Astralbound
+Cosmic-glyph descendants
+Optional humanlike forms incl. deep tones
+Human hairstyle requirements: launch quality list
+• Short coils / cropped 4A-4C texture
+• High-top fade and shaped Afro
+• Low fade / taper fade / lineup and waves
+• Full round Afro and freeform Afro
+• Short twists, two-strand twists, twist-out
+• Starter locs, short locs, medium locs, long locs
+• Freeform locs, semi-freeform locs, high-top locs
+• Loc ponytail, half-up locs, loc bun
+• Barrel twists, rope twists, retwisted locs
+• Cornrows straight-back, intricate stitch braids
+• Box braids, knotless braids, microbraids
+• Fulani-inspired braids; culturally respectful research
+• Bantu knots, flat twists, braided buns
+• Natural curls, curly undercut, afro-puff
+• Braided beards, shape-up, goatee/full facial hair
+• Color gradients, dyed tips, accessories and beads
+Asset QA: hairstyles must have plausible density at hairline/crown, accurate scalp visibility, non-plastic strand
+shading, appropriate roughness, wind/helmet collision, multiple LODs, body physics performance, and hairline
+
+===== PAGE 66 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 8
+adjustments across head morphs. Do not assume one hair shader works for straight and tightly coiled hair. Validate
+in sunshine, night, interior, backlight, and skin-tone calibration scenes.
+Inclusion acceptance tests
+• At least 12 deep-to-light skin presets with continuous sliders and warm/neutral/cool undertones, using realistic
+subsurface and specular responses.
+• No ancestry locks on hairstyles or skin colors where anatomy allows; horns/ears require compatibility offsets.
+• Black male hero must be representable with mature facial structure, full beard, loc variations, armor-fit and helmet
+on/off without clipping.
+• Every presentation/body type supports strong and slender builds, scars, body markings, mobility options and
+modifiable pronouns/voice without gameplay penalty.
+• NPC population includes Black rulers, scholars, artisans, villains, heroes and ordinary civilians, not solely athletes
+or warriors.
+• Review all cultural details with compensated specialists rather than flattening real-world cultures into fantasy
+caricatures.
+Character creator layout concept
+RACE / ORIGIN / BODY
+FULL BODY 3D PREVIEW
+SKIN / FACE / HAIR
+Skin tones / undertones
+Coily hair / locs
+Braids / twists
+Hair length / physics
+Beard / edges
+Face morphs / nose
+Save presets
+CONCEPT WIREFRAME - NOT AN IMPLEMENTED SCREEN
+
+===== PAGE 67 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 9
+06 | Main characters and 5-act narrative treatment
+Kael Orun — Fractureborn / customizable protagonist
+• Identity: Player authored; default concept is a Black male knight with shoulder-length locs, deep-brown
+complexion and silver fracture markings, not a mandatory appearance.
+• Motivation: Find the truth of the missing family member erased from all but the player’s memories.
+• Secret: Contains an impossible eighth Echo, whose origin determines final ending.
+• Arc: From displaced survivor to decision-maker who rejects or accepts celestial authority.
+Commander Nia Sere
+• Identity: Black woman, cropped natural curls or long braids selectable in narrative design; battle-worn captain of
+the Solaran refuge.
+• Motivation: Protect citizens despite the aristocracy’s cover-up of fractures.
+• Conflict: Family served the faction implicated in the First Eclipse.
+• Gameplay: Early ally and co-op tactical support for tutorial missions.
+Archivist Tovan Rhyl
+• Identity: Aelari elder with textured white hair and deep complexion; scholar of contradictory timelines.
+• Motivation: Preserve the truth, even if truth destabilizes the people.
+• Twist: He remembers one prior run of the universe where he caused its fall.
+Ves Marrow
+• Identity: Duskborn smuggler and reluctant informer; woman with shaved sides and waist-length locs.
+• Motivation: Recover her sister from a memory prison.
+• Twist: Will betray player if price of the cure is ignored.
+High Regent Sevran Vale
+• Identity: Charismatic ruler of Solara; believes centralized coercion prevents existential collapse.
+• Motivation: Unite the realm through Dominion.
+• Twist: Public enemy in Act II but possible ally against the hidden antagonist.
+Eshara of the Unwritten
+• Identity: A former Celestial archivist without a stable body; reconstitutes from borrowed memories.
+• Motivation: Interrupt a planned eternal extinction cycle.
+• Twist: Beloved mentor responsible for engineering the Second Eclipse.
+The Chronovore / The God Beneath Time
+• Identity: An impossible entity shaped by timelines abandoned during the First Eclipse.
+• Motivation: End the Celestials’ control by consuming all possible futures.
+• Twist: Its defeat may erase many rescued lives, forcing a true moral choice.
+
+===== PAGE 68 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 10
+Five-act story outline
+Prologue — The Last Dawn
+Solara suffers a reality storm; the player sees different versions of the same doomed street. Nia recruits the
+survivor. Boss: Gatelight Sentinel. Choice: rescue civilians or secure the only surviving archive. The missed objective
+creates persistent consequences.
+Act I — Kingdoms of Ash
+Competing factions claim the first relic. Vaelwood spirits disclose that memory is traded. Quest chain: The Unnamed
+Bridge, The Weaver of Roots, Siege of Blueglass. Finale: the player learns a former friend has been edited out of
+history.
+Act II — The Seven Thrones
+Regional relic hunts reveal the Mandates. Eshara appears as helpful guide. Nhalor vaults expose seven contradictory
+histories. Choice: release archives publicly or hide them to avoid unrest. Boss: Choir of the Seventh Seal.
+Act III — War of the Fractured
+The Accord fractures, guild-level public conflict occurs as authored events, not forced open-world PvP. Cross-realm
+heroes exist as alternate echoes. Player chooses a coalition and sacrifices access to some faction convenience
+without losing critical progression.
+Act IV — The God Beneath Time
+Umbryss reaches into all lands. The apparent villain Sevran offers uneasy alliance. Eshara reveals her plan: replace
+the seven Mandates with mortal memory. Boss sequence: Three Lost Sovereigns and the Clockless Witness.
+Act V — Final Convergence
+Branching ending options: Restore the Seven, Free the Realms, Become the Eighth, or Accept the Hollow Silence
+(hidden route). Each conclusion has a playable epilogue and a distinct faction-state record.
+
+===== PAGE 69 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 11
+07 | Quest script samples and cinematic beats
+THE UNNAMED BRIDGE
+• Hook: After a celestial rupture, a bridge is visible only when the player carries a relic. A child insists her brother
+crossed it yesterday; the city ledger says he never existed.
+• Playable steps: A. Explore haunted market; B. defeat Lantern Wraith; C. recover a fractured family sigil; D. choose
+to restore brother (wipes a district’s memory) or preserve district memories (brother stays erased).
+• Outcomes: Reward: Echo Sigil, world-state flag, one of two dialogue trees. NPC continuity QA: verify references in
+Acts II and V.
+THE SILENT FORGE
+• Hook: In Morvath, miners secretly shape memory into weapons; an oppressive guild can weaponize their
+knowledge.
+• Playable steps: Three-path objective: infiltrate factory, ally with labor leaders, or negotiate with forge council.
+Boss: The Furnace Judge.
+• Outcomes: Reward: named weapon imprint and regional craft recipe; permanent moral reputation flag.
+A CROWN WITHOUT A FACE
+• Hook: King Sevran has lost every portrait and his name in half the realm. A traitor or supernatural influence may
+be responsible.
+• Playable steps: Investigate three contradictory witnesses; solve perspective puzzle in Aetheris; combat an Echo
+duplicate of the player.
+• Outcomes: Reward: unique class cosmetic, major political revelation, cross-act alliance opportunity.
+THE SEVENTH DOOR
+• Hook: Final act threshold; players revisit a first-area sealed chapel, altered by earlier decisions.
+• Playable steps: Dialogue recalls exact saved choices; siege encounter; character-centered boss gauntlet; four
+ending routes.
+• Outcomes: Reward: epilogue, account cosmetic, NG+ lore variation; preserve campaign replay choices.
+Sample cutscene, opening
+EXT. SOLARA EAST GATE — TWILIGHT. The moon swallows the last sun. A brass bell rings three times, stops, then
+rings backward. The same soldier falls from the parapet twice. NIA: "You remember him? Then you are not supposed
+to be here." KAEL / PLAYER: "Who decided that?" NIA: "That is the question they kill us for asking."
+
+===== PAGE 70 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 12
+08 | Classes, 24 specializations and combat roles
+Vanguard
+Core combat fantasy: measured heaviness, guard mastery and battlefield command.
+• Bulwark — mitigation tank/control; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Warbreaker — two-handed burst bruiser; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Bannerlord — team aura/frontline; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+Umbral Assassin
+Core combat fantasy: burst timing, stealth routes and punishing exposed targets.
+• Nightblade — mobility finisher; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Venomshade — damage-over-time attrition; design three signature talents, a capstone, PvP modifier and
+class-combo interaction.
+• Specter — counter/anti-caster; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+Arcanist
+Core combat fantasy: high-impact spells, resource juggling and terrain manipulation.
+• Pyroclast — fire burst; design three signature talents, a capstone, PvP modifier and class-combo interaction.
+• Frostweaver — zone control; design three signature talents, a capstone, PvP modifier and class-combo interaction.
+• Stormcaller — chain/cast pressure; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+Soulbinder
+Core combat fantasy: spirits, prepared curses, and distributed pressure.
+• Gravecaller — pet/undeath; design three signature talents, a capstone, PvP modifier and class-combo interaction.
+• Hexwright — curses and debuffs; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Lifeweaver — damage-to-heal hybrid; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+Wildwarden
+Core combat fantasy: adaptive shapeshifting and nature-based restoration.
+• Moonclaw — melee shapeshift; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Grovekeeper — primary healer; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+
+===== PAGE 71 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 13
+• Thornspeaker — summoned terrain/control; design three signature talents, a capstone, PvP modifier and
+class-combo interaction.
+Templar
+Core combat fantasy: vows, counterattack rituals, purification and protection.
+• Dawnshield — defensive support; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Judicator — holy melee damage; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Oracle — shield and heal; design three signature talents, a capstone, PvP modifier and class-combo interaction.
+Riftwalker
+Core combat fantasy: space-time positioning and temporary control of timing.
+• Chronomancer — time windows/support; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Phaseblade — melee blinks; design three signature talents, a capstone, PvP modifier and class-combo interaction.
+• Voidrunner — ranged disruptor; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+Dreadknight
+Core combat fantasy: dark armor, recovery through aggression and attrition.
+• Bloodreaver — sustain bruiser; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Frostgrave — slow/area denial; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+• Oblivion — anti-heal/execution; design three signature talents, a capstone, PvP modifier and class-combo
+interaction.
+
+===== PAGE 72 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 14
+09 | Talent trees, ability ranks, specializations
+Proposed model: character level cap 60 at launch (design target); 3 talent lanes per class (class core, spec, weapon
+mastery) with 20–30 authored nodes each at full scope. Prototype target: 12 class nodes + 10 spec nodes + 6
+weapon mastery nodes for two classes. Progression and currency totals require tuning, not hard-coded assumptions.
+CLASS
+Tier 1
+Tier 1
+Tier 2
+Tier 2
+Tier 3
+Tier 3
+SPECIALIZATION
+Tier 1
+Tier 1
+Tier 2
+Tier 2
+Tier 3
+Tier 3
+WEAPON MASTERY
+Tier 1
+Tier 1
+Tier 2
+Tier 2
+Tier 3
+Tier 3
+CONCEPT WIREFRAME - NOT AN IMPLEMENTED SCREEN
+• Character growth: at milestone levels choose active skills, passive talents, modifiers, or branch-exclusive
+keystones. Specify prerequisite graphs, node point cost, respec currency and per-mode scaling.
+• Skill tier 0 (unlearned); I (basic active); II (modifier choice); III (new combo/utility); IV (mastery); V (legendary class
+mastery). Avoid simply inflating damage each rank.
+• Talent types: basic passive, conditional trigger, resource conversion, mobility utility, group support,
+capstone/ultimate and trade-off modifiers.
+• Loadouts: minimum 3 saved class/spec/build profiles, with PvP template separately stored. Switching specs
+outside combat and outside ranked matches only.
+• Ability architecture data: AbilityID, class restriction, spec, rank, category, target rules, costs, cast time, cooldown,
+charges, animation tags, gameplay effects, PvP coefficients, PvE coefficients, visual/audio refs, prediction policy,
+telemetry and tests.
+• Respec: free or low-friction in the early game, with no punitive irreversible character traps. Display dependency
+conflicts and compare builds.
+
+===== PAGE 73 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 15
+Example talent chain — Vanguard / Warbreaker
+Node
+Requirement
+Mechanical effect
+Trade-off / counter
+Iron Entry
+Tier 1
+Guard counter adds 15 posture damage
+Visible counter window
+Momentum Debt
+Tier 2
+Charged heavy gains damage after sprint
+Reduced turn speed
+Rallying Rupture
+Tier 3
+Stagger generates short team damage window
+Longer cooldown in PvP
+Falling Crown
+Capstone
+One gravity slam after full posture break
+Interruptible long windup
+
+===== PAGE 74 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 16
+10 | Combat detail and boss encounter framework
+• Locomotion: Acceleration curves, intentional turn radius, sprint, jump, contextual climb and dodge; camera
+collision and lock-on testing.
+• Attack vocabulary: Standing light/heavy, charged heavy, sprint, dodge attack, jump attack, weapon art, class
+abilities, guard counter and counterspell.
+• Defense: I-frame dodge windows, parry active frames, guarded stamina depletion, posture damage, directional
+backstabs when appropriate.
+• Resource model: Health, stamina, class-specific focus/mana, posture, limited consumables and cooldowns.
+• Targeting: Soft aim for free-aim spells; hard lock-on with swap, camera obstruction and enemy size constraints.
+• Enemy readability: Consistent animation anticipations; audio attack tells; attack-specific contact and recovery
+timings.
+• Co-op rules: Boss scaling without health sponges, threat selection, revived allies, synchronized encounter phase
+and loot eligibility.
+• PvP differentiation: Separate coefficients, CC rules, movement immunity and damage caps; no PvE boss immunity
+or taunt semantics copied into PvP.
+Named boss: The Gatelight Sentinel
+• Appearance: shattered guardian with a rotating halo of broken clockstones and a giant weapon forged from the
+city gate; original silhouette and mechanics.
+• Phase 1: disciplined sword arcs, ground stomp, shield parry response, predictable overhead strike; players learn
+stagger and dodge.
+• Phase 2 at 55% health: halo detaches, arena segments briefly freeze in time; the boss telegraphs delayed
+shockwaves; one safe exit route always remains.
+• Phase 3 optional challenge: player breaks three memory anchors to prevent forced chronology reset; reward
+improves with optional execution.
+• Rewards: deterministic first-kill narrative relic; weighted drops for repeat kills; pity/duplicate protection for rare
+cosmetic, not mandatory power.
+• QA: each attack tested for telegraph timing, hitbox alignment, camera occlusion, shield interactions, co-op
+replication and accessibility cues.
+
+===== PAGE 75 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 17
+In-game HUD rough wireframe
+PLAYER / LV 24
+BOSS: THE GATEWARDEN
+MISSION / TRACKER
+HP / STAMINA / FOCUS
+ABILITIES 1 - 6 / DODGE
+MINIMAP / PINGS
+3D ENCOUNTER VIEW
+CONCEPT WIREFRAME - NOT AN IMPLEMENTED SCREEN
+
+===== PAGE 76 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 18
+11 | PvP foundational specification and brackets
+USER PRIORITY: real 1v1, 2v2, 3v3, 5v5 arenas, plus robust objective battlegrounds. These are explicit targets, not
+optional stretch modes. Separate unranked, ranked, custom duel, tournament/spectator and training variants, with
+staggered implementation.
+Bracket
+Design rules
+Balance emphasis
+1v1 Duel
+Best-of-3 optional; duel challenge, arena queue, friendly
+toggles; mirrors allowed
+No healer mandatory; utility and burst fairness
+2v2
+Rounds or last-team-standing; 1 healer max as tested; solo
+duo queue choice
+High CC risk; anti-stall rules
+3v3
+Core competitive team format; full utility synergies
+Kill setups, peel, interrupts, swaps
+5v5
+First-class ranked large-arena experience; 1–2 supports; visible
+objectives optional
+Clear telegraphs, AoE control and spectator readability
+Unrated
+Flexible group composition, backfill by mode policy
+Fast match access and practice
+Custom games
+Password/private matches, map/format switches
+Scrims, testing, community
+Match lifecycle
+• Queue: region and latency filters, MMR bracket, role composition, team size and queue estimates.
+• Prep: map loading, assigned spawns, 45–60 second preparation (initial design target), consumable restrictions and
+locked talents.
+• Start: gates open, match timer, server authority. No PvE item effects from nonapproved lists.
+• Victory: defeat opponent team or rule-specific objective. In long matches, ramping anti-stall dampening or
+shrinking high-threat zone; never surprise sudden death.
+• End: reconnect/grace handling, anti-leaver rules, ratings, team/individual replay stats and fraud detection.
+• Competitive telemetry: cooldown use, casts interrupted, teammates peeled, objective contribution, healer output,
+damage to kills, CC overlap and connection quality.
+Sample 3v3 arena battle plan
+Vanguard/Bannerlord + Arcanist/Frostweaver + Wildwarden/Grovekeeper: initiate a corner trap, protect Arcanist
+casting, use an unshared control category to isolate opposing healer, coordinate target swap at enemy trinket
+cooldown, then sustain through counter-pressure. Counterplay: interruption, line-of-sight, dispersal and timing. This
+is an example comp, not a guaranteed best strategy.
+
+===== PAGE 77 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 19
+Arena wireframe — Shattered Court
+ARENA: SHATTERED COURT
+SPAWN A
+SPAWN B
+COVER / PILLAR
+ELEVATED WALKWAY
+CONCEPT WIREFRAME - NOT AN IMPLEMENTED SCREEN
+
+===== PAGE 78 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 20
+12 | Crowd control, PvP balance and competitive
+integrity
+Eclipse proposed crowd control: Stun, Disorient, Fear, Root, Silence, Knockback, Displacement, Slow and Blind.
+Define shared diminishing-return category taxonomy; hard CC must be expensive enough that a team cannot
+permanently prevent control of one player.
+• Prototype DR option A: first full category CC, second 50% duration, next immune until a 16-second category reset
+(inspired by 2026 WoW changes). Test against alternative three-step DR; do not claim balance until empirical data.
+• Hard CC duration caps and standardized break-free resources; unbreakable chains prohibited. Give primary healer
+meaningful interrupt and escape counterplay.
+• Arena healing dampening begins after a defined elapsed time and increments visibly; threshold depends on
+bracket. Favor predictable rules over secret anti-stall effects.
+• Burst window design: powerful group sequences should be readable through sound, VFX, HUD and telegraphs,
+with counters such as dispel, line-of-sight and proactive defense.
+• Stacking restrictions: unique haste aura, damage resistance cap, speed cap, vulnerability cap, damage-to-heal
+cap, summon cap and reflect chain prevention.
+• PvP-only modifiers stored by ability ID/spec and patch version. Gear item-level normalization, banned PvE proc list,
+competitive trinkets and stats budgets.
+• Ranked abuse prevention: server validated damage/movement/inventory, bot detection, network anomaly flags,
+match-fixing review, reports, bans and appeals.
+• Ratings: hidden skill MMR and visible rank/rating, separate queues and ladders by bracket, team size matched,
+seasonal rollover and transparent rewards.
+• Accessibility and fairness: color-blind readable effects, captioned sound signals, high-contrast team outlines and
+no purchasable competitive advantage.
+
+===== PAGE 79 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 21
+13 | Team synergy and counter-composition atlas
+Pair
+What complements each other
+Counterplay
+Frostweaver + Specter
+Root/line-of-sight setup, silence on exposed caster
+Cleanse + flanking + spell reflect
+Bannerlord + Pyroclast
+Damage-window banner + telegraphed large burst
+Disengage from banner + interrupt cast
+Grovekeeper + Bloodreaver
+Sustain frontliner and deny attrition win
+Heal cut + ranged kiting
+Chronomancer + Nightblade
+Rewind escape lets rogue commit to execute
+Bait rewind, force cooldown
+Dawnshield + Stormcaller
+Peel/ward allows safe ranged pressure
+Split attention and dive support
+Thornspeaker + Frostgrave
+Terrain zone control and slowing objective holders
+Vertical entry, cleanse and area clear
+Hexwright + Venomshade
+Stacked affliction pressure across targets
+Timed dispel and anti-dot tools
+Oracle + Warbreaker
+Barrier protects predictable power attack
+Disruption and spacing
+Voidrunner + Phaseblade
+Blink displacement into precision burst
+Line-of-sight + stun breaker
+Gravecaller + Bannerlord
+Pet swarm under coordinated army aura
+AoE summons with resource cost
+Composition doctrine: create push-pull synergies with visible opportunity cost. Every 2v2/3v3/5v5 team comp must
+have an accessible response. Build algorithmic tools that sample pick rates, match outcomes, role mix, mirror win
+rate and skill-band slices. Never balance solely from top-100 player data.
+5v5 example compositions
+• Balanced control: Bulwark + Nightblade + Frostweaver + Grovekeeper + Oracle. Strong survival and chain setup;
+weaker continuous mobility.
+• Dive and collapse: Warbreaker + Phaseblade + Stormcaller + Judicator + Lifeweaver. Dangerous cooldown rush;
+susceptible to kiting/peel.
+• Attrition siege: Frostgrave + Hexwright + Thornspeaker + Gravecaller + Dawnshield. Strong objective pressure;
+weak against fast flag rotations.
+• Anti-caster disruption: Specter + Voidrunner + Bannerlord + Pyroclast + Oracle. Denies casts and controls angles;
+vulnerable to sustained physical bruisers.
+
+===== PAGE 80 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 22
+14 | Battlegrounds and faction warfare
+Design battlegrounds so teamwork, objective coordination and positioning trump the scoreboard damage meter.
+Ranked battleground composition rules must avoid a single required meta and require role identity. Players can opt
+into faction PvP; PvE narrative does not force open-world PvP.
+Map
+Team size
+Objective
+War of the Five Beacons
+10v10
+Domination across three rotating active beacons; map-wide buff after controlled circuit.
+The Relic Run
+10v10
+Two-team capture-the-relic with movement debuffs for carrier and alternate tunnels.
+The Ember Caravan
+10v10
+Escort/defense asymmetric alternating rounds; side objectives shift route.
+Citadel Breach
+15v15
+Siege gates, resource crews, inner-core capture, destructible towers.
+Tide of Dominion
+20v20 future
+Resource harvest and control; three linked fronts and transport mechanisms.
+The Rift Convergence
+Large future event
+Multi-stage faction warfare, controlled by shard budgets and PvE opt-out.
+Sample battleground wireframe
+BATTLEGROUND: WAR OF THE FIVE BEACONS
+TEAM A
+TEAM B
+NORTH
+CENTER
+SOUTH
+CONCEPT WIREFRAME - NOT AN IMPLEMENTED SCREEN
+• Anti-zerg: diminishing returns on massive group stacking, objectives that reward coordinated splits, multiple
+routes and limited sightlines.
+• Respawns: wave-based by objective, safe spawn immunity, no spawn camping, reconnect grace and AFK
+protection.
+• Objectives: interaction channels with telegraphs, contested states, capture speed, time-to-win scoring, overtime
+and tiebreaker definitions.
+• Ranks and rewards: PvP gear currency, appearance items, titles, mounts, optional arena cosmetics; no exclusive
+high-power weapons necessary for campaign play.
+
+===== PAGE 81 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 23
+• Classes interact differently with objectives but every roster has a viable action: defense, scouting, transport,
+disruption, healing, combat and crafting siege supplies.
+
+===== PAGE 82 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 24
+15 | Inventory and item rarity taxonomy
+Rarity
+Color token
+Design intent
+Common
+Gray
+Base stats, plain designs, early trash/salvage
+Uncommon
+Green
+One minor random affix
+Rare
+Blue
+One to two impactful affixes, modest upgrade potential
+Epic
+Purple
+Two or three affixes, socket or trait roll
+Legendary
+Gold
+Hand-authored unique power and quest/boss provenance
+Mythic
+Crimson
+Multi-step authored quest evolution, limited power budget
+Relic / Celestial
+Prismatic
+Narrative artifact with build-changing options and strict rarity gating
+Item level is separate from rarity. A newly acquired Rare can outperform an old Legendary in raw statistics, while
+the Legendary may retain a unique build interaction. Establish deterministic budget curves so rarity does not
+automatically mean all stats are larger.
+• Equipment slots: main hand, off hand, head, chest, hands, legs, feet, shoulders, cloak, neck, two rings,
+trinket/relic, class artifact; confirm UI budget.
+• Weapon families: straight/curved sword, colossal sword, spear, halberd, axe, mace, dagger, bow, staff, catalyst,
+shield, whip, gauntlets; each distinct movement and animation matrix.
+• Stat pools: Might, Dexterity, Intellect, Resolve, Vitality, Endurance, crit, haste, mastery, armor penetration, block
+efficiency, healing, warding, elemental resistance and resource regen.
+• Item tags: level requirement, class/weapon compatibility, binding, trade state, item type, rarity, source, unique
+equip, season, upgraded tier, durability and cosmetic appearance.
+• Loot rights: personal instanced drops by default, party trade window for eligible gear, deterministic boss tokens,
+weekly lockouts only if designed around player time.
+• Inventory: stack rules, overflow delivery, filtering, sorting, favorite/lock to prevent accidental salvage, visual
+comparison, controller navigation.
+
+===== PAGE 83 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 25
+16 | Loot sources, drop tables, affixes and
+anti-frustration
+Example weighted loot pool — elite boss (illustrative only)
+Outcome
+Weight
+Rule
+Rare equipment
+40%
+Stat-selected class-usable fallback
+Epic equipment
+25%
+Affix-roll from controlled pool
+Legendary imprint component
+10%
+Can assemble named item via tokens
+Materials / currency
+20%
+Always useful for deterministic progression
+Cosmetic / collectible
+5%
+Duplicate protection or conversion
+A real implementation should support separate independent roll channels so necessary currency is guaranteed and
+cosmetic drops do not compete with combat necessities. The above weights are illustrative, not certified balance
+targets.
+• Affix taxonomy: offensive flat or percentage budgets; defense; utility; conditional on dodge, parry, stance, time,
+elemental exposure, ally aid, target type and role.
+• Prefixes/suffixes draw from allowed pools by slot, rarity and level; invalid combo constraints prohibit multiplicative
+explosive stacks.
+• Gear set system: 2-piece utility, 4-piece spec interaction, optional 6-piece cosmetic evolution; never render single
+set mandatory in all modes.
+• Named legendary examples: Ashwake Greatblade (charged attack ignites after perfect guard); Mirrorwake Staff
+(next spell echoes at reduced power after successful interrupt); Verdant Oath Ring (healing ally cleanses a minor
+rooted state on internal cooldown).
+• Crafting: blacksmithing, weaving, runesmithing, alchemy, cooking, enchanting; player craft specialties, ingredient
+sources and repair/recycle sinks.
+• Upgrades: linear power increments controlled by material gate; branching legendary trait evolution through
+quests. Never require random failure that destroys valuable items.
+• Pity safety: tokens, duplicate protection, bad-luck protection for cosmetic farms and deterministic paths for
+baseline combat viability.
+• Trading: audit logs, fraud detection, no real-money item trading support; bind rules to prevent endgame raid
+power laundering.
+• PvP fair play: normalize raw stat budgets, allow moderate build expression via curated PvP affix pools and no
+overpowered PvE proc interactions.
+
+===== PAGE 84 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 26
+17 | Named items, gear sets and economy examples
+Item
+Rarity/type
+Signature effect
+Ashwake, the Gatelight Blade
+Legendary greatsword
+Perfect guard creates a short cone of ember damage, internal 18s
+cooldown; PvP coefficient reduced.
+The Chronist’s Second
+Legendary focus
+Once per minute, a nonultimate spell is repeated at 40% power after
+a completed interrupt.
+Sere’s Last Standard
+Epic cloak
+A nearby ally gains brief resilience after you rescue an ally, limit one
+group effect.
+Heart of Unwritten Names
+Mythic ring
+Echo Ledger quests upgrade one of three mutually exclusive traits.
+Rootmother’s Promise
+Legendary staff
+Excess healing creates capped temporary barrier, diminished in
+ranked arenas.
+The Hollow Compass
+Relic trinket
+Reveals temporary world secrets, limited use during expedition.
+Veil of Ten Shadows
+Epic dagger pair
+Alternating dodge and attack rhythm grants a capped mobility
+charge.
+Stonebound Legacy
+Epic plate set
+2pc: reduced stagger taken; 4pc: guard counter briefly empowers
+one ally.
+Currency architecture
+• Crownmarks: ordinary spend and repair, abundant through quests and trade.
+• Aether Shards: deterministic high-tier upgrades, earned in dungeons/weekly goals.
+• Glory Seals: fair PvP progression and cosmetic currency, never purchased for advantage.
+• Fracture Embers: expedition meta-progression unlocks, not direct arena power.
+• Echo Fragments: narrative upgrade catalyst, with strict lore and item provenance.
+• Economic health dashboards: generation/sinks, inflation, duplicated item anomaly, trade volumes and
+time-to-upgrade by player segment.
+
+===== PAGE 85 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 27
+18 | Expedition roguelite system and world
+persistence
+• Expedition uses a selectable map seed with variable enemy placements, side objectives, loot caches, hazards,
+mini-events and biome modifiers. Major boss and critical routes are authored for readability.
+• During a run, temporary character level begins at a normalized baseline; permanent class identity survives while
+item affixes and upgrades are run-scoped.
+• Daily-style arc: exploration phase A, environmental escalation/B boss, final guardian confrontation. Provide shorter
+mode and accessibility option for timers.
+• Solo scaling: enemy count, enemy HP and objective travel time need dedicated tuning, not simply reducing
+damage or enemy levels.
+• Expedition cards display recommended party size, time estimate as target, enemy ecology, extraction reward and
+modifiers.
+• Players keep awarded Fracture Embers, account cosmetics and approved rare materials; temporary weapons
+disappear at extraction.
+• Cross-mode economy firewall prevents unlimited speed-run farming from dominating PvP or invalidating campaign
+gear progression.
+• Replayability must come from meaningful choices, alternate encounters and surprise events, not endless empty
+travel.
+
+===== PAGE 86 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 28
+19 | UX/UI, controller, accessibility and cinematic art
+• Character creation: 3D full-body realtime preview with accessible presets, body/face/hair tabs, skin undertone and
+texture selectors, scars, voice, lineage, pronouns, ancestry lore and class preview.
+• Combat HUD: minimal while exploring; boss view, stamina, cast warnings, ally party indicators, lock-on target
+feedback and objective prompts under heavy combat.
+• Inventory: side-by-side equipped/candidate item comparison, raw and normalized PvP stats, rarity icon + text,
+affixes, upgrade preview and stat source.
+• Talent tree: full zoomable 3-lane representation, connectors, prerequisites, spec comparison, respec preview,
+loadout saves and controller navigation.
+• PvP: queue from social hub, clear match rules/rank/rewards, dedicated match scoreboard, CC DR rings, ally
+cooldown UI and scoreboard abuse report.
+• Accessibility: customizable controls including hold/toggle, high-contrast highlights, subtitle sizing, subtitles for
+crucial environmental sound, camera shake controls, flash reduction and input-device parity.
+• Art pillars: celestial black/gold, fractures of amethyst light, unique region palettes, readable status colors; protect
+silhouette and visibility over excessive particles.
+• Sound: orchestral/organic percussion balanced with region-specific instruments; avoid implying that any existing
+protected game soundtrack can be repurposed.
+• Performance: frame-time budgets and scalable feature tiers for PC/console, animation LODs, hair card LOD
+alternatives, particle and NPC density budgets.
+
+===== PAGE 87 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 29
+20 | Multiplayer engineering, persistence and
+security
+• Unreal Engine C++ gameplay modules, Blueprint designers, Gameplay Ability System for effect replication and
+data-driven attributes; Enhanced Input for device control.
+• Server-authoritative damage, hit validation, movement correction, arena outcomes, currency, inventory item
+award and quest-state transitions.
+• Client prediction for actions where appropriate; reconciliation paths must avoid phantom hits, overlong rollback
+and input latency issues.
+• Crossplay goals: identity linking, cross-platform entitlements, party invites, platform privacy, voice/text
+moderation, region-aware matchmaking. Platform approval is a blocker to shipping, not a routine checkbox.
+• Services: auth, player profile, character saves, inventory service, queue/matchmaking, parties/guilds, commerce if
+applicable, event configuration, telemetry and admin moderation.
+• Persistence: transactional PostgreSQL schema or comparable managed storage, immutable item grant ledger,
+dedupe idempotency keys, and inventory rollback rules.
+• Session backend: dedicated game servers for ranked and controlled co-op, health checks and server lifecycle
+orchestration. Public world sharding is a later design decision.
+• Security: never trust client-side currency or damage values, versioned data migrations, sealed content packages,
+anti-cheat integration, server logs with retention/privacy protections.
+• QA matrix: packet loss, latency, disconnect, reconnect, out-of-sync states, gamepad unplug/replug, ultrawide
+support, localization, anti-exploit tests.
+
+===== PAGE 88 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 30
+21 | Core data models and content schemas
+Character
+character_id, account_id, ancestry_id, skin_tone, undertone, face_morphs, hair_asset_id, hair_color, beard_asset_id,
+body_preset, voice_id, class_id, spec_id, level, progression_version, narrative_flags.
+Ability
+ability_id, rank, class, spec, tags, cost, cooldown, cast, montage, effects, conditions, pve_scalars, pvp_scalars,
+DR_group, replication_policy, UI/icon refs.
+ItemInstance
+instance_guid, template_id, item_level, rarity, rolled_affixes, sockets, upgrade_branch, owner_id, binding,
+created_at, provenance_source, unique_equip.
+LootTable
+table_id, rolls, entries, weights, conditional_tags, guaranteed_grants, bonus_channels, pity_bucket, duplicate_rule,
+audit_version.
+Match
+match_id, mode, map_id, season, roster, mmr_snapshot, server_region, ruleset_version, created_at, outcomes,
+fraud_flags, event_summary.
+QuestState
+character_id, quest_id, objective_states, decisions, NPC_reputations, reward_claimed, version, player_timeline_flags.
+FractureRun
+run_id, seed, difficulty, roster, modifiers, temporary_levels, temporary_inventory, milestones, boss_id, outcome,
+rewards_ledger.
+Required design workflow: write schema migration, example fixtures, validation constraints, authoritative owner,
+replication requirements, and integration tests before populating dozens of content records.
+
+===== PAGE 89 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 31
+22 | Boss database, enemy ecology and encounter
+templates
+Enemy
+Region
+Role/tutorial mechanic
+Lantern Wraith
+Solara
+Teleporting caster; teaches counterspell/lock-on
+Accord Exile
+Solara
+Humanoid shield melee; teaches parry and guard counter
+Rootbound Hunter
+Vaelwood
+Stalking bow user; teaches cover and audio tells
+Bloom Devourer
+Vaelwood
+Growth-area monster, plant hazards, escape window
+Furnace Apostate
+Morvath
+Flame heavy, heat pressure, predictable lanes
+Ashbound Duelist
+Morvath
+Aggressive blade chain, baited openings
+Skyward Archivist
+Aetheris
+Arcane ward, position swap, ranged dodge check
+Ice-Tomb Keeper
+Nhalor
+Deliberate massive enemy with breakable armor
+Chronal Residuum
+Umbryss
+Copies player prior animation with delayed timing
+• Boss format fields: identity/biography, arena diagram, approach quest, encounter phases, move frame windows,
+dialogue, cutscene triggers, accessibility tells, danger telegraphs, loot pools, multiplayer scaling, achievement
+challenges and QA.
+• Additional boss concepts: The Thorn Matriarch (living forest guardian); The Furnace Judge (forge jailer); The Sky
+Unbound (gravity dragon); The Hollow Chorus (many-voiced memory monster); The Chronovore (time-eating final
+antagonist).
+• Boss diversity: not every climax is a humanoid sword duel. Use spatial, puzzle, chase, team coordination and
+resource-management encounters with meaningful counterplay.
+
+===== PAGE 90 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 32
+23 | Prototype playbook, milestones and acceptance
+gates
+Phase
+Milestone
+Gate to exit
+P0
+Tools and design
+Repo, Unreal version, C++ build, input specification, art/legal source record, hardware benchmark.
+P1
+First fight
+One character, two enemies, dodge/block/parry, hit reactions, checkpoint, packaged build.
+P2
+Ashen Gate slice
+Single polished zone, one authored quest, Gatelight boss, loot and basic character creator.
+P3
+Progression
+One spec per two classes, small talent tree, item rarity and affixes, persistent saves.
+P4
+Duel netcode
+1v1 authoritative multiplayer, latency benchmark, disconnect handling, duel queue.
+P5
+Team combat
+2v2/3v3 arena, CC DR, class synergies, gear normalization, ranked test telemetry.
+P6
+Larger PvP
+5v5 arena and first 10v10 battleground, performance and ability clarity.
+P7
+Expedition
+3-player run, seed variation, boss, run-specific loot and permanent reward path.
+P8
+Scaled production
+Expanded cast/regions, art, audio, accessibility, content, console partnerships.
+Every phase must deliver: working source, successful build record, screenshots/video evidence, changelog,
+automated test output, reproducible manual QA and a prioritized unresolved-bugs list. No acceptance based
+exclusively on an agent assertion.
+
+===== PAGE 91 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 33
+24 | AI agent orchestration: Hermes + specialist team
+• Director: Manage requirements, design decisions, architecture approvals, scope and dependency ledger.
+• Research: Verify official systems, competitor comparisons, licenses, platform prerequisites, benchmark references.
+• Narrative: Write five-act outline, lore, dialogue, quest states, cultural review, ending matrix.
+• Character: Races, skin shaders, Black hair assets, face morphs, animation fitting and inclusion QA.
+• Gameplay: Combat C++, GAS, motion, camera, attributes, hit detection and enemy interactions.
+• PvP: Arenas, battle maps, DR, balance coefficients, rank/MMR, server validation.
+• Loot: Rarity, inventories, tables, weights, affixes, crafting, progression economy, audit integrity.
+• Environment: World art, level metrics, modular assets, navigability and World Partition.
+• Backend: Accounts, matchmaking, persistence, network correctness, security and telemetry.
+• Art/Audio: Original assets, UI, VFX, sounds, provenance, performance and readability.
+• QA: Test harnesses, performance, multiplayer scenario matrix, regression and reporting.
+• Release: CI packaging, agreements, build versioning, platform-readiness checklist.
+Parallel work safeguard
+One system owner per code area; each agent uses its own branch/task identifier. Agent must read VISION,
+ARCHITECTURE, DATA_SCHEMAS and relevant task. All merges go through director review, tests and integration
+build. Shared files require locks or serialized ownership. Separate research conclusions from generated ideas.
+Hermes kickoff directive — copy into agent instructions
+You are operating the Eclipse project for Momentum Labs. Read this PDF in full. Create a machine-readable index
+and generate authoritative Markdown GDD, TDD, World Bible, PvP Design, Class Matrix, Loot System, Character
+Representation Spec, UI Wireframes, Content Plan, Backlog, and Research Log. Preserve all explicit user
+requirements including Black male customization, authentic locs/braids/coils, 1v1/2v2/3v3/5v5 arenas,
+battlegrounds, distinct class synergies, rarity tiers and specialization trees. First audit available hardware/tools and
+select a tested Unreal version. Scope Phase P0 and P1, implement only in a new isolated project directory, run
+builds/tests, report truthfully, and request any console SDK access through official developer programs. Do not
+overwrite unrelated apps or repos. Never claim a prototype works unless launched and tested.
+
+===== PAGE 92 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 34
+25 | Momentum Labs coming-soon project and
+follower funnel
+• Project title: Eclipse: Realms of the Fractured. Label: Original fantasy action RPG, IN PREPRODUCTION.
+• Website listing: Momentum Labs > Games > Eclipse. Visual cover, platform targets (PC, Xbox Series X|S, PS5),
+one-paragraph pitch, gameplay pillars and original concept image.
+• Follower action: email signup with explicit consent, privacy notice, anti-spam measures, unsubscribe mechanism
+and optional platform preference.
+• Updates: monthly development journal with verified screenshots or gameplay clips, design diaries, concept art
+explorations, feature progress and limited prototype testing invite.
+• Do not market art concepts as in-engine gameplay or platform availability as approved. Clearly disclose concept
+renders.
+• Site CMS data: project_id, slug, title, synopsis, status, platform_targets, genre, images, media_labels,
+feature_bullets, changelog, signup_list_id, public_update_at, SEO and social preview.
+• Optional development tracker: publicly display the planned/actively developing/working/tested status of high-level
+features with editorial approval.
+Public teaser copy
+Eclipse: Realms of the Fractured — Enter a dark-fantasy universe where kingdoms, memories and the laws of reality
+collide. Forge your own hero, pursue an original branching campaign, master demanding action combat, and
+compete in high-stakes arenas and objective battlegrounds. Explore the world alone or with friends. Follow
+development of this ambitious upcoming Momentum Labs project.
+
+===== PAGE 93 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 35
+26 | Production risks, staffing and decision register
+Risk
+Severity
+Mitigation
+Content-scale overreach
+Critical
+Ship one polished demo before six-world roadmap and full MMO infra.
+Combat quality
+Critical
+Frame-time, input latency, boss tests, skilled players, controller parity.
+Network authority and cheating
+Critical
+Dedicated server tests, anti-exploit event ledger, fuzz/property tests.
+Race/hair quality
+High
+Art reference consultants, textured hair specialists, hardware LOD testing.
+PvP class balance
+High
+Modes by bracket, separate stats, telemetry and frequent controlled patches.
+Console gates
+High
+Get legal agreements/devkits; do not confuse planned support with approved port.
+IP infringement
+High
+Avoid game-specific protected expressions and competitor assets.
+Live economy exploits
+High
+Transaction audit, rewards idempotency, anti-dupe tests.
+AI-generated design inconsistency
+High
+Canonical docs, content review, scoped agents, continuous integration.
+Budget and staffing
+High
+Scope reduction, contractors, staged funding, milestone criteria.
+Rough scale: a prototype can be achieved with a small AI-assisted team and assets, but a polished multiplatform
+online action RPG requires dedicated human gameplay engineers, technical artists/animators, designers,
+backend/QA staff, accessibility review and professional console publishing relationships. All schedules and costs are
+subject to a staffing plan and detailed estimates.
+
+===== PAGE 94 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 36
+27 | Official sources and further research queue
+• Blizzard Midnight PvP season: https://worldofwarcraft.blizzard.com/en-us/news/24294369/les-ombres-s%C3%A9te
+ndent-la-saison-2-de-midnight-commence-le-19-ao%C3%BBt
+• Blizzard crowd-control changes: https://worldofwarcraft.blizzard.com/en-us/news/24244455/
+• Nightreign gameplay guide: https://www.bandainamcoent.com/games/nightreign/gameplay-guide
+• Nightreign official: https://en.bandainamcoent.eu/elden-ring/elden-ring-nightreign
+• UE groom documentation: https://dev.epicgames.com/documentation/unreal-engine/groom-components-and-asse
+ts-in-unreal-engine?lang=en-US
+• Unreal GAS:
+https://dev.epicgames.com/documentation/en-us/unreal-engine/gameplay-ability-system-for-unreal-engine
+• UE World Partition:
+https://dev.epicgames.com/documentation/en-us/unreal-engine/world-partition-in-unreal-engine
+• Unreal Lyra: https://dev.epicgames.com/documentation/en-us/unreal-engine/lyra-sample-game-in-unreal-engine
+• Xbox publishing: https://developer.microsoft.com/en-us/games/publish/
+• PlayStation developer: https://partners.playstation.net/
+• Epic Online Services: https://onlineservices.epicgames.com/en-US/
+Further research needed before implementation: authoritative 2026 live PvP bracket/reward comparison,
+animation/capture contractors, platform SDK requirements, third-party anti-cheat terms, dedicated-server costs,
+hairstyles/skin tone validation with domain experts, regional rating and privacy compliance, competitive genre
+market sizing, commercial music rights and user-generated content moderation.
+
+===== PAGE 95 =====
+MOMENTUM LABS  /  ECLIPSE  /  PREPRODUCTION DESIGN
+PAGE 37
+28 | Open decisions and first two-week task ledger
+• Decide true launch ambition: buy-to-play co-op action RPG with online arenas is the recommended shippable first
+game; full MMO-style persistence can be a staged expansion.
+• Approve working name and original IP clearance research; complete a basic trademark/domain review before
+major promotional investments.
+• Choose two prototype classes: Vanguard and Arcanist, with one authored specialization each.
+• Choose two initial ancestries: Human and Aelari; build all Black hero creator features before expanding races.
+• Validate initial hero reference: adult Black male, deep brown skin, authentic shoulder-length locs, natural hairline,
+realistic facial geometry, adjustable physical build, compatible helmet.
+• Approve PvP founding brackets and formats: custom 1v1, tested ranked 2v2 then 3v3, then 5v5, then 10v10
+battleground. No bracket should be quietly removed.
+• Specify expected hardware and identify Unreal installation, licensing, repos, available GPUs and build tools.
+• Start P0: documents, requirements numbering, automated unit tests and first C++ third-person project; keep
+Momentum Labs production apps untouched.
+• Launch simple coming-soon landing page, collect followers with consent, publish honest devlog at milestone
+cadence.
+Final instruction to Hermes: Expand the precise systems first, implement and prove one real playable slice, and
+maintain a live source-of-truth of what is planned versus working. The purpose of this bible is to make a large
+ambition buildable, not to assert the entire MMO can be generated automatically.
