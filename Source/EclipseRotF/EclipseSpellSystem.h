@@ -7,8 +7,9 @@
 #include "UObject/NoExportTypes.h"
 #include "EclipseSpellSystem.generated.h"
 
-#include "EclipseCharacter.h" // For EClass, EAncestry
+#include "EclipseCharacter.h" // For EClass, EAncestry, EResourceType
 #include "EclipseWeaponSwap.h" // For EWeaponStatusEffect (elements)
+#include "EclipseClassRoles.h" // For EClassRole
 
 UENUM(BlueprintType)
 enum class ESpellTier : uint8
@@ -20,7 +21,7 @@ enum class ESpellTier : uint8
     Ultimate       UMETA(DisplayName = "Ultimate - Flow cost, devastating, long CD"),
     DualAffinity   UMETA(DisplayName = "Dual Affinity - combines 2 elements, unique hybrid effect"),
     WeaponArt      UMETA(DisplayName = "Weapon Art - L2, weapon-specific, medium CD"),
-    Defensive      UMMETA(DisplayName = "Defensive - block, shield, heal, cleanse, buff"),
+    Defensive      UMETA(DisplayName = "Defensive - block, shield, heal, cleanse, buff"),
     Utility        UMETA(DisplayName = "Utility - CC, teleport, buff, debuff, summon, terrain"),
     Ritual          UMETA(DisplayName = "Ritual - very long cast, party-wide, raid-level"),
 };
@@ -38,7 +39,7 @@ enum class ESpellShape : uint8
     Party          UMETA(DisplayName = "Party - affects all allies in range"),
     Aura           UMETA(DisplayName = "Aura - persistent around caster"),
     Summon         UMETA(DisplayName = "Summon - creates a minion/construct"),
-    Projectile     UMMETA(DisplayName = "Projectile - travels to target"),
+    Projectile     UMETA(DisplayName = "Projectile - travels to target"),
     Wall           UMETA(DisplayName = "Wall - creates a barrier"),
     Zone           UMETA(DisplayName = "Zone - large persistent area"),
 };
@@ -51,42 +52,42 @@ struct FSpell
     // Identity
     UPROPERTY(BlueprintReadWrite) int32 SpellID = 0;
     UPROPERTY(BlueprintReadWrite) FString SpellName = "";
-    UProperty(BlueprintReadWrite) FString Description = "";
+    UPROPERTY(BlueprintReadWrite) FString Description = "";
     
     // Classification
-    UProperty(BlueprintReadWrite) EClass Class = EClass::Vanguard;
-    UProperty(BlueprintReadWrite) ESpellTier Tier = ESpellTier::Basic;
-    UProperty(BlueprintReadWrite) ESpellShape Shape = ESpellShape::SingleTarget;
-    UProperty(BlueprintReadWrite) EWeaponStatusEffect Element1 = EWeaponStatusEffect::None;
-    UProperty(BlueprintReadWrite) EWeaponStatusEffect Element2 = EWeaponStatusEffect::None; // For dual affinity
+    UPROPERTY(BlueprintReadWrite) EClass Class = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) ESpellTier Tier = ESpellTier::Basic;
+    UPROPERTY(BlueprintReadWrite) ESpellShape Shape = ESpellShape::SingleTarget;
+    UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect Element1 = EWeaponStatusEffect::None;
+    UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect Element2 = EWeaponStatusEffect::None; // For dual affinity
     
     // Mechanics
-    UProperty(BlueprintReadWrite) float Damage = 0.0f;
-    UProperty(BlueprintReadWrite) float Healing = 0.0f;
-    UProperty(BlueprintReadWrite) float ResourceCost = 20.0f;
-    UProperty(BlueprintReadWrite) EResourceType ResourceType = EResourceType::Mana;
-    UProperty(BlueprintReadWrite) float Cooldown = 5.0f;
-    UProperty(BlueprintReadWrite) float CastTime = 0.0f;
-    UProperty(BlueprintReadWrite) float Range = 500.0f;
-    UProperty(BlueprintReadWrite) float Radius = 0.0f; // For AoE/Zone
-    UProperty(BlueprintReadWrite) float Duration = 0.0f; // For persistent effects
+    UPROPERTY(BlueprintReadWrite) float Damage = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float Healing = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float ResourceCost = 20.0f;
+    UPROPERTY(BlueprintReadWrite) EResourceType ResourceType = EResourceType::Mana;
+    UPROPERTY(BlueprintReadWrite) float Cooldown = 5.0f;
+    UPROPERTY(BlueprintReadWrite) float CastTime = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float Range = 500.0f;
+    UPROPERTY(BlueprintReadWrite) float Radius = 0.0f; // For AoE/Zone
+    UPROPERTY(BlueprintReadWrite) float Duration = 0.0f; // For persistent effects
     
     // Effects
-    UProperty(BlueprintReadWrite) bool bStuns = false;
-    UProperty(BlueprintReadWrite) bool bFreezes = false;
-    UProperty(BlueprintReadWrite) bool bKnockbacks = false;
-    UProperty(BlueprintReadWrite) bool bRoots = false;
-    UProperty(BlueprintReadWrite) bool bSilences = false;
-    UProperty(BlueprintReadWrite) bool bHealsCaster = false;
-    UProperty(BlueprintReadWrite) bool bLifesteal = false;
-    UProperty(BlueprintReadWrite) float LifestealPercent = 0.0f;
-    UProperty(BlueprintReadWrite) bool bAppliesDoT = false;
-    UProperty(BlueprintReadWrite) float DoTDamage = 0.0f;
-    UProperty(BlueprintReadWrite) float DoTDuration = 0.0f;
-    UProperty(BlueprintReadWrite) bool bAppliesDebuff = false;
-    UProperty(BlueprintReadWrite) EWeaponStatusEffect DebuffType = EWeaponStatusEffect::None;
-    UProperty(BlueprintReadWrite) float DebuffDuration = 0.0f;
-    UProperty(BlueprintReadWrite) bool bIsDualAffinity = false;
+    UPROPERTY(BlueprintReadWrite) bool bStuns = false;
+    UPROPERTY(BlueprintReadWrite) bool bFreezes = false;
+    UPROPERTY(BlueprintReadWrite) bool bKnockbacks = false;
+    UPROPERTY(BlueprintReadWrite) bool bRoots = false;
+    UPROPERTY(BlueprintReadWrite) bool bSilences = false;
+    UPROPERTY(BlueprintReadWrite) bool bHealsCaster = false;
+    UPROPERTY(BlueprintReadWrite) bool bLifesteal = false;
+    UPROPERTY(BlueprintReadWrite) float LifestealPercent = 0.0f;
+    UPROPERTY(BlueprintReadWrite) bool bAppliesDoT = false;
+    UPROPERTY(BlueprintReadWrite) float DoTDamage = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float DoTDuration = 0.0f;
+    UPROPERTY(BlueprintReadWrite) bool bAppliesDebuff = false;
+    UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect DebuffType = EWeaponStatusEffect::None;
+    UPROPERTY(BlueprintReadWrite) float DebuffDuration = 0.0f;
+    UPROPERTY(BlueprintReadWrite) bool bIsDualAffinity = false;
 };
 
 UCLASS(Blueprintable)
