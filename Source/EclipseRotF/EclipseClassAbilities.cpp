@@ -55,10 +55,10 @@ void UEclipseClassAbilities::InitializeAllClassAbilities()
     AddAbility(EClass::Riftwalker, "Time Dilation", EAbilityType::Ability2, 25.0f, 0.0f, 40.0f, EResourceType::Mana, 0.0f, 0.0f, "Slow all enemies in 10m by 50% for 4s while you move at normal speed");
     AddAbility(EClass::Riftwalker, "Astral Harrier", EAbilityType::Ability3, 15.0f, 120.0f, 30.0f, EResourceType::Stamina, 500.0f, 0.0f, "Rapid multidirectional slashes, hits all enemies in melee range");
     AddAbility(EClass::Riftwalker, "Gateweaver Cataclysm", EAbilityType::Ultimate, 180.0f, 500.0f, 100.0f, EResourceType::Flow, 1200.0f, 1.5f, "Open 5 dimensional rifts around target, each fires energy beam for 3s");
-    AddAbility(EClass::Riftwalker, "Phase Strike", EAbilityType::WeaponArt, 10.0f, 200.0f, 25.0f, EResourceType::Stamina, 400.0f, 0.0f, "Phase through enemy with weapon, damage applies after passing through");
+    AddAbility(EClass::Riftwalker, "Dimension Hew", EAbilityType::WeaponArt, 10.0f, 200.0f, 25.0f, EResourceType::Stamina, 400.0f, 0.0f, "Phase through enemy with weapon, damage applies after passing through");
 
     // === DREADKNIGHT === Tank/DPS, drain, dark knight
-    AddAbility(EClass::Dreadknight, "Soul Drain", EAbilityType::Ability1, 10.0f, 80.0f, 20.0f, EResourceType::Rage, 300.0f, 0.0f, "Red-black tendrils drain 30 health from target, heal self for 50%");
+    AddAbility(EClass::Dreadknight, "Eidolon Siphon", EAbilityType::Ability1, 10.0f, 80.0f, 20.0f, EResourceType::Rage, 300.0f, 0.0f, "Red-black tendrils drain 30 health from target, heal self for 50%");
     AddAbility(EClass::Dreadknight, "Blood Pact", EAbilityType::Ability2, 20.0f, 0.0f, 40.0f, EResourceType::Rage, 0.0f, 0.0f, "Sacrifice 20% HP, gain 50% damage buff and 30% lifesteal for 10s");
     AddAbility(EClass::Dreadknight, "Void Reaver", EAbilityType::Ability3, 15.0f, 150.0f, 35.0f, EResourceType::Rage, 400.0f, 0.5f, "Sweep weapon in arc, drain 3 enemies simultaneously");
     AddAbility(EClass::Dreadknight, "Bone Regent Crown", EAbilityType::Ultimate, 180.0f, 350.0f, 100.0f, EResourceType::Flow, 600.0f, 1.0f, "Summon crown of bone, AoE drain all enemies in 12m, heal full party for 30%");
@@ -79,7 +79,7 @@ void UEclipseClassAbilities::InitializeAllClassAbilities()
     AddAbility(EClass::Soulbinder, "Soul Chain", EAbilityType::WeaponArt, 12.0f, 120.0f, 25.0f, EResourceType::Mana, 600.0f, 0.0f, "Chain up to 3 enemies, shared damage, cannot move while chained");
 
     // === WILDWARDEN === Tank/DPS/Healer, nature guardian
-    AddAbility(EClass::Wildwarden, "Barkskin", EAbilityType::Ability1, 15.0f, 0.0f, 30.0f, EResourceType::Stamina, 0.0f, 0.0f, "Bark skin armor, reduce physical damage 60% for 8s, thorns reflect 20 damage");
+    AddAbility(EClass::Wildwarden, "Ironbark Mantle", EAbilityType::Ability1, 15.0f, 0.0f, 30.0f, EResourceType::Stamina, 0.0f, 0.0f, "Bark skin armor, reduce physical damage 60% for 8s, thorns reflect 20 damage");
     AddAbility(EClass::Wildwarden, "Thorn Sentinel", EAbilityType::Ability2, 8.0f, 90.0f, 20.0f, EResourceType::Mana, 500.0f, 0.0f, "Summon thorn vines, root enemies in 6m for 3s, damage over time");
     AddAbility(EClass::Wildwarden, "Beastheart", EAbilityType::Ability3, 20.0f, 150.0f, 35.0f, EResourceType::Rage, 300.0f, 0.0f, "Transform into beast form, +100% attack speed and damage for 6s");
     AddAbility(EClass::Wildwarden, "Grove Seer Awakening", EAbilityType::Ultimate, 180.0f, 350.0f, 100.0f, EResourceType::Flow, 1200.0f, 2.0f, "Massive roots erupt in 15m, root + damage all enemies, heal all allies for 150");
@@ -95,7 +95,7 @@ void UEclipseClassAbilities::InitializeAllClassAbilities()
     // === ORACLE === Healer/Support, divine seer
     AddAbility(EClass::Oracle, "Premonition", EAbilityType::Ability1, 10.0f, 0.0f, 20.0f, EResourceType::Mana, 0.0f, 0.0f, "Reveal all enemy telegraphs for 8s, +20% dodge chance for all allies");
     AddAbility(EClass::Oracle, "Divine Prophecy", EAbilityType::Ability2, 6.0f, 0.0f, 25.0f, EResourceType::Mana, 600.0f, 0.5f, "Heal target for 150, if target drops below 20% HP within 5s, auto-heal for 200");
-    AddAbility(EClass::Oracle, "Judgment", EAbilityType::Ability3, 15.0f, 130.0f, 35.0f, EResourceType::Mana, 500.0f, 0.0f, "Holy mark on target, all allies deal 25% more damage to marked target for 8s");
+    AddAbility(EClass::Oracle, "Tribunal", EAbilityType::Ability3, 15.0f, 130.0f, 35.0f, EResourceType::Mana, 500.0f, 0.0f, "Holy mark on target, all allies deal 25% more damage to marked target for 8s");
     AddAbility(EClass::Oracle, "All-Knowing Grace", EAbilityType::Ultimate, 180.0f, 0.0f, 100.0f, EResourceType::Flow, 2000.0f, 1.0f, "Full party heal 300 HP, full resource restore, 10s immunity to debuffs");
     AddAbility(EClass::Oracle, "Astral Rain", EAbilityType::WeaponArt, 14.0f, 120.0f, 30.0f, EResourceType::Mana, 800.0f, 0.8f, "Rain holy stars on target area, 6 impacts over 2s, heal allies in area for 30 per impact");
 
@@ -121,16 +121,16 @@ void UEclipseClassAbilities::InitializeAllClassAbilities()
     AddAbility(EClass::Shadowblade, "Void Edge", EAbilityType::WeaponArt, 12.0f, 200.0f, 30.0f, EResourceType::Stamina, 400.0f, 0.0f, "Infuse blade with void energy, next 3 hits deal void damage and heal for 20%");
 
     // === SPELLBLADE === Tank/DPS, battlemage
-    AddAbility(EClass::Spellblade, "Arcane Barrier", EAbilityType::Ability1, 12.0f, 0.0f, 30.0f, EResourceType::Mana, 0.0f, 0.0f, "Magical shield, absorb 300 damage, reflect 25% as arcane damage");
-    AddAbility(EClass::Spellblade, "Rune-Etched Blow", EAbilityType::Ability2, 5.0f, 130.0f, 20.0f, EResourceType::Mana, 250.0f, 0.0f, "Infuse weapon with arcane energy, +100% damage, applies arcane mark");
+    AddAbility(EClass::Spellblade, "Wardspark Wall", EAbilityType::Ability1, 12.0f, 0.0f, 30.0f, EResourceType::Mana, 0.0f, 0.0f, "Magical shield, absorb 300 damage, reflect 25% as arcane damage");
+    AddAbility(EClass::Spellblade, "Runic Hew", EAbilityType::Ability2, 5.0f, 130.0f, 20.0f, EResourceType::Mana, 250.0f, 0.0f, "Infuse weapon with arcane energy, +100% damage, applies arcane mark");
     AddAbility(EClass::Spellblade, "Spell Parry", EAbilityType::Ability3, 8.0f, 80.0f, 15.0f, EResourceType::Stamina, 200.0f, 0.0f, "Parry spell projectile back at caster with 50% extra damage");
     AddAbility(EClass::Spellblade, "Aether Severance", EAbilityType::Ultimate, 180.0f, 400.0f, 100.0f, EResourceType::Flow, 600.0f, 0.5f, "Cut through reality itself, 5m range guaranteed crit, sever all magical effects on target");
     AddAbility(EClass::Spellblade, "Flux Ward", EAbilityType::WeaponArt, 10.0f, 0.0f, 40.0f, EResourceType::Mana, 0.0f, 0.0f, "Convert Mana to barrier, 1 Mana = 5 shield, lasts 10s or until depleted");
 
     // === WARLORD === Tank/DPS, commander
-    AddAbility(EClass::Warlord, "Legion Standard", EAbilityType::Ability1, 20.0f, 0.0f, 40.0f, EResourceType::Rage, 0.0f, 0.0f, "Plant war banner, all allies in 15m +20% damage and +15% defense for 10s");
+    AddAbility(EClass::Warlord, "Warhost Pennant", EAbilityType::Ability1, 20.0f, 0.0f, 40.0f, EResourceType::Rage, 0.0f, 0.0f, "Plant war banner, all allies in 15m +20% damage and +15% defense for 10s");
     AddAbility(EClass::Warlord, "Commanding Shout", EAbilityType::Ability2, 15.0f, 100.0f, 25.0f, EResourceType::Stamina, 800.0f, 0.0f, "Fear all enemies in 10m for 3s, knockback 5m, generate high threat");
-    AddAbility(EClass::Warlord, "Warhorn Echo", EAbilityType::Ability3, 25.0f, 0.0f, 50.0f, EResourceType::Rage, 0.0f, 0.0f, "All allies heal 50, gain 30 Flow, immune to fear for 8s");
+    AddAbility(EClass::Warlord, "Battlehorn Resound", EAbilityType::Ability3, 25.0f, 0.0f, 50.0f, EResourceType::Rage, 0.0f, 0.0f, "All allies heal 50, gain 30 Flow, immune to fear for 8s");
     AddAbility(EClass::Warlord, "Bannerlord Decree", EAbilityType::Ultimate, 180.0f, 300.0f, 100.0f, EResourceType::Flow, 1500.0f, 1.0f, "Massive war banner slam, 15m AoE stun, all allies +50% damage for 15s");
     AddAbility(EClass::Warlord, "Shield Breaker", EAbilityType::WeaponArt, 8.0f, 180.0f, 25.0f, EResourceType::Stamina, 300.0f, 0.0f, "Overhead smash, break enemy guard/poise instantly, guaranteed stagger");
 
@@ -146,7 +146,7 @@ void UEclipseClassAbilities::InitializeAllClassAbilities()
     AddAbility(EClass::Druid, "Bloom Renewal", EAbilityType::Ability2, 8.0f, 0.0f, 25.0f, EResourceType::Mana, 600.0f, 0.0f, "Heal target for 60 instantly + 10/s for 10s, cleanses poison");
     AddAbility(EClass::Druid, "Galvanic Aspect", EAbilityType::Ability3, 20.0f, 150.0f, 35.0f, EResourceType::Mana, 0.0f, 0.0f, "Transform into lightning wolf: +80% speed, lightning damage on attacks, 8s");
     AddAbility(EClass::Druid, "Nature Wrath", EAbilityType::Ultimate, 180.0f, 350.0f, 100.0f, EResourceType::Flow, 1500.0f, 1.5f, "Massive nature eruption: roots + thorns + lightning in 20m, heal allies for 200");
-    AddAbility(EClass::Druid, "Thorn Whip", EAbilityType::WeaponArt, 6.0f, 80.0f, 15.0f, EResourceType::Mana, 400.0f, 0.0f, "Whip of thorns, pull enemy 5m toward you, apply bleed for 5s");
+    AddAbility(EClass::Druid, "Briarlash", EAbilityType::WeaponArt, 6.0f, 80.0f, 15.0f, EResourceType::Mana, 400.0f, 0.0f, "Whip of thorns, pull enemy 5m toward you, apply bleed for 5s");
 }
 
 TArray<FClassAbility> UEclipseClassAbilities::GetClassAbilities(EClass CharacterClass) const
