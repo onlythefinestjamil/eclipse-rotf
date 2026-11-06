@@ -13,7 +13,7 @@ public class EclipseRotF : ModuleRules
         });
         
         PrivateDependencyModuleNames.AddRange(new string[] {
-            "Slate", "SlateCore", "UMG",
+            "Slate", "SlateCore", "UMG", "AIModule",
         });
     }
 }

@@ -6,19 +6,33 @@
 UENUM(BlueprintType)
 enum class EAncestry : uint8
 {
+    // Core 8 (V4 canonical)
     Aetherborn UMETA(DisplayName = "Aetherborn - Lunarian"),
     Solari UMETA(DisplayName = "Solari - Sunforged Human"),
     Vyrael UMETA(DisplayName = "Vyrael - Elven Kindred"),
     Tharuk UMETA(DisplayName = "Tharuk - Titanborn"),
-    Grimstarr UMETA(DisplayName = "Grimstarr - Forge Dwarf"),
     Kazari UMETA(DisplayName = "Kazari - Beastblood"),
     Umbralis UMETA(DisplayName = "Umbralis - Void-Touched"),
     Draven UMETA(DisplayName = "Draven - Draconic"),
+    Nhalori UMETA(DisplayName = "Nhalori - Coldland"),
+    // Expansion 10
+    Grimstarr UMETA(DisplayName = "Grimstarr - Forge Dwarf"),
     Nereyth UMETA(DisplayName = "Nereyth - Aquatic Kin"),
     Myceliar UMETA(DisplayName = "Myceliar - Verdant Kin"),
     Forgeborn UMETA(DisplayName = "Forgeborn - Arcane Construct"),
     Hellsworn UMETA(DisplayName = "Hellsworn - Demon-Blooded"),
     Necrevan UMETA(DisplayName = "Necrevan - Oath-Bound Dead"),
+    Stormfang UMETA(DisplayName = "Stormfang - Wolf-Kin Shapeshifter"),
+    Ashfallen UMETA(DisplayName = "Ashfallen - Volcanic Ash"),
+    Tidecaller UMETA(DisplayName = "Tidecaller - Deep Sea Merfolk"),
+    Duskborn UMETA(DisplayName = "Duskborn - Twilight Halfling"),
+};
+
+UENUM(BlueprintType)
+enum class EClassUnlockType : uint8
+{
+    Starting UMETA(DisplayName = "Starting Class"),
+    Unlockable UMETA(DisplayName = "Unlockable Class"),
 };
 
 UENUM(BlueprintType)
@@ -75,6 +89,9 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Eclipse|Identity")
     EClass CharacterClass;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Eclipse|Identity")
+    EClassUnlockType ClassUnlockType = EClassUnlockType::Starting;
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Eclipse|Affinity")
     EElementalAffinity PrimaryAffinity;
