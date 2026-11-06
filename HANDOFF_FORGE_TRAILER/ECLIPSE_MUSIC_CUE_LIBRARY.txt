@@ -1,0 +1,715 @@
+================================================================================
+ECLIPSE: REALMS OF THE FRACTURED — SUNO MUSIC CUE LIBRARY (MASTER)
+================================================================================
+Momentum Labs / Illustrators Entertainment LLC
+Owner: Jamil Mateen Johnson
+Hermes handoff | November 2026 | CONFIDENTIAL: internal creative planning
+
+Source files:
+  - C:/Users/Tap/Desktop/Eclipse_Prompts/ECLIPSE_Suno_Editable_Prompts.txt
+  - C:/Users/Tap/Desktop/Eclipse_Prompts/ECLIPSE_Suno_OST_and_Cinematic_Preproduction_Hermes_V1.md
+
+PURPOSE: Organize the complete 24-cue Suno prompt library (M01-M24), the main
+title theme, the 3-part sonic grammar, and the 120-second trailer spotting
+sheet into one ready-to-use document. NO MUSIC HAS BEEN GENERATED. All prompts
+are paste-ready for when a Suno Pro/Premier account is secured.
+
+STATUS: Preproduction organization only. No audio assets exist. Commercial
+rights require an active Suno Pro or Premier plan AT THE TIME OF GENERATION
+AND DOWNLOAD. Free-tier outputs are noncommercial; upgrading later does NOT
+retroactively license previously generated free-tier tracks.
+
+================================================================================
+SECTION 0 — SUNO WORKFLOW (read before generating anything)
+================================================================================
+
+1. Use CUSTOM mode + INSTRUMENTAL ON for most cues. Paste the Style prompt,
+   set a clear track title.
+2. For choir without words, specify "wordless/phonetic choir" and manually
+   reject any hallucinated lyrics. Voiceover must be recorded/licensed
+   separately — never rely on Suno for VO.
+3. Use the newest Suno model for committed cues (v6 family as of Nov 2026:
+   v6, v6-wild, v6-mini). Log model variant, parameters, date, plan tier,
+   and seed/reference inputs for repeatability.
+4. Generate 4-8 candidates per cue (more for the main theme). Audition in
+   context with image/animatic. CHOOSE — one prompt is a brief, not a guarantee.
+5. Reuse ONLY owned/authorized motif audio or MIDI. Never upload another
+   game's soundtrack, trailer audio, or confidential full lore files.
+6. Use Studio editor (Replace Section, Extend, trim/crop, export) where
+   entitled. Extract stems for mixing; inspect separation artifacts before
+   relying on them.
+7. Export WAV/stems where plan permits. Master in a DAW. Build genuine
+   loops and stems for Unreal — not one uneditable long MP3.
+8. Separate underscore music from SFX/ambient beds/dialogue/foley. Use an
+   authorized SFX tool for isolated whooshes/impacts.
+9. Preserve dynamic range. Make trailer-specific mixes where VO, sword
+   contact, and wing VFX can breathe.
+
+COMMERCIAL RIGHTS (verified Nov 2026):
+  - Pro/Premier = commercial-use rights when properly obtained under the plan.
+  - Free tier = noncommercial only.
+  - Commercial-use grant does NOT automatically guarantee U.S. copyright
+    protection or exclusive originality.
+  - Review exact plan + Terms before releasing trailer or shipping game.
+  - Sources: help.suno.com/en/articles/9601665, 13926081, 13925249, 2746945
+             suno.com/terms/
+
+RECOMMENDED METADATA PER GENERATED TRACK:
+  TrackID, CueName, CreativeBrief, ApprovedMotif, SunoModel, GenerationPrompt,
+  CandidateURL/ID, GeneratedAt, PlanTierAtGeneration, AuthorizedDownloadDate,
+  FileHash, WAVPath, StemPaths, BPM, Key, TimeSignature, LoopPoints,
+  LicenseProof, HumanEdits, Approver, Status
+
+================================================================================
+SECTION 1 — THREE-PART SONIC GRAMMAR (the project's musical identity)
+================================================================================
+
+The ECLIPSE soundtrack is built on a three-part sonic grammar. Every cue must
+serve at least one part; the main theme weaves all three together.
+
+----------------------------------------------------------------
+PART A — THE AETHEL (the leitmotif)
+----------------------------------------------------------------
+- An ORIGINAL five-note motif that sounds luminous yet incomplete.
+- Must be produced as a documented, rights-cleared SEED: a human-performed
+  MIDI or recorded instrument reference — NOT left to text generation to
+  reproduce a tune.
+- Must survive different instrumentation and harmonies (solo cello, full
+  orchestra, detuned Fracture texture, etc.).
+- Design exercise: create 3 fully original five-note candidates from an
+  approved human musician or MIDI sketch. Select by blind listening, mood
+  match, and recognizability. Preserve motif ID, notated pitches, intervals,
+  rhythmic cells, key-independent MIDI, BPM reference, stems, ownership chain,
+  and transformation notes. Name it MOTIF_AETHEL_01 only when approved.
+- Acceptance test: a person who has never heard the theme can hum the
+  signature motif after two listens, and the melody still works on solo cello
+  with no percussion or choir.
+- DO NOT copy or prompt a melody from any existing soundtrack.
+
+----------------------------------------------------------------
+PART B — THE LIVING PEOPLES (acoustic specificity)
+----------------------------------------------------------------
+- Acoustic detail, physically performed rhythm, distinct regional ensembles.
+- West African-inspired percussion is an explicit V6 canon direction — but it
+  is NOT a substitute for cultural specificity.
+- If commissioning performers: identify precise instruments, traditions,
+  credits, and context.
+- Avoid a single undifferentiated "tribal" sound applied to every race.
+- The 13 proposed ancestries each deserve a distinct instrumental voice woven
+  into one coherent harmonic language (see M11).
+
+----------------------------------------------------------------
+PART C — THE FRACTURE (a texture, not a melody)
+----------------------------------------------------------------
+- Partially erased overtones, detuned bells, sound arriving before its
+  physical source, sub-bass drones, reversed reflections, breath-like distant
+  voices, and selective silence.
+- Dissonant and dimensional — NOT "evil creature" horror music.
+- Do NOT bury gameplay cues beneath wall-to-wall dissonance.
+- Must layer cleanly with gameplay threat pulses.
+
+----------------------------------------------------------------
+MIXING PHILOSOPHY
+----------------------------------------------------------------
+- A game-world soundtrack should often be QUIETER than the player expects.
+- Environments need air for dialogue, footsteps, and combat telegraphs.
+- Reserve maximum orchestral impact for irreversible narrative beats, major
+  boss phases, and the cinematic crest.
+
+================================================================================
+SECTION 2 — MAIN TITLE THEME (paste-ready)
+================================================================================
+
+TITLE: The Last Light of the Aethel
+SETTING: Suno Custom mode | INSTRUMENTAL ON | target 3-4 minutes (edit to fit)
+
+--- BEGIN PASTE ---
+Compose an entirely original, emotionally unforgettable dark-fantasy orchestral
+game main theme for ECLIPSE: REALMS OF THE FRACTURED, a world shaped by a
+celestial creative force whose light is slowly fracturing. Monumental symphonic
+dark fantasy, sacred cosmic wonder, tragic grandeur, intricate acoustic
+ensemble, distinct West African-inspired hand-drum interlocks performed with
+human groove, layered djembe and dunun alongside deep cinematic bass drums,
+passionate solo cello, intimate low strings, soaring but restrained violins,
+warm French horns, dark brass, harp, spectral bowed glass, celestial bell
+partials, distant wordless mixed choir, subtly detuned resonance, and very
+restrained analog sub-bass. Start almost silent with a fragile, memorable
+original five-note melody; introduce suspended harmonies and measured
+percussion; build an emotionally devastating orchestral statement, then return
+to solitary unresolved tones. Dynamics matter more than loudness. Original
+melodic construction, varied arrangement, musical space for character dialogue
+and foley. Wonder > reverence > dread > grief > defiance > fragile hope.
+Realistic acoustic depth, controlled low end, organic ensemble detail,
+beautiful quiet passages, no pop structure, no EDM/trap, no intelligible
+lyrics, no endless repetitive ostinato, no generic trailer booms, no imitation
+of recognizable films or games.
+--- END PASTE ---
+
+ACCEPTANCE TEST: Someone who has never heard the theme should be able to hum
+its signature motif after two listens, and the melody must still work on solo
+cello with no percussion or choir.
+
+================================================================================
+SECTION 3 — THE 24-CUE LIBRARY (M01-M24)
+================================================================================
+
+HOW TO USE: For each cue, copy the Style prompt into Suno Custom mode, turn
+INSTRUMENTAL ON, and set the track title. Each is a separate generation and
+sound-design starting point. Stated BPM is CREATIVE GUIDANCE — verify the
+resulting tempo and edit/regenerate if wrong. Loop points, dynamic variants,
+crossfades, and cue lengths must be built in a DAW and tested in Unreal.
+
+PER-CUE PRODUCTION REVIEW CHECKLIST (applies to ALL 24 cues):
+  - Preserve identity with the Aethel theme where appropriate
+  - Audible motifs present
+  - Clean source
+  - Musical dynamics preserved
+  - No unwanted words / hallucinated lyrics
+  - No stolen or overly familiar phrases
+  - Sufficient SFX and dialogue space
+  - Looping feasibility
+  - Proof of commercial authorization (plan tier + download date logged)
+
+--------------------------------------------------------------------------------
+M01 | Gothic City: Breath of the Crowns
+--------------------------------------------------------------------------------
+BPM:    72-82
+USAGE:  Day hub; safety, intrigue, life
+DELIVERABLE VARIANTS: Explore daytime / quiet interior / short transition into night
+
+STYLE PROMPT (copy into Suno):
+> Original fantasy-city ambient orchestral score with spacious warm strings,
+> solo cello and soft woodwind, distant handbells, gentle plucked strings and
+> subtle hand-drum pulse; architectural grandeur without triumphal fanfare;
+> warm public-life humanity, merchants, rooflines, cathedral shadow, the
+> enormous cracked Aethel fragment overlooking the city. Slow moving harmony
+> and a barely audible allusion to the original Aethel motif. Intimate and
+> majestic, very low rhythmic density, no sudden swells or vocals, no
+> aggressive percussion, seamless-loop-friendly sustained ending.
+
+--------------------------------------------------------------------------------
+M02 | Gothic City: The Last Market Lantern
+--------------------------------------------------------------------------------
+BPM:    56-66
+USAGE:  Night hub; melancholic safety
+DELIVERABLE VARIANTS: Night hub / tavern exterior / threatened nighttime overlay
+
+STYLE PROMPT (copy into Suno):
+> A nocturnal variation of the Gothic City theme: low viola and cello, soft
+> distant bells, sparse harp harmonics, thin night air, footsteps between
+> ancient arches and the shadow of a dying celestial light. Retain the core
+> melodic identity at half speed but let harmonies remain unresolved. Warmth
+> in an immense cold city, solitary and understated. No climactic drums, no
+> recognizable lyrics, little high-frequency energy, long reverb tails,
+> loop-friendly last cadence.
+
+--------------------------------------------------------------------------------
+M03 | Ashen Forge: The Heart Below
+--------------------------------------------------------------------------------
+BPM:    86-98
+USAGE:  Grimstarr forges; heat and craftsmanship
+DELIVERABLE VARIANTS: Ambient forge / active forge / emergency molten-dimming layer
+
+STYLE PROMPT (copy into Suno):
+> Grounded industrial dark fantasy underscoring with warm bowed low strings,
+> earthy struck iron, hand-hammer polyrhythms, deep drum skins, rough bass
+> woodwind, distant furnace roar like pitched breath, small human work-song
+> fragments without intelligible words. Create a patient working rhythm that
+> feels old, sacred and physical, and a slight harmonic sinking that suggests
+> cooling forges. Not rock, not sci-fi machinery, no constant huge brass,
+> distinct mallet timbres. Able to loop beneath crafting dialogue.
+
+--------------------------------------------------------------------------------
+M04 | Verdant Deep: Root Memory
+--------------------------------------------------------------------------------
+BPM:    58-70
+USAGE:  Living forest; wonder, alertness
+DELIVERABLE VARIANTS: Day forest / twilight / predator sensed
+
+STYLE PROMPT (copy into Suno):
+> Vast, intimate organic fantasy exploration soundtrack: bowed wooden textures,
+> flute-like airy harmonics, delicate harp, string harmonics, hollow resonant
+> wood, gentle percussion with irregular pulse, soft breath-like wordless
+> textures, suspended melody under shimmering moss and ancient forest canopy.
+> Nature feels alive and watchful, not whimsical or cute. Sparse
+> instrumentation, changing microtextures, spacious frequencies leaving room
+> for birds and rain; end designed for a gentle loop.
+
+--------------------------------------------------------------------------------
+M05 | Sun-Sand Wastes: Cities Beneath the Dust
+--------------------------------------------------------------------------------
+BPM:    74-88
+USAGE:  Desert ruins; hidden scholarship
+DELIVERABLE VARIANTS: Wilderness / ruin interior / sandstorm tension
+
+STYLE PROMPT (copy into Suno):
+> Original desert-ruin dark fantasy underscore built from dry bowed string
+> drones, low wooden winds, plucked string ostinatos, delicate metal
+> resonances, slow rolling frame-drum patterns, brittle heat-scorched
+> harmonics, intermittent deep bass notes. Suggest buried knowledge,
+> wind-carved stones, long distances and an oasis that may not be real. Avoid
+> stock "exotic" scale cliches; emotional motif should be melancholy, proud
+> and enigmatic. Sparse, evolving and loop-friendly.
+
+--------------------------------------------------------------------------------
+M06 | Frozen Crown: The Sky Without Dragons
+--------------------------------------------------------------------------------
+BPM:    48-62
+USAGE:  Ice, loss and silence
+DELIVERABLE VARIANTS: Glacier / mountain pass / ancestral memory
+
+STYLE PROMPT (copy into Suno):
+> Emotionally austere orchestral northern mountain ambience: lonely solo
+> cello, glassy string harmonics, thin icy air, restrained low horn, bowed
+> metal, extreme dynamic space and silences. Sound of a sky emptied of
+> ancient dragons, vast glaciers and stone halls. A slow fragment of the
+> Aethel motif emerges through a cold suspended chord then breaks. Minimal
+> pulse, no bright heroic choir, loopable and quiet enough for wind and
+> distant cracking ice.
+
+--------------------------------------------------------------------------------
+M07 | Floating Isles: Wings of Last Light
+--------------------------------------------------------------------------------
+BPM:    64-78
+USAGE:  Aetherborn; celestial beauty and loss
+DELIVERABLE VARIANTS: Exploration / wing awakening / grief reprise
+
+STYLE PROMPT (copy into Suno):
+> Otherworldly yet tactile celestial fantasy music for suspended islands and a
+> near-extinct luminous people. Delicate solo cello, wordless crystalline
+> female-and-male choir, layered string harmonics, subdued slow hand drums,
+> water-glass resonance, distant brass bloom. An original five-note Aethel
+> motif arrives through inverted harmony, and the sound expands in a
+> breathtaking but intimate swell as violet-indigo energy wings unfold from a
+> fallen celestial warrior. No lyrics, no constant fanfare, dynamic restraint
+> and space for electrical wing crackles.
+
+--------------------------------------------------------------------------------
+M08 | Eclipse Shadow: Where Light Refuses
+--------------------------------------------------------------------------------
+BPM:    40-56
+USAGE:  The Fracture; dissonant not evil
+DELIVERABLE VARIANTS: Ambient void / mimic nearby / imminent breach
+
+STYLE PROMPT (copy into Suno):
+> Sparse psychological cosmic-darkness score for an expanding absence of
+> light, not an evil creature. Detuned bass clarinet, bowed cymbal, unstable
+> string clusters, distant breath textures, filtered heartbeats, silence
+> interrupting low drones, a harmonic resonance that seems to disappear before
+> resolving. Small acoustic details and uneasy stereo space, no typical horror
+> stingers, no constant loud drones, no slasher music, no words. Minimal loop
+> that can be layered with gameplay threat pulses.
+
+--------------------------------------------------------------------------------
+M09 | Sunken Realms: The Water Remembers
+--------------------------------------------------------------------------------
+BPM:    60-72
+USAGE:  Nereyth aquatic setting (proposed extension)
+DELIVERABLE VARIANTS: Surface shore / underwater / flooded sanctum
+
+STYLE PROMPT (copy into Suno):
+> Deep underwater dark-fantasy ambience using resonant low cello, glassy
+> mallet tones, plucked harp, airy choir without words and soft watery
+> filtered percussion. Slow undulating phrasing and harmonic currents should
+> suggest a civilization below tidal light and coral structures without
+> relying on cliche tropical rhythms. The Aethel motif appears as distant
+> fragments reflected through water. Rich low-mid depth, no sudden drums,
+> subtle looping finale.
+
+--------------------------------------------------------------------------------
+M10 | Myceliar: The Choir of Spores
+--------------------------------------------------------------------------------
+BPM:    52-68
+USAGE:  Symbiotic forest culture (proposed extension)
+DELIVERABLE VARIANTS: Forest colony / growth ritual / ecological danger
+
+STYLE PROMPT (copy into Suno):
+> Strange, beautiful living-forest underscore based on breathy woodwinds,
+> bowed wood, muted marimba-like organic resonance, granular falling droplets
+> and fine string tremolo. Tiny interlocking rhythmic cells spread and answer
+> one another as fungal networks grow. The music should feel sentient, patient
+> and rooted rather than monstrous; no generic sinister swamp theme and no
+> explosive climax. Very spare instrumental layers suitable for seamless
+> looping.
+
+--------------------------------------------------------------------------------
+M11 | The Peoples: Thirteen Paths
+--------------------------------------------------------------------------------
+BPM:    78-92
+USAGE:  Shared unity; ancestry montage
+DELIVERABLE VARIANTS: Character selection / ancestry introduction / alliance scene
+
+STYLE PROMPT (copy into Suno):
+> Original orchestral suite representing distinct peoples living under one
+> fractured sky. Start with solo hand drum and cello; add small, contrasting
+> instrument families over time, weaving them into one coherent harmonic
+> language without assigning stereotypes or pretending one instrument
+> represents an ethnicity. Gentle wordless voices unite only near the end.
+> Emotional communal strength, not propaganda or a march; use a clear melodic
+> link to the Aethel motif.
+
+--------------------------------------------------------------------------------
+M12 | Skirmish: Steel Against the Fractured
+--------------------------------------------------------------------------------
+BPM:    118-132
+USAGE:  Small combat; precise telegraphs
+DELIVERABLE VARIANTS: Anticipation / active skirmish / elite combat / clear ending
+
+STYLE PROMPT (copy into Suno):
+> Tactical dark fantasy combat underscore with taut staccato low strings, deep
+> hand percussion and irregular accents, sparse brass responses, a pulsing
+> distorted bowed bass tone, and brief spaces for weapon impacts and enemy
+> calls. Strong rhythmic drive but never wall-to-wall sound; clear 4-bar
+> phrasing for adaptive loops. Unpredictable but readable, skill-based melee
+> intensity, no rock guitars, no dance beat, no endless choir or fake trailer
+> braams.
+
+--------------------------------------------------------------------------------
+M13 | Weeping Foundry: The Furnace Has a Memory
+--------------------------------------------------------------------------------
+BPM:    100-112
+USAGE:  5-player dungeon; corrupted forge
+DELIVERABLE VARIANTS: Dungeon exploration / trash packs / miniboss / boss
+
+STYLE PROMPT (copy into Suno):
+> Dark forge dungeon music where manual hammer rhythms slowly lose
+> synchronization, with grinding metal percussion, cello ostinato, contrabass,
+> muted low brass, restrained choir fragments, volcanic rumble and ghostlike
+> harmonics. Dangerous but deeply crafted; suggest the sacred workshops
+> collapsing into the Fracture. Build sparse and modular, with distinct
+> encounter pulse and boss escalation layer; room for five players' combat
+> cues.
+
+--------------------------------------------------------------------------------
+M14 | Cathedral of Unmade Hours: The Ninth Bell
+--------------------------------------------------------------------------------
+BPM:    94-108
+USAGE:  10-player raid; altered time
+DELIVERABLE VARIANTS: Raid intro / phase A / phase B / final phase / victory
+
+STYLE PROMPT (copy into Suno):
+> Enormous ritual dark-fantasy raid soundtrack: massive cathedral reverberation,
+> tolling bells that skip expected beats, deep orchestra, string tremolo,
+> precise hand percussion, male-and-female wordless choir singing dissonant
+> clusters, fragments of the Aethel theme stretched into unnaturally long
+> notes. Three phases: solemn entry, temporal instability and relentless final
+> judgment. Spectacular scale but distinct attack cue openings; no
+> unintelligible choir syllables treated as invented lore language.
+
+--------------------------------------------------------------------------------
+M15 | Aetherborn: What Fell From the Sky
+--------------------------------------------------------------------------------
+BPM:    68-82
+USAGE:  Hero motif; power and mortality
+DELIVERABLE VARIANTS: Private sorrow / wing transformation / final hero shot
+
+STYLE PROMPT (copy into Suno):
+> Character-driven elegy for a muscular dark-skinned Aetherborn whose luminous
+> skin fractures and celestial lightning wings are the last light of a fading
+> creator. Begin with a single expressive bowed melody and dry heartbeat
+> percussion, then rising harmonic overtones and a restrained choir. A major
+> chord tries to emerge from an unresolved minor texture, becoming huge for
+> one brief wing-awakening climax before returning to fragile solitary
+> strings. Never constant bombast; brave, wounded, magnificent.
+
+--------------------------------------------------------------------------------
+M16 | Arena: No Crown Without Skill
+--------------------------------------------------------------------------------
+BPM:    136-148
+USAGE:  1v1, 2v2, 3v3 and 5v5 ranked
+DELIVERABLE VARIANTS: Match ready / active fight / final seconds / win and loss stingers
+
+STYLE PROMPT (copy into Suno):
+> Competitive dark fantasy PvP music with sharp rhythmic precision, urgent
+> low string ostinatos, interlocking deep hand-drum patterns, dry brass jabs
+> and subtle atmospheric metallic resonance. Aggressive yet focused: no
+> overwhelming choir, no distracting melody during clutch CC timings, no broad
+> epic explosions every 10 seconds. Athletic, tense and suited to seamless
+> 8-bar looping; create intro, sustained duel and last-stand layers.
+
+--------------------------------------------------------------------------------
+M17 | Battleground: Standards in Ash
+--------------------------------------------------------------------------------
+BPM:    122-136
+USAGE:  10v10 and objective battles
+DELIVERABLE VARIANTS: Neutral / push / comeback / overtime / score
+
+STYLE PROMPT (copy into Suno):
+> Large-scale objective-driven dark fantasy battleground score: powerful but
+> restrained low strings, disciplined interlocking hand drums and orchestral
+> percussion, distant brass horns, fragmented battle motif, occasional wordless
+> choral lift. Conveys teamwork, flanking, flags, siege objectives and a
+> contested capture point without turning into generic war trailer music.
+> Rhythmic sections should map to neutral capture, advantage, overtime and
+> victory states.
+
+--------------------------------------------------------------------------------
+M18 | Fracture Expedition: The Night Takes Shape
+--------------------------------------------------------------------------------
+BPM:    108-122
+USAGE:  Timed cooperative expedition
+DELIVERABLE VARIANTS: Discovery / escalation / close threat / extraction
+
+STYLE PROMPT (copy into Suno):
+> Dark-fantasy survival expedition cue with rhythmic hand percussion, ticking
+> processed plucks, anxious string ostinato and gradually dissonant
+> resonances. Early sections feel curious and opportunistic; later layers
+> reveal unstable reality and approaching danger. Create clearly separable
+> movement layers for safe gathering, closing threat, elite pursuit, final
+> boss and extraction. Moderate dynamic range, avoid unbroken climax.
+
+--------------------------------------------------------------------------------
+M19 | Eclipse Avatar: The Unanswered Choice
+--------------------------------------------------------------------------------
+BPM:    70 rising to 116
+USAGE:  Final campaign confrontation; spoiler-sensitive
+DELIVERABLE VARIANTS: Secret production cue; phase transitions, spoiler-safe
+
+STYLE PROMPT (copy into Suno):
+> Grand tragic celestial boss score centered on the original Aethel motif now
+> stretched and harmonically fractured. Distant human cello, cathedral-sized
+> wordless choir, grave low brass, irregular ritual percussion, surging
+> strings, sudden pauses, huge deep-space resonance. Emotion is grief and
+> impossible responsibility, not simply good versus evil. Three movements:
+> revelation without explicit answer, irreversible combat and suspended moral
+> choice. Never disclose the hidden true nature of the Avatar through lyrics
+> or track titles in public builds.
+
+--------------------------------------------------------------------------------
+M20 | Character Creator: Who Will You Become?
+--------------------------------------------------------------------------------
+BPM:    55-68
+USAGE:  Class and ancestry creation interface
+DELIVERABLE VARIANTS: Menu loop / race selection preview / confirmation stinger
+
+STYLE PROMPT (copy into Suno):
+> Soft, aspirational dark fantasy music for creating a hero: gentle harp and
+> solo viola, intimate low cello, a little choir breath, subtle bowed-glass
+> celestial ring, and a simple fragment of the Aethel melody. Emotional
+> wonder, possibilities, vulnerability and a sense of a world waiting. No loud
+> climax, no lyrics, static spatial image appropriate for a menu, carefully
+> constructed loop ending.
+
+--------------------------------------------------------------------------------
+M21 | Guild Hall: The Fires We Keep
+--------------------------------------------------------------------------------
+BPM:    66-76
+USAGE:  Housing, social, crafting respite
+DELIVERABLE VARIANTS: Guild hall / quiet housing / festival adaptation
+
+STYLE PROMPT (copy into Suno):
+> Warm acoustic fantasy ambience with gentle hand percussion, woodwind, cello,
+> plucked strings and occasional low communal humming without lyrics. A sense
+> of believable people sharing a safe room while the dangerous world continues
+> outside; small human-scale rhythms and laughter-like instrumental gestures,
+> not tavern novelty music. Calm, friendly, minimal; no solo vocals. Seamless
+> long-form loop.
+
+--------------------------------------------------------------------------------
+M22 | Forge: Name the Blade
+--------------------------------------------------------------------------------
+BPM:    84-96
+USAGE:  Crafting and legendary acquisition
+DELIVERABLE VARIANTS: Craft loop / successful forge / rare forge variation
+
+STYLE PROMPT (copy into Suno):
+> Ceremonial crafting underscore with heavy but soft struck iron, heartbeat
+> percussion, low viola, short brass swells and a sparse, original three-note
+> motif that builds toward the naming strike. Close-up tactile instrument
+> detail, carefully measured hammer rhythms, no music overpowering blade
+> impact Foley. Structure into waiting loop, action sequence and short forge
+> completion sting; controlled low end.
+
+--------------------------------------------------------------------------------
+M23 | The Last Breath: Defeat and Grace
+--------------------------------------------------------------------------------
+BPM:    46-60
+USAGE:  Death, checkpoint and recovery
+DELIVERABLE VARIANTS: Death stinger / rest point / regained control
+
+STYLE PROMPT (copy into Suno):
+> A profoundly restrained dark fantasy lament: one bowed cello line, distant
+> piano-like resonances, an unresolved cluster that opens into one slender
+> warm note. Very short and emotionally precise. Leave generous silence after
+> the death beat. No cheesy sadness or excessively long choir; usable as an
+> 8-15 second sting with a companion ambient recovery loop.
+
+--------------------------------------------------------------------------------
+M24 | Trailer: The Light Broke. We Did Not.
+--------------------------------------------------------------------------------
+BPM:    Variable
+USAGE:  Approximately 120-second trailer cue
+DELIVERABLE VARIANTS: Trailer-specific cue; section stems and voiceover-safe gaps
+
+STYLE PROMPT (copy into Suno):
+> Original through-composed dark fantasy cinematic score synchronized to a
+> precise 120-second twelve-shot storyboard: 0:00-0:30 sacred celestial awe and
+> an unheard fracture; 0:30-0:51 forge and forest grief; 0:51-1:14 celestial
+> wing awakening and disparate peoples; 1:14-1:25 near-silence as a void mimic
+> emerges; 1:25-1:47 precision combat and environment-changing magic,
+> controlled percussion crescendo; 1:47-1:55 five-hero dungeon and ten-hero
+> raid scale; 1:55-2:00 almost complete silence and final five-note Aethel
+> motif with logo impact. Distinct acoustic low strings, original hand-drum
+> polyrhythms, expressive choir without words, wounded horns, measured
+> silence, realistic dynamics, no pop beat or generic rise-only trailer
+> structure. Reserve frequencies for voiceover, foley and impact sync. Create
+> as sections and finish to picture in editor/DAW; precise synchronization is
+> an editorial task, not guaranteed by text.
+
+================================================================================
+SECTION 4 — QUICK-REFERENCE CUE INDEX (ID | Title | BPM | Usage)
+================================================================================
+
+M01 | Gothic City: Breath of the Crowns         | 72-82        | Day hub
+M02 | Gothic City: The Last Market Lantern      | 56-66        | Night hub
+M03 | Ashen Forge: The Heart Below              | 86-98        | Grimstarr forges
+M04 | Verdant Deep: Root Memory                 | 58-70        | Living forest
+M05 | Sun-Sand Wastes: Cities Beneath the Dust  | 74-88        | Desert ruins
+M06 | Frozen Crown: The Sky Without Dragons     | 48-62        | Ice/loss/silence
+M07 | Floating Isles: Wings of Last Light       | 64-78        | Aetherborn zone
+M08 | Eclipse Shadow: Where Light Refuses       | 40-56        | The Fracture
+M09 | Sunken Realms: The Water Remembers        | 60-72        | Nereyth aquatic (ext.)
+M10 | Myceliar: The Choir of Spores             | 52-68        | Symbiotic forest (ext.)
+M11 | The Peoples: Thirteen Paths               | 78-92        | Ancestry montage
+M12 | Skirmish: Steel Against the Fractured     | 118-132      | Small combat
+M13 | Weeping Foundry: The Furnace Has a Memory | 100-112      | 5-player dungeon
+M14 | Cathedral of Unmade Hours: The Ninth Bell | 94-108       | 10-player raid
+M15 | Aetherborn: What Fell From the Sky        | 68-82        | Hero motif
+M16 | Arena: No Crown Without Skill             | 136-148      | Ranked PvP
+M17 | Battleground: Standards in Ash            | 122-136      | 10v10/objective
+M18 | Fracture Expedition: The Night Takes Shape| 108-122      | Timed co-op expedition
+M19 | Eclipse Avatar: The Unanswered Choice     | 70->116      | Final boss (spoiler)
+M20 | Character Creator: Who Will You Become?   | 55-68        | Creation menu
+M21 | Guild Hall: The Fires We Keep             | 66-76        | Housing/social
+M22 | Forge: Name the Blade                     | 84-96        | Crafting
+M23 | The Last Breath: Defeat and Grace         | 46-60        | Death/recovery
+M24 | Trailer: The Light Broke. We Did Not.     | Variable     | 120s trailer cue
+
+================================================================================
+SECTION 5 — 120-SECOND TRAILER MUSIC SPOTTING SHEET
+================================================================================
+
+Follows the exact 12-shot timing from the approved V1 trailer concept.
+Timestamps are EDITORIAL TARGETS, not preexisting completed recordings.
+Final tagline: THE LIGHT BROKE. WE DID NOT.
+
+SHOT | TIME       | PICTURE                              | MUSICAL INTENTION                                          | SOUND-DESIGN / VO PRIORITY
+-----|------------|--------------------------------------|------------------------------------------------------------|---------------------------------------------------
+ 01  | 00:00-00:09| Aethel in silent sky                 | Almost silence, single spectral harmonic                  | Opening line, airy celestial resonance
+ 02  | 00:09-00:20| Gothic City and people               | Warm low strings; first five-note seed                    | Ambient market, bells, footsteps, voice
+ 03  | 00:20-00:30| Celestial fracture                   | Motif dislocates; cut to low suspended note               | Cracking light, lone bell, VO breath
+ 04  | 00:30-00:40| Ashen Forge                          | Iron percussion in 3 uneven hits                           | Hammer sparks, heat, cooling river, VO
+ 05  | 00:40-00:51| Verdant Deep / glimpses              | Forest textures; delicate cello lament                     | Leaves, rain, animals, VO
+ 06  | 00:51-01:04| Aetherborn and wing reveal           | Motif large but only brief climax                          | Skin-energy charge, wings, wind, VO
+ 07  | 01:04-01:14| Many peoples                         | Rhythm becomes shared pulse                                | One human detail per cut, VO
+ 08  | 01:14-01:25| Fractured mimic                      | Almost all music ducks into dread silence                  | Organic void shift, cloth and breath, VO
+ 09  | 01:25-01:37| Shield and sword battle              | Percussion and short string ostinato enter                 | Hit transients, guard counters, footsteps
+ 10  | 01:37-01:47| Frost/fire/lightning reactions       | Music swells with staggered attacks                        | Frozen arch, vapor, lightning on water
+ 11  | 01:47-01:55| 5-player dungeon, 10-player raid, PvP| Biggest 8-second orchestral statement                      | Party call, spell punctuation, cinematic edit
+ 12  | 01:55-02:00| Final hero and title                 | Sudden silence; five-note identity/title impact            | Whisper 'What will you become?' then logo
+
+VOICEOVER RULE: Test intelligibility BEFORE mastering the score. In music
+stems, preserve a dialogue-safe spectral window rather than merely turning
+down the finished mix. Design the final hit AFTER the spoken tag rather than
+colliding with it.
+
+================================================================================
+SECTION 6 — ADAPTIVE MUSIC SPECIFICATION (for DAW/Unuel integration)
+================================================================================
+
+CORE PLAYER STATES (map each region's cues to these):
+  SAFE_HUB, WILDERNESS_CALM, WILDERNESS_UNEASE, ENEMY_DETECTED, SKIRMISH,
+  ELITE, BOSS_PHASE_1, BOSS_PHASE_2, BOSS_FINAL, VICTORY, DEFEAT,
+  EXTRACTION, PVP_READY, PVP_ACTIVE, PVP_OVERTIME, SOCIAL
+
+LAYERS PER CUE (genuine composition stems or acceptable stem extractions;
+each layer time-aligned to shared reference clock, key, BPM, length, zero start):
+  BASE_AMBIENCE, HARMONY, MELODY, RHYTHM, DANGER, CHOIR, IMPACT_STING,
+  VICTORY_STING
+
+GAME EVENT EXAMPLES:
+  - Entering Verdant Deep fades a calm bed
+  - Awareness rises when the Kazari hears a Fractured
+  - Combat adds percussion only on a bar boundary
+  - Enemy death removes combat layer after the next phrase
+  - World boss forces authored transition into its own motif
+  - PvP uses neutral audible states regardless of item rarity; avoid masking
+    enemy cast and dodge cues
+
+IMPLEMENTATION TARGETS (engineering proposal):
+  - Unreal 5.8 MetaSounds for controllable sound sources
+  - Quartz for quantized music playback
+  - Audio Modulation for ducking/intensity
+  - Sound classes/submixes for menu, dialogue, effects, music routing
+  - Parameter inputs: BossIntensity, DangerLevel, HealthCritical, RegionID,
+    PvpState, ExpeditionTimeRemaining
+  - Evaluate whether separate interactive-music middleware is justified;
+    never assume it is needed
+
+TECHNICAL AUDIO DELIVERABLES:
+  - 48 kHz / 24-bit WAV where feasible; streaming/compressed runtime versions
+    made from masters
+  - Synced stems with precise start offset
+  - Metadata: BPM, Key, TimeSignature, LoopStartSample, LoopEndSample,
+    BarsPerLoop, TailHandling, TransitionBarCount, CueID, RegionID, GameState,
+    ThreatLevel, StingerName, SourceRights
+  - Test headphones, stereo TV speakers, console-like playback; check
+    loudness, mono fold-down, accessibility sliders
+
+MANDATORY IN-ENGINE QA (avoid these failures):
+  - Phase drift, clicks at loop boundaries, overlong crossfades
+  - Redundant full-mix layering
+  - Combat music too loud for spell telegraphs
+  - Stacked elite cues, queue-to-combat latency
+  - Repeated stingers, restart-on-camera cuts
+  - Audio breakup during scene transitions
+
+================================================================================
+SECTION 7 — CANON SOUND DIRECTIVE (what V6 actually specifies)
+================================================================================
+
+From ECLIPSE_MASTER_BIBLE_V6.pdf, p. 81 (Sound Design Directive):
+  - Base sound: dark-fantasy orchestral music with African percussion
+  - Combat: drums, string tension, vocal chants
+  - Bosses: full orchestra, choir, soloists
+  - PvP: aggressive strings and percussion
+  - Exploration: ambient strings, nature, wind-like instrument colors
+  - Fracture: dissonant dimensional sonorities
+  - Distinct sound signatures for: fire, ice, lightning, shadow, holy, water,
+    nature, soul, temporal, earth, wind, poison
+
+TRAILER 12-SHOT ARC (sourced from V1 trailer prompt, not invented):
+  Aethel -> Gothic City -> first fracture -> Ashen Forge -> Verdant Deep ->
+  Aetherborn on Floating Isles -> the peoples -> Fractured emergence ->
+  melee combat -> environmental magic -> 5-player dungeon/10-player raid and
+  PvP -> final title.
+  Closing tagline: THE LIGHT BROKE. WE DID NOT.
+
+CANON RECONCILIATION NEEDED before race-specific theme libraries:
+  - V6 uses 9-peoples lore framing; production proposes 13 ancestries
+  - Class counts vary (8/12/17 references)
+  - Group sizes vary (4 vs 5 player; 8 vs 10 player)
+  - A Canon/Production Reconciliation Matrix must be created and a
+    creative-director decision obtained for conflicts before producing
+    race-specific themes. Do not silently rewrite locked lore.
+
+================================================================================
+END OF MASTER CUE LIBRARY
+================================================================================
+
+Next steps when a Suno Pro/Premier account is secured:
+  1. Commission or create 3 original five-note Aethel motif candidates (MIDI
+     or recorded instrument). Select one by blind listening. Name it
+     MOTIF_AETHEL_01 when approved. Log ownership chain.
+  2. Generate the main title theme ("The Last Light of the Aethel") first —
+     8+ candidates. Run the acceptance test.
+  3. Generate cues in priority order: M24 (trailer), M15 (hero), M01/M02
+     (city hubs), M12 (combat), M07 (Aetherborn zone), then remaining cues.
+  4. For each generation, log the full metadata block from Section 0.
+  5. Export WAV/stems, master in DAW, build genuine loops, test in Unreal 5.8
+     with MetaSounds + Quartz.
+  6. Never use free-tier outputs for any commercial asset. Verify plan tier
+     at both generation AND download time.
+
+NO MUSIC HAS BEEN GENERATED. This document organizes preproduction materials
+only.

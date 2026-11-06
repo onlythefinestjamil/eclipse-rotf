@@ -1,0 +1,480 @@
+# ECLIPSE: REALMS OF THE FRACTURED
+# CINEMATIC REVEAL TRAILER — FULL PRE-PRODUCTION DOCUMENT
+# Based on: Hermes Master Prompt v1.0 + V6 Bible + 5 reference trailers
+# Status: Pre-production. No footage generated yet. No GPU tokens spent.
+
+---
+
+## 1. PROJECT OVERVIEW
+
+**Title:** ECLIPSE: REALMS OF THE FRACTURED
+**Format:** 4K UHD 3840x2160, 24fps, 16:9 master, ~120 seconds
+**Cutdowns:** 60s, 30s, 15s
+**Tagline:** THE LIGHT BROKE. WE DID NOT.
+**End card:** MOMENTUM LABS | IN DEVELOPMENT | PC / XBOX SERIES X|S / PLAYSTATION 5
+**Status:** Cinematic concept / Previsualization. Not gameplay footage.
+
+**Quality benchmarks:**
+- Epic scale and emotional progression of Blizzard-style cinematics (WoW trailer)
+- Ancient, austere environmental mystery of Elden Ring
+- Realistic skin, hair, textile, stone, weapon, and motion detail of Black Myth: Wukong
+- NOT copies of those games — Eclipse has its own visual identity
+
+---
+
+## 2. CANON LOCK
+
+### The Aethel
+- Original creation-giving celestial force, now fractured
+- Cause of fracture: UNKNOWN — never revealed
+- Visual: vast luminous golden celestial body in the sky, now cracked
+
+### The Aetherborn (Hero)
+- Living fragments of the Aethel, near extinct
+- Muscular anatomy, luminous fracture markings, wings of LIGHT/LIGHTNING
+- NEVER feathered, mechanical, or fleshy wings
+- Hero: Black male, deep-brown skin, long natural locs, violet-indigo/silver fracture lines
+- Face, hair, build, armor IDENTICAL in all shots
+- Female Aetherborn counterpart may appear if supported by concepts
+
+### 13 Ancestries (V6 roster)
+Aetherborn, Solari, Vyrael, Tharuk, Grimstarr, Kazari, Umbralis, Draven, Nereyth, Myceliar, Forgeborn, Hellsworn, Necrevan
+
+### 17 Classes (V6)
+Vanguard, Umbral Assassin, Arcanist, Riftwalker, Dreadknight, Templar, Soulbinder, Wildwarden, Stormcaller, Oracle, Alchemist, Berserker, Shadowblade, Spellblade, Warlord, Necromancer, Druid
+
+### The Fractured
+- Void-born mimics of creation, NOT an organized race
+- No cities, no language
+- Look profoundly uncanny, not generic demons
+- Emerge from seams in space itself
+
+### 6 Environments
+1. Gothic City — built around colossal cracked celestial fragment
+2. Ashen Forge — volcanic underground, Grimstarr workers, cooling molten rivers
+3. Verdant Deep — immense living forest, bioluminescent
+4. Sun-Sand Wastes — buried sunlit ruins in golden dunes
+5. Frozen Crown — silent icy peaks
+6. Floating Isles — celestial debris, impossible waterfalls
+
+### Group sizes (latest user-authorized)
+- Dungeons: 5-player groups
+- Raids: 10-player teams
+- Arena: 1v1, 2v2, 3v3, 5v5, 10v10
+
+---
+
+## 3. CHARACTER BIBLE — HERO
+
+### Aetherborn Hero (Primary)
+- **Skin:** Deep brown, natural melanin, visible pores, subsurface scattering
+- **Hair:** Long natural locs, individually modeled, gravity and wind physics, readable silhouette
+- **Build:** Strong sculpted musculature, broad shoulders, powerful frame
+- **Face:** Subtly detailed facial anatomy, distinctive eyes, individualized proportions
+- **Fracture markings:** Violet-indigo/silver lines under the skin, light up with energy
+- **Wings:** Geometric wings of celestial electricity, NOT feathers, NOT static — living energy matching skin markings, release physical sparks
+- **Armor:** Intricate yet physically believable dark armor, forged steel, straps, buckles, weathering
+- **Weapon:** May carry a recognizable relic greatblade (not oversized)
+- **Identity:** MUST be identical across all 12 shots
+
+### Supporting Cast
+- Black Solari woman — sculpted twists, scarred plate armor, warm golden light
+- Vyrael seer — exhausted ancient silver eyes, ethereal
+- Horned Hellsworn — dark skin, inner fire glow, demonic horns
+- Scaled Draven warrior — reptilian features, draconic descendant
+- Spectral Necrevan — blue ghostly light, keeping vigil
+- Towering Tharuk — giant-born, earth-toned skin, massive
+- Nereyth — aquatic features, near moonlit sea
+- Myceliar — emerging through fungal roots, bioluminescent spores
+- Grimstarr dwarf — soot-streaked face, forge master, cracked leather gloves
+- Kazari hunter — feline features, authentic lived-in leather gear
+
+---
+
+## 4. ART DIRECTION LOCK
+
+### Materials
+- **Steel:** Aged, forged, dark alloys, patina, wear, battle scars, tool marks
+- **Stone:** Carved, weathered, cracked, moss-covered, ancient
+- **Cloth:** Woven, layered, straps, buckles, seams, wind physics
+- **Skin:** Pores, melanin-correct SSS, micro-expressions, sweat, dirt
+- **Hair:** Individual strands, gravity, collision, motion, no clipping through armor
+
+### Color Palette
+- **Base:** Deep shadow crush (RGB 12,8,18), rich blacks without losing detail
+- **Midtones:** Amethyst/violet (hue 270, sat 40%), indigo, silver
+- **Highlights:** Gold (hue 45, sat 70%, lum 65%), warm amber, dying corona light
+- **Contrast:** Warm gold vs cold blue, warm forge vs cold frost, holy light vs void shadow
+
+### Magic / VFX Rules
+- ONE magical accent per idea — not everything glowing simultaneously
+- Spells emanate from actual cast source
+- Light illuminates skin, armor, dust, water, smoke, architecture
+- Cast shadows where physically appropriate
+- Contact effects and aftermath — not floating decorative particles
+- No screen-covering particle fog
+
+### Rejection Rules
+REJECT shots with:
+- Inconsistent Aetherborn faces
+- Feathery wings
+- Washed-out dark skin (no skin lightening)
+- Cheap glowing plastic armor
+- Oversized cartoon weapons
+- Unconvincing feet-on-ground movement
+- Broken fingers
+- Duplicated NPCs
+- Drifting symbols
+- Glowing effects that cast no light
+- Spells passing through objects without consequence
+- Gameplay UI, damage numbers, menus
+- Motion artifacts, temporal inconsistency
+- Copycat imagery from reference trailers
+
+---
+
+## 5. SHOT LIST — 12 SHOTS, ~120 SECONDS
+
+### SHOT 01 | 00:00–00:09 | BEFORE THE WOUND
+**Duration:** 9 seconds
+**Purpose:** Establish the sacred, the divine, the before
+**Voice:** "Before the first crown... there was the Aethel."
+**Visual:** Black screen. A microscopic shimmer of golden light appears, expanding into the vast luminous Aethel filling a silent sky above ancient dark mountains. Extremely slow cinematic push-in. No title. Sacred, otherworldly.
+**Camera:** Slow push-in from black to extreme wide
+**Lighting:** Warm gold against cosmic black, god rays
+**Color:** Near-monochrome gold on black
+**Audio:** Distant celestial resonance, low sustained drone
+**Assets needed:** Aethel sky environment, ancient mountains silhouette
+**VFX:** Light shimmer expansion, god rays
+**Reference images:** ECLIPSED_REALM_WORLD_MAP.png (world map for sky reference)
+
+---
+
+### SHOT 02 | 00:09–00:20 | WHAT THE LIGHT GAVE
+**Duration:** 11 seconds
+**Purpose:** Show the world that the light created — life, civilization, beauty
+**Voice:** "Its light gave shape to stone... and breath to every living thing."
+**Visual:** Sunlight crosses the Gothic City built around a colossal cracked celestial fragment. Bustling ancient streets: Black Solari merchants, grim dwarven forge workers, diverse races and skin tones, moving cloth, temple bells, smoke, children, monumental bridges. Camera floats across textured architecture to one intimate human face.
+**Camera:** Float/crane across city, ending on intimate portrait
+**Lighting:** Golden hour, warm sunlight, long shadows
+**Color:** Warm gold dominant, rich earth tones
+**Audio:** Bells, crowd ambience, cloth movement, life
+**Assets needed:** Gothic City environment, Solari merchants, dwarven workers, diverse NPCs, cloth sims
+**VFX:** Sunlight shafts, atmospheric dust, smoke from kitchens
+**Reference images:** GOTHIC_CITY_V1/V2/V3.png
+
+---
+
+### SHOT 03 | 00:20–00:30 | THE CRACK
+**Duration:** 10 seconds
+**Purpose:** The inciting incident — the light begins to break
+**Voice:** "Then... the light began to break."
+**Visual:** An enormous hairline fracture crawls across the Aethel's face. No attacker. Sunlight turns strange and cold — warm gold shifts to pale blue. Birds scatter. A temple bell rings without a hand. The crowd looks skyward. Music stops on a single low note.
+**Camera:** Wide sky shot, then cut to crowd reaction (skyward looks)
+**Lighting:** Shift from warm gold to cold blue — the temperature change is the horror
+**Color:** Desaturating, cooling, gold draining to blue
+**Audio:** Bell toll (unplayed), silence, low bass note, bird scatter
+**Assets needed:** Aethel (cracked), Gothic City crowd (skyward), bird flock
+**VFX:** Crack propagation on celestial body, light temperature shift
+**Reference images:** ECLIPSED_REALM_WORLD_MAP.png
+
+---
+
+### SHOT 04 | 00:30–00:40 | FIRES BENEATH THE WORLD
+**Duration:** 10 seconds
+**Purpose:** Show the forge dying — the world losing its fire
+**Voice:** "Our forges cooled."
+**Visual:** Ashen Forge. A Grimstarr master hammers a half-finished blacksteel blade. Extreme close-ups: real forging sparks, molten channels, ash, furnace texture, perspiration, cracked leather gloves. A river of molten stone visibly dims. Eyes in a soot-streaked face register terror.
+**Camera:** Extreme close-ups, macro shots of sparks, then medium on dwarf face
+**Lighting:** Orange forge glow against deep black, fading
+**Color:** Orange-red dominant, fading to grey, ash
+**Audio:** Hammer strikes, sparks, furnace rumble, then quiet
+**Assets needed:** Ashen Forge environment, Grimstarr dwarf, anvil, blade, molten river
+**VFX:** Spark particles (slow motion), molten flow dimming, ash drift
+**Reference images:** WEEPING_FOUNDRY_DUNGEON.png, BLACKSMITH_FORGE.png, BLACKSMITH_CRAFTING_UI.png
+
+---
+
+### SHOT 05 | 00:40–00:51 | BEAUTY AT THE EDGE
+**Duration:** 11 seconds
+**Purpose:** Show the natural world fading — beauty still exists but is dying
+**Voice:** "Our oldest lands began to forget us."
+**Visual:** Serene long take through the Verdant Deep: giant roots, bioluminescent moss, insect wings, pollen, rain on leaves, forest mist. A Kazari hunter senses something and turns. Quick cuts: Frozen Crown glaciers, sun-sand ruins under ominous clouds.
+**Camera:** Long tracking shot through forest, then quick cuts
+**Lighting:** Dappled golden-green forest light, shifting to cold blue for glacier, warm gold for desert
+**Color:** Green-gold forest, cold blue ice, warm amber sand
+**Audio:** Forest ambience, rain, insects, then wind and silence
+**Assets needed:** Verdant Deep environment, Kazari hunter, Frozen Crown, Sun-Sand Wastes
+**VFX:** Bioluminescent moss, pollen drift, rain, mist, leaf scatter
+**Reference images:** KAZARI_WILDWARDEN_ARMOR.png, WILDWARDEN_SHEET.png
+
+---
+
+### SHOT 06 | 00:51–01:04 | THE FALLEN CELESTIAL (HERO REVEAL)
+**Duration:** 13 seconds
+**Purpose:** Hero reveal — the Aetherborn awakens
+**Voice:** "And from the falling heavens... some of us awoke."
+**Visual:** Silhouette of the Black male Aetherborn on a suspended stone bridge in the Floating Isles. Deep-brown skin, long locs in high wind, dark armor. Camera orbits from behind to a 70mm close-up of his eyes and jaw. His violet-indigo fracture markings light up under the skin. Matching geometric wings of celestial electricity unfurl from his back — NOT feathers — releasing physical sparks that illuminate suspended stone fragments.
+**Camera:** Orbit from behind to 70mm close-up, slow and deliberate
+**Lighting:** Celestial backlight, violet-indigo energy glow, spark illumination
+**Color:** Deep brown skin, violet-indigo energy, gold spark highlights
+**Audio:** Wind, electrical crackle building, then a surge of energy sound
+**Assets needed:** Floating Isles environment, Aetherborn hero model, stone bridge, energy wings VFX
+**VFX:** Fracture markings activating under skin, geometric energy wings unfurling, sparks
+**Reference images:** AETHERBORN_MALE.png, AETHERBORN_V3.png
+
+---
+
+### SHOT 07 | 01:04–01:14 | THE OTHER PEOPLES
+**Duration:** 10 seconds
+**Purpose:** Show the diversity of ancestries — each with cultural authorship
+**Voice:** "We are not one blood... but this world is ours."
+**Visual:** Lyrical montage of unique faces: Black Solari woman with twists and scarred plate; Vyrael seer with ancient silver eyes; horned Hellsworn; scaled Draven; spectral Necrevan; towering Tharuk; Nereyth by moonlit sea; Myceliar through fungal roots. NOT a character grid — individual portraits with cultural identity.
+**Camera:** Quick portrait cuts, each ~1 second, 85mm close-ups
+**Lighting:** Per ancestry — warm gold for Solari, silver for Vyrael, fire for Hellsworn, blue for Necrevan, etc.
+**Color:** Each ancestry has personalized color grade within unified palette
+**Audio:** Brief musical motif per ancestry, blending into continuous suite
+**Assets needed:** 8 ancestry character models, each with unique environment
+**VFX:** Per ancestry — fire glow, spectral light, bioluminescence, etc.
+**Reference images:** SOLARI_VANGUARD_ARMOR.png, AETHELORN_SHEET.png, HELLSWORN.png, DRAEKAL_SHEET.png, NECREVAN_SHEET.png, THARUK_BERSERKER_ARMOR.png, NEREYTH_SHEET.png, MYCELIAR_SHEET.png
+
+---
+
+### SHOT 08 | 01:14–01:25 | SOMETHING WEARING OUR SHAPES
+**Duration:** 11 seconds
+**Purpose:** Introduce the Fractured — uncanny horror
+**Voice:** "The darkness does not hate us. It simply takes what the light leaves behind."
+**Visual:** At the boundary of the Eclipse Shadow (a wound in reality, NOT cartoon smoke). An ordinary-looking person turns and their face shifts into an impossible void-mimic contour — features almost right but profoundly uncanny. A Fractured being emerges from a seam in space. Dread hush, cloth flutter, involuntary human terror.
+**Camera:** Medium shot on the person, slow push-in as face shifts
+**Lighting:** Reality distortion lighting, light bending at the seam edges, amethyst-violet void glow
+**Color:** Desaturating around the seam, amethyst-violet from within the void
+**Audio:** Dread hush, reality-bending SFX (reversed sounds, pitch glitches), cloth flutter
+**Assets needed:** Fractured being model, Eclipse Shadow environment, ordinary NPC
+**VFX:** Reality seam, face morph (uncanny not monster), void-mimic distortion
+**Reference images:** NECREVAN.png (spectral reference), UMBRAKAI.png (dark reference)
+
+---
+
+### SHOT 09 | 01:25–01:37 | THE FIRST STRIKE
+**Duration:** 12 seconds
+**Purpose:** Combat — grounded, weighty, real
+**Voice:** (none — percussion enters)
+**Visual:** Grounded hero-on-monster combat. A Vanguard braces, catches a huge blow on shield — iron sparks flash, he staggers back, adjusts feet, counters with greatsword. An Umbral Assassin runs low along the creature's blind side with daggers. A Riftwalker creates one brief afterimage. Real contact, recovery frames, stone fragments, believable weight, excellent timing.
+**Camera:** Shoulder-level tracking during combat, slow motion at impact moments
+**Lighting:** High contrast combat lighting, sparks illuminating faces
+**Color:** Full combat saturation, amethyst and gold at max intensity
+**Audio:** Percussion enters (drums), metal impacts, shield bash, footsteps on stone
+**Assets needed:** Vanguard model, Umbral Assassin model, Riftwalker model, Fractured creature, combat arena
+**VFX:** Spark particles on impact, afterimage (Riftwalker), stone fragments, dust
+**Reference images:** VANGUARD_SHEET.png, UMBRAL_ASSASSIN_SHEET.png, RIFTWALKER_SHEET.png, BATTLE_V3.png
+
+---
+
+### SHOT 10 | 01:37–01:47 | MAGIC CHANGES REALITY
+**Duration:** 10 seconds
+**Purpose:** Show spell system — physically coherent, environmental interaction
+**Voice:** (none — music surges)
+**Visual:** A caster freezes a collapsing arch — ice crystals spreading on stone. A fire spell hits it — shatters into hot vapor and falling ice. A Stormcaller releases lightning into flooded stone — branching current across water, reflected in armor and faces. Physically coherent spell origins, environmental interactions.
+**Camera:** Wide to medium, tracking spell travel
+**Lighting:** Ice (cold blue), fire (warm orange), lightning (violet-white) — each spell changes the lighting
+**Color:** Shifting between ice blue, fire orange, lightning violet — environmental color changes
+**Audio:** Ice crackle, fire whoosh, lightning crack, shatter
+**Assets needed:** Arcanist/caster model, Stormcaller model, collapsing arch, flooded stone floor
+**VFX:** Ice spreading, shatter + vapor, lightning branching, water reflection
+**Reference images:** ARCANIST_SHEET.png, STORMCALLER_SHEET.png, SPELL_FROST.png, FULMEN_LANCE_SPELL.png
+
+---
+
+### SHOT 11 | 01:47–01:55 | UNITED
+**Duration:** 8 seconds
+**Purpose:** Show group play — dungeons, raids, PvP
+**Voice:** (none — music at full)
+**Visual:** Five-hero dungeon group navigates the Weeping Foundry (molten rivers, rusted iron). Cut to ten-hero raid beneath the Cathedral of Unmade Hours (impossible vaulted stone). Two fast arena flashes: 1v1 duel, 5v5 tactical confrontation with distinct team roles. Cinematic, not gameplay UI.
+**Camera:** Wide establishing for groups, then quick cuts for arena
+**Lighting:** Forge orange for dungeon, cathedral candlelight for raid, arena spotlight
+**Color:** Per environment — forge warm, cathedral cold, arena high contrast
+**Audio:** Music at full, combat sounds, crowd roar for arena
+**Assets needed:** 5-hero group, 10-hero raid, Cathedral interior, Duel Circle arena, Weeping Foundry
+**VFX:** Class ability flashes (shield, heal, spell), coordinated attack arcs
+**Reference images:** WEEPING_FOUNDRY_DUNGEON.png, CATHEDRAL_OF_UNMADE_HOURS.png, DUEL_CIRCLE_ARENA.png
+
+---
+
+### SHOT 12 | 01:55–02:00 | WHAT WILL REMAIN
+**Duration:** 5 seconds
+**Purpose:** Closing beat — emotion, title, tagline
+**Voice:** "What will you become?"
+**Visual:** The Aetherborn stands at a precipice before the wounded Aethel. His wings dim to thin strands of light. The fracture spreads silently. Hard cut to black on a final heartbeat. Title: ECLIPSE: REALMS OF THE FRACTURED. Tagline: THE LIGHT BROKE. WE DID NOT. End card: MOMENTUM LABS | IN DEVELOPMENT.
+**Camera:** Wide hero shot, then hard cut to black, then static title
+**Lighting:** Fading celestial light, then black, then amethyst-violet title glow
+**Color:** Fading gold to black, then amethyst-violet and gold text
+**Audio:** Heartbeat, silence, then final piano note with reverb tail
+**Assets needed:** Aetherborn hero, Aethel (wounded), precipice environment
+**VFX:** Wings dimming, fracture spreading, title particle effect
+**Reference images:** AETHERBORN_MALE.png, ECLIPSED_REALM_WORLD_MAP.png
+
+---
+
+## 6. VOICEOVER SCRIPT
+
+1. "Before the first crown... there was the Aethel."
+2. "Its light gave shape to stone... and breath to every living thing."
+3. "Then... the light began to break."
+4. "Our forges cooled."
+5. "Our oldest lands began to forget us."
+6. "And from the falling heavens... some of us awoke."
+7. "We are not one blood... but this world is ours."
+8. "The darkness does not hate us. It simply takes what the light leaves behind."
+9. (silence — percussion enters)
+10. (silence — music surges)
+11. (silence — music at full)
+12. "What will you become?"
+
+**Performance direction:** Grounded, restrained, deep weathered voice. Room to breathe between lines. Do not fill every second with dialogue. The narrator may be an Aethelorn seer.
+
+---
+
+## 7. MUSIC CUE SHEET
+
+| Time | Cue | Description |
+|------|-----|-------------|
+| 00:00 | C0 drone | Sustained low celestial resonance, barely perceptible |
+| 00:09 | Strings enter | Warm, reverberant, cathedral-like |
+| 00:20 | Music stops | Single low bass note — the crack |
+| 00:30 | Silence | Forge sounds only, fading |
+| 00:40 | Ethereal pad | Forest ambience, nature sounds |
+| 00:51 | Vocal chant | Wordless, reverberant, building |
+| 01:04 | Strings rise | Ancestry montage — each race gets a brief motif |
+| 01:14 | Dread hush | Reality-bending SFX, reversed sounds, pitch glitches |
+| 01:25 | Percussion enters | Tribal drums, taiko, industrial elements |
+| 01:37 | Full orchestra | Brass stabs, choir, strings at full |
+| 01:47 | Crescendo | Maximum intensity, all instruments |
+| 01:55 | All music CUTS | Silence, heartbeat, then single piano note (A2) with reverb |
+| 02:00 | End | Wind whisper fading, sub-bass heartbeat |
+
+**Music budget:** Original composition only. No copied WoW/Elden Ring/Wukong themes or melodies.
+
+---
+
+## 8. SOUND DESIGN CUE SHEET
+
+| Shot | SFX |
+|------|-----|
+| 01 | Celestial drone, sub-bass rumble, cosmic resonance |
+| 02 | Bells, crowd murmur, cloth movement, footsteps, smoke |
+| 03 | Bell toll (unplayed by hand), bird scatter, bass drop, silence |
+| 04 | Hammer strikes, spark crackle, furnace rumble, metal ring, silence as forge dims |
+| 05 | Forest ambience, rain on leaves, insects, wind, bird calls, silence |
+| 06 | Wind, electrical crackle building, energy surge, spark pops |
+| 07 | Brief musical motif per ancestry, blending |
+| 08 | Dread hush, reality-bend (reversed audio, pitch stutter), cloth flutter, heartbeat |
+| 09 | Metal impacts, shield bash, spark spray, footsteps on stone, percussion |
+| 10 | Ice crackle, fire whoosh, shatter, lightning crack, water splash |
+| 11 | Combat sounds, crowd roar (arena), group coordination, spell casts |
+| 12 | Heartbeat, silence, single piano note (A2), wind whisper, sub-bass |
+
+---
+
+## 9. TECHNICAL SPECIFICATIONS
+
+### Delivery
+- **Master:** 4K UHD 3840x2160, 24fps, 16:9, H.264/H.265
+- **Cutdowns:** 60s, 30s, 15s
+- **Audio:** 5.1 surround + stereo mix
+- **Captions:** SRT file
+- **Stills:** 12 keyframe stills (one per shot)
+
+### Generation Pipeline
+1. Generate at 720p native using Wan 2.2 TI2V-5B (50 steps, bfloat16)
+2. Upscale to 4K using ffmpeg (Lanczos + hqdn3d + curves color grade)
+3. Assemble 12 shots in order
+4. Add voiceover, music, sound design
+5. Final color grade (deep shadow crush, amethyst/gold)
+6. Export master + cutdowns
+
+### Quality Gates (per shot, 0-5 scale, must average 4+)
+1. Originality
+2. Craftsmanship
+3. Material realism
+4. Animation feel
+5. Spell spectacle
+6. Readability
+7. Representation (authentic Black characters, textured hair)
+8. Performance
+9. Integration
+10. Canon compliance
+
+### Asset Checklist
+- [ ] Aetherborn hero model (locked face, hair, armor, wings)
+- [ ] 8 ancestry character models (Solari, Vyrael, Hellsworn, Draven, Necrevan, Tharuk, Nereyth, Myceliar)
+- [ ] 6 environment models (Gothic City, Ashen Forge, Verdant Deep, Sun-Sand Wastes, Frozen Crown, Floating Isles)
+- [ ] Fractured creature model
+- [ ] Vanguard, Umbral Assassin, Riftwalker combat models
+- [ ] Stormcaller, Arcanist spell models
+- [ ] Cathedral of Unmade Hours interior
+- [ ] Weeping Foundry interior
+- [ ] Duel Circle arena
+- [ ] Voiceover recording (8 lines)
+- [ ] Original music composition (~120 seconds)
+- [ ] Sound design (SFX library or authored)
+
+---
+
+## 10. CURRENT ASSET INVENTORY
+
+### Available Now
+- 151 concept art images (eclipse_concepts/)
+- 5 3D GLB models (Aetherborn Male/Female, Vanguard, Umbral Assassin, Arcanist)
+- 12 C++ game systems (Character, DR, Combat, Level, Chat, GameMode, Loot, DamageRotation, Targeting, ClassRoles, WeaponSwap, + 2 new)
+- V6 Master Bible (131 pages)
+- Cinematic Directive (1,465 lines, 5 trailers)
+- This pre-production document
+- Wan 2.2 TI2V-5B model access (via Vast.ai A100)
+- HuggingFace token
+- Vast.ai A100 instance ($15.61 balance, ~12 hours)
+
+### Still Needed
+- Higher-resolution character models for close-ups
+- Environment 3D models for each of the 6 regions
+- Fractured creature model
+- Voiceover recording
+- Original music composition
+- Sound design assets
+- Color grading LUT
+
+---
+
+## 11. PRODUCTION SCHEDULE
+
+| Phase | Task | Time | Cost |
+|-------|------|------|------|
+| Pre-pro | This document | Done | $0 |
+| Pre-pro | Shot list approval | Pending | $0 |
+| Generation | 12 shots at 720p/50 steps | ~2-3 hours | ~$3-4 Vast.ai |
+| Upscale | 12 shots to 4K | ~30 min | $0 (ffmpeg) |
+| Assembly | Edit 12 shots in order | ~1 hour | $0 |
+| Audio | Voiceover + music + SFX | ~2-4 hours | $0 (if authored) or licensed |
+| Color | Final grade | ~1 hour | $0 |
+| Export | Master + cutdowns | ~1 hour | $0 |
+| Upload | gofile.io for Mac viewing | ~10 min | $0 |
+| **Total** | | **~8-10 hours** | **~$3-4 GPU** |
+
+---
+
+## 12. HONEST DISCLOSURE
+
+- This trailer is AI-generated concept footage, NOT in-engine gameplay
+- Native resolution is 720p, upscaled to 4K — this will be disclosed
+- Wan 2.2 TI2V-5B is the model used (5B parameters, not 14B)
+- The 14B model would produce better quality but requires 27GB disk + 27GB temp = 54GB minimum
+- AI video will not match real game engine footage quality
+- For true Elden Ring/Wukong quality, we need UE5.8 cinematic capture
+- This is previsualization — the final trailer should be rendered in UE5.8
+- No copyrighted footage or music from reference trailers is used
+- All Eclipse characters, lore, and designs are original
+
+---
+
+**Document owner:** Momentum Labs / Illustrators Entertainment LLC
+**Date:** November 6, 2026
+**Status:** Pre-production — ready for generation upon approval

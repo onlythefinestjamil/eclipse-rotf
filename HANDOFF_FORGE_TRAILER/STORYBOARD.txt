@@ -1,0 +1,317 @@
+================================================================================
+ECLIPSE: REALMS OF THE FRACTURED — 4K Cinematic Reveal Trailer
+STORYBOARD V1.0 — 12 Shots, ~120 Seconds
+Momentum Labs / Illustrators Entertainment LLC
+Tagline: THE LIGHT BROKE. WE DID NOT.
+================================================================================
+
+Visual style throughout: 4K UHD, ultra-detailed, filmic realism, photorealistic
+skin texture with pores and subsurface scattering, authentic textured hair with
+physics, practical layered armor with straps/buckles/forged steel, volumetric
+clouds and fog, atmospheric particles, controlled highlights, natural color
+contrast, Unreal Engine 5 quality, dark fantasy with restrained magical
+highlights. NO feathery wings. NO cartoon glow. NO oversized weapons.
+
+Emotional curve: wonder → loss → dread → defiance → fragile hope
+
+--------------------------------------------------------------------------------
+SHOT 01 — SQ01_SH010 | 00:00–00:09 (9s)
+  TITLE: Before the Wound
+  PURPOSE: Establish the celestial creator; sacred origin before civilization.
+--------------------------------------------------------------------------------
+FRAME 1A (00:00–00:03): Pure black. A microscopic shimmer of golden light
+  appears in the darkness — a single warm point against infinite void.
+  Composition: dead center, vast negative space. Atmosphere: sacred silence.
+
+FRAME 1B (00:03–00:06): The golden shimmer expands outward, resolving into
+  the vast luminous celestial form of the Aethel filling a silent sky above
+  ancient dark mountain silhouettes. God rays radiate downward. Warm gold
+  against deep cosmic black.
+
+FRAME 1C (00:06–00:09): The Aethel at full luminous bloom. Atmospheric depth,
+  celestial resonance, volumetric light. Extremely slow cinematic push-in
+  continues throughout. No title text. The world feels ancient and sacred.
+
+  VO: "Before the first crown... there was the Aethel."
+  MUSIC: Near-silence; single spectral harmonic; Aethel motif seed.
+  COLOR: Deep cosmic black / warm luminous gold.
+
+--------------------------------------------------------------------------------
+SHOT 02 — SQ01_SH020 | 00:09–00:20 (11s)
+  TITLE: What the Light Gave
+  PURPOSE: Show what the light built — life, commerce, civilization.
+--------------------------------------------------------------------------------
+FRAME 2A (00:09–00:13): A gothic city built around a colossal cracked celestial
+  fragment of golden stone, visible overhead. Bustling ancient streets:
+  dark-skinned Solari merchants in rich textiles, grim dwarven forge workers,
+  diverse races and skin tones. Moving cloth and banners. Temple bells ringing.
+  Smoke rising from kitchens. Children in the streets. Distant monumental stone
+  bridges. Golden hour light.
+
+FRAME 2B (00:13–00:17): Camera floats across richly textured baroque
+  architecture — worn stone, carved gargoyles, market awnings, hanging
+  banners. The camera moves through the life of the city.
+
+FRAME 2C (00:17–00:20): The camera resolves to one intimate human face — warm
+  brown skin, natural skin pores, a look of quiet contentment. A 70mm
+  close-up. The cracked Aethel fragment glows above in the background.
+
+  VO: "Its light gave shape to stone... and breath to every living thing."
+  MUSIC: Warm low strings; first five-note Aethel seed; ambient market.
+  COLOR: Warm gold / textured stone grey / rich textile accents.
+
+--------------------------------------------------------------------------------
+SHOT 03 — SQ01_SH030 | 00:20–00:30 (10s)
+  TITLE: The Crack
+  PURPOSE: Inciting fracture — the light begins to break; cause unknown.
+--------------------------------------------------------------------------------
+FRAME 3A (00:20–00:23): An enormous hairline fracture crawls across the face
+  of the luminous golden celestial body in the sky. No attacker visible — the
+  cause remains unknown. The crack spreads in eerie silence.
+
+FRAME 3B (00:23–00:26): Sunlight turns strange and cold, shifting from warm
+  gold to pale blue. Birds scatter and change course in the sky. A temple bell
+  rings without a hand touching it.
+
+FRAME 3C (00:26–00:30): Below, a crowd of diverse ancient people looks skyward
+  in awe and fear. Faces lit by the cold shifted light. The music stops on a
+  single low bass note. Cinematic dread.
+
+  VO: "Then... the light began to break."
+  MUSIC: Motif dislocates; cut to low suspended note.
+  COLOR: Warm gold transitioning to cold pale blue / grey.
+
+--------------------------------------------------------------------------------
+SHOT 04 — SQ01_SH040 | 00:30–00:40 (10s)
+  TITLE: Fires Beneath
+  PURPOSE: Consequence — the forges cool; industry and craft failing.
+--------------------------------------------------------------------------------
+FRAME 4A (00:30–00:33): Inside the Ashen Forge — a dark volcanic underground
+  foundry. A Grimstarr dwarf master hammers a half-finished blacksteel blade
+  on an ancient anvil. Extreme close-ups of real forging sparks flying in
+  slow motion. Molten metal channels flowing with orange glow. Ash floating
+  in the air. Furnace texture on cracked stone walls.
+
+FRAME 4B (00:33–00:37): Closer on the dwarf — perspiration on a soot-streaked
+  face, cracked leather gloves gripping the hammer. A river of molten stone
+  visibly dims and cools, its orange glow fading to dull red.
+
+FRAME 4C (00:37–00:40): The dwarf's eyes register terror as the forge light
+  fades. The warm glow recedes into shadow. Dark industrial fantasy. Warm
+  forge glow against deep shadow.
+
+  VO: "Our forges cooled."
+  MUSIC: Iron percussion in three uneven hits; harmonic sinking.
+  COLOR: Molten orange / deep shadow black / ash grey.
+
+--------------------------------------------------------------------------------
+SHOT 05 — SQ01_SH050 | 00:40–00:51 (11s)
+  TITLE: Beauty at the Edge
+  PURPOSE: Consequence — nature receding; oldest lands forgetting.
+--------------------------------------------------------------------------------
+FRAME 5A (00:40–00:45): A serene long take moving through the Verdant Deep —
+  an immense ancient forest with giant roots bigger than houses.
+  Bioluminescent moss glowing soft blue-green. Tiny insect wings catching
+  light. Suspended pollen drifting in golden shafts of light. Rain falling on
+  enormous leaves. Drifting forest mist.
+
+FRAME 5B (00:45–00:48): A Kazari hunter with intelligent feline features,
+  natural hair, and authentic lived-in leather gear senses something
+  approaching and turns. Alert, watchful. Nature feels alive.
+
+FRAME 5C (00:48–00:51): Quick cut to Frozen Crown glaciers and silent icy
+  peaks under ominous clouds. Quick cut to sun-sand ruins buried in golden
+  dunes. Nature's beauty fading — each landscape quiet, empty, forgetting.
+
+  VO: "Our oldest lands began to forget us."
+  MUSIC: Forest textures; delicate cello lament.
+  COLOR: Forest green / bioluminescent blue-green / golden shafts → icy white → desert gold.
+
+--------------------------------------------------------------------------------
+SHOT 06 — SQ01_SH060 | 00:51–01:04 (13s)
+  TITLE: Fallen Celestial — HERO REVEAL
+  PURPOSE: The Aetherborn awakens; celestial power persists in mortal form.
+--------------------------------------------------------------------------------
+FRAME 6A (00:51–00:55): A muscular Black male warrior stands on a suspended
+  stone bridge in the Floating Isles. Celestial debris and impossible
+  waterfalls around him. Deep-brown skin with natural skin texture and pores.
+  Carefully modeled long locs moving in high wind. Intricate yet physically
+  believable dark armor with forged steel and straps. Camera behind him.
+
+FRAME 6B (00:55–00:59): The camera orbits from behind to a 70mm close-up of
+  his eyes and jaw. His violet-indigo fracture markings light up under his
+  skin like constellations — the markings glow through the dermis, not on top
+  of it. His face is lit from within.
+
+FRAME 6C (00:59–01:04): Matching geometric wings of celestial electricity
+  unfurl from his back — NOT feathers, NOT static. Living energy wings that
+  match his skin markings in violet-indigo geometry. Physical sparks release
+  and illuminate suspended stone fragments around him. The wings crackle with
+  real electric arcs. He is magnificent and wounded.
+
+  VO: "And from the falling heavens... some of us awoke."
+  MUSIC: Motif large but only brief climax; wing awakening swell.
+  COLOR: Deep brown skin / violet-indigo energy / celestial blue-white.
+
+  CRITICAL: Wings are GEOMETRIC CELESTIAL ELECTRICITY — never feathers.
+  The Aetherborn is a Black male with deep-brown skin and long locs.
+
+--------------------------------------------------------------------------------
+SHOT 07 — SQ01_SH070 | 01:04–01:14 (10s)
+  TITLE: The Peoples
+  PURPOSE: Unity in diversity — many ancestries under one fractured sky.
+--------------------------------------------------------------------------------
+FRAME 7A (01:04–01:05): A proud Black Solari woman with sculpted twists and
+  scarred plate armor. Warm golden light. Natural skin texture and pores.
+
+FRAME 7B (01:05–01:06): A Vyrael seer with exhausted ancient silver eyes.
+  Pale, weary dignity. Silver key light.
+
+FRAME 7C (01:06–01:07): A horned Hellsworn with dark skin and inner fire glow
+  visible behind the horns. Warm fire-lit rim.
+
+FRAME 7D (01:07–01:08): A scaled Draven warrior with reptilian features.
+  Detailed scale texture, not cartoon. Green-grey key light.
+
+FRAME 7E (01:08–01:09): A spectral Necrevan keeping vigil in blue ghostly
+  light. Translucent, mournful, ancient.
+
+FRAME 7F (01:09–01:10): A towering Tharuk giant with earth-toned skin.
+  Enormous scale, weathered hands, geological patience.
+
+FRAME 7G (01:10–01:11): A Nereyth near moonlit sea with aquatic features.
+  Wet sheen, finned, moonlit teal light.
+
+FRAME 7H (01:11–01:14): A Myceliar emerging through fungal roots with
+  bioluminescent spores drifting around them. Living symbiosis. Each face has
+  cultural authorship, individuality, natural skin texture, authentic hair.
+  NOT a character grid — a lyrical portrait sequence.
+
+  VO: "We are not one blood... but this world is ours."
+  MUSIC: Rhythm becomes shared pulse; one human detail per cut.
+  COLOR: Multi-cultural palette per face — warm gold, silver, fire-red,
+         reptilian green, ghostly blue, earth brown, moonlit teal, fungal bio.
+
+--------------------------------------------------------------------------------
+SHOT 08 — SQ01_SH080 | 01:14–01:25 (11s)
+  TITLE: Wearing Our Shapes
+  PURPOSE: The threat — the Fractured emerge; reality itself is wrong.
+--------------------------------------------------------------------------------
+FRAME 8A (01:14–01:18): At the boundary of the Eclipse Shadow — a creeping
+  darkness that is a wound in reality, not cartoon black smoke. An ordinary-
+  looking person with natural skin turns toward camera.
+
+FRAME 8B (01:18–01:22): Their face shifts into an impossible void-mimic
+  contour — features that look almost right but profoundly uncanny, like a
+  reflection that does not match. The transformation is subtle and wrong.
+
+FRAME 8C (01:22–01:25): A Fractured being emerges from a seam in space itself,
+  its form unsettling and void-born. Cloth fluttering in unnatural wind.
+  Dread hush. Involuntary human reaction of terror. No generic monsters —
+  something deeply wrong with reality itself.
+
+  VO: "The darkness does not hate us. It simply takes what the light leaves behind."
+  MUSIC: Almost all music ducks into dread silence.
+  COLOR: Void black / uncanny pale / cold grey.
+
+--------------------------------------------------------------------------------
+SHOT 09 — SQ01_SH090 | 01:25–01:37 (12s)
+  TITLE: First Strike
+  PURPOSE: Grounded resistance — hero-on-monster melee combat with weight.
+--------------------------------------------------------------------------------
+FRAME 9A (01:25–01:29): A heavily armored Vanguard braces and catches a
+  massive blow on his tower shield. Iron sparks flash on impact. He staggers
+  backward with visible weight. His foot adjusts on cracked stone — believable
+  physics.
+
+FRAME 9B (01:29–01:33): The Vanguard counters with a greatsword slash — full
+  commitment, recovery frame visible. An Umbral Assassin runs low along the
+  creature's blind side with dual daggers, quick and precise.
+
+FRAME 9C (01:33–01:37): A Riftwalker creates one brief afterimage of light —
+  a streak of luminous motion. Real contact between weapons and bodies.
+  Stone fragments flying. Believable weight and excellent timing. Percussion
+  enters. Dark fantasy combat — Elden Ring weight, Wukong fluidity.
+
+  VO: (none — combat driven by SFX and percussion)
+  MUSIC: Percussion and short string ostinato enter.
+  COLOR: Dark steel / sparks orange / stone grey.
+
+--------------------------------------------------------------------------------
+SHOT 10 — SQ01_SH100 | 01:37–01:47 (10s)
+  TITLE: Magic Changes Reality
+  PURPOSE: Environmental magic — spells change reality with physical consequence.
+--------------------------------------------------------------------------------
+FRAME 10A (01:37–01:40): A caster in dark robes thrusts hands forward. A
+  collapsing stone arch freezes — ice crystals spreading across ancient stone
+  with visible frost. The light casts FROM the cast source, illuminating skin
+  and armor and dust.
+
+FRAME 10B (01:40–01:43): An allied fire spell hits the frozen arch. It
+  shatters into hot vapor and falling ice shards — the thermal contrast is
+  physical and violent. No floating decorative particles.
+
+FRAME 10C (01:43–01:47): A Stormcaller raises a staff. Lightning branches
+  across flooded stone. The current reflects in polished armor and faces —
+  every surface catches the light. Real physical consequences. Music surges.
+
+  VO: (none — magic driven by SFX and orchestral swell)
+  MUSIC: Music swells with staggered attacks.
+  COLOR: Frost blue / fire orange / lightning violet-white.
+
+--------------------------------------------------------------------------------
+SHOT 11 — SQ01_SH110 | 01:47–01:55 (8s)
+  TITLE: United
+  PURPOSE: Scale — endgame content: 5-player dungeon, 10-player raid, PvP.
+--------------------------------------------------------------------------------
+FRAME 11A (01:47–01:50): A five-hero dungeon group navigates the Weeping
+  Foundry — a dark industrial dungeon with molten rivers and rusted iron
+  walkways. Five distinct warriors move with discipline: a tank with shield,
+  a healer casting golden light, two DPS warriors flanking, a caster behind.
+  Rusted iron, molten glow, dangerous beauty.
+
+FRAME 11B (01:50–01:53): Cut to a ten-hero raid bracing beneath the
+  impossible vaulted stone of the Cathedral of Unmade Hours. Enormous ancient
+  architecture dwarfing the warriors. They are small against the scale. The
+  space feels sacred and doomed.
+
+FRAME 11C (01:53–01:55): Two fast arena flashes: (1) an intense 1v1 duel with
+  weapons clashing in golden light; (2) a 5v5 tactical confrontation with
+  distinct team roles visible. Cinematic, not gameplay UI. Biggest 8-second
+  orchestral statement of the trailer.
+
+  VO: (none — cinematic edit with party calls and spell punctuation)
+  MUSIC: M13 Foundry → M14 Cathedral → M16 Arena; biggest 8-second statement.
+  COLOR: Foundry molten orange → cathedral stone/volumetric gold → arena golden.
+
+--------------------------------------------------------------------------------
+SHOT 12 — SQ01_SH120 | 01:55–02:00 (5s)
+  TITLE: What Will Remain — FINALE
+  PURPOSE: Denouement — the unanswered choice; hero before wounded Aethel; title.
+--------------------------------------------------------------------------------
+FRAME 12A (01:55–01:57): The Black Aetherborn hero stands alone at a
+  precipice before the wounded Aethel in the sky. His celestial energy wings
+  dim to thin strands of violet light. Deep-brown skin, long locs in the wind,
+  dark armor, violet-indigo fracture markings fading. The sky's fracture
+  widens in the distance, silently.
+
+FRAME 12B (01:57–01:58): Hard cut to black on a final heartbeat sound.
+  Silence.
+
+FRAME 12C (01:58–02:00): The word ECLIPSE materializes in amethyst-violet
+  energy with gold edge lighting. Below: REALMS OF THE FRACTURED. Below that:
+  THE LIGHT BROKE. WE DID NOT. End card: MOMENTUM LABS | IN DEVELOPMENT.
+  Dark fantasy, elegant, ominous, final.
+
+  VO: "What will you become?"
+  MUSIC: Sudden silence; five-note Aethel motif; logo impact.
+  COLOR: Amethyst-violet / gold edge lighting / black.
+
+  CRITICAL: The Aetherborn's wings are celestial electricity, never feathers.
+  The fracture's cause remains unresolved. Do not spoil the Eclipse Avatar.
+
+================================================================================
+END OF STORYBOARD V1.0 — 12 SHOTS, 120 SECONDS
+ECLIPSE: REALMS OF THE FRACTURED | THE LIGHT BROKE. WE DID NOT.
+Momentum Labs / Illustrators Entertainment LLC
+================================================================================
