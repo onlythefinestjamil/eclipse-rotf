@@ -149,8 +149,8 @@ void UEclipseSpellSystem::InitVanguardSpells()
     AddSpell(EClass::Vanguard, TEXT("Phalanx Poke"), ESpellTier::Cantrip, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 40.0f, 5.0f, EResourceType::Stamina, 3.0f, 0.0f, 300.0f, 0.0f, 0.0f, TEXT("Spear thrust through shield wall"));
 
     // Basic
-    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Shield Bash"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 80.0f, 20.0f, EResourceType::Stamina, 8.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Bash shield into enemy, stuns 1s, high threat")); S.bStuns = true; S.bKnockbacks = true; }
-    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Guard Counter"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 150.0f, 25.0f, EResourceType::Stamina, 6.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Block incoming hit then counter with heavy strike")); S.bKnockbacks = true; }
+    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Warspite Slam"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 80.0f, 20.0f, EResourceType::Stamina, 8.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Bash shield into enemy, stuns 1s, high threat")); S.bStuns = true; S.bKnockbacks = true; }
+    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Aegis Riposte"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 150.0f, 25.0f, EResourceType::Stamina, 6.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Block incoming hit then counter with heavy strike")); S.bKnockbacks = true; }
     { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Bulwark Cleave"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Earth, 100.0f, 20.0f, EResourceType::Stamina, 6.0f, 0.5f, 300.0f, 4.0f, 0.0f, TEXT("Sweeping shield cleave, hits all in frontal arc")); S.bKnockbacks = true; }
 
     // Intermediate
@@ -159,7 +159,7 @@ void UEclipseSpellSystem::InitVanguardSpells()
     AddSpell(EClass::Vanguard, TEXT("Fortress Stance"), ESpellTier::Intermediate, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 30.0f, EResourceType::Stamina, 15.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Defensive stance, -60% damage taken, immune to knockback 8s"));
 
     // Advanced
-    AddSpell(EClass::Vanguard, TEXT("Shield Wall"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Stamina, 30.0f, 0.0f, 0.0f, 0.0f, 5.0f, TEXT("Full damage reduction 50%, immune to knockback 5s"));
+    AddSpell(EClass::Vanguard, TEXT("Bastion Formation"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Stamina, 30.0f, 0.0f, 0.0f, 0.0f, 5.0f, TEXT("Full damage reduction 50%, immune to knockback 5s"));
     { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Titan's Wrath"), ESpellTier::Advanced, ESpellShape::AoE, EWeaponStatusEffect::Earth, 200.0f, 40.0f, EResourceType::Stamina, 20.0f, 1.0f, 300.0f, 8.0f, 0.0f, TEXT("Crushing ground slam, 8m AoE knockback")); S.bKnockbacks = true; }
     AddSpell(EClass::Vanguard, TEXT("Unbreakable Will"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 35.0f, EResourceType::Stamina, 25.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Immune to CC, +40% defense for 10s"));
 
@@ -167,18 +167,18 @@ void UEclipseSpellSystem::InitVanguardSpells()
     { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Sunbreaker Slam"), ESpellTier::Ultimate, ESpellShape::AoE, EWeaponStatusEffect::Earth, 300.0f, 100.0f, EResourceType::Aether, 180.0f, 1.5f, 400.0f, 8.0f, 0.0f, TEXT("Jump and slam greatsword, 8m shockwave, stuns all enemies")); S.bStuns = true; S.bKnockbacks = true; }
 
     // Weapon Arts
-    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Shield Charge"), ESpellTier::WeaponArt, ESpellShape::Line, EWeaponStatusEffect::Earth, 120.0f, 30.0f, EResourceType::Stamina, 12.0f, 0.0f, 600.0f, 0.0f, 0.0f, TEXT("Charge forward with shield, knockback all enemies in path")); S.bKnockbacks = true; }
+    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Bulwark Surge"), ESpellTier::WeaponArt, ESpellShape::Line, EWeaponStatusEffect::Earth, 120.0f, 30.0f, EResourceType::Stamina, 12.0f, 0.0f, 600.0f, 0.0f, 0.0f, TEXT("Charge forward with shield, knockback all enemies in path")); S.bKnockbacks = true; }
     { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Bulwark Strike"), ESpellTier::WeaponArt, ESpellShape::Cone, EWeaponStatusEffect::Earth, 160.0f, 30.0f, EResourceType::Stamina, 10.0f, 0.0f, 300.0f, 5.0f, 0.0f, TEXT("Heavy sweeping shield strike, knockback all in cone")); S.bKnockbacks = true; }
 
     // Defensive
-    AddSpell(EClass::Vanguard, TEXT("Iron Skin"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 20.0f, EResourceType::Stamina, 20.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Hardened skin, +50% armor for 10s"));
-    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Guardian's Aegis"), ESpellTier::Defensive, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 0.0f, 25.0f, EResourceType::Stamina, 15.0f, 0.5f, 500.0f, 0.0f, 0.0f, TEXT("Shield an ally, absorb next 200 damage")); S.Healing = 200.0f; }
+    AddSpell(EClass::Vanguard, TEXT("Stoneheart Mantle"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 20.0f, EResourceType::Stamina, 20.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Hardened skin, +50% armor for 10s"));
+    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Sentinel's Ward"), ESpellTier::Defensive, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 0.0f, 25.0f, EResourceType::Stamina, 15.0f, 0.5f, 500.0f, 0.0f, 0.0f, TEXT("Shield an ally, absorb next 200 damage")); S.Healing = 200.0f; }
     AddSpell(EClass::Vanguard, TEXT("Bulwark of Faith"), ESpellTier::Defensive, ESpellShape::Aura, EWeaponStatusEffect::Holy, 0.0f, 30.0f, EResourceType::Stamina, 18.0f, 0.0f, 0.0f, 5.0f, 10.0f, TEXT("Allies in 5m aura gain +30% defense for 10s"));
 
     // Utility
     AddSpell(EClass::Vanguard, TEXT("Taunting Shout"), ESpellTier::Utility, ESpellShape::AoE, EWeaponStatusEffect::Earth, 0.0f, 15.0f, EResourceType::Stamina, 10.0f, 0.0f, 0.0f, 10.0f, 0.0f, TEXT("Force all enemies in 10m to attack you"));
     AddSpell(EClass::Vanguard, TEXT("Phalanx March"), ESpellTier::Utility, ESpellShape::Party, EWeaponStatusEffect::Earth, 0.0f, 30.0f, EResourceType::Stamina, 25.0f, 0.0f, 0.0f, 10.0f, 8.0f, TEXT("All allies in 10m gain +20% movement speed for 8s"));
-    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Guardian's Mark"), ESpellTier::Utility, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 50.0f, 10.0f, EResourceType::Stamina, 8.0f, 0.0f, 300.0f, 0.0f, 5.0f, TEXT("Mark target, takes 30% more damage for 5s")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Earth; S.DebuffDuration = 5.0f; }
+    { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Watcher's Sigil"), ESpellTier::Utility, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 50.0f, 10.0f, EResourceType::Stamina, 8.0f, 0.0f, 300.0f, 0.0f, 5.0f, TEXT("Mark target, takes 30% more damage for 5s")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Earth; S.DebuffDuration = 5.0f; }
 
     // Ritual
     { FSpell& S = AddSpell(EClass::Vanguard, TEXT("Final Bastion"), ESpellTier::Ritual, ESpellShape::Party, EWeaponStatusEffect::Holy, 0.0f, 100.0f, EResourceType::Aether, 300.0f, 3.0f, 1000.0f, 15.0f, 10.0f, TEXT("Party-wide shield, absorb 500 damage, immune to knockback")); S.Healing = 500.0f; }
@@ -196,8 +196,8 @@ void UEclipseSpellSystem::InitUmbralAssassinSpells()
     AddSpell(EClass::UmbralAssassin, TEXT("Shadow Slice"), ESpellTier::Cantrip, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 45.0f, 5.0f, EResourceType::Stamina, 2.5f, 0.0f, 250.0f, 0.0f, 0.0f, TEXT("Quick shadow slash, applies brief debuff"));
 
     // Basic
-    { FSpell& S = AddSpell(EClass::UmbralAssassin, TEXT("Shadow Step"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 60.0f, 15.0f, EResourceType::Stamina, 10.0f, 0.0f, 1500.0f, 0.0f, 0.0f, TEXT("Teleport behind target, leaves afterimages")); S.bStuns = false; }
-    { FSpell& S = AddSpell(EClass::UmbralAssassin, TEXT("Backstab"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 200.0f, 20.0f, EResourceType::Stamina, 5.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("X-pattern dagger strike, guaranteed crit from behind")); S.bLifesteal = true; S.LifestealPercent = 15.0f; }
+    { FSpell& S = AddSpell(EClass::UmbralAssassin, TEXT("Gloom Stride"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 60.0f, 15.0f, EResourceType::Stamina, 10.0f, 0.0f, 1500.0f, 0.0f, 0.0f, TEXT("Teleport behind target, leaves afterimages")); S.bStuns = false; }
+    { FSpell& S = AddSpell(EClass::UmbralAssassin, TEXT("Vertebra Pierce"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 200.0f, 20.0f, EResourceType::Stamina, 5.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("X-pattern dagger strike, guaranteed crit from behind")); S.bLifesteal = true; S.LifestealPercent = 15.0f; }
     AddSpell(EClass::UmbralAssassin, TEXT("Shade Flurry"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 90.0f, 18.0f, EResourceType::Stamina, 5.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("5 rapid dagger strikes, each applies shadow debuff"));
 
     // Intermediate
@@ -206,7 +206,7 @@ void UEclipseSpellSystem::InitUmbralAssassinSpells()
     AddSpell(EClass::UmbralAssassin, TEXT("Crescent Dance"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Shadow, 120.0f, 30.0f, EResourceType::Stamina, 12.0f, 0.5f, 300.0f, 5.0f, 0.0f, TEXT("Spin with daggers, hit all enemies in 5m"));
 
     // Advanced
-    AddSpell(EClass::UmbralAssassin, TEXT("Smoke Bomb"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Shadow, 0.0f, 25.0f, EResourceType::Stamina, 20.0f, 0.0f, 0.0f, 8.0f, 5.0f, TEXT("Vanish into void smoke, invisible 5s, +50% next hit"));
+    AddSpell(EClass::UmbralAssassin, TEXT("Cinder Shroud"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Shadow, 0.0f, 25.0f, EResourceType::Stamina, 20.0f, 0.0f, 0.0f, 8.0f, 5.0f, TEXT("Vanish into void smoke, invisible 5s, +50% next hit"));
     { FSpell& S = AddSpell(EClass::UmbralAssassin, TEXT("Assassinate"), ESpellTier::Advanced, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 250.0f, 35.0f, EResourceType::Stamina, 15.0f, 1.0f, 300.0f, 0.0f, 0.0f, TEXT("Teleport strike, guaranteed crit, +100% on low HP targets")); S.bLifesteal = true; S.LifestealPercent = 30.0f; }
     { FSpell& S = AddSpell(EClass::UmbralAssassin, TEXT("Death Mark"), ESpellTier::Advanced, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 80.0f, 30.0f, EResourceType::Stamina, 18.0f, 0.0f, 600.0f, 0.0f, 8.0f, TEXT("Mark target, takes 50% more damage for 8s, reveals position")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Shadow; S.DebuffDuration = 8.0f; }
 
@@ -244,11 +244,11 @@ void UEclipseSpellSystem::InitArcanistSpells()
 
     // Basic
     AddSpell(EClass::Arcanist, TEXT("Aether Lance"), ESpellTier::Basic, ESpellShape::Line, EWeaponStatusEffect::Lightning, 120.0f, 20.0f, EResourceType::Mana, 3.0f, 0.0f, 1200.0f, 0.0f, 0.0f, TEXT("Concentrated beam of amethyst energy, pierces all in line"));
-    { FSpell& S = AddSpell(EClass::Arcanist, TEXT("Frost Nova"), ESpellTier::Basic, ESpellShape::AoE, EWeaponStatusEffect::Ice, 80.0f, 30.0f, EResourceType::Mana, 8.0f, 0.5f, 500.0f, 8.0f, 0.0f, TEXT("Freeze all enemies in 8m for 3s, ice shatters on hit")); S.bFreezes = true; }
+    { FSpell& S = AddSpell(EClass::Arcanist, TEXT("Rime Burst"), ESpellTier::Basic, ESpellShape::AoE, EWeaponStatusEffect::Ice, 80.0f, 30.0f, EResourceType::Mana, 8.0f, 0.5f, 500.0f, 8.0f, 0.0f, TEXT("Freeze all enemies in 8m for 3s, ice shatters on hit")); S.bFreezes = true; }
     AddSpell(EClass::Arcanist, TEXT("Arcane Missiles"), ESpellTier::Basic, ESpellShape::Projectile, EWeaponStatusEffect::Lightning, 90.0f, 18.0f, EResourceType::Mana, 5.0f, 0.5f, 800.0f, 0.0f, 0.0f, TEXT("Fire 3 homing missiles, each deals 30 damage"));
 
     // Intermediate
-    { FSpell& S = AddSpell(EClass::Arcanist, TEXT("Meteor Storm"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Fire, 250.0f, 40.0f, EResourceType::Mana, 12.0f, 1.0f, 800.0f, 6.0f, 3.0f, TEXT("Rain meteors on target area, 5 impacts over 3s")); S.bAppliesDoT = true; S.DoTDamage = 20.0f; S.DoTDuration = 3.0f; }
+    { FSpell& S = AddSpell(EClass::Arcanist, TEXT("Celestial Ruin"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Fire, 250.0f, 40.0f, EResourceType::Mana, 12.0f, 1.0f, 800.0f, 6.0f, 3.0f, TEXT("Rain meteors on target area, 5 impacts over 3s")); S.bAppliesDoT = true; S.DoTDamage = 20.0f; S.DoTDuration = 3.0f; }
     AddSpell(EClass::Arcanist, TEXT("Arcane Barrier"), ESpellTier::Intermediate, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 30.0f, EResourceType::Mana, 15.0f, 0.0f, 0.0f, 0.0f, 6.0f, TEXT("Arcane shield, absorb 200 damage, reflect 25%"));
     AddSpell(EClass::Arcanist, TEXT("Gravity Well"), ESpellTier::Intermediate, ESpellShape::Zone, EWeaponStatusEffect::Lightning, 100.0f, 35.0f, EResourceType::Mana, 15.0f, 0.5f, 800.0f, 8.0f, 4.0f, TEXT("Create gravity well, pull enemies to center, 25/s"));
 
@@ -267,7 +267,7 @@ void UEclipseSpellSystem::InitArcanistSpells()
     // Defensive
     { FSpell& S = AddSpell(EClass::Arcanist, TEXT("Arcane Shield"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 25.0f, EResourceType::Mana, 15.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Arcane barrier, absorb 250 damage for 8s")); S.Healing = 250.0f; }
     AddSpell(EClass::Arcanist, TEXT("Blink"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 15.0f, EResourceType::Mana, 10.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Instant teleport to safety, breaks targeting"));
-    AddSpell(EClass::Arcanist, TEXT("Mana Shield"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 30.0f, EResourceType::Mana, 20.0f, 0.0f, 0.0f, 0.0f, 6.0f, TEXT("Convert Mana to barrier, 1 Mana = 5 shield, lasts 6s"));
+    AddSpell(EClass::Arcanist, TEXT("Flux Ward"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 30.0f, EResourceType::Mana, 20.0f, 0.0f, 0.0f, 0.0f, 6.0f, TEXT("Convert Mana to barrier, 1 Mana = 5 shield, lasts 6s"));
 
     // Utility
     { FSpell& S = AddSpell(EClass::Arcanist, TEXT("Slow"), ESpellTier::Utility, ESpellShape::SingleTarget, EWeaponStatusEffect::Ice, 30.0f, 15.0f, EResourceType::Mana, 8.0f, 0.0f, 800.0f, 0.0f, 5.0f, TEXT("Slow target by 50% for 5s")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Ice; S.DebuffDuration = 5.0f; }
@@ -339,7 +339,7 @@ void UEclipseSpellSystem::InitDreadknightSpells()
     // Basic
     { FSpell& S = AddSpell(EClass::Dreadknight, TEXT("Soul Drain"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Soul, 80.0f, 20.0f, EResourceType::Rage, 10.0f, 0.0f, 300.0f, 0.0f, 0.0f, TEXT("Drain 30 HP from target, heal self for 50%")); S.bLifesteal = true; S.LifestealPercent = 50.0f; }
     AddSpell(EClass::Dreadknight, TEXT("Blood Pact"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Shadow, 0.0f, 40.0f, EResourceType::Rage, 20.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Sacrifice 20% HP, +50% damage and 30% lifesteal for 10s"));
-    AddSpell(EClass::Dreadknight, TEXT("Shadow Cleave"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Shadow, 90.0f, 18.0f, EResourceType::Rage, 6.0f, 0.0f, 300.0f, 4.0f, 0.0f, TEXT("Sweeping dark strike, hits all in frontal cone"));
+    AddSpell(EClass::Dreadknight, TEXT("Gloom Reave"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Shadow, 90.0f, 18.0f, EResourceType::Rage, 6.0f, 0.0f, 300.0f, 4.0f, 0.0f, TEXT("Sweeping dark strike, hits all in frontal cone"));
 
     // Intermediate
     { FSpell& S = AddSpell(EClass::Dreadknight, TEXT("Void Reaver"), ESpellTier::Intermediate, ESpellShape::Cone, EWeaponStatusEffect::Shadow, 150.0f, 35.0f, EResourceType::Rage, 15.0f, 0.5f, 400.0f, 5.0f, 0.0f, TEXT("Sweep weapon in arc, drain 3 enemies simultaneously")); S.bLifesteal = true; S.LifestealPercent = 40.0f; }
@@ -385,8 +385,8 @@ void UEclipseSpellSystem::InitTemplarSpells()
 
     // Basic
     AddSpell(EClass::Templar, TEXT("Dawnshield"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Holy, 60.0f, 25.0f, EResourceType::Mana, 12.0f, 0.0f, 300.0f, 0.0f, 0.0f, TEXT("Holy barrier, absorb next 200 damage, reflect 50% as holy"));
-    { FSpell& S = AddSpell(EClass::Templar, TEXT("Divine Light"), ESpellTier::Basic, ESpellShape::AoE, EWeaponStatusEffect::Holy, 0.0f, 30.0f, EResourceType::Mana, 8.0f, 0.5f, 500.0f, 8.0f, 0.0f, TEXT("Heal all allies in 8m for 80 HP, cleanse all debuffs")); S.Healing = 80.0f; }
-    { FSpell& S = AddSpell(EClass::Templar, TEXT("Smite"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 120.0f, 20.0f, EResourceType::Mana, 6.0f, 0.0f, 300.0f, 0.0f, 0.0f, TEXT("Holy judgment strike, bonus vs undead/demon")); S.bStuns = true; }
+    { FSpell& S = AddSpell(EClass::Templar, TEXT("Hallowed Dawn"), ESpellTier::Basic, ESpellShape::AoE, EWeaponStatusEffect::Holy, 0.0f, 30.0f, EResourceType::Mana, 8.0f, 0.5f, 500.0f, 8.0f, 0.0f, TEXT("Heal all allies in 8m for 80 HP, cleanse all debuffs")); S.Healing = 80.0f; }
+    { FSpell& S = AddSpell(EClass::Templar, TEXT("Condemn"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 120.0f, 20.0f, EResourceType::Mana, 6.0f, 0.0f, 300.0f, 0.0f, 0.0f, TEXT("Holy judgment strike, bonus vs undead/demon")); S.bStuns = true; }
 
     // Intermediate
     AddSpell(EClass::Templar, TEXT("Consecrate"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Holy, 80.0f, 30.0f, EResourceType::Mana, 15.0f, 0.5f, 500.0f, 6.0f, 8.0f, TEXT("Consecrated ground, 10/s holy damage to enemies, heal allies 10/s"));
@@ -527,7 +527,7 @@ void UEclipseSpellSystem::InitStormcallerSpells()
     // Basic
     { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Thundercall Staff"), ESpellTier::Basic, ESpellShape::Chain, EWeaponStatusEffect::Lightning, 100.0f, 15.0f, EResourceType::Mana, 5.0f, 0.0f, 600.0f, 0.0f, 0.0f, TEXT("Lightning bolt, chains to 3 enemies for 50% each")); S.bStuns = true; }
     { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Wind Slash"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Wind, 80.0f, 20.0f, EResourceType::Stamina, 8.0f, 0.0f, 400.0f, 0.0f, 0.0f, TEXT("Blade of wind, knockback all in cone, push 8m")); S.bKnockbacks = true; }
-    AddSpell(EClass::Stormcaller, TEXT("Lightning Bolt"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Lightning, 130.0f, 18.0f, EResourceType::Mana, 5.0f, 0.5f, 800.0f, 0.0f, 0.0f, TEXT("Direct lightning strike, high single-target damage"));
+    AddSpell(EClass::Stormcaller, TEXT("Volt Lance"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Lightning, 130.0f, 18.0f, EResourceType::Mana, 5.0f, 0.5f, 800.0f, 0.0f, 0.0f, TEXT("Direct lightning strike, high single-target damage"));
 
     // Intermediate
     { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Storm Surge"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Lightning, 200.0f, 40.0f, EResourceType::Mana, 15.0f, 1.0f, 1000.0f, 8.0f, 5.0f, TEXT("Lightning storm, 8 strikes over 5s in target area")); S.bStuns = true; S.bAppliesDoT = true; S.DoTDamage = 25.0f; S.DoTDuration = 5.0f; }
@@ -543,7 +543,7 @@ void UEclipseSpellSystem::InitStormcallerSpells()
     { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Tempest Cataclysm"), ESpellTier::Ultimate, ESpellShape::Zone, EWeaponStatusEffect::Lightning, 500.0f, 100.0f, EResourceType::Aether, 180.0f, 2.0f, 1500.0f, 15.0f, 5.0f, TEXT("Tornado + lightning, pull all enemies to center, stun 4s")); S.bStuns = true; S.bKnockbacks = true; }
 
     // Weapon Arts
-    { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Chain Lightning"), ESpellTier::WeaponArt, ESpellShape::Chain, EWeaponStatusEffect::Lightning, 150.0f, 30.0f, EResourceType::Mana, 12.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Lightning chains through all in 15m, 6 chains max")); S.bStuns = true; }
+    { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Forked Voltage"), ESpellTier::WeaponArt, ESpellShape::Chain, EWeaponStatusEffect::Lightning, 150.0f, 30.0f, EResourceType::Mana, 12.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Lightning chains through all in 15m, 6 chains max")); S.bStuns = true; }
     { FSpell& S = AddSpell(EClass::Stormcaller, TEXT("Storm Staff"), ESpellTier::WeaponArt, ESpellShape::AoE, EWeaponStatusEffect::Lightning, 170.0f, 35.0f, EResourceType::Mana, 10.0f, 0.5f, 600.0f, 8.0f, 0.0f, TEXT("Staff slam, 8m lightning burst, stuns all")); S.bStuns = true; }
 
     // Defensive
@@ -572,12 +572,12 @@ void UEclipseSpellSystem::InitOracleSpells()
     { FSpell& S = AddSpell(EClass::Oracle, TEXT("Minor Blessing"), ESpellTier::Cantrip, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 0.0f, 5.0f, EResourceType::Mana, 3.0f, 0.0f, 400.0f, 0.0f, 0.0f, TEXT("Quick heal 30 HP to ally")); S.Healing = 30.0f; }
 
     // Basic
-    AddSpell(EClass::Oracle, TEXT("Foresight"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Holy, 0.0f, 20.0f, EResourceType::Mana, 10.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Reveal all enemy telegraphs for 8s, +20% dodge for all allies"));
+    AddSpell(EClass::Oracle, TEXT("Premonition"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Holy, 0.0f, 20.0f, EResourceType::Mana, 10.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Reveal all enemy telegraphs for 8s, +20% dodge for all allies"));
     { FSpell& S = AddSpell(EClass::Oracle, TEXT("Divine Prophecy"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 0.0f, 25.0f, EResourceType::Mana, 6.0f, 0.5f, 600.0f, 0.0f, 5.0f, TEXT("Heal target 150, auto-heal 200 if below 20% HP in 5s")); S.Healing = 150.0f; }
     { FSpell& S = AddSpell(EClass::Oracle, TEXT("Judgment"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Holy, 130.0f, 35.0f, EResourceType::Mana, 15.0f, 0.0f, 500.0f, 0.0f, 8.0f, TEXT("Holy mark, all allies +25% damage to marked target for 8s")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Holy; S.DebuffDuration = 8.0f; }
 
     // Intermediate
-    { FSpell& S = AddSpell(EClass::Oracle, TEXT("Starfall"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Holy, 120.0f, 30.0f, EResourceType::Mana, 14.0f, 0.8f, 800.0f, 6.0f, 2.0f, TEXT("Rain holy stars, 6 impacts over 2s, heal allies 30 per impact")); S.Healing = 180.0f; }
+    { FSpell& S = AddSpell(EClass::Oracle, TEXT("Astral Rain"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Holy, 120.0f, 30.0f, EResourceType::Mana, 14.0f, 0.8f, 800.0f, 6.0f, 2.0f, TEXT("Rain holy stars, 6 impacts over 2s, heal allies 30 per impact")); S.Healing = 180.0f; }
     { FSpell& S = AddSpell(EClass::Oracle, TEXT("Divine Radiance"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Holy, 100.0f, 35.0f, EResourceType::Mana, 12.0f, 0.5f, 500.0f, 8.0f, 0.0f, TEXT("8m holy burst, damage enemies, heal allies 80")); S.Healing = 80.0f; }
     AddSpell(EClass::Oracle, TEXT("Clairvoyance"), ESpellTier::Intermediate, ESpellShape::Self, EWeaponStatusEffect::Holy, 0.0f, 25.0f, EResourceType::Mana, 20.0f, 0.0f, 0.0f, 20.0f, 10.0f, TEXT("Reveal entire map for 10s, see enemy HP and debuffs"));
 
@@ -626,7 +626,7 @@ void UEclipseSpellSystem::InitAlchemistSpells()
     // Intermediate
     { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Mutation Elixir"), ESpellTier::Intermediate, ESpellShape::Party, EWeaponStatusEffect::Poison, 0.0f, 40.0f, EResourceType::Reagents, 20.0f, 0.0f, 500.0f, 8.0f, 10.0f, TEXT("Buff all allies in 8m, +30% damage, +20% defense for 10s")); S.Healing = 50.0f; }
     AddSpell(EClass::Alchemist, TEXT("Flash Powder"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Fire, 80.0f, 25.0f, EResourceType::Reagents, 10.0f, 0.0f, 500.0f, 6.0f, 0.0f, TEXT("Alchemical flash, blind all in 6m, 3s miss chance"));
-    { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Acid Flask"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Poison, 80.0f, 20.0f, EResourceType::Reagents, 10.0f, 0.0f, 600.0f, 5.0f, 8.0f, TEXT("5m acid pool, 20/s, armor reduced 50% for 8s")); S.bAppliesDoT = true; S.DoTDamage = 20.0f; S.DoTDuration = 8.0f; S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Poison; S.DebuffDuration = 8.0f; }
+    { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Corrosive Phial"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Poison, 80.0f, 20.0f, EResourceType::Reagents, 10.0f, 0.0f, 600.0f, 5.0f, 8.0f, TEXT("5m acid pool, 20/s, armor reduced 50% for 8s")); S.bAppliesDoT = true; S.DoTDamage = 20.0f; S.DoTDuration = 8.0f; S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Poison; S.DebuffDuration = 8.0f; }
 
     // Advanced
     { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Panacea"), ESpellTier::Advanced, ESpellShape::Party, EWeaponStatusEffect::Poison, 0.0f, 40.0f, EResourceType::Reagents, 18.0f, 0.5f, 500.0f, 10.0f, 0.0f, TEXT("Cure all debuffs and DoTs from all allies in 10m, heal 80")); S.Healing = 80.0f; }
@@ -634,7 +634,7 @@ void UEclipseSpellSystem::InitAlchemistSpells()
     AddSpell(EClass::Alchemist, TEXT("Transmute"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Poison, 0.0f, 35.0f, EResourceType::Reagents, 25.0f, 0.0f, 0.0f, 0.0f, 0.0f, TEXT("Convert 50 Reagents to 100 Mana, or 50 Mana to 80 Reagents"));
 
     // Ultimate
-    { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Philosopher Stone"), ESpellTier::Ultimate, ESpellShape::AoE, EWeaponStatusEffect::Poison, 300.0f, 100.0f, EResourceType::Aether, 180.0f, 1.5f, 1000.0f, 10.0f, 0.0f, TEXT("Transmute area, 300 damage to enemies, convert to healing for allies")); S.Healing = 150.0f; }
+    { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Primal Catalyst"), ESpellTier::Ultimate, ESpellShape::AoE, EWeaponStatusEffect::Poison, 300.0f, 100.0f, EResourceType::Aether, 180.0f, 1.5f, 1000.0f, 10.0f, 0.0f, TEXT("Transmute area, 300 damage to enemies, convert to healing for allies")); S.Healing = 150.0f; }
 
     // Weapon Arts
     { FSpell& S = AddSpell(EClass::Alchemist, TEXT("Acid Spray"), ESpellTier::WeaponArt, ESpellShape::Cone, EWeaponStatusEffect::Poison, 120.0f, 25.0f, EResourceType::Reagents, 10.0f, 0.0f, 400.0f, 6.0f, 0.0f, TEXT("Spray acid in cone, -50% armor, 15/s for 5s")); S.bAppliesDoT = true; S.DoTDamage = 15.0f; S.DoTDuration = 5.0f; S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Poison; S.DebuffDuration = 5.0f; }
@@ -667,8 +667,8 @@ void UEclipseSpellSystem::InitBerserkerSpells()
 
     // Basic
     AddSpell(EClass::Berserker, TEXT("Rage Frenzy"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Fire, 80.0f, 30.0f, EResourceType::Rage, 10.0f, 0.0f, 300.0f, 0.0f, 8.0f, TEXT("Enter frenzy, +50% attack speed, +30% damage, no stamina cost for 8s"));
-    { FSpell& S = AddSpell(EClass::Berserker, TEXT("Earthshaker"), ESpellTier::Basic, ESpellShape::AoE, EWeaponStatusEffect::Earth, 150.0f, 40.0f, EResourceType::Rage, 15.0f, 0.0f, 600.0f, 10.0f, 0.0f, TEXT("Slam 2h axe into ground, AoE knockback 10m")); S.bKnockbacks = true; S.bStuns = true; }
-    { FSpell& S = AddSpell(EClass::Berserker, TEXT("Bloodthirst"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Fire, 120.0f, 20.0f, EResourceType::Rage, 8.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Savage strike, 100% lifesteal, build 20 Rage on hit")); S.bLifesteal = true; S.LifestealPercent = 100.0f; }
+    { FSpell& S = AddSpell(EClass::Berserker, TEXT("Seismic Sunder"), ESpellTier::Basic, ESpellShape::AoE, EWeaponStatusEffect::Earth, 150.0f, 40.0f, EResourceType::Rage, 15.0f, 0.0f, 600.0f, 10.0f, 0.0f, TEXT("Slam 2h axe into ground, AoE knockback 10m")); S.bKnockbacks = true; S.bStuns = true; }
+    { FSpell& S = AddSpell(EClass::Berserker, TEXT("Gore Hunger"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Fire, 120.0f, 20.0f, EResourceType::Rage, 8.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Savage strike, 100% lifesteal, build 20 Rage on hit")); S.bLifesteal = true; S.LifestealPercent = 100.0f; }
 
     // Intermediate
     AddSpell(EClass::Berserker, TEXT("Whirlwind"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Fire, 140.0f, 30.0f, EResourceType::Rage, 12.0f, 0.0f, 300.0f, 6.0f, 0.0f, TEXT("Spin with axe, hit all in 6m, 5 hits over 2s"));
@@ -684,7 +684,7 @@ void UEclipseSpellSystem::InitBerserkerSpells()
     { FSpell& S = AddSpell(EClass::Berserker, TEXT("Berserker Rampage"), ESpellTier::Ultimate, ESpellShape::Self, EWeaponStatusEffect::Fire, 500.0f, 100.0f, EResourceType::Aether, 180.0f, 0.0f, 800.0f, 0.0f, 10.0f, TEXT("2x damage, immune to CC, 50% lifesteal, 10s duration")); S.bLifesteal = true; S.LifestealPercent = 50.0f; }
 
     // Weapon Arts
-    { FSpell& S = AddSpell(EClass::Berserker, TEXT("Crushing Blow"), ESpellTier::WeaponArt, ESpellShape::SingleTarget, EWeaponStatusEffect::Fire, 250.0f, 35.0f, EResourceType::Rage, 8.0f, 0.5f, 300.0f, 0.0f, 0.0f, TEXT("Charged overhead axe slam, guaranteed stagger, 2x vs staggered")); S.bStuns = true; }
+    { FSpell& S = AddSpell(EClass::Berserker, TEXT("Pulverize"), ESpellTier::WeaponArt, ESpellShape::SingleTarget, EWeaponStatusEffect::Fire, 250.0f, 35.0f, EResourceType::Rage, 8.0f, 0.5f, 300.0f, 0.0f, 0.0f, TEXT("Charged overhead axe slam, guaranteed stagger, 2x vs staggered")); S.bStuns = true; }
     { FSpell& S = AddSpell(EClass::Berserker, TEXT("Raging Frenzy"), ESpellTier::WeaponArt, ESpellShape::AoE, EWeaponStatusEffect::Fire, 180.0f, 40.0f, EResourceType::Rage, 12.0f, 0.0f, 400.0f, 6.0f, 0.0f, TEXT("8 rapid axe swings, each hit builds 5 Rage")); S.bLifesteal = true; S.LifestealPercent = 20.0f; }
 
     // Defensive
@@ -713,7 +713,7 @@ void UEclipseSpellSystem::InitShadowbladeSpells()
     AddSpell(EClass::Shadowblade, TEXT("Void Cut"), ESpellTier::Cantrip, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 45.0f, 5.0f, EResourceType::Stamina, 2.0f, 0.0f, 250.0f, 0.0f, 0.0f, TEXT("Void-infused cut, ignores 20% armor"));
 
     // Basic
-    { FSpell& S = AddSpell(EClass::Shadowblade, TEXT("Shadow Cleave"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Shadow, 100.0f, 20.0f, EResourceType::Stamina, 6.0f, 0.0f, 300.0f, 4.0f, 0.0f, TEXT("Sweeping dark slash, hits all in arc, 5s bleed")); S.bAppliesDoT = true; S.DoTDamage = 12.0f; S.DoTDuration = 5.0f; }
+    { FSpell& S = AddSpell(EClass::Shadowblade, TEXT("Gloom Reave"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Shadow, 100.0f, 20.0f, EResourceType::Stamina, 6.0f, 0.0f, 300.0f, 4.0f, 0.0f, TEXT("Sweeping dark slash, hits all in arc, 5s bleed")); S.bAppliesDoT = true; S.DoTDamage = 12.0f; S.DoTDuration = 5.0f; }
     { FSpell& S = AddSpell(EClass::Shadowblade, TEXT("Umbral Strike"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Shadow, 150.0f, 25.0f, EResourceType::Stamina, 10.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Phase through enemy, void damage, ignores 50% armor")); S.bLifesteal = true; S.LifestealPercent = 15.0f; }
     AddSpell(EClass::Shadowblade, TEXT("Dark Step"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Shadow, 80.0f, 15.0f, EResourceType::Stamina, 8.0f, 0.0f, 600.0f, 0.0f, 0.0f, TEXT("Dash through shadows, briefly invisible, next attack guaranteed crit"));
 
@@ -741,7 +741,7 @@ void UEclipseSpellSystem::InitShadowbladeSpells()
 
     // Utility
     { FSpell& S = AddSpell(EClass::Shadowblade, TEXT("Shadow Trap"), ESpellTier::Utility, ESpellShape::Ground, EWeaponStatusEffect::Shadow, 80.0f, 20.0f, EResourceType::Stamina, 15.0f, 0.0f, 400.0f, 4.0f, 10.0f, TEXT("Place shadow trap, triggers on enemy proximity, roots 3s + 80 damage")); S.bRoots = true; }
-    AddSpell(EClass::Shadowblade, TEXT("Shadowstep"), ESpellTier::Utility, ESpellShape::Self, EWeaponStatusEffect::Shadow, 0.0f, 15.0f, EResourceType::Stamina, 8.0f, 0.0f, 1000.0f, 0.0f, 0.0f, TEXT("Teleport to any visible location, stealthed for 1s"));
+    AddSpell(EClass::Shadowblade, TEXT("Gloomstride"), ESpellTier::Utility, ESpellShape::Self, EWeaponStatusEffect::Shadow, 0.0f, 15.0f, EResourceType::Stamina, 8.0f, 0.0f, 1000.0f, 0.0f, 0.0f, TEXT("Teleport to any visible location, stealthed for 1s"));
     AddSpell(EClass::Shadowblade, TEXT("Silent Step"), ESpellTier::Utility, ESpellShape::Self, EWeaponStatusEffect::Shadow, 0.0f, 10.0f, EResourceType::Stamina, 12.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Silent movement, no aggro, +50% move speed, 8s or until attack"));
 
     // Ritual
@@ -761,7 +761,7 @@ void UEclipseSpellSystem::InitSpellbladeSpells()
 
     // Basic
     AddSpell(EClass::Spellblade, TEXT("Arcane Barrier"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 30.0f, EResourceType::Mana, 12.0f, 0.0f, 0.0f, 0.0f, 6.0f, TEXT("Magical shield, absorb 300 damage, reflect 25% as arcane"));
-    { FSpell& S = AddSpell(EClass::Spellblade, TEXT("Enchanted Strike"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Lightning, 130.0f, 20.0f, EResourceType::Mana, 5.0f, 0.0f, 250.0f, 0.0f, 0.0f, TEXT("Infuse weapon with arcane, +100% damage, applies arcane mark")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Lightning; S.DebuffDuration = 5.0f; }
+    { FSpell& S = AddSpell(EClass::Spellblade, TEXT("Rune-Etched Blow"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Lightning, 130.0f, 20.0f, EResourceType::Mana, 5.0f, 0.0f, 250.0f, 0.0f, 0.0f, TEXT("Infuse weapon with arcane, +100% damage, applies arcane mark")); S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Lightning; S.DebuffDuration = 5.0f; }
     AddSpell(EClass::Spellblade, TEXT("Spell Parry"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Lightning, 80.0f, 15.0f, EResourceType::Stamina, 8.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Parry spell projectile back at caster with 50% extra damage"));
 
     // Intermediate
@@ -770,7 +770,7 @@ void UEclipseSpellSystem::InitSpellbladeSpells()
     AddSpell(EClass::Spellblade, TEXT("Arcane Surge"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Lightning, 140.0f, 30.0f, EResourceType::Mana, 12.0f, 0.5f, 500.0f, 6.0f, 0.0f, TEXT("Weapon slam releases arcane burst, 6m AoE"));
 
     // Advanced
-    AddSpell(EClass::Spellblade, TEXT("Mana Shield"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 40.0f, EResourceType::Mana, 10.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Convert Mana to barrier, 1 Mana = 5 shield, lasts 10s or depleted"));
+    AddSpell(EClass::Spellblade, TEXT("Flux Ward"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 40.0f, EResourceType::Mana, 10.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Convert Mana to barrier, 1 Mana = 5 shield, lasts 10s or depleted"));
     { FSpell& S = AddSpell(EClass::Spellblade, TEXT("Spellbreaker"), ESpellTier::Advanced, ESpellShape::SingleTarget, EWeaponStatusEffect::Lightning, 180.0f, 35.0f, EResourceType::Mana, 15.0f, 0.5f, 300.0f, 0.0f, 0.0f, TEXT("Strike that dispels all buffs on target, 2x damage vs buffed targets")); S.bSilences = true; }
     AddSpell(EClass::Spellblade, TEXT("Arcane Form"), ESpellTier::Advanced, ESpellShape::Self, EWeaponStatusEffect::Lightning, 0.0f, 40.0f, EResourceType::Mana, 25.0f, 0.0f, 0.0f, 0.0f, 10.0f, TEXT("Arcane empowerment, +50% spell and weapon damage, -50% mana cost for 10s"));
 
@@ -807,12 +807,12 @@ void UEclipseSpellSystem::InitWarlordSpells()
     AddSpell(EClass::Warlord, TEXT("Pommel Strike"), ESpellTier::Cantrip, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 45.0f, 5.0f, EResourceType::Stamina, 2.5f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Hilt strike, brief stagger"));
 
     // Basic
-    AddSpell(EClass::Warlord, TEXT("War Banner"), ESpellTier::Basic, ESpellShape::Ground, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Rage, 20.0f, 0.0f, 0.0f, 15.0f, 10.0f, TEXT("Plant war banner, allies in 15m +20% damage, +15% defense for 10s"));
+    AddSpell(EClass::Warlord, TEXT("Legion Standard"), ESpellTier::Basic, ESpellShape::Ground, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Rage, 20.0f, 0.0f, 0.0f, 15.0f, 10.0f, TEXT("Plant war banner, allies in 15m +20% damage, +15% defense for 10s"));
     { FSpell& S = AddSpell(EClass::Warlord, TEXT("Commanding Shout"), ESpellTier::Basic, ESpellShape::Cone, EWeaponStatusEffect::Earth, 100.0f, 25.0f, EResourceType::Stamina, 15.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Fear all in 10m for 3s, knockback 5m, high threat")); S.bStuns = true; S.bKnockbacks = true; }
-    AddSpell(EClass::Warlord, TEXT("Shield Bash"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 90.0f, 18.0f, EResourceType::Stamina, 6.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Shield bash, stuns 1s, generates high threat"));
+    AddSpell(EClass::Warlord, TEXT("Warspite Slam"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Earth, 90.0f, 18.0f, EResourceType::Stamina, 6.0f, 0.0f, 200.0f, 0.0f, 0.0f, TEXT("Shield bash, stuns 1s, generates high threat"));
 
     // Intermediate
-    AddSpell(EClass::Warlord, TEXT("Rallying Cry"), ESpellTier::Intermediate, ESpellShape::Party, EWeaponStatusEffect::Earth, 0.0f, 50.0f, EResourceType::Rage, 25.0f, 0.0f, 0.0f, 10.0f, 8.0f, TEXT("All allies heal 50, gain 30 Flow, immune to fear for 8s"));
+    AddSpell(EClass::Warlord, TEXT("Warhorn Echo"), ESpellTier::Intermediate, ESpellShape::Party, EWeaponStatusEffect::Earth, 0.0f, 50.0f, EResourceType::Rage, 25.0f, 0.0f, 0.0f, 10.0f, 8.0f, TEXT("All allies heal 50, gain 30 Flow, immune to fear for 8s"));
     { FSpell& S = AddSpell(EClass::Warlord, TEXT("Phalanx Wall"), ESpellTier::Intermediate, ESpellShape::Wall, EWeaponStatusEffect::Earth, 80.0f, 35.0f, EResourceType::Stamina, 15.0f, 0.5f, 500.0f, 8.0f, 8.0f, TEXT("Create shield wall, blocks enemies, allies behind take -30% damage")); S.bKnockbacks = true; }
     { FSpell& S = AddSpell(EClass::Warlord, TEXT("Warlord's Presence"), ESpellTier::Intermediate, ESpellShape::Aura, EWeaponStatusEffect::Earth, 50.0f, 30.0f, EResourceType::Rage, 18.0f, 0.0f, 0.0f, 10.0f, 6.0f, TEXT("Commanding aura, enemies in 10m -20% damage, forced to attack you for 6s")); S.bStuns = true; }
 
@@ -829,7 +829,7 @@ void UEclipseSpellSystem::InitWarlordSpells()
     AddSpell(EClass::Warlord, TEXT("War Banner Throw"), ESpellTier::WeaponArt, ESpellShape::Projectile, EWeaponStatusEffect::Earth, 150.0f, 30.0f, EResourceType::Rage, 12.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Throw war banner like spear, pierces, plants on landing, 8s aura"));
 
     // Defensive
-    AddSpell(EClass::Warlord, TEXT("Shield Wall"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 30.0f, EResourceType::Stamina, 20.0f, 0.0f, 0.0f, 0.0f, 6.0f, TEXT("Raise shield wall, -60% frontal damage, immune to knockback for 6s"));
+    AddSpell(EClass::Warlord, TEXT("Bastion Formation"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 30.0f, EResourceType::Stamina, 20.0f, 0.0f, 0.0f, 0.0f, 6.0f, TEXT("Raise shield wall, -60% frontal damage, immune to knockback for 6s"));
     AddSpell(EClass::Warlord, TEXT("Fortify"), ESpellTier::Defensive, ESpellShape::Aura, EWeaponStatusEffect::Earth, 0.0f, 35.0f, EResourceType::Rage, 18.0f, 0.0f, 0.0f, 8.0f, 8.0f, TEXT("Allies in 8m +40% defense, immune to fear for 8s"));
     AddSpell(EClass::Warlord, TEXT("Last Stand"), ESpellTier::Defensive, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Rage, 30.0f, 0.0f, 0.0f, 0.0f, 5.0f, TEXT("Below 30% HP, immune to death for 5s, +100% damage, heal 200 on expire"));
 
@@ -854,12 +854,12 @@ void UEclipseSpellSystem::InitNecromancerSpells()
     AddSpell(EClass::Necromancer, TEXT("Dark Pulse"), ESpellTier::Cantrip, ESpellShape::Self, EWeaponStatusEffect::Soul, 35.0f, 5.0f, EResourceType::Mana, 2.0f, 0.0f, 300.0f, 4.0f, 0.0f, TEXT("Necrotic pulse, 4m AoE, applies decay"));
 
     // Basic
-    AddSpell(EClass::Necromancer, TEXT("Raise Skeleton"), ESpellTier::Basic, ESpellShape::Summon, EWeaponStatusEffect::Soul, 40.0f, 20.0f, EResourceType::Mana, 8.0f, 0.5f, 500.0f, 0.0f, 30.0f, TEXT("Summon skeleton warrior, lasts 30s, taunts and deals melee damage"));
-    AddSpell(EClass::Necromancer, TEXT("Bone Spear"), ESpellTier::Basic, ESpellShape::Line, EWeaponStatusEffect::Soul, 120.0f, 15.0f, EResourceType::Mana, 5.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Fire bone projectile, pierces enemies, +50% vs living"));
+    AddSpell(EClass::Necromancer, TEXT("Exhume Warrior"), ESpellTier::Basic, ESpellShape::Summon, EWeaponStatusEffect::Soul, 40.0f, 20.0f, EResourceType::Mana, 8.0f, 0.5f, 500.0f, 0.0f, 30.0f, TEXT("Summon skeleton warrior, lasts 30s, taunts and deals melee damage"));
+    AddSpell(EClass::Necromancer, TEXT("Ossuary Lance"), ESpellTier::Basic, ESpellShape::Line, EWeaponStatusEffect::Soul, 120.0f, 15.0f, EResourceType::Mana, 5.0f, 0.0f, 800.0f, 0.0f, 0.0f, TEXT("Fire bone projectile, pierces enemies, +50% vs living"));
     { FSpell& S = AddSpell(EClass::Necromancer, TEXT("Decay"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Soul, 60.0f, 18.0f, EResourceType::Mana, 8.0f, 0.0f, 600.0f, 0.0f, 8.0f, TEXT("Inflict decay, 15/s for 8s, -30% healing to target")); S.bAppliesDoT = true; S.DoTDamage = 15.0f; S.DoTDuration = 8.0f; S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Soul; S.DebuffDuration = 8.0f; }
 
     // Intermediate
-    { FSpell& S = AddSpell(EClass::Necromancer, TEXT("Death Nova"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Soul, 180.0f, 35.0f, EResourceType::Mana, 12.0f, 0.8f, 600.0f, 8.0f, 0.0f, TEXT("Explosion of necrotic energy, 8m AoE, applies decay")); S.bAppliesDoT = true; S.DoTDamage = 20.0f; S.DoTDuration = 5.0f; S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Soul; S.DebuffDuration = 5.0f; }
+    { FSpell& S = AddSpell(EClass::Necromancer, TEXT("Necrotic Pulse"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Soul, 180.0f, 35.0f, EResourceType::Mana, 12.0f, 0.8f, 600.0f, 8.0f, 0.0f, TEXT("Explosion of necrotic energy, 8m AoE, applies decay")); S.bAppliesDoT = true; S.DoTDamage = 20.0f; S.DoTDuration = 5.0f; S.bAppliesDebuff = true; S.DebuffType = EWeaponStatusEffect::Soul; S.DebuffDuration = 5.0f; }
     AddSpell(EClass::Necromancer, TEXT("Raise Archer"), ESpellTier::Intermediate, ESpellShape::Summon, EWeaponStatusEffect::Soul, 30.0f, 25.0f, EResourceType::Mana, 10.0f, 0.5f, 600.0f, 0.0f, 25.0f, TEXT("Summon skeleton archer, ranged attacks, 25 damage per shot, lasts 25s"));
     { FSpell& S = AddSpell(EClass::Necromancer, TEXT("Soul Drain"), ESpellTier::Intermediate, ESpellShape::Chain, EWeaponStatusEffect::Soul, 100.0f, 28.0f, EResourceType::Mana, 12.0f, 0.0f, 600.0f, 0.0f, 0.0f, TEXT("Drain souls, chains to 3 enemies, heal 30% of damage")); S.bLifesteal = true; S.LifestealPercent = 30.0f; }
 
@@ -901,12 +901,12 @@ void UEclipseSpellSystem::InitDruidSpells()
     AddSpell(EClass::Druid, TEXT("Moonfire"), ESpellTier::Cantrip, ESpellShape::Projectile, EWeaponStatusEffect::Water, 45.0f, 5.0f, EResourceType::Mana, 2.0f, 0.0f, 600.0f, 0.0f, 0.0f, TEXT("Lunar energy bolt, +50% vs undead"));
 
     // Basic
-    AddSpell(EClass::Druid, TEXT("Bear Form"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Mana, 15.0f, 0.5f, 0.0f, 0.0f, 15.0f, TEXT("Transform into bear, +100% HP, +50% armor, taunt all for 15s"));
-    { FSpell& S = AddSpell(EClass::Druid, TEXT("Rejuvenation"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Water, 0.0f, 25.0f, EResourceType::Mana, 8.0f, 0.0f, 600.0f, 0.0f, 10.0f, TEXT("Heal 60 instantly + 10/s for 10s, cleanses poison")); S.Healing = 160.0f; }
+    AddSpell(EClass::Druid, TEXT("Ursine Aspect"), ESpellTier::Basic, ESpellShape::Self, EWeaponStatusEffect::Earth, 0.0f, 40.0f, EResourceType::Mana, 15.0f, 0.5f, 0.0f, 0.0f, 15.0f, TEXT("Transform into bear, +100% HP, +50% armor, taunt all for 15s"));
+    { FSpell& S = AddSpell(EClass::Druid, TEXT("Bloom Renewal"), ESpellTier::Basic, ESpellShape::SingleTarget, EWeaponStatusEffect::Water, 0.0f, 25.0f, EResourceType::Mana, 8.0f, 0.0f, 600.0f, 0.0f, 10.0f, TEXT("Heal 60 instantly + 10/s for 10s, cleanses poison")); S.Healing = 160.0f; }
     AddSpell(EClass::Druid, TEXT("Entangle"), ESpellTier::Basic, ESpellShape::Ground, EWeaponStatusEffect::Earth, 60.0f, 18.0f, EResourceType::Mana, 8.0f, 0.0f, 500.0f, 4.0f, 4.0f, TEXT("Roots in 4m, root all for 4s, 15/s"));
 
     // Intermediate
-    AddSpell(EClass::Druid, TEXT("Lightning Form"), ESpellTier::Intermediate, ESpellShape::Self, EWeaponStatusEffect::Lightning, 150.0f, 35.0f, EResourceType::Mana, 20.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Transform into lightning wolf, +80% speed, lightning damage on attacks for 8s"));
+    AddSpell(EClass::Druid, TEXT("Galvanic Aspect"), ESpellTier::Intermediate, ESpellShape::Self, EWeaponStatusEffect::Lightning, 150.0f, 35.0f, EResourceType::Mana, 20.0f, 0.0f, 0.0f, 0.0f, 8.0f, TEXT("Transform into lightning wolf, +80% speed, lightning damage on attacks for 8s"));
     { FSpell& S = AddSpell(EClass::Druid, TEXT("Healing Bloom"), ESpellTier::Intermediate, ESpellShape::Ground, EWeaponStatusEffect::Water, 0.0f, 30.0f, EResourceType::Mana, 12.0f, 0.5f, 500.0f, 6.0f, 8.0f, TEXT("Create healing bloom, allies in 6m heal 15/s for 8s")); S.Healing = 120.0f; }
     { FSpell& S = AddSpell(EClass::Druid, TEXT("Storm Call"), ESpellTier::Intermediate, ESpellShape::AoE, EWeaponStatusEffect::Lightning, 140.0f, 35.0f, EResourceType::Mana, 15.0f, 0.8f, 800.0f, 8.0f, 0.0f, TEXT("Call lightning storm, 8m AoE, chains to 3 enemies")); S.bStuns = true; }
 
