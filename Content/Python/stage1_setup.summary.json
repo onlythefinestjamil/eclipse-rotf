@@ -1,0 +1,39 @@
+{
+  "rc_preset": false,
+  "rc_asset_search": {
+    "Aetherborn": 0,
+    "Berserker": 0
+  },
+  "aetherborn_found": false,
+  "enemy_found": false,
+  "in_engine": true,
+  "cathedral": {
+    "floor": "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_15' (0x000001FFB4F05000) Class 'StaticMeshActor'>",
+    "ceiling": "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_16' (0x000001FFB4F08C00) Class 'StaticMeshActor'>",
+    "walls": {
+      "N": "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_17' (0x000001FFB4F0A500) Class 'StaticMeshActor'>",
+      "S": "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_18' (0x000001FFB4F03C00) Class 'StaticMeshActor'>",
+      "E": "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_19' (0x000001FFB4F0B900) Class 'StaticMeshActor'>",
+      "W": "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_20' (0x000001FFB4F04B00) Class 'StaticMeshActor'>"
+    },
+    "pillars": [
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_21' (0x000001FFB4F0A000) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_22' (0x000001FFB4F06400) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_23' (0x000001FFB4F00A00) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_24' (0x000001FFB4F04600) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_25' (0x000001FFB4F09100) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_26' (0x000001FFB4F05500) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_27' (0x000001FFB4F07300) Class 'StaticMeshActor'>",
+      "<Object '/Temp/Untitled_2.Untitled:PersistentLevel.StaticMeshActor_28' (0x000001FFB4F00500) Class 'StaticMeshActor'>"
+    ]
+  },
+  "lighting": {},
+  "enemy": true,
+  "saved": true,
+  "errors": [
+    "RC create_transient_preset failed: TimeoutError: timed out",
+    "setup_lighting failed",
+    "spawn player failed"
+  ],
+  "player": false
+}
