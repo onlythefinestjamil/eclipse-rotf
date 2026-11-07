@@ -1,0 +1,78 @@
+ECLIPSE: REALMS OF THE FRACTURED
+RUNWAY PROMPTS — ALL ENVIRONMENTS (AAA Quality)
+==================================================
+For Forge to upload to Runway for environment generation.
+Each prompt captures one region at Elden Ring / Wukong quality.
+Paste each into Runway separately. 16:9, 1080p or 4K, 5-10s clips.
+
+==================================================
+ENVIRONMENT 1: CATHEDRAL OF UNMADE HOURS (Solara)
+==================================================
+Cinematic interior of a colossal Gothic cathedral caught in a temporal collapse, Elden Ring quality, Black Myth Wukong level detail. The roof is ripped open revealing a cosmic void of stars and purple nebula. Massive stone pillars with intricate religious carvings soar into darkness. Floating brass clocks, gears, and broken stone fragments hang suspended in mid-air, frozen in time. Purple crackling energy veins pulse through the architecture like lightning through stone. Stained glass windows glow with ethereal cold blue and violet light, casting fractured color across the dark floor. Dark weathered basalt stone with visible cracks, moss, and ancient weathering. Ribbed vault ceilings partially collapsed. A central nave leading to a distant altar bathed in cosmic light. Volumetric god rays piercing through the breach in the ceiling. Floating embers and dust particles drifting through purple haze. Warm brass highlights on clockwork contrasting with cool stone. Scale meant to make a human feel insignificant. Deep shadows in archways. Unreal Engine 5 rendered, Lumen global illumination, Nanite geometric detail, 4K cinematic, photorealistic materials, volumetric fog, dramatic chiaroscuro lighting. Dark fantasy aesthetic.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile game, generic
+
+==================================================
+ENVIRONMENT 2: SOLARA CATHEDRAL EXTERIOR (Sun-Scorched Desert)
+==================================================
+Cinematic exterior shot of a massive Gothic cathedral rising from a sun-scorched desert, Elden Ring quality. Golden hour sunlight bathing weathered stone spires that pierce a hazy amber sky. Intricate religious stone carvings covering every surface, worn by centuries of sandstorms. Collapsed sections of the cathedral revealing hollow interiors with hanging chains and broken statues. Sand dunes accumulating against the cathedral base. Ancient bronze doors ornately carved with sun deities. Heat haze shimmer distorting the horizon. Floating ash particles catching golden light. Distant ruins of smaller structures half-buried in sand. Warm amber and orange color grading with deep shadows in doorways. Volumetric god rays through dust. Photorealistic weathered stone materials with visible erosion. Unreal Engine 5, Lumen, Nanite, 4K cinematic.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 3: VAELEWOOD (Ancient Forest)
+==================================================
+Cinematic shot of an ancient primordial forest with colossal twisted trees, Elden Ring quality. Roots erupting from moss-covered ground like wooden tentacles. Crumbling stone ruins of a forgotten civilization reclaimed by nature, vines strangling broken archways. Dappled emerald light filtering through a massive dense canopy hundreds of feet above. Bioluminescent fungi glowing soft blue-green on bark. Mist drifting between massive trunks. Ancient stone pathways cracked and covered in thick moss. Shafts of golden light piercing the canopy. Fireflies and floating spores drifting in the air. Deep earth tones with vibrant green accents. Dark fantasy atmosphere. Scale showing trees 20x human height. Unreal Engine 5, Lumen, Nanite, 4K cinematic, volumetric fog.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 4: MORVATH (Shadow-Drenched Wastes)
+==================================================
+Cinematic shot of a desolate shadow-corrupted wasteland, Elden Ring quality. Cracked obsidian ground with veins of purple dark energy pulsing beneath the surface. Ruined gothic structures half-consumed by living darkness, walls dissolving into shadow. Swirling black mist with purple energy veins creeping across the ground. Dying trees twisted into skeletal claw shapes reaching toward a blood-red moon low on the horizon. Scattered bones and broken weapons from ancient battles half-buried in ash. Toxic pools of green-black liquid with eerie glow. Faint ghostly apparitions drifting in the fog. Oppressive dark atmosphere. Desaturated color palette with purple and sickly green accents. Volumetric shadows. Unreal Engine 5, Lumen, Nanite, 4K cinematic.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile, bright, cheerful
+
+==================================================
+ENVIRONMENT 5: AETHERIS (Floating Islands)
+==================================================
+Cinematic shot of surreal floating islands suspended in a void of crackling blue-white energy, Elden Ring quality. Crystalline rock formations with veins of luminous blue energy running through them. Broken ancient stone bridges connecting fragments of a shattered world, some crumbled and hanging. Lightning arcing between floating landmasses in the distance. Storm clouds with inner blue glow rolling below. Ancient energy conduits pulsing with power, crystals growing from the rock. Shards of crystal floating in the air. A waterfall cascading off an island edge into the void below, turning to mist. Electric blue and white color palette with deep violet accents. Energetic atmosphere with constant particle effects. Unreal Engine 5, Lumen, Nanite, 4K cinematic.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 6: NHALOR (Frozen Peaks)
+==================================================
+Cinematic shot of massive snow-covered mountain peaks piercing through clouds, Elden Ring quality. Ancient ice caverns with crystalline frozen walls glowing with inner blue light. A frozen waterfall cascading down a cliff face, locked in ice. Aurora borealis dancing in a deep blue star-filled sky above. Snow particles drifting on bitter wind. Ice formations growing from the ground like crystal trees. Frozen corpses of ancient warriors preserved in ice, visible inside translucent walls. A distant frozen lake reflecting starlight. Abandoned frost-covered monastery with broken spiers. Deep blue and white color palette with ice crystal refractions. Visible breath vapor. Frost on every surface. Unreal Engine 5, Lumen, Nanite, 4K cinematic, volumetric fog.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 7: UMBRYSS (Abyssal Deep)
+==================================================
+Cinematic shot of an underwater abyssal environment with bioluminescent creatures, Elden Ring quality. Ancient submerged gothic city with coral-encrusted architecture, cathedrals and towers on the seafloor. Deep blue darkness with shafts of faint light from far above the surface. Jellyfish-like creatures glowing soft teal in the darkness. Submerged ruins with schools of fish swimming through broken stained glass windows. Massive tentacled shadows barely visible in the distant gloom. Glowing kelp forests swaying in gentle current. Bioluminescent algae illuminating ancient stonework with pulsing blue-green light. Pressure cracks in the seafloor releasing bubbles. Deep ocean color palette with bioluminescent teal and purple accents. Beautiful but claustrophobic. Unreal Engine 5, Lumen, Nanite, 4K cinematic, volumetric fog.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 8: GOTHIC CITY (Solara Capital)
+==================================================
+Cinematic aerial shot of a massive dark fantasy gothic city at twilight, Elden Ring quality. Towering cathedrals and spires rising above dense medieval architecture. Narrow cobblestone streets between towering stone buildings with ornate carvings. Braziers and torches casting warm orange light against purple twilight sky. Flying buttresses and gargoyles on every rooftop. A central cathedral plaza with a massive statue of a forgotten sun deity. Market stalls with glowing wares. Distant city walls against a mountainous backdrop. Purple and orange color grading. Volumetric fog in the streets. Rain-slicked cobblestones reflecting torchlight. Crow silhouettes circling spires. Unreal Engine 5, Lumen, Nanite, 4K cinematic.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 9: WEEPING FOUNDRY (Dungeon)
+==================================================
+Cinematic interior of an ancient underground forge dungeon, Elden Ring quality. Massive iron forges glowing orange-red with molten metal. Corridors of black stone with riveted iron supports. Chains hanging from ceilings with broken cages. Lava streams flowing through channels in the floor. Sparks showering from an unseen anvil. Heavy machinery with gears and pistons, some still grinding. Broken weapons scattered on the ground. Blacksmith tools on workbenches. Orange and red glow from forges contrasting with dark stone. Heat distortion in the air. Steam venting from floor cracks. Scale showing massive industrial spaces. Unreal Engine 5, Lumen, Nanite, 4K cinematic, volumetric fog.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 10: DUEL CIRCLE ARENA (PvP)
+==================================================
+Cinematic shot of a circular combat arena carved into ancient stone, Elden Ring quality. A flat circular platform 50 meters across, surrounded by a ring of broken pillars. Purple energy runes etched into the floor, glowing faintly. Stone seating carved into the surrounding rock, ancient and crumbling. A domed ceiling partially collapsed, open to a starry purple sky. Torches in iron brackets casting flickering orange light. Scattered bones and broken weapons from previous battles. A central raised platform with a carved statue of a forgotten champion. Volumetric light shafts from the ceiling breach. Dark stone with weathering and battle damage. Unreal Engine 5, Lumen, Nanite, 4K cinematic.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 11: ECLIPSED REALM WORLD MAP (Overworld)
+==================================================
+Cinematic sweeping aerial shot of a fractured continent seen from high above, Elden Ring quality. The land is split into six distinct regions visible from this height: a sun-scorched desert with a golden cathedral (Solara), a vast ancient forest with ruins (Vaelwood), a shadow-drenched wasteland with purple energy (Morvath), floating islands crackling with blue energy (Aetheris), frozen mountain peaks (Nhalor), and a dark abyssal ocean (Umbryss). A massive purple fracture runs through the center of the continent, splitting it apart, with purple energy visible in the chasm. Clouds casting shadows on the landscape. Auroras over the frozen region. Dust storms over the desert. The scale showing an entire continent. Epic fantasy landscape. Unreal Engine 5, 4K cinematic, aerial drone shot.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
+
+==================================================
+ENVIRONMENT 12: FINAL BOSS ARENA (Eclipsed Sovereign)
+==================================================
+Cinematic shot of a cosmic arena suspended in a void of stars and purple energy, Elden Ring final boss quality. A circular platform of dark fractured stone floating in infinite space, pieces breaking off and drifting away. Purple and white energy crackling across the platform surface. The background shows all six regions visible as fragments in the distance — desert, forest, shadow, floating islands, ice, and ocean — all being consumed by a massive purple eclipse in the center of the void. Stars and galaxies visible between floating debris. No gravity, floating particles and debris everywhere. The platform has ancient carvings that glow with purple energy. A central throne at the far end, empty but radiating power. Epic, apocalyptic, awe-inspiring. Unreal Engine 5, Lumen, Nanite, 4K cinematic, volumetric everything.
+Negative: low quality, blurry, cartoon, anime, stylized, oversaturated, toy, plastic, flat lighting, gamey, low poly, mobile
