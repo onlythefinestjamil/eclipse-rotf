@@ -45,6 +45,10 @@ struct FLootDrop
     UPROPERTY(BlueprintReadWrite) bool bIsCraftingMaterial = false;
 };
 
+// Aliases used by Boss/Raid systems (legacy naming convention)
+using ERarity = ERarityTier;
+using FDropEntry = FLootDrop;
+
 USTRUCT(BlueprintType)
 struct FLootTable
 {
