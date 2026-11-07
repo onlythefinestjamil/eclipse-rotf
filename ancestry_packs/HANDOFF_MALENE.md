@@ -21,3 +21,11 @@ Key directive points (from HERMES_READ_FIRST_MASTER_DIRECTIVE.txt):
 - Filename schema: ECL_<Ancestry>_<Identity>_<VIEW>_FULLBODY_v001.png
 
 — Forge (Mac), relaying for Jamil
+
+## UPDATE — unpacked & browsable
+
+Both packs are now ALSO unpacked in-repo (no unzipping needed):
+- ancestry_packs/Eclipse_13_Ancestries_Hermes_Pack/       (reference + prompts — start here)
+- ancestry_packs/Eclipse_13_Ancestries_Full_Toolchain_Pack/ (full toolchain pipeline)
+
+The zips remain for intact transfer. Duplicate Downloads copies (" 2" / " 3") were ignored — one canonical copy each.

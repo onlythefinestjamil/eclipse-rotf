@@ -1,0 +1,17 @@
+ECLIPSE: REALMS OF THE FRACTURED
+HERMES -> AURA FULL TOOLCHAIN MASTER OPERATING DIRECTIVE (v2)
+
+READ THIS FIRST. This is the 13-ancestry FINAL canon, superseding any older 10-race document. Ancestries: Aetherborn, Solari, Vyrael, Tharuk, Kazari, Umbralis, Draven, Grimstarr, Nereyth, Myceliar, Forgeborn, Hellsworn, Necrevan. Muscalar is a subtype / design under Aetherborn, NOT race fourteen.
+
+This package contains ancestry-specific prompts with 13 full 00–12 production pipelines and race-specific checks. Execute EACH prompt, not only this master. Supplied image concepts are not yet fully validated high-resolution orthographic front/back sheets, nor completed rigged meshes.
+
+VERIFIED PROJECT INTENT (TOOL AVAILABILITY MUST BE CHECKED LOCALLY):
+Hermes orchestration, Aura AI/plugin inside Unreal; Unreal Engine 5.8, Nanite, Lumen, Niagara, MetaHuman, Motion Matching, Groom, World Partition, Enhanced Input, GAS, Control Rig/IK retargeting/Chaos Cloth as appropriate; Blender 4.2 LTS, ZBrush 2025 (trial/licensing may apply), Houdini Indie (license/eligibility verify), Substance 3D Painter (trial/licensing verify). Unreal dedicated server/GAS replication and potentially gateway, zone, PostgreSQL, Redis for backend services. Unreal features have mesh-type and performance restrictions: check individually. No need to buy any tool merely because it is listed; use viable installed alternatives and record substitutions.
+
+GOAL: create actual source-editable photoreal high-fantasy character assets with complete front/back/side references, high-poly sculpt, clean gameplay topology, PBR materials, groom/cloth, rigs, combos, spells, interactive VFX, optimized LODs, working networked UE avatars and validation reports.
+
+PROCESS CONTROL: stage 00 source/rights; 01 multiview; 02 Blender blockout; 03 ZBrush/Blender detailed sculpt; 04 Blender retopo/UV/bake; 05 Substance/Blender PBR; 06 Blender/Houdini/Groom/Chaos Cloth; 07 MetaHuman where appropriate, Control Rig/IK retarget; 08 Aura/Motion Matching/GAS animation and combat; 09 UE5.8/Niagara/Lumen integration; 10 network QA; 11 performance profiling; 12 final Hermes/Aura audit. Full details exist INSIDE EVERY ancestry prompt.
+
+STOP CONDITIONS: no missing back design silently invented; no marketing illustration counted as mesh; no sculpture counted as rig; no beautiful rig counted as MMO-ready if costs fail; no untested optional tool claimed used. Enforce original visual DNA and cite source files.
+
+START WITH AETHERBORN MUSCALAR gold standard, then proceed Solari through Necrevan. Do not confuse class visuals/archetypes with races. The highest-quality cinematic mesh and optimized gameplay variants must share identity and core source assets, not be completely redesigned characters.

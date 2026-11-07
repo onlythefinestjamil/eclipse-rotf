@@ -1,0 +1,26 @@
+HERMES → AURA: ECLIPSE FINAL CANON 13-ANCESTRY PRODUCTION MASTER DIRECTIVE
+
+Treat the 13 supplied ancestry folders as the complete playable ancestry roster, not classes. Do not merge/swap/rename ancestries. Muscalar is an Aetherborn type, not a 14th ancestry. Generate an approved, unique, consistent high-resolution front and back full-body reference FOR EACH ancestry before modeling.
+
+Each ancestry folder contains an identity-locked prompt and a LOW RES preview crop. Those previews are not substitutes for deliverables. A roster collage is not equivalent to 13 independent full-resolution front and back files. Follow per-ancestry constraints, maintain strict cross-view consistency and match user-provided character artwork.
+
+PHASES:
+0 Asset ingestion: inventory source files and map ancestry by visual identifiers. Show user unclear or contradictory sources.
+1 Design lock: confirm signature anatomy and palette for each, material breakdown, front and rear silhouettes.
+2 Generate full-res FRONT reference and have it accepted before creating the matching BACK reference. Follow with side and component views.
+3 Build explicit 3D blockouts and production high-poly sculpt, retopology, UV, bakes and PBR materials. Separate static ornaments, hair, armor, fabric, anatomy and magical FX as needed.
+4 Rig, corrective shapes, cloth/hair constraints, sockets, hit reactions, animation test and gameplay collision.
+5 Unreal import, cinematic/gameplay fidelity profiles, LODs, lighting integration, performance + replication tests.
+6 QA gate: preserve front-back continuity, texture detail, no prompt drift, full body visibility, ankle/foot/finger validity, valid UVs, deformations, accessory persistence and normal directions, versioned deliverables.
+
+REQUIRED FILENAME SCHEMA:
+ECL_<Ancestry>_<Identity>_FRONT_FULLBODY_v001.png
+ECL_<Ancestry>_<Identity>_BACK_FULLBODY_v001.png
+ECL_<Ancestry>_<Identity>_LEFT_v001.png
+ECL_<Ancestry>_<Identity>_RIGHT_v001.png
+ECL_<Ancestry>_<Identity>_DETAILS_v001.png
+ECL_<Ancestry>_<Identity>_SCULPT.blend
+ECL_<Ancestry>_<Identity>_RIG.fbx
+ECL_<Ancestry>_<Identity>_QUALITY_REPORT.json
+
+DO NOT claim full-resolution individual front and back character reference sheets already exist: this ZIP has only extracted low-resolution references and detailed generation prompts. The generated artwork in the global references includes some full-body character art and original Aetherborn sheets, but it does not supply production-grade orthographic views for all races.

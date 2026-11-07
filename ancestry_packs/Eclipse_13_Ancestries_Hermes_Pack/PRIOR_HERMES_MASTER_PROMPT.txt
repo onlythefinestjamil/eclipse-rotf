@@ -1,0 +1,103 @@
+ECLIPSE: REALMS OF THE FRACTURED
+HERMES -> AURA AAA 3D CHARACTER PRODUCTION MASTER DIRECTIVE
+Version 1.0 | Source: user-supplied image references, 7 November 2026
+
+MISSION
+Produce actual EDITABLE, RIGGED, ANIMATION-READY 3D assets for Eclipse, not 2D images or single-view mockups. Target the visual detail of the supplied references while providing performant real-time multiplayer variants. Do not claim production readiness from a generated mesh alone. Hermes orchestrates; Aura operates in Unreal; asset tools perform mesh, texture and rig production; automated validators and human/art-direction approval gate deliveries.
+
+INPUT REFERENCES AND PRIORITY
+All ten supplied JPEGs are available in the originating conversation. Hermes must ingest and register exact reference files, create a contact sheet, assign each reference to a character or race, and preserve them as immutable source-of-truth art direction. The group chart lists ten playable races: Aetherborn (Lunarian Descendants), Solari (Sunforged Humans), Vyrael (Elven Kindred), Tharuk (Titanborn), Kazari (Beastblood), Umbralis (Void-Touched), Nereyth (Aquatic Kin), Draven (Draconic Bloodline), Myceliar (Verdant Kin), and Forgeborn (Arcane Constructs). The individual images include a dark-skinned Viking warrior with axe/shield, blue-and-gold knight, blue-eyed grave shaman, purple-robed void sorceress, alchemist, and multiple Lunarian Aetherborn / Muscalar reference sheets. These individual portraits represent character or class archetypes, NOT automatically new races. Confirm canonical race/class affiliations against the latest project bible before assigning them.
+
+LUNARIAN AETHERBORN MUSCALAR HERO: LOCKED VISUAL DNA
+Dark brown skin with believable subsurface scattering, pores and microdetail; intensely athletic muscular silhouette; long black rope locs with gold cuffs and independently controlled clumps; deliberate symmetrical lunar runes and subtly branching aetheric fissures across face, shoulders, chest and arms; cool blue-white eyes; navy, indigo, purple, silver and antique gold palette; layered engraved gold armor and moon-disc ornamentation; draped white/navy/purple fabrics; moon-crest imagery; striking crescent-themed equipment. Preserve the original face, natural hair texture, individual metal elements and proportional hierarchy from the reference sheets. Different wing reference versions are deliberate design alternatives: (A) feathered cinematic celestial wings; (B) preferred magical manifested aether-energy wings in violet-blue with gold fracture veins. Do not permanently bake both as always-on appendages. Implement switchable wing modes and optional temporary manifestations based on gameplay, racial ability, or cinematic state. Energy wings require readable branching volume and silhouettes, collision-independent visual effects, motion-based deformation, believable emissive light contribution and quality-scalable particle counts. Do not use a flat textured plane or opaque generic angel wings as a substitute.
+
+OTHER CHARACTER ARCHETYPES, LOCKED VISUAL DNA
+Viking guardian: large heavily built dark-skinned man; short natural tightly curled hair, dense long beard; worn dark iron riveted armor, brown leather, fur trim, embossed beast shoulder; one-handed axe and thick circular timber shield with worn runic edge; historically tactile materials and grounded silhouette.
+Blue-gold knight: dark-skinned male with pulled-back locs, groomed beard, blue plate armor with engraved sun motif and brass/gold trims; asymmetric grey fur mantle; full-length longsword; moonlit gothic fortress environment is presentation context, not geometry to fuse to character.
+Grave shaman: lean dark slate-blue/ashen body, luminous cyan eyes, runic/ritual markings, hanging bead necklaces, ragged cloth and bone accessories, skull-topped staff; faint cool spirit aura; preserve readable face and limbs.
+Void sorceress: dark-skinned woman, elaborate braided updo with flowing long braids and gold cuffs; richly embroidered purple-black robe with gold trim, structured high collar, potion/talisman belt and dark violet controlled spell smoke; hands anatomically clean; expressive facial rig.
+Alchemist: dark-skinned woman with close-cropped natural hair, blue embroidered workwear, worn leather apron with straps and brass fasteners, mortar/pestle, multiple correctly attached glass flasks containing varied blue, green, amber liquids; functional object physics and liquid shaders.
+
+RACE BIBLE VISUAL EXTENSION
+Aetherborn: lunar/celestial manifestations, fracture energy skin patterns, optional energy wings, prominent moon ornaments.
+Solari: radiant solar-gold skin accents, warm forged metals, solar geometry; distinguish clearly from Aetherborn.
+Vyrael: distinct elven anatomy and ears, pale moonlight/dusk materials, organic arcane filigree; no generic human-only meshes.
+Tharuk: massive titan proportions, heavy bones and broad landmarks; rig and equipment sizing must account for extremes.
+Kazari: leonine/beastblood muzzle, whiskers, ears, mane/groom, clawed hands and digitigrade considerations; custom face rig and silhouette.
+Umbralis: void pigmentation, controlled shadow fracture pattern, layered translucent shadow energy, facial expression retained.
+Nereyth: amphibious humanoid anatomy, fins/gills/webbing and aquatic materials; wetness state, underwater visual variation.
+Draven: draconic scales, horns, ridges, claws and optional tail; preserve sex/body variations and equipment collision.
+Myceliar: fungal/verdant symbiosis, bark/fungal detail, cap/gill accents, bioluminescent spores; controlled ambient particle budget.
+Forgeborn: articulated arcane construct with readable metal plates, joints, glowing core and mechanical design; custom rig/physics, not MetaHuman forced onto mechanical geometry.
+
+PRODUCTION PHASES
+P0. Canon audit: parse latest approved Eclipse bible and reference set; create asset register and lineage linking race, subtype, class, source image, hero asset, and wardrobe. Produce feature checklist and approval matrix. Any discrepancies are flagged, not silently invented.
+P1. Reference breakdown: each asset receives orthographic-ready front, 3/4, side, back views plus front/side facial crops, garment layers, gear isolation, material swatches and negative-space silhouettes. If a reference lacks back/side, author continuity-consistent concept turnarounds and mark inferred areas for approval. Do not ask a single generative tool to guess hidden armor and assume correctness.
+P2. Greybox: scale figures in centimeters; use shared skeleton families where compatible; establish body/face and gear proportions. Show 360-degree turntable; validate correct hand count, joints, anatomy, cloth thickness, gear sizing, and back view.
+P3. Sculpt: Blender/ZBrush high-resolution meshes with separate body, head, hair, armor, cloth, weapons, talismans and VFX anchors; physically plausible details. No fused fingers, floating armor, distorted pupils, rubbery metal, illegible ornament overload or texture-only faux geometry for high-silhouette elements.
+P4. Retopo and UV: deformation-safe edge loops, proper eyelids/mouth/hands/shoulders/hips, separate material/UV sets when useful. Bake high-to-low normals/AO/curvature and validate tangent basis. Make clean modular sections and wearables.
+P5. Material authoring: full PBR (base color, normal, ORM or separately mapped roughness/metallic/occlusion, subsurface and opacity where needed); texture resolution tiers with hero 4K-8K where justified and gameplay tier 2K-4K, avoiding unnecessary VRAM; worn micro-scratches, tiny engravings and cloth weave. Separate emissive masks and dynamic material parameter controls. No baked highlights or projected 2D source lighting in albedo.
+P6. Groom/cloth: dreadlocks and braids as authored lock groups with physical sectioning, scalp coverage and binding; hair card LODs; cloth weights/secondary bones or selective Chaos Cloth simulation only where performance merits it; prevent frequent capes/locs collision penetrations.
+P7. Rigging: humanoid MetaHuman conversion for suitable humanlike faces/bodies only; use shared Unreal-compatible skeleton and IK Retargeter/Control Rig where useful; custom facial and body rigs for beast, giant, aquatic, dragon and mechanical variants. Correct skinning, twist bones, weapon sockets, hitboxes, physical assets, cloth and accessory constraints. Test extreme poses.
+P8. Aura gameplay animation: create idle, walk, jog, sprint, turn, jump, fall, land, dodge/iframe, block, guard-break, stagger, knockdown, melee 3-hit combos, heavy attacks, spell windups/casts/releases, channeling, heal, interact, death, revive, emotes. Align to hybrid Elden Ring plus WoW-style combat intentions, GCD, casting, weapons and optional manual critical/migration mechanics from latest design bible. No animation removes gameplay hitbox/collision authority; combat remains server authoritative.
+P9. Unreal integration: import Unreal-compatible FBX/Interchange and approved groom files; author SkeletalMesh, skeleton, physics asset, ControlRig/IK rigs as required, Gameplay Ability System tags and character Blueprint; material instances and Niagara VFX. Per-character effects use exposed parameters (color, damage level, resource, phase, wing state), not fixed baked emissive thumbnails. Runtime visuals must react to character motion and environment lighting.
+P10. Optimization: separate Cinematic Hero, Gameplay Hero, Standard Player, Crowd LODs. Profile draw calls, shader complexity, hair cost, groom budget, GPU skinning, textures, shadow and translucent overdraw. Nanite applicability must be evaluated per mesh and engine settings; never assume dynamic skeletal armor/grooms all support the same paths. VRAM/network budgets must be tested at planned 100 and 1000 concurrent-player scenarios; concurrency does not imply 1000 characters on screen. Do real scene profiling and define quality switches for wings, cloth, hair and particles.
+P11. QA: 360 turntable, close-up skin and armor inspection, texture map inspection, wireframe screenshot, skeleton list, bend-test sequence, ten-second combat preview, camera-distance performance test and multiplayer replication test. Compare reference silhouette, skin tone, facial features, hair, armor, robes, metal patterns, colors and VFX. If one dimension fails, repair and rerun.
+P12. Deliver: source .blend, ZBrush source if used, texture project sources, layered PBR maps, FBX/GLB for inspection, Unreal-ready skeleton/mesh/animation assets, Niagara VFX, material functions/instances, Blueprints, LODs, physics setup, asset manifests, metrics and licensing log. Screenshot-only output never counts as completion.
+
+MINIMUM ART QUALITY ACCEPTANCE
+- Facial likeness and silhouette visibly match the user's original art from front, profile, rear and 3/4.
+- Distinct braided/loc hair; strands and accessories do not merge into smooth tubes.
+- Materials respond correctly under neutral studio light, full moon, daylight, torchlight and spell illumination.
+- No baked photographic background, ground or spotlights inside model textures.
+- Correct full-body geometry, five digits per normal human hand unless lore establishes otherwise, consistent armor layering and believable shoulders/hips during motion.
+- Armor, clothes, hair, weapons, back accessories and magical wings are independently adjustable/replaceable.
+- Each character must support at least idle, run, dodge, attack, spell and equipment-change tests.
+- Full screenshot/metrics checklist and explicit sign-off per asset.
+
+ARTIFACT NAMING CONVENTION
+/Game/Eclipse/Characters/<Race>/<Archetype>/Meshes/SK_<Race>_<Archetype>_Body
+/Game/Eclipse/Characters/<Race>/<Archetype>/Meshes/SK_<Race>_<Archetype>_Head
+/Game/Eclipse/Characters/<Race>/<Archetype>/Equipment/
+/Game/Eclipse/Characters/<Race>/<Archetype>/Materials/
+/Game/Eclipse/Characters/<Race>/<Archetype>/Textures/
+/Game/Eclipse/Characters/<Race>/<Archetype>/Grooms/
+/Game/Eclipse/Characters/<Race>/<Archetype>/Animations/
+/Game/Eclipse/Characters/<Race>/<Archetype>/VFX/
+/Game/Eclipse/Characters/<Race>/<Archetype>/Blueprints/
+/Game/Eclipse/Characters/<Race>/<Archetype>/QA/
+
+HERMES AND AURA RESPONSIBILITY SPLIT
+HERMES: project bible reconciliation, reference intake, task decomposition, asset generation tool selection, local scripts/API orchestration, validation, performance reports, file organization and approval gating. Ask for tool credentials only when actually needed; do not assert having used a paid API without access.
+AURA: Unreal Editor task execution, importer setup, skeleton/animation validation, Control Rig/Retargeter, Material Instances, Niagara, Gameplay Ability System hooks, Blueprint assembly, playable test scenes, visual captures and performance profiling. Hermes must provide Aura exact input paths, output paths, steps, preconditions, pass/fail criteria, and a structured report schema. Aura must not hallucinate tool actions.
+
+AURA EXECUTION TASK TEMPLATE
+TASK_ID:
+CHARACTER_ID:
+PROJECT_UE_VERSION: verify installed version
+INPUT_ASSETS: exact paths
+DEPENDENCIES:
+OBJECTIVE:
+EDITOR_ACTIONS: precise menu/API/Blueprint operations
+EXPECTED_OUTPUT_PATHS:
+TEST_SCENES:
+VISUAL_ACCEPTANCE:
+RIG_ACCEPTANCE:
+RUNTIME_METRICS:
+STATUS: PASS / FAIL / BLOCKED
+EVIDENCE: screenshot paths, logs and manifest
+NEXT_ACTION: only if validated
+
+PILOT BEFORE SCALE
+Build one perfect, approved Aetherborn Muscalar male hero first, including switchable violet-gold fracture energy wings, one complete armor set and crescent weapon set. Make neutral turnaround, rig, six core animations, original-material shader test and one live Unreal combat test. Then produce the Viking guardian, blue-gold knight, grave shaman, void sorceress and alchemist archetypes. Extend the workflow to the ten canonical races after visual QA and performance budgets are stable. No mass producing dozens of mediocre single-view character meshes.
+
+HONESTY AND LICENSING
+Track licensing and usage rights for all generative services, sculpting assets, scans, textures and plugins. Check current service/API and engine licenses before commercial deployment. Never label a screenshot or unrigged OBJ as a finished AAA 3D playable character. Generate an implementation progress report distinguishing finished, in progress, awaiting human approval, blocked and not started.
+
+START NOW
+1. Build image reference manifest with exact file mapping and classify each reference.
+2. Validate lore with the latest Eclipse bible.
+3. Create Aetherborn Muscalar multi-view 3D reconstruction brief and hero asset plan.
+4. Generate a first actual 3D mesh using available licensed tools, open it in Blender, render 360 QA, report reconstruction defects.
+5. Iterate to production-quality sculpt/retopo/rig, import and validate in Unreal with Aura.
+6. Return clickable paths or exact disk locations for editable assets and evidence. Explicitly report any missing application, permission, credential or source file.
