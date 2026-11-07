@@ -293,13 +293,17 @@ LOOT SYSTEM:
   - Legendary/Mythic: Soulbound on Pickup (can't trade)
   - Eclipse: Account Bound (scales with character)
 
-NO HOSTILE MECHANICS:
+ATMOSPHERIC PRESENCE (POWERFUL CHARACTERS):
 - NO forced screen vibration on other players
 - NO forced character trembling/kneeling
-- NO color desaturation of other players' screens
 - NO hesitation delay based on gear tier difference
-- Gear differences affect YOUR stats, not the OPPONENT'S screen.
-  (Removed per design review — hostile UX kills PvP games.)
+- YES atmospheric presence: powerful characters have visible auras,
+  ground cracks, ambient particles, and local lighting shifts
+  that other players can SEE without being debuffed
+- Gear differences affect YOUR stats, not the OPPONENTS controls
+- The atmosphere effect scales: Epic = faint glow, Legendary = visible
+  aura + ground cracks, Mythic = full atmospheric distortion nearby,
+  Eclipse = reality warping within 5m (visual only, no debuff)
 
 ============================================================
   SECTION 9: PROGRESSION
@@ -477,11 +481,29 @@ ENVIRONMENTAL HAZARDS (per region):
 - Nhalor: Ice slides, freezing winds (slow), avalanche
 - Umbryss: Water currents, pressure changes, abyssal darkness
 
-NO HOSTILE MECHANICS (REMOVED):
-- No "environmental reaction" that forces other players to tremble
-- No forced kneeling based on gear
-- No screen desaturation from other players' presence
-- Hazards affect the PLAYER in the hazard, not bystanders
+ATMOSPHERIC PRESENCE (POWERFUL CHARACTERS):
+- Powerful characters (Mythic/Eclipse geared) have a visible aura
+  effect that other players can SEE in the world:
+  - The air around them shimmers with elemental energy
+  - The ground cracks with fracture lines beneath their feet
+  - Their weapon leaves a faint trail of light
+  - Ambient particles (embers, frost, shadow wisps) emanate from them
+  - The local lighting shifts slightly (warmer for Fire, colder for Ice)
+- This is a VISUAL/ATMOSPHERIC effect only:
+  - Does NOT take control from other players
+  - Does NOT desaturate other players screens
+  - Does NOT force other players to tremble or kneel
+  - Does NOT add hesitation delay or input lag
+  - Does NOT debuff other players stats
+- It signals power and creates intimidation/fear organically
+  through visual storytelling, not through mechanical debuffs
+- In PvP arenas, this creates a natural "boss arrival" feeling
+  when a top-geared player enters — without punishing the opponent
+- The atmosphere effect scales with gear tier:
+  - Epic: Faint glow, subtle particles
+  - Legendary: Visible aura, ground cracks
+  - Mythic: Full atmospheric distortion nearby
+  - Eclipse: Reality warping within 5m (visual only)
 
 ============================================================
   SECTION 14: MONETIZATION (FINAL)
@@ -583,8 +605,10 @@ NEXT MILESTONES:
 ============================================================
 
 1. OFFLINE FIRST — Complete game playable solo. MMO is additive.
-2. NO HOSTILE UX — Never take control from the player because of
-   another player's gear/stats. Hazards affect the player in them.
+2. ATMOSPHERIC PRESENCE - Powerful characters have visible auras
+   and environmental effects (ground cracks, particles, lighting
+   shifts) that other players can SEE. This creates organic
+   intimidation without taking control from other players.
 3. MANUAL COMBAT — No auto-attack. Every action is player input.
 4. HIGH SKILL CEILING — Perfect dodge, perfect parry, combo chains,
    timing windows reward skilled play. But not so hard that casual
