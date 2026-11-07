@@ -70,7 +70,7 @@ struct FCompanionProfile
     UPROPERTY(BlueprintReadWrite) int32 SlotIndex = 0;
     UPROPERTY(BlueprintReadWrite) ECompanionPersonality Personality = ECompanionPersonality::Stoic;
     UPROPERTY(BlueprintReadWrite) EAncestry Ancestry = EAncestry::Solari;
-    UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Bulwark;
     UPROPERTY(BlueprintReadWrite) EClassRole Role = EClassRole::Tank;
     UPROPERTY(BlueprintReadWrite) ERaidRole RaidRole = ERaidRole::MainTank;
     

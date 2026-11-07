@@ -31,13 +31,13 @@ void UEclipseCombatSystem::SetGCDForClass(EClass CharacterClass)
     // Fast classes get shorter GCD
     switch (CharacterClass)
     {
-    case EClass::UmbralAssassin:
+    case EClass::Duskblade:
     case EClass::Riftwalker:
     case EClass::Shadowblade:
         GCDTime = 1.0f; // Fast
         break;
-    case EClass::Vanguard:
-    case EClass::Warlord:
+    case EClass::Bulwark:
+    case EClass::Warthane:
     case EClass::Berserker:
         GCDTime = 1.75f; // Slow, heavy weapons
         break;

@@ -38,8 +38,8 @@ enum class EClassUnlockType : uint8
 UENUM(BlueprintType)
 enum class EClass : uint8
 {
-    Vanguard UMETA(DisplayName = "Vanguard - Tank/Initiator"),
-    UmbralAssassin UMETA(DisplayName = "Umbral Assassin - Burst/Stealth"),
+    Bulwark UMETA(DisplayName = "Bulwark - Tank/Initiator"),
+    Duskblade UMETA(DisplayName = "Duskblade - Burst/Stealth"),
     Arcanist UMETA(DisplayName = "Arcanist - Ranged DPS/Control"),
     Riftwalker UMETA(DisplayName = "Riftwalker - Mobility/Disruptor"),
     Dreadknight UMETA(DisplayName = "Dreadknight - Drain Tank/Bruiser"),
@@ -50,11 +50,11 @@ enum class EClass : uint8
     Oracle UMETA(DisplayName = "Oracle - Support/Caster"),
     Alchemist UMETA(DisplayName = "Alchemist - Utility/Control"),
     Berserker UMETA(DisplayName = "Berserker - Plate DPS"),
-    Shadowblade UMETA(DisplayName = "Shadowblade - Stealth/Assassin"),
+    Shadowblade UMETA(DisplayName = "Shadowblade - Stealth/Burst"),
     Spellblade UMETA(DisplayName = "Spellblade - Hybrid DPS"),
-    Warlord UMETA(DisplayName = "Warlord - Tank/Protector"),
-    Necromancer UMETA(DisplayName = "Necromancer - Summoner/Caster"),
-    Druid UMETA(DisplayName = "Druid - Hybrid/Shapeshifter"),
+    Warthane UMETA(DisplayName = "Warthane - Tank/Protector"),
+    Necroturge UMETA(DisplayName = "Necroturge - Summoner/Caster"),
+    Earthweaver UMETA(DisplayName = "Earthweaver - Hybrid/Shapeshifter"),
 };
 
 UENUM(BlueprintType)

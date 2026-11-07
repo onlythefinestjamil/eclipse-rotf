@@ -55,7 +55,7 @@ struct FSpell
     UPROPERTY(BlueprintReadWrite) FString Description = "";
     
     // Classification
-    UPROPERTY(BlueprintReadWrite) EClass Class = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClass Class = EClass::Bulwark;
     UPROPERTY(BlueprintReadWrite) ESpellTier Tier = ESpellTier::Basic;
     UPROPERTY(BlueprintReadWrite) ESpellShape Shape = ESpellShape::SingleTarget;
     UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect Element1 = EWeaponStatusEffect::None;
@@ -157,8 +157,8 @@ private:
         bool bAppliesDoT = false, float DoTDamage = 0.0f, float DoTDuration = 0.0f);
 
     // Generate spells for each class
-    void InitVanguardSpells();
-    void InitUmbralAssassinSpells();
+    void InitBulwarkSpells();
+    void InitDuskbladeSpells();
     void InitArcanistSpells();
     void InitRiftwalkerSpells();
     void InitDreadknightSpells();
@@ -171,9 +171,9 @@ private:
     void InitBerserkerSpells();
     void InitShadowbladeSpells();
     void InitSpellbladeSpells();
-    void InitWarlordSpells();
-    void InitNecromancerSpells();
-    void InitDruidSpells();
+    void InitWarthaneSpells();
+    void InitNecroturgeSpells();
+    void InitEarthweaverSpells();
 
     // Generate dual affinity spells (45 combinations)
     void InitDualAffinitySpells();

@@ -51,7 +51,7 @@ void UEclipseDamageRotation::InitializeClassRotation(EClass Class)
     // Each class has different damage values and rotation style
     switch (Class)
     {
-    case EClass::Vanguard:
+    case EClass::Bulwark:
         LightDamage = 90.0f;
         HeavyDamage = 180.0f;
         ChargedDamage = 300.0f;
@@ -60,13 +60,13 @@ void UEclipseDamageRotation::InitializeClassRotation(EClass Class)
         // Tank rotation: build momentum with blocks, spend on heavy hits
         break;
 
-    case EClass::UmbralAssassin:
+    case EClass::Duskblade:
         LightDamage = 60.0f;  // Fast but lower per-hit
         HeavyDamage = 120.0f;
         ChargedDamage = 200.0f;
         WeaponArtDamage = 280.0f;
         UltimateDamage = 450.0f;
-        // Assassin rotation: build Flow through perfect dodges, burst with finishers
+        // Duskblade rotation: build Flow through perfect dodges, burst with finishers
         break;
 
     case EClass::Arcanist:

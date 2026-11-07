@@ -59,7 +59,7 @@ void UEclipseActionBar::InitializeForClass(EClass CharacterClass)
 
     switch (CharacterClass)
     {
-    case EClass::Vanguard:
+    case EClass::Bulwark:
         ActionBarSlots[0].ActionType = EActionType::Ability;
         ActionBarSlots[0].ActionID = (int32)EAbilityType::Ability1;
         ActionBarSlots[0].DisplayName = "Shield Bash";
@@ -102,7 +102,7 @@ void UEclipseActionBar::InitializeForClass(EClass CharacterClass)
         ActionBarSlots[15].FlowCost = 100.0f;
         break;
 
-    case EClass::UmbralAssassin:
+    case EClass::Duskblade:
         ActionBarSlots[0].DisplayName = "Shadow Step";
         ActionBarSlots[0].bIsUsable = true;
         ActionBarSlots[0].ResourceCost = 15.0f;

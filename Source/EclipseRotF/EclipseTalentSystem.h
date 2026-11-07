@@ -75,7 +75,7 @@ struct FTalentNode
     UPROPERTY(BlueprintReadWrite) FString DetailedTooltip = "";
 
     // Classification
-    UPROPERTY(BlueprintReadWrite) EClass ParentClass = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClass ParentClass = EClass::Bulwark;
     UPROPERTY(BlueprintReadWrite) ETalentLayer Layer = ETalentLayer::ClassFoundation;
     UPROPERTY(BlueprintReadWrite) ETalentNodeType NodeType = ETalentNodeType::Passive;
     UPROPERTY(BlueprintReadWrite) EGameModeContext GameMode = EGameModeContext::AllModes;
@@ -165,7 +165,7 @@ struct FTalentTree
 {
     GENERATED_BODY()
 
-    UPROPERTY(BlueprintReadWrite) EClass ParentClass = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClass ParentClass = EClass::Bulwark;
     UPROPERTY(BlueprintReadWrite) ETalentLayer Layer = ETalentLayer::ClassFoundation;
     UPROPERTY(BlueprintReadWrite) TArray<FTalentNode> Nodes;
     UPROPERTY(BlueprintReadWrite) TArray<FTalentBranch> Branches;
@@ -181,7 +181,7 @@ struct FBuildArchetype
     UPROPERTY(BlueprintReadWrite) FString BuildName = "";
     UPROPERTY(BlueprintReadWrite) FString Identity = "";
     UPROPERTY(BlueprintReadWrite) FString CentralMechanic = "";
-    UPROPERTY(BlueprintReadWrite) EClass Class = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClass Class = EClass::Bulwark;
     UPROPERTY(BlueprintReadWrite) EClassRole Role = EClassRole::DPS;
     UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect PrimaryAffinity = EWeaponStatusEffect::None;
     UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect SecondaryAffinity = EWeaponStatusEffect::None;
@@ -312,8 +312,8 @@ private:
     int32 MaxTalentPoints = 30;
 
     // Tree builders
-    void InitVanguardTalents();
-    void InitUmbralAssassinTalents();
+    void InitBulwarkTalents();
+    void InitDuskbladeTalents();
     void InitArcanistTalents();
     void InitRiftwalkerTalents();
     void InitDreadknightTalents();
@@ -326,9 +326,9 @@ private:
     void InitBerserkerTalents();
     void InitShadowbladeTalents();
     void InitSpellbladeTalents();
-    void InitWarlordTalents();
-    void InitNecromancerTalents();
-    void InitDruidTalents();
+    void InitWarthaneTalents();
+    void InitNecroturgeTalents();
+    void InitEarthweaverTalents();
 
     // Build archetypes
     void InitBuildArchetypes();

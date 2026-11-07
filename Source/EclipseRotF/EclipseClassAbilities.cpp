@@ -29,19 +29,19 @@ void UEclipseClassAbilities::AddAbility(EClass Class, const FString& Name, EAbil
 
 void UEclipseClassAbilities::InitializeAllClassAbilities()
 {
-    // === VANGUARD === Tank, shield + greatsword
-    AddAbility(EClass::Vanguard, "Warspite Slam", EAbilityType::Ability1, 8.0f, 80.0f, 20.0f, EResourceType::Stamina, 200.0f, 0.0f, "Bash shield into enemy, stuns for 1s, generates high threat");
-    AddAbility(EClass::Vanguard, "Aegis Riposte", EAbilityType::GuardCounter, 6.0f, 150.0f, 25.0f, EResourceType::Stamina, 200.0f, 0.0f, "Block incoming hit then counter with heavy strike");
-    AddAbility(EClass::Vanguard, "Bastion Formation", EAbilityType::Ability2, 30.0f, 0.0f, 40.0f, EResourceType::Stamina, 0.0f, 0.0f, "Reduce all damage by 50% for 5s, immune to knockback");
-    AddAbility(EClass::Vanguard, "Sunbreaker Slam", EAbilityType::Ultimate, 180.0f, 300.0f, 100.0f, EResourceType::Aether, 400.0f, 1.5f, "Jump and slam greatsword creating shockwave, stuns all enemies in 8m");
-    AddAbility(EClass::Vanguard, "Bulwark Surge", EAbilityType::WeaponArt, 12.0f, 120.0f, 30.0f, EResourceType::Stamina, 600.0f, 0.0f, "Charge forward with shield, knockback all enemies in path");
+    // === BULWARK === Tank, shield + greatsword
+    AddAbility(EClass::Bulwark, "Warspite Slam", EAbilityType::Ability1, 8.0f, 80.0f, 20.0f, EResourceType::Stamina, 200.0f, 0.0f, "Bash shield into enemy, stuns for 1s, generates high threat");
+    AddAbility(EClass::Bulwark, "Aegis Riposte", EAbilityType::GuardCounter, 6.0f, 150.0f, 25.0f, EResourceType::Stamina, 200.0f, 0.0f, "Block incoming hit then counter with heavy strike");
+    AddAbility(EClass::Bulwark, "Bastion Formation", EAbilityType::Ability2, 30.0f, 0.0f, 40.0f, EResourceType::Stamina, 0.0f, 0.0f, "Reduce all damage by 50% for 5s, immune to knockback");
+    AddAbility(EClass::Bulwark, "Sunbreaker Slam", EAbilityType::Ultimate, 180.0f, 300.0f, 100.0f, EResourceType::Aether, 400.0f, 1.5f, "Jump and slam greatsword creating shockwave, stuns all enemies in 8m");
+    AddAbility(EClass::Bulwark, "Bulwark Surge", EAbilityType::WeaponArt, 12.0f, 120.0f, 30.0f, EResourceType::Stamina, 600.0f, 0.0f, "Charge forward with shield, knockback all enemies in path");
 
-    // === UMBRAL ASSASSIN === DPS, daggers, stealth
-    AddAbility(EClass::UmbralAssassin, "Gloom Stride", EAbilityType::Ability1, 10.0f, 60.0f, 15.0f, EResourceType::Stamina, 1500.0f, 0.0f, "Teleport behind target, 3 rapid blinks, leaves afterimages");
-    AddAbility(EClass::UmbralAssassin, "Vertebra Pierce", EAbilityType::Ability2, 5.0f, 200.0f, 20.0f, EResourceType::Stamina, 200.0f, 0.0f, "X-pattern dagger strike from behind, guaranteed crit on unaware target");
-    AddAbility(EClass::UmbralAssassin, "Cinder Shroud", EAbilityType::Ability3, 20.0f, 0.0f, 25.0f, EResourceType::Stamina, 0.0f, 0.0f, "Vanish into void smoke, become invisible for 5s, +50% damage on next hit");
-    AddAbility(EClass::UmbralAssassin, "Veilfang Massacre", EAbilityType::Ultimate, 180.0f, 400.0f, 100.0f, EResourceType::Aether, 600.0f, 0.5f, "Strike all enemies in 10m with 5 rapid teleport strikes, each guaranteed crit");
-    AddAbility(EClass::UmbralAssassin, "Voidrender Daggers", EAbilityType::WeaponArt, 8.0f, 150.0f, 20.0f, EResourceType::Stamina, 300.0f, 0.0f, "Throw both daggers in void trajectory, pierce all enemies in line");
+    // === UMBRAL DUSKBLADE === DPS, daggers, stealth
+    AddAbility(EClass::Duskblade, "Gloom Stride", EAbilityType::Ability1, 10.0f, 60.0f, 15.0f, EResourceType::Stamina, 1500.0f, 0.0f, "Teleport behind target, 3 rapid blinks, leaves afterimages");
+    AddAbility(EClass::Duskblade, "Vertebra Pierce", EAbilityType::Ability2, 5.0f, 200.0f, 20.0f, EResourceType::Stamina, 200.0f, 0.0f, "X-pattern dagger strike from behind, guaranteed crit on unaware target");
+    AddAbility(EClass::Duskblade, "Cinder Shroud", EAbilityType::Ability3, 20.0f, 0.0f, 25.0f, EResourceType::Stamina, 0.0f, 0.0f, "Vanish into void smoke, become invisible for 5s, +50% damage on next hit");
+    AddAbility(EClass::Duskblade, "Veilfang Massacre", EAbilityType::Ultimate, 180.0f, 400.0f, 100.0f, EResourceType::Aether, 600.0f, 0.5f, "Strike all enemies in 10m with 5 rapid teleport strikes, each guaranteed crit");
+    AddAbility(EClass::Duskblade, "Voidrender Daggers", EAbilityType::WeaponArt, 8.0f, 150.0f, 20.0f, EResourceType::Stamina, 300.0f, 0.0f, "Throw both daggers in void trajectory, pierce all enemies in line");
 
     // === ARCANIST === DPS, spells, glass cannon
     AddAbility(EClass::Arcanist, "Aether Lance", EAbilityType::Spell1, 3.0f, 120.0f, 20.0f, EResourceType::Mana, 1200.0f, 0.0f, "Concentrated beam of amethyst energy, pierces all enemies in line");
@@ -127,26 +127,26 @@ void UEclipseClassAbilities::InitializeAllClassAbilities()
     AddAbility(EClass::Spellblade, "Aether Severance", EAbilityType::Ultimate, 180.0f, 400.0f, 100.0f, EResourceType::Aether, 600.0f, 0.5f, "Cut through reality itself, 5m range guaranteed crit, sever all magical effects on target");
     AddAbility(EClass::Spellblade, "Flux Ward", EAbilityType::WeaponArt, 10.0f, 0.0f, 40.0f, EResourceType::Mana, 0.0f, 0.0f, "Convert Mana to barrier, 1 Mana = 5 shield, lasts 10s or until depleted");
 
-    // === WARLORD === Tank/DPS, commander
-    AddAbility(EClass::Warlord, "Warhost Pennant", EAbilityType::Ability1, 20.0f, 0.0f, 40.0f, EResourceType::Rage, 0.0f, 0.0f, "Plant war banner, all allies in 15m +20% damage and +15% defense for 10s");
-    AddAbility(EClass::Warlord, "Commanding Shout", EAbilityType::Ability2, 15.0f, 100.0f, 25.0f, EResourceType::Stamina, 800.0f, 0.0f, "Fear all enemies in 10m for 3s, knockback 5m, generate high threat");
-    AddAbility(EClass::Warlord, "Battlehorn Resound", EAbilityType::Ability3, 25.0f, 0.0f, 50.0f, EResourceType::Rage, 0.0f, 0.0f, "All allies heal 50, gain 30 Flow, immune to fear for 8s");
-    AddAbility(EClass::Warlord, "Bannerlord Decree", EAbilityType::Ultimate, 180.0f, 300.0f, 100.0f, EResourceType::Aether, 1500.0f, 1.0f, "Massive war banner slam, 15m AoE stun, all allies +50% damage for 15s");
-    AddAbility(EClass::Warlord, "Shield Breaker", EAbilityType::WeaponArt, 8.0f, 180.0f, 25.0f, EResourceType::Stamina, 300.0f, 0.0f, "Overhead smash, break enemy guard/poise instantly, guaranteed stagger");
+    // === WARTHANE === Tank/DPS, commander
+    AddAbility(EClass::Warthane, "Warhost Pennant", EAbilityType::Ability1, 20.0f, 0.0f, 40.0f, EResourceType::Rage, 0.0f, 0.0f, "Plant war banner, all allies in 15m +20% damage and +15% defense for 10s");
+    AddAbility(EClass::Warthane, "Commanding Shout", EAbilityType::Ability2, 15.0f, 100.0f, 25.0f, EResourceType::Stamina, 800.0f, 0.0f, "Fear all enemies in 10m for 3s, knockback 5m, generate high threat");
+    AddAbility(EClass::Warthane, "Battlehorn Resound", EAbilityType::Ability3, 25.0f, 0.0f, 50.0f, EResourceType::Rage, 0.0f, 0.0f, "All allies heal 50, gain 30 Flow, immune to fear for 8s");
+    AddAbility(EClass::Warthane, "Bannerlord Decree", EAbilityType::Ultimate, 180.0f, 300.0f, 100.0f, EResourceType::Aether, 1500.0f, 1.0f, "Massive war banner slam, 15m AoE stun, all allies +50% damage for 15s");
+    AddAbility(EClass::Warthane, "Shield Breaker", EAbilityType::WeaponArt, 8.0f, 180.0f, 25.0f, EResourceType::Stamina, 300.0f, 0.0f, "Overhead smash, break enemy guard/poise instantly, guaranteed stagger");
 
-    // === NECROMANCER === DPS, summons, death magic
-    AddAbility(EClass::Necromancer, "Exhume Warrior", EAbilityType::Spell1, 8.0f, 40.0f, 20.0f, EResourceType::Mana, 500.0f, 0.5f, "Summon skeleton warrior, lasts 30s, taunts enemies and deals melee damage");
-    AddAbility(EClass::Necromancer, "Ossuary Lance", EAbilityType::Spell2, 5.0f, 120.0f, 15.0f, EResourceType::Mana, 800.0f, 0.0f, "Fire bone projectile, pierces enemies, +50% damage vs living targets");
-    AddAbility(EClass::Necromancer, "Necrotic Pulse", EAbilityType::Spell3, 12.0f, 180.0f, 35.0f, EResourceType::Mana, 600.0f, 0.8f, "Explosion of necrotic energy, 8m AoE, applies decay (damage over time)");
-    AddAbility(EClass::Necromancer, "Lich Ascension", EAbilityType::Ultimate, 180.0f, 250.0f, 100.0f, EResourceType::Aether, 1200.0f, 2.0f, "Transform into Lich form: +200% spell damage, raise 5 skeletons, immune to death for 10s");
-    AddAbility(EClass::Necromancer, "Cursed Bone Staff", EAbilityType::WeaponArt, 10.0f, 100.0f, 25.0f, EResourceType::Mana, 600.0f, 0.0f, "Staff strike applies curse: target takes 30% more damage from all sources for 5s");
+    // === NECROTURGE === DPS, summons, death magic
+    AddAbility(EClass::Necroturge, "Exhume Warrior", EAbilityType::Spell1, 8.0f, 40.0f, 20.0f, EResourceType::Mana, 500.0f, 0.5f, "Summon skeleton warrior, lasts 30s, taunts enemies and deals melee damage");
+    AddAbility(EClass::Necroturge, "Ossuary Lance", EAbilityType::Spell2, 5.0f, 120.0f, 15.0f, EResourceType::Mana, 800.0f, 0.0f, "Fire bone projectile, pierces enemies, +50% damage vs living targets");
+    AddAbility(EClass::Necroturge, "Necrotic Pulse", EAbilityType::Spell3, 12.0f, 180.0f, 35.0f, EResourceType::Mana, 600.0f, 0.8f, "Explosion of necrotic energy, 8m AoE, applies decay (damage over time)");
+    AddAbility(EClass::Necroturge, "Lich Ascension", EAbilityType::Ultimate, 180.0f, 250.0f, 100.0f, EResourceType::Aether, 1200.0f, 2.0f, "Transform into Lich form: +200% spell damage, raise 5 skeletons, immune to death for 10s");
+    AddAbility(EClass::Necroturge, "Cursed Bone Staff", EAbilityType::WeaponArt, 10.0f, 100.0f, 25.0f, EResourceType::Mana, 600.0f, 0.0f, "Staff strike applies curse: target takes 30% more damage from all sources for 5s");
 
-    // === DRUID === DPS/Healer/Tank, shapeshifter
-    AddAbility(EClass::Druid, "Ursine Aspect", EAbilityType::Ability1, 15.0f, 0.0f, 40.0f, EResourceType::Mana, 0.0f, 0.5f, "Transform into bear: +100% HP, +50% armor, taunt all enemies, 15s duration");
-    AddAbility(EClass::Druid, "Bloom Renewal", EAbilityType::Ability2, 8.0f, 0.0f, 25.0f, EResourceType::Mana, 600.0f, 0.0f, "Heal target for 60 instantly + 10/s for 10s, cleanses poison");
-    AddAbility(EClass::Druid, "Galvanic Aspect", EAbilityType::Ability3, 20.0f, 150.0f, 35.0f, EResourceType::Mana, 0.0f, 0.0f, "Transform into lightning wolf: +80% speed, lightning damage on attacks, 8s");
-    AddAbility(EClass::Druid, "Nature Wrath", EAbilityType::Ultimate, 180.0f, 350.0f, 100.0f, EResourceType::Aether, 1500.0f, 1.5f, "Massive nature eruption: roots + thorns + lightning in 20m, heal allies for 200");
-    AddAbility(EClass::Druid, "Briarlash", EAbilityType::WeaponArt, 6.0f, 80.0f, 15.0f, EResourceType::Mana, 400.0f, 0.0f, "Whip of thorns, pull enemy 5m toward you, apply bleed for 5s");
+    // === EARTHWEAVER === DPS/Healer/Tank, shapeshifter
+    AddAbility(EClass::Earthweaver, "Ursine Aspect", EAbilityType::Ability1, 15.0f, 0.0f, 40.0f, EResourceType::Mana, 0.0f, 0.5f, "Transform into bear: +100% HP, +50% armor, taunt all enemies, 15s duration");
+    AddAbility(EClass::Earthweaver, "Bloom Renewal", EAbilityType::Ability2, 8.0f, 0.0f, 25.0f, EResourceType::Mana, 600.0f, 0.0f, "Heal target for 60 instantly + 10/s for 10s, cleanses poison");
+    AddAbility(EClass::Earthweaver, "Galvanic Aspect", EAbilityType::Ability3, 20.0f, 150.0f, 35.0f, EResourceType::Mana, 0.0f, 0.0f, "Transform into lightning wolf: +80% speed, lightning damage on attacks, 8s");
+    AddAbility(EClass::Earthweaver, "Nature Wrath", EAbilityType::Ultimate, 180.0f, 350.0f, 100.0f, EResourceType::Aether, 1500.0f, 1.5f, "Massive nature eruption: roots + thorns + lightning in 20m, heal allies for 200");
+    AddAbility(EClass::Earthweaver, "Briarlash", EAbilityType::WeaponArt, 6.0f, 80.0f, 15.0f, EResourceType::Mana, 400.0f, 0.0f, "Whip of thorns, pull enemy 5m toward you, apply bleed for 5s");
 }
 
 TArray<FClassAbility> UEclipseClassAbilities::GetClassAbilities(EClass CharacterClass) const

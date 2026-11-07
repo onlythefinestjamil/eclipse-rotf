@@ -27,8 +27,8 @@ void UEclipseClassRoles::InitializeRoles()
         "Dark knight - can tank with drain/aggro or DPS with soul drain burst"
     });
 
-    // Druid - DPS/Healer/Tank (shapeshifter)
-    ClassRoles.Add(EClass::Druid, {
+    // Earthweaver - DPS/Healer/Tank (shapeshifter)
+    ClassRoles.Add(EClass::Earthweaver, {
         ERoleFlexibility::Flexible,
         {EClassRole::DPS, EClassRole::Healer, EClassRole::Tank},
         "Nature shapeshifter - bear form tanks, caster form DPS, restoration heals"
@@ -48,8 +48,8 @@ void UEclipseClassRoles::InitializeRoles()
         "Battlemage - can tank with arcane barrier or DPS with spell-infused strikes"
     });
 
-    // Warlord - Tank/DPS (commander)
-    ClassRoles.Add(EClass::Warlord, {
+    // Warthane - Tank/DPS (commander)
+    ClassRoles.Add(EClass::Warthane, {
         ERoleFlexibility::Flexible,
         {EClassRole::Tank, EClassRole::DPS},
         "Battle commander - can tank with war banner aggro or DPS with command strikes"
@@ -57,8 +57,8 @@ void UEclipseClassRoles::InitializeRoles()
 
     // === FIXED DPS CLASSES ===
 
-    // Umbral Assassin - DPS only (burst)
-    ClassRoles.Add(EClass::UmbralAssassin, {
+    // Duskblade - DPS only (burst)
+    ClassRoles.Add(EClass::Duskblade, {
         ERoleFlexibility::Fixed,
         {EClassRole::DPS},
         "Stealth burst - pure DPS, highest single-target damage, fragile"
@@ -99,8 +99,8 @@ void UEclipseClassRoles::InitializeRoles()
         "Elemental DPS - lightning and wind damage, pure offensive caster"
     });
 
-    // Necromancer - DPS only (dark caster)
-    ClassRoles.Add(EClass::Necromancer, {
+    // Necroturge - DPS only (dark caster)
+    ClassRoles.Add(EClass::Necroturge, {
         ERoleFlexibility::Fixed,
         {EClassRole::DPS},
         "Death mage - pure DPS with summons, no healing or tanking"
@@ -127,8 +127,8 @@ void UEclipseClassRoles::InitializeRoles()
         "Nature guardian - can tank with bark skin, DPS with thorns, or heal with grove"
     });
 
-    // Vanguard - Tank only (pure tank)
-    ClassRoles.Add(EClass::Vanguard, {
+    // Bulwark - Tank only (pure tank)
+    ClassRoles.Add(EClass::Bulwark, {
         ERoleFlexibility::Fixed,
         {EClassRole::Tank},
         "Pure tank - highest defense, shield wall, aggro management, no DPS specialization"

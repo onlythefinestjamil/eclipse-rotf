@@ -171,20 +171,20 @@ TArray<FLootDrop> UEclipseLootSystem::ExpandClassDrop(const FLootDrop& ClassItem
     // When a class-specific item drops, it drops for ALL 17 classes
     // Each player gets the version for their class
     TArray<EClass> AllClasses = {
-        EClass::Vanguard, EClass::UmbralAssassin, EClass::Arcanist,
+        EClass::Bulwark, EClass::Duskblade, EClass::Arcanist,
         EClass::Riftwalker, EClass::Dreadknight, EClass::Templar,
         EClass::Soulbinder, EClass::Wildwarden, EClass::Stormcaller,
         EClass::Oracle, EClass::Alchemist, EClass::Berserker,
-        EClass::Shadowblade, EClass::Spellblade, EClass::Warlord,
-        EClass::Necromancer, EClass::Druid
+        EClass::Shadowblade, EClass::Spellblade, EClass::Warthane,
+        EClass::Necroturge, EClass::Earthweaver
     };
 
     for (EClass Class : AllClasses)
     {
         FLootDrop ClassVersion = ClassItem;
         // Same rarity, same level, same binding — just different class version
-        // Item name would be class-specific (e.g., "Sunbreaker Greatblade" for Vanguard,
-        // "Veilfang Daggers" for Umbral Assassin, same drop, different class item)
+        // Item name would be class-specific (e.g., "Sunbreaker Greatblade" for Bulwark,
+        // "Veilfang Daggers" for Duskblade, same drop, different class item)
         AllClassVersions.Add(ClassVersion);
     }
 

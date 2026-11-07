@@ -6,9 +6,9 @@
 // 5 layers per class: Class Foundation, Specialization, Affinity,
 // Dual-Affinity Convergence, Game Mode Adaptation.
 //
-// Vanguard is the FULLY realized reference tree (33 nodes across all 5 layers)
+// Bulwark is the FULLY realized reference tree (33 nodes across all 5 layers)
 // with 3 build archetypes. The other 16 classes ship Class Foundation placeholders
-// (6 nodes each); full trees are added after Vanguard passes review.
+// (6 nodes each); full trees are added after Bulwark passes review.
 
 #include "EclipseTalentSystem.h"
 #include "Engine/Engine.h"
@@ -26,10 +26,10 @@ UEclipseTalentSystem::UEclipseTalentSystem()
 void UEclipseTalentSystem::InitializeAllTrees()
 {
     // Full tree first — the reference implementation.
-    InitVanguardTalents();
+    InitBulwarkTalents();
 
-    // Class Foundation placeholders (full trees pending Vanguard review).
-    InitUmbralAssassinTalents();
+    // Class Foundation placeholders (full trees pending Bulwark review).
+    InitDuskbladeTalents();
     InitArcanistTalents();
     InitRiftwalkerTalents();
     InitDreadknightTalents();
@@ -42,9 +42,9 @@ void UEclipseTalentSystem::InitializeAllTrees()
     InitBerserkerTalents();
     InitShadowbladeTalents();
     InitSpellbladeTalents();
-    InitWarlordTalents();
-    InitNecromancerTalents();
-    InitDruidTalents();
+    InitWarthaneTalents();
+    InitNecroturgeTalents();
+    InitEarthweaverTalents();
 
     // Build archetypes reference talent IDs by name lookup, so they are
     // robust against insertion order changes above.
@@ -153,7 +153,7 @@ static int32 FindIDByName(const TArray<FTalentNode>& Talents, const FString& Nam
 }
 
 // =============================================================================
-// VANGUARD — full 5-layer reference tree (33 nodes)
+// BULWARK — full 5-layer reference tree (33 nodes)
 // Tank / Initiator — Shield + Greatsword — Earth affinity, Earth+Fire convergence
 // Resource: Stamina (ultimate uses Flow)
 //
@@ -167,7 +167,7 @@ static int32 FindIDByName(const TArray<FTalentNode>& Talents, const FString& Nam
 //   the chain when 3+ targets are Fractured.
 // =============================================================================
 
-void UEclipseTalentSystem::InitVanguardTalents()
+void UEclipseTalentSystem::InitBulwarkTalents()
 {
     // ---- Spell ID constants this tree references (ability slot convention) ----
     constexpr int32 SPELL_WarspiteSlam     = 100;
@@ -186,7 +186,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     // LAYER 1 — CLASS FOUNDATION (7 nodes): identity, survival, movement, utility
     // ===================================================================
 
-    FTalentNode& CF1 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
+    FTalentNode& CF1 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
         ETalentNodeType::Defensive, TEXT("Iron Resolve"), 1, 0,
         TEXT("When a single hit deals more than 15% of max HP, gain 1 Fortitude stack (max 3); each stack reduces the next incoming hit by 10%."));
     CF1.TriggerEvent = TEXT("OnTakeDamage");
@@ -199,7 +199,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CF1.AIUsageRule = TEXT("Always-on passive; no decision needed.");
     CF1.RequiredLevel = 1;
 
-    FTalentNode& CF2 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
+    FTalentNode& CF2 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Shield Wall Stance"), 1, 1,
         TEXT("Toggle stance: while blocking, reflect 20% of melee damage as Earth damage and generate 5 Stamina/sec. Cannot attack while active."));
     CF2.TriggerEvent = TEXT("OnToggle");
@@ -211,8 +211,8 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CF2.AIUsageRule = TEXT("Engage when surrounded or expecting a heavy telegraphed hit.");
     CF2.RequiredLevel = 1;
 
-    FTalentNode& CF3 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
-        ETalentNodeType::Utility, TEXT("Vanguard's March"), 1, 2,
+    FTalentNode& CF3 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
+        ETalentNodeType::Utility, TEXT("Bulwark's March"), 1, 2,
         TEXT("Dash 600 units forward; enemies in the path are knocked back and knocked down for 1.5s. 12s cooldown."));
     CF3.TriggerEvent = TEXT("OnCast");
     CF3.EffectDescription = TEXT("600u dash; knockback + 1.5s knockdown in path.");
@@ -221,7 +221,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CF3.AIUsageRule = TEXT("Open fights by closing distance and scattering ranged enemies.");
     CF3.RequiredLevel = 1;
 
-    FTalentNode& CF4 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
+    FTalentNode& CF4 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
         ETalentNodeType::ResourceMod, TEXT("Fortified Breathing"), 2, 1,
         TEXT("At full Stamina, gain Second Wind: next 3 Stamina-costing abilities cost 50% less and gain +1s of effect duration."));
     CF4.TriggerEvent = TEXT("OnStaminaFull");
@@ -232,7 +232,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CF4.AIUsageRule = TEXT("Passive; AI holds stamina high before engaging to bank charges.");
     CF4.RequiredLevel = 5;
 
-    FTalentNode& CF5 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
+    FTalentNode& CF5 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
         ETalentNodeType::AbilityTransform, TEXT("Taunting Strike"), 2, 2,
         TEXT("First light attack on a new target applies Taunt (forces aggro 4s) and marks them Exposed (+15% Earth damage taken, 6s)."));
     CF5.TriggerEvent = TEXT("OnHit");
@@ -246,7 +246,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CF5.RequiredLevel = 5;
     // Synergy with Plate Striker (SP9) is wired below via AddSynergy(IdCF5, IdSP9).
 
-    FTalentNode& CF6 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
+    FTalentNode& CF6 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
         ETalentNodeType::Passive, TEXT("Heavyfooted"), 2, 0,
         TEXT("Immune to knockback and forced displacement while blocking; +20% Stamina regen while stationary."));
     CF6.TriggerEvent = TEXT("OnBlock");
@@ -255,7 +255,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CF6.AIUsageRule = TEXT("Passive; lets AI hold ground against boss knockbacks.");
     CF6.RequiredLevel = 5;
 
-    FTalentNode& CF7 = AddTalent(EClass::Vanguard, ETalentLayer::ClassFoundation,
+    FTalentNode& CF7 = AddTalent(EClass::Bulwark, ETalentLayer::ClassFoundation,
         ETalentNodeType::Keystone, TEXT("Guardian's Oath"), 3, 0,
         TEXT("When an ally within 8m drops below 30% HP, gain Oathsworn: +30% damage reduction, +30% move speed, 6s. 60s internal cooldown."));
     CF7.TriggerEvent = TEXT("OnAllyLowHP");
@@ -277,7 +277,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     // ===================================================================
 
     // --- Bulwark branch ---
-    FTalentNode& SP1 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP1 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::Keystone, TEXT("Bulwark"), 4, 0,
         TEXT("Keystone — blocking converts 30% of blocked damage into Stamina; Aegis Riposte becomes a guaranteed crit after a successful block."));
     SP1.TriggerEvent = TEXT("OnBlock");
@@ -287,7 +287,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP1.AIUsageRule = TEXT("Pick for sustained defensive play; block-then-counter loop.");
     SP1.RequiredLevel = 10;
 
-    FTalentNode& SP2 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP2 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::AbilityTransform, TEXT("Reinforced Aegis"), 5, 0,
         TEXT("Aegis Riposte counter damage +50% and applies Stagger (1s) to the countered target."));
     SP2.TriggerEvent = TEXT("OnCounter");
@@ -300,7 +300,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP2.PrerequisiteTalentIDs.Add(0); // patched to SP1.TalentID below
     SP2.bRequiresKeystone = true;
 
-    FTalentNode& SP3 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP3 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::ProcReaction, TEXT("Return Fire"), 5, 0,
         TEXT("25% chance on block to fire a shield projectile dealing Earth damage equal to 20% of the blocked amount."));
     SP3.TriggerEvent = TEXT("OnBlock");
@@ -312,7 +312,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP3.RequiredLevel = 12;
     SP3.PrerequisiteTalentIDs.Add(0); // SP1
 
-    FTalentNode& SP4 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP4 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::AbilityTransform, TEXT("Stalwart Surge"), 6, 0,
         TEXT("Bulwark Surge charge now leaves a 6m-wide Tremor Lane for 4s; enemies entering are knocked up and lose 10% armor."));
     SP4.TriggerEvent = TEXT("OnCast");
@@ -324,7 +324,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP4.PrerequisiteTalentIDs.Add(0); // SP1
 
     // --- Warsinger branch ---
-    FTalentNode& SP5 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP5 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::Keystone, TEXT("Warsinger"), 4, 1,
         TEXT("Keystone — Warspite Slam's stun becomes Battered (stacks to 3): each stack +12% Earth damage taken and -5% move speed on the target."));
     SP5.TriggerEvent = TEXT("OnHit");
@@ -335,7 +335,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP5.AIUsageRule = TEXT("Pick for aggressive initiator; stack Battered then unload Earth abilities.");
     SP5.RequiredLevel = 10;
 
-    FTalentNode& SP6 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP6 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::AbilityTransform, TEXT("Crater Maker"), 5, 1,
         TEXT("Warspite Slam impact leaves a 4m Seismic Crater for 8s; enemies inside have -20% attack speed and are pulled 1m/s toward the center."));
     SP6.TriggerEvent = TEXT("OnCast");
@@ -346,7 +346,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP6.RequiredLevel = 12;
     SP6.PrerequisiteTalentIDs.Add(0); // SP5
 
-    FTalentNode& SP7 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP7 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::ProcReaction, TEXT("Tremor Pulse"), 5, 1,
         TEXT("Every 3rd auto-attack pulses Earth damage in 3m; pulses deal double damage to enemies inside a Seismic Crater."));
     SP7.TriggerEvent = TEXT("OnAutoAttack");
@@ -358,9 +358,9 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP7.PrerequisiteTalentIDs.Add(0); // SP5
 
     // --- Earthshaker branch ---
-    FTalentNode& SP8 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP8 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::Keystone, TEXT("Earthshaker"), 4, 2,
-        TEXT("Keystone — Bastion Formation becomes Earthwall Bastion: creates a 5m physical wall that blocks projectiles and enemies for 8s; Vanguard can move along it."));
+        TEXT("Keystone — Bastion Formation becomes Earthwall Bastion: creates a 5m physical wall that blocks projectiles and enemies for 8s; Bulwark can move along it."));
     SP8.TriggerEvent = TEXT("OnCast");
     SP8.EffectDescription = TEXT("Bastion Formation -> Earthwall Bastion: 5m wall, blocks projectiles + enemies 8s.");
     SP8.AffectedAbilityIDs.Add(SPELL_BastionFormation);
@@ -368,7 +368,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP8.AIUsageRule = TEXT("Pick for area control; wall off ranged adds or split a pack.");
     SP8.RequiredLevel = 10;
 
-    FTalentNode& SP9 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP9 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::Passive, TEXT("Plate Striker"), 5, 2,
         TEXT("Heavy attacks now deal Earth damage and apply 1 Fracture stack (armor -5% per stack, max 5, 8s). Shares the Fracture stack pool with Fracturing Blows."));
     SP9.TriggerEvent = TEXT("OnHeavyAttack");
@@ -380,11 +380,11 @@ void UEclipseTalentSystem::InitVanguardTalents()
     SP9.PrerequisiteTalentIDs.Add(0); // SP8
 
     // --- Capstone ---
-    FTalentNode& SP10 = AddTalent(EClass::Vanguard, ETalentLayer::Specialization,
+    FTalentNode& SP10 = AddTalent(EClass::Bulwark, ETalentLayer::Specialization,
         ETalentNodeType::Capstone, TEXT("Sunbreaker's Wake"), 7, 0,
-        TEXT("Capstone — Sunbreaker Slam's shockwave leaves a 10m Magma Rift for 10s: enemies inside take Earth+Fire DoT, are snared 30%, and Vanguard gains 20 Stamina/sec while standing in it."));
+        TEXT("Capstone — Sunbreaker Slam's shockwave leaves a 10m Magma Rift for 10s: enemies inside take Earth+Fire DoT, are snared 30%, and Bulwark gains 20 Stamina/sec while standing in it."));
     SP10.TriggerEvent = TEXT("OnCast");
-    SP10.EffectDescription = TEXT("Sunbreaker Slam leaves Magma Rift (10m, 10s): Earth+Fire DoT, 30% snare, +20 Stamina/sec to Vanguard inside.");
+    SP10.EffectDescription = TEXT("Sunbreaker Slam leaves Magma Rift (10m, 10s): Earth+Fire DoT, 30% snare, +20 Stamina/sec to Bulwark inside.");
     SP10.AffectedAbilityIDs.Add(SPELL_SunbreakerSlam);
     SP10.EffectValue = 0.30f;
     SP10.ResourceGen = 20.0f;
@@ -397,7 +397,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     // LAYER 3 — AFFINITY: EARTH (7 nodes)
     // ===================================================================
 
-    FTalentNode& AF1 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF1 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::Passive, TEXT("Stoneblood"), 1, 0,
         TEXT("Gain 1 Stone Skin stack per 5s out of combat (max 5); each stack absorbs one hit for 40 Earth damage, then shatters, applying a 2s slow."));
     AF1.Affinity1 = EWeaponStatusEffect::Earth;
@@ -408,7 +408,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AF1.AIUsageRule = TEXT("Pre-stack before pulls; shatters slow charging enemies.");
     AF1.RequiredLevel = 8;
 
-    FTalentNode& AF2 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF2 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::Passive, TEXT("Fracturing Blows"), 2, 0,
         TEXT("All Earth-elemental hits apply Fracture (armor -5% per stack, max 5, 8s). Shares the stack pool with Plate Striker."));
     AF2.Affinity1 = EWeaponStatusEffect::Earth;
@@ -420,7 +420,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AF2.RequiredLevel = 10;
     AF2.PrerequisiteTalentIDs.Add(0); // AF1
 
-    FTalentNode& AF3 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF3 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::ActiveAbility, TEXT("Tectonic Tremor"), 3, 0,
         TEXT("8s CD, 20 Stamina — stomp dealing Earth damage in 6m and applying Stagger; enemies already at 3+ Fracture stacks are knocked down 1.5s instead."));
     AF3.Affinity1 = EWeaponStatusEffect::Earth;
@@ -435,7 +435,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AF3.PrerequisiteTalentIDs.Add(0); // AF2
     AF3.RotationPriority = TEXT("Cast after 3+ Fracture stacks for the knockdown upgrade.");
 
-    FTalentNode& AF4 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF4 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::Defensive, TEXT("Bedrock"), 3, 0,
         TEXT("While stationary >1s, gain Bedrock: CC-immune and +10% armor. Synergizes with Heavyfooted (also block-immune)."));
     AF4.Affinity1 = EWeaponStatusEffect::Earth;
@@ -447,7 +447,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AF4.RequiredLevel = 12;
     AF4.PrerequisiteTalentIDs.Add(0); // AF2
 
-    FTalentNode& AF5 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF5 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::ResourceMod, TEXT("Lithosphere"), 4, 0,
         TEXT("Each Stone Skin shatter or Fracture application generates 5 Stamina."));
     AF5.Affinity1 = EWeaponStatusEffect::Earth;
@@ -458,9 +458,9 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AF5.RequiredLevel = 15;
     AF5.PrerequisiteTalentIDs.Add(0); // AF2
 
-    FTalentNode& AF6 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF6 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::Conditional, TEXT("Seismic Resonance"), 5, 0,
-        TEXT("When 3+ enemies within 6m are Fractured, Vanguard's next Earth ability has its cooldown reduced 50% and deals +30%."));
+        TEXT("When 3+ enemies within 6m are Fractured, Bulwark's next Earth ability has its cooldown reduced 50% and deals +30%."));
     AF6.Affinity1 = EWeaponStatusEffect::Earth;
     AF6.TriggerEvent = TEXT("OnConditionMet");
     AF6.ActivationCondition = TEXT("Count(Fractured enemies in 6m) >= 3");
@@ -471,7 +471,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AF6.RequiredLevel = 18;
     AF6.PrerequisiteTalentIDs.Add(0); // AF3
 
-    FTalentNode& AF7 = AddTalent(EClass::Vanguard, ETalentLayer::Affinity,
+    FTalentNode& AF7 = AddTalent(EClass::Bulwark, ETalentLayer::Affinity,
         ETalentNodeType::Capstone, TEXT("Pillar of the World"), 7, 0,
         TEXT("Capstone — 90s CD: summon an 8m stone pillar (blocks movement + LOS 12s); on expiry it shatters for Earth damage in 5m + Stagger. Requires Stoneblood + Fracturing Blows."));
     AF7.Affinity1 = EWeaponStatusEffect::Earth;
@@ -489,7 +489,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     // LAYER 4 — DUAL-AFFINITY CONVERGENCE: EARTH + FIRE (4 nodes)
     // ===================================================================
 
-    FTalentNode& CV1 = AddTalent(EClass::Vanguard, ETalentLayer::DualAffinityConvergence,
+    FTalentNode& CV1 = AddTalent(EClass::Bulwark, ETalentLayer::DualAffinityConvergence,
         ETalentNodeType::CrossSynergy, TEXT("Magma Veins"), 4, 0,
         TEXT("Fracture stacks now also apply Ember (1 Fire DoT tick per 2s, 8s, stackable). Cross-synergy with Fracturing Blows."));
     CV1.Affinity1 = EWeaponStatusEffect::Earth;
@@ -501,7 +501,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CV1.RequiredLevel = 15;
     CV1.PrerequisiteTalentIDs.Add(0); // AF2 (Fracturing Blows)
 
-    FTalentNode& CV2 = AddTalent(EClass::Vanguard, ETalentLayer::DualAffinityConvergence,
+    FTalentNode& CV2 = AddTalent(EClass::Bulwark, ETalentLayer::DualAffinityConvergence,
         ETalentNodeType::Convergence, TEXT("Volcanic Mantle"), 5, 0,
         TEXT("When a Stone Skin stack shatters, release a 3m Fire burst (Fire DoT 6s) and replace the stack with Magma Skin (next 2 hits reflect 30 Fire damage each)."));
     CV2.Affinity1 = EWeaponStatusEffect::Earth;
@@ -516,7 +516,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CV2.PrerequisiteTalentIDs.Add(0); // CV1
     CV2.PrerequisiteTalentIDs.Add(0); // AF1 (Stoneblood)
 
-    FTalentNode& CV3 = AddTalent(EClass::Vanguard, ETalentLayer::DualAffinityConvergence,
+    FTalentNode& CV3 = AddTalent(EClass::Bulwark, ETalentLayer::DualAffinityConvergence,
         ETalentNodeType::Convergence, TEXT("Quake-and-Burn"), 6, 0,
         TEXT("20s CD — slam creates a 6m Fissure traveling 10m forward: Earth damage + knockdown in path, then it erupts for Fire damage + Ignite (Burn 6s). Requires Magma Veins."));
     CV3.Affinity1 = EWeaponStatusEffect::Earth;
@@ -531,7 +531,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     CV3.PrerequisiteTalentIDs.Add(0); // CV1
     CV3.RotationPriority = TEXT("Cast after Fracture stacks so the Earth portion benefits from armor shred.");
 
-    FTalentNode& CV4 = AddTalent(EClass::Vanguard, ETalentLayer::DualAffinityConvergence,
+    FTalentNode& CV4 = AddTalent(EClass::Bulwark, ETalentLayer::DualAffinityConvergence,
         ETalentNodeType::Capstone, TEXT("Cataclysm"), 7, 0,
         TEXT("Capstone — Sunbreaker's Wake ultimate: the Magma Rift now spreads Ember to all enemies hit; after 10s the rift detonates — each Ember stack on each enemy explodes for Fire damage + 1s Earth stun. Requires Quake-and-Burn + Sunbreaker's Wake."));
     CV4.Affinity1 = EWeaponStatusEffect::Earth;
@@ -550,7 +550,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     // LAYER 5 — GAME MODE ADAPTATION (5 nodes)
     // ===================================================================
 
-    FTalentNode& GM1 = AddTalent(EClass::Vanguard, ETalentLayer::GameModeAdaptation,
+    FTalentNode& GM1 = AddTalent(EClass::Bulwark, ETalentLayer::GameModeAdaptation,
         ETalentNodeType::Conditional, TEXT("Lone Bastion"), 1, 0,
         TEXT("Solo — when no allies within 20m, +20% Stamina regen and Stone Skin max stacks +2."));
     GM1.GameMode = EGameModeContext::Solo;
@@ -561,7 +561,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     GM1.AIUsageRule = TEXT("Auto-active in solo play.");
     GM1.RequiredLevel = 5;
 
-    FTalentNode& GM2 = AddTalent(EClass::Vanguard, ETalentLayer::GameModeAdaptation,
+    FTalentNode& GM2 = AddTalent(EClass::Bulwark, ETalentLayer::GameModeAdaptation,
         ETalentNodeType::Conditional, TEXT("Phalanx Captain"), 2, 0,
         TEXT("Dungeon — in a party of 3-5, Taunt duration +4s and Guardian's Oath internal cooldown halved."));
     GM2.GameMode = EGameModeContext::Dungeon;
@@ -572,19 +572,19 @@ void UEclipseTalentSystem::InitVanguardTalents()
     GM2.AIUsageRule = TEXT("Auto-active in dungeons; hold adds longer.");
     GM2.RequiredLevel = 8;
 
-    FTalentNode& GM3 = AddTalent(EClass::Vanguard, ETalentLayer::GameModeAdaptation,
+    FTalentNode& GM3 = AddTalent(EClass::Bulwark, ETalentLayer::GameModeAdaptation,
         ETalentNodeType::Conditional, TEXT("Raid Bulwark"), 3, 0,
-        TEXT("Raid — Bastion Formation's damage reduction extends to the 2 nearest allies (40% transfer); Vanguard takes 50% of the redirected damage."));
+        TEXT("Raid — Bastion Formation's damage reduction extends to the 2 nearest allies (40% transfer); Bulwark takes 50% of the redirected damage."));
     GM3.GameMode = EGameModeContext::Raid;
     GM3.TriggerEvent = TEXT("OnConditionMet");
     GM3.ActivationCondition = TEXT("Raid context");
-    GM3.EffectDescription = TEXT("Raid: Bastion covers 2 nearest allies (40% transfer); Vanguard takes 50% of redirected.");
+    GM3.EffectDescription = TEXT("Raid: Bastion covers 2 nearest allies (40% transfer); Bulwark takes 50% of redirected.");
     GM3.EffectValue = 0.40f;
     GM3.AffectedAbilityIDs.Add(SPELL_BastionFormation);
     GM3.AIUsageRule = TEXT("Use Bastion to body-block raid cleaves for the ranged stack.");
     GM3.RequiredLevel = 12;
 
-    FTalentNode& GM4 = AddTalent(EClass::Vanguard, ETalentLayer::GameModeAdaptation,
+    FTalentNode& GM4 = AddTalent(EClass::Bulwark, ETalentLayer::GameModeAdaptation,
         ETalentNodeType::Conditional, TEXT("Colosseum's Wall"), 4, 0,
         TEXT("Arena/PvP — Aegis Riposte counters also Disarm the target 1.5s; Return Fire procs ignore 30% of PvP damage reduction."));
     GM4.GameMode = EGameModeContext::Arena;
@@ -595,12 +595,12 @@ void UEclipseTalentSystem::InitVanguardTalents()
     GM4.AIUsageRule = TEXT("Bait an attack, counter to disarm and strip PvP mitigation.");
     GM4.RequiredLevel = 10;
 
-    FTalentNode& GM5 = AddTalent(EClass::Vanguard, ETalentLayer::GameModeAdaptation,
+    FTalentNode& GM5 = AddTalent(EClass::Bulwark, ETalentLayer::GameModeAdaptation,
         ETalentNodeType::Utility, TEXT("Frontline Standard"), 5, 0,
-        TEXT("Battleground — 60s CD: plant a Banner (12m aura) — allies +10% damage + CC resist; Vanguard gains Standard-Bearer (taunt-immune, +15% move speed)."));
+        TEXT("Battleground — 60s CD: plant a Banner (12m aura) — allies +10% damage + CC resist; Bulwark gains Standard-Bearer (taunt-immune, +15% move speed)."));
     GM5.GameMode = EGameModeContext::Battleground;
     GM5.TriggerEvent = TEXT("OnCast");
-    GM5.EffectDescription = TEXT("BG: Banner (12m) — allies +10% dmg + CC resist; Vanguard taunt-immune +15% speed.");
+    GM5.EffectDescription = TEXT("BG: Banner (12m) — allies +10% dmg + CC resist; Bulwark taunt-immune +15% speed.");
     GM5.EffectValue = 0.10f;
     GM5.CooldownMod = 60.0f;
     GM5.UnlockedAbilityID = SPELL_FrontlineStandard;
@@ -608,7 +608,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     GM5.RequiredLevel = 10;
 
     // ---- Resolve placeholder prerequisite / synergy IDs by name now that all
-    //      Vanguard nodes exist in AllTalents. We look up by TalentName. ----
+    //      Bulwark nodes exist in AllTalents. We look up by TalentName. ----
     auto ID = [&](const FString& Name) -> int32
     {
         return FindIDByName(AllTalents, Name);
@@ -664,7 +664,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
     // (SetPrerequisite only adds; we scrub the sentinel zero we inserted.)
     for (FTalentNode& Node : AllTalents)
     {
-        if (Node.ParentClass != EClass::Vanguard) continue;
+        if (Node.ParentClass != EClass::Bulwark) continue;
         Node.PrerequisiteTalentIDs.RemoveAll([](int32 V) { return V == 0; });
     }
 
@@ -674,7 +674,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
         if (Node.TalentID == IdSP10)
         {
             Node.bRequiresKeystone = true;
-            Node.RequiredKeystoneID = -1; // "any Vanguard specialization keystone"
+            Node.RequiredKeystoneID = -1; // "any Bulwark specialization keystone"
         }
     }
 
@@ -705,7 +705,7 @@ void UEclipseTalentSystem::InitVanguardTalents()
 }
 
 // =============================================================================
-// BUILD ARCHETYPES — 3 Vanguard builds
+// BUILD ARCHETYPES — 3 Bulwark builds
 // =============================================================================
 
 void UEclipseTalentSystem::InitBuildArchetypes()
@@ -719,13 +719,13 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     FBuildArchetype Bulwark;
     Bulwark.BuildName = TEXT("Bulwark Sentinel");
     Bulwark.Identity = TEXT("Sustained defensive tank — block-to-counter loop with stacking Fortitude and party protection.");
-    Bulwark.Class = EClass::Vanguard;
+    Bulwark.Class = EClass::Bulwark;
     Bulwark.Role = EClassRole::Tank;
     Bulwark.PrimaryAffinity = EWeaponStatusEffect::Earth;
     Bulwark.SecondaryAffinity = EWeaponStatusEffect::None;
     Bulwark.PreferredMode = EGameModeContext::Dungeon;
     Bulwark.CentralMechanic = TEXT("Block absorbs damage -> Bulwark converts 30% to Stamina -> Reinforced Aegis guarantees a crit counter -> Return Fire procs ranged Earth -> repeat. Fortitude stacks dampen spikes; Guardian's Oath saves allies.");
-    Bulwark.CombatOpener = TEXT("Vanguard's March in -> light attack for Taunting Strike (Taunt + Exposed) -> enter Shield Wall Stance.");
+    Bulwark.CombatOpener = TEXT("Bulwark's March in -> light attack for Taunting Strike (Taunt + Exposed) -> enter Shield Wall Stance.");
     Bulwark.NormalRotation = TEXT("Block telegraphed hits -> Aegis Riposte (guaranteed crit + Stagger) -> Warspite Slam for Battered -> Tremor Pulse procs from autos -> Tectonic Tremor to knock down Fractured adds.");
     Bulwark.BurstWindow = TEXT("Build 3+ Fortitude -> Bastion Formation (Earthwall) -> Sunbreaker Slam (Sunbreaker's Wake drops Magma Rift) -> stand in rift for +20 Stamina/sec and unload Aegis Riposte counters on CD.");
     Bulwark.DefensiveRotation = TEXT("Shield Wall Stance for reflect + stamina -> Bastion Formation for 50% DR / Earthwall -> Guardian's Oath auto-procs to save a low ally -> Bedrock if stationary.");
@@ -735,7 +735,7 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     Bulwark.GroupSynergies = TEXT("Holds aggro for DPS, Guardian's Oath saves squishies, Raid Bulwark transfers DR to ranged stack, Earthwall splits dangerous packs.");
 
     TArray<FString> BulwarkNames = {
-        TEXT("Iron Resolve"), TEXT("Shield Wall Stance"), TEXT("Vanguard's March"),
+        TEXT("Iron Resolve"), TEXT("Shield Wall Stance"), TEXT("Bulwark's March"),
         TEXT("Fortified Breathing"), TEXT("Taunting Strike"), TEXT("Heavyfooted"),
         TEXT("Guardian's Oath"),
         TEXT("Bulwark"), TEXT("Reinforced Aegis"), TEXT("Return Fire"), TEXT("Stalwart Surge"),
@@ -765,7 +765,7 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     FBuildArchetype Earthquake;
     Earthquake.BuildName = TEXT("Earthquake Berserker");
     Earthquake.Identity = TEXT("High-risk burst bruiser — stacks Fracture + Ember then detonates with Cataclysm for a Fire/Earth apocalypse.");
-    Earthquake.Class = EClass::Vanguard;
+    Earthquake.Class = EClass::Bulwark;
     Earthquake.Role = EClassRole::Hybrid;
     Earthquake.PrimaryAffinity = EWeaponStatusEffect::Earth;
     Earthquake.SecondaryAffinity = EWeaponStatusEffect::Fire;
@@ -781,7 +781,7 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     Earthquake.GroupSynergies = TEXT("Clusters adds for AoE DPS to cleave, Earth snare/knockdown controls packs, Volcanic Mantle reflects melee, benefits from group CC to keep targets in the rift.");
 
     TArray<FString> EarthquakeNames = {
-        TEXT("Iron Resolve"), TEXT("Vanguard's March"), TEXT("Taunting Strike"), TEXT("Heavyfooted"),
+        TEXT("Iron Resolve"), TEXT("Bulwark's March"), TEXT("Taunting Strike"), TEXT("Heavyfooted"),
         TEXT("Warsinger"), TEXT("Crater Maker"), TEXT("Tremor Pulse"),
         TEXT("Plate Striker"), TEXT("Sunbreaker's Wake"),
         TEXT("Stoneblood"), TEXT("Fracturing Blows"), TEXT("Tectonic Tremor"),
@@ -811,13 +811,13 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     FBuildArchetype StoneWarden;
     StoneWarden.BuildName = TEXT("Stone Warden");
     StoneWarden.Identity = TEXT("Area control + group support — walls, craters, pillars and snares to dictate the battlefield.");
-    StoneWarden.Class = EClass::Vanguard;
+    StoneWarden.Class = EClass::Bulwark;
     StoneWarden.Role = EClassRole::Support;
     StoneWarden.PrimaryAffinity = EWeaponStatusEffect::Earth;
     StoneWarden.SecondaryAffinity = EWeaponStatusEffect::Earth;
     StoneWarden.PreferredMode = EGameModeContext::Raid;
-    StoneWarden.CentralMechanic = TEXT("Earthshaker keystone turns Bastion into Earthwall (a physical wall) -> Crater Maker zones enemies -> Pillar of the World blocks LOS/movement -> Quake-and-Burn fissures a line -> Tremor Pulse + Tectonic Tremor lock down what's inside. Vanguard reshapes the arena so enemies fight on his terms.");
-    StoneWarden.CombatOpener = TEXT("Earthwall Bastion to wall off ranged adds -> Vanguard's March knocks melee into the wall -> Pillar of the World to trap the remaining cluster.");
+    StoneWarden.CentralMechanic = TEXT("Earthshaker keystone turns Bastion into Earthwall (a physical wall) -> Crater Maker zones enemies -> Pillar of the World blocks LOS/movement -> Quake-and-Burn fissures a line -> Tremor Pulse + Tectonic Tremor lock down what's inside. Bulwark reshapes the arena so enemies fight on his terms.");
+    StoneWarden.CombatOpener = TEXT("Earthwall Bastion to wall off ranged adds -> Bulwark's March knocks melee into the wall -> Pillar of the World to trap the remaining cluster.");
     StoneWarden.NormalRotation = TEXT("Crater Maker (Warspite Slam zone) -> Tectonic Tremor knockdown on Fractured targets -> Tremor Pulse autos -> Quake-and-Burn fissure line -> reposition with Earthwall as needed.");
     StoneWarden.BurstWindow = TEXT("Sunbreaker Slam into the Crater -> Magma Rift snares the cluster -> Pillar shatters for a 5m Earth burst + Stagger -> Quake-and-Burn to clean up stragglers.");
     StoneWarden.DefensiveRotation = TEXT("Bedrock while planting walls -> Stoneblood pre-stacks -> Guardian's Oath for allies -> Bastion/Earthwall to body-block cleaves away from the party.");
@@ -827,7 +827,7 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     StoneWarden.GroupSynergies = TEXT("Walls protect ranged DPS, Pillar blocks LOS for enemy casters, Crater + knockdown sets up melee cleave, Raid Bulwark + Frontline Standard buff the party, snares hold enemies for AoE.");
 
     TArray<FString> StoneWardenNames = {
-        TEXT("Iron Resolve"), TEXT("Shield Wall Stance"), TEXT("Vanguard's March"),
+        TEXT("Iron Resolve"), TEXT("Shield Wall Stance"), TEXT("Bulwark's March"),
         TEXT("Fortified Breathing"), TEXT("Taunting Strike"), TEXT("Heavyfooted"),
         TEXT("Guardian's Oath"),
         TEXT("Earthshaker"), TEXT("Plate Striker"), TEXT("Sunbreaker's Wake"),
@@ -862,46 +862,46 @@ void UEclipseTalentSystem::InitBuildArchetypes()
 // =============================================================================
 // PLACEHOLDER CLASS FOUNDATION TREES — 16 classes x 6 nodes each
 // Each node has a real mechanical effect (not +X% filler). Full trees are added
-// after the Vanguard reference passes review.
+// after the Bulwark reference passes review.
 // =============================================================================
 
-void UEclipseTalentSystem::InitUmbralAssassinTalents()
+void UEclipseTalentSystem::InitDuskbladeTalents()
 {
-    FTalentNode& N1 = AddTalent(EClass::UmbralAssassin, ETalentLayer::ClassFoundation,
+    FTalentNode& N1 = AddTalent(EClass::Duskblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::Utility, TEXT("Umbral Step"), 1, 0,
         TEXT("Placeholder — Blink 400u through target, leaving an afterimage that taunts 2s. 10s CD."));
     N1.TriggerEvent = TEXT("OnCast"); N1.EffectDescription = TEXT("Blink through target; afterimage taunts 2s.");
     N1.CooldownMod = 10.0f; N1.ResourceType = EResourceType::Stamina; N1.ResourceCost = 15.0f;
     N1.AIUsageRule = TEXT("Reposition behind a target and drop aggro."); N1.RequiredLevel = 1;
 
-    FTalentNode& N2 = AddTalent(EClass::UmbralAssassin, ETalentLayer::ClassFoundation,
+    FTalentNode& N2 = AddTalent(EClass::Duskblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Shadow Cloak"), 1, 1,
         TEXT("Placeholder — Enter stealth 4s; first attack from stealth +50% and applies Marked (crit dmg +20%, 6s)."));
     N2.TriggerEvent = TEXT("OnCast"); N2.EffectDescription = TEXT("Stealth 4s; stealth attack +50%, applies Marked.");
     N2.CooldownMod = 15.0f; N2.ResourceType = EResourceType::Stamina; N2.ResourceCost = 20.0f;
     N2.AIUsageRule = TEXT("Open from stealth for the Marked setup."); N2.RequiredLevel = 1;
 
-    FTalentNode& N3 = AddTalent(EClass::UmbralAssassin, ETalentLayer::ClassFoundation,
+    FTalentNode& N3 = AddTalent(EClass::Duskblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::Defensive, TEXT("Afterimage Dodge"), 2, 0,
         TEXT("Placeholder — Perfect dodge leaves an afterimage that explodes for Shadow damage on contact."));
     N3.TriggerEvent = TEXT("OnPerfectDodge"); N3.EffectDescription = TEXT("Perfect dodge -> afterimage bomb (Shadow).");
     N3.AIUsageRule = TEXT("Passive; rewards well-timed dodges."); N3.RequiredLevel = 5;
 
-    FTalentNode& N4 = AddTalent(EClass::UmbralAssassin, ETalentLayer::ClassFoundation,
+    FTalentNode& N4 = AddTalent(EClass::Duskblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::ProcReaction, TEXT("Venom Edge"), 2, 1,
         TEXT("Placeholder — Dagger crits apply 1 Toxin stack (Poison DoT 4s, max 5); stealth attacks double the stacks applied."));
     N4.Affinity1 = EWeaponStatusEffect::Poison; N4.TriggerEvent = TEXT("OnCrit");
     N4.EffectDescription = TEXT("Crit -> Toxin stack (Poison DoT, max 5); stealth x2 stacks."); N4.MaxStacks = 5;
     N4.AIUsageRule = TEXT("Build stacks from stealth for a poison payoff."); N4.RequiredLevel = 5;
 
-    FTalentNode& N5 = AddTalent(EClass::UmbralAssassin, ETalentLayer::ClassFoundation,
+    FTalentNode& N5 = AddTalent(EClass::Duskblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::ResourceMod, TEXT("Flow Siphon"), 3, 1,
         TEXT("Placeholder — Killing a Marked target refunds 20 Stamina and resets Umbral Step CD."));
     N5.TriggerEvent = TEXT("OnKill"); N5.ActivationCondition = TEXT("Target was Marked");
     N5.EffectDescription = TEXT("Marked kill -> +20 Stamina, reset Umbral Step."); N5.ResourceGen = 20.0f;
     N5.AIUsageRule = TEXT("Chain Marked kills to keep uptime."); N5.RequiredLevel = 8;
 
-    FTalentNode& N6 = AddTalent(EClass::UmbralAssassin, ETalentLayer::ClassFoundation,
+    FTalentNode& N6 = AddTalent(EClass::Duskblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::Keystone, TEXT("Death Mark"), 3, 0,
         TEXT("Placeholder — Mark a target (30s CD): +25% Shadow damage taken and revealed through stealth; killing them resets all CDs."));
     N6.TriggerEvent = TEXT("OnCast"); N6.EffectDescription = TEXT("Mark: target +25% Shadow dmg, true-sighted; kill resets CDs.");
@@ -1377,116 +1377,116 @@ void UEclipseTalentSystem::InitSpellbladeTalents()
     N6.TriggerEvent = TEXT("OnMeleeHit"); N6.ActivationCondition = TEXT("MeleeCount % 3 == 0"); N6.EffectDescription = TEXT("3rd melee -> infused spell burst."); N6.AIUsageRule = TEXT("Weave melee to proc burst."); N6.RequiredLevel = 10; N6.bRequiresKeystone = true;
 }
 
-void UEclipseTalentSystem::InitWarlordTalents()
+void UEclipseTalentSystem::InitWarthaneTalents()
 {
-    FTalentNode& N1 = AddTalent(EClass::Warlord, ETalentLayer::ClassFoundation,
+    FTalentNode& N1 = AddTalent(EClass::Warthane, ETalentLayer::ClassFoundation,
         ETalentNodeType::Utility, TEXT("War Banner"), 1, 0,
         TEXT("Placeholder — Plant a banner (12m aura, 10s): allies +10% damage, +10% armor."));
     N1.Affinity1 = EWeaponStatusEffect::Earth; N1.TriggerEvent = TEXT("OnCast"); N1.EffectDescription = TEXT("Banner: allies +10% dmg, +10% armor."); N1.CooldownMod = 20.0f;
     N1.AIUsageRule = TEXT("Drop at the engage point."); N1.RequiredLevel = 1;
 
-    FTalentNode& N2 = AddTalent(EClass::Warlord, ETalentLayer::ClassFoundation,
+    FTalentNode& N2 = AddTalent(EClass::Warthane, ETalentLayer::ClassFoundation,
         ETalentNodeType::Passive, TEXT("Bodyguard"), 1, 1,
-        TEXT("Placeholder — Allies behind Warlord take 20% less damage."));
+        TEXT("Placeholder — Allies behind Warthane take 20% less damage."));
     N2.TriggerEvent = TEXT("OnAura"); N2.EffectDescription = TEXT("Allies behind you -20% dmg taken."); N2.EffectValue = 0.20f;
     N2.AIUsageRule = TEXT("Face the damage source."); N2.RequiredLevel = 1;
 
-    FTalentNode& N3 = AddTalent(EClass::Warlord, ETalentLayer::ClassFoundation,
+    FTalentNode& N3 = AddTalent(EClass::Warthane, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Earthshatter"), 2, 0,
         TEXT("Placeholder — Slam: Earth damage + knockdown in 5m."));
     N3.Affinity1 = EWeaponStatusEffect::Earth; N3.TriggerEvent = TEXT("OnCast"); N3.EffectDescription = TEXT("5m Earth slam + knockdown."); N3.CooldownMod = 10.0f;
     N3.ResourceType = EResourceType::Stamina; N3.AIUsageRule = TEXT("AoE interrupt."); N3.RequiredLevel = 5;
 
-    FTalentNode& N4 = AddTalent(EClass::Warlord, ETalentLayer::ClassFoundation,
+    FTalentNode& N4 = AddTalent(EClass::Warthane, ETalentLayer::ClassFoundation,
         ETalentNodeType::Defensive, TEXT("Juggernaut"), 2, 1,
         TEXT("Placeholder — Gain Bulwark per hit taken (max 5, +5% armor each); consume all for 2s immunity."));
     N4.TriggerEvent = TEXT("OnTakeDamage"); N4.EffectDescription = TEXT("Bulwark stacks -> 2s immunity on spend."); N4.MaxStacks = 5;
     N4.AIUsageRule = TEXT("Tank hits, then cash out."); N4.RequiredLevel = 5;
 
-    FTalentNode& N5 = AddTalent(EClass::Warlord, ETalentLayer::ClassFoundation,
+    FTalentNode& N5 = AddTalent(EClass::Warthane, ETalentLayer::ClassFoundation,
         ETalentNodeType::ResourceMod, TEXT("Commanding Shout"), 3, 0,
         TEXT("Placeholder — Shout (10s CD): +10 Stamina to all allies in 10m."));
     N5.TriggerEvent = TEXT("OnCast"); N5.EffectDescription = TEXT("Shout: allies +10 Stamina."); N5.CooldownMod = 10.0f; N5.ResourceGen = 10.0f;
     N5.AIUsageRule = TEXT("Group sustain on CD."); N5.RequiredLevel = 8;
 
-    FTalentNode& N6 = AddTalent(EClass::Warlord, ETalentLayer::ClassFoundation,
+    FTalentNode& N6 = AddTalent(EClass::Warthane, ETalentLayer::ClassFoundation,
         ETalentNodeType::Keystone, TEXT("Unbreakable"), 3, 1,
         TEXT("Placeholder — Below 20% HP, cannot die for 4s (60s CD); a killing blow during this heals 15% max HP."));
     N6.TriggerEvent = TEXT("OnLethalHP"); N6.EffectDescription = TEXT("4s death immunity; kill during it -> heal 15% max HP."); N6.CooldownMod = 60.0f;
     N6.AIUsageRule = TEXT("Raid-save panic button."); N6.RequiredLevel = 10; N6.bRequiresKeystone = true;
 }
 
-void UEclipseTalentSystem::InitNecromancerTalents()
+void UEclipseTalentSystem::InitNecroturgeTalents()
 {
-    FTalentNode& N1 = AddTalent(EClass::Necromancer, ETalentLayer::ClassFoundation,
+    FTalentNode& N1 = AddTalent(EClass::Necroturge, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Raise Skeleton"), 1, 0,
         TEXT("Placeholder — Summon a skeleton minion (30s) that taunts and attacks."));
     N1.Affinity1 = EWeaponStatusEffect::Shadow; N1.TriggerEvent = TEXT("OnCast"); N1.EffectDescription = TEXT("Summon skeleton (taunt + attack)."); N1.CooldownMod = 8.0f;
     N1.ResourceType = EResourceType::Mana; N1.AIUsageRule = TEXT("Keep a minion up."); N1.RequiredLevel = 1;
 
-    FTalentNode& N2 = AddTalent(EClass::Necromancer, ETalentLayer::ClassFoundation,
+    FTalentNode& N2 = AddTalent(EClass::Necroturge, ETalentLayer::ClassFoundation,
         ETalentNodeType::Defensive, TEXT("Bone Armor"), 1, 1,
         TEXT("Placeholder — Consume a minion to gain 20% damage absorb for 10s."));
     N2.TriggerEvent = TEXT("OnCast"); N2.EffectDescription = TEXT("Consume minion -> 20% absorb 10s."); N2.CooldownMod = 12.0f;
     N2.AIUsageRule = TEXT("Sacrifice for defense."); N2.RequiredLevel = 1;
 
-    FTalentNode& N3 = AddTalent(EClass::Necromancer, ETalentLayer::ClassFoundation,
+    FTalentNode& N3 = AddTalent(EClass::Necroturge, ETalentLayer::ClassFoundation,
         ETalentNodeType::ResourceMod, TEXT("Soul Tap"), 2, 0,
         TEXT("Placeholder — Each minion kill generates 10 Mana."));
     N3.TriggerEvent = TEXT("OnMinionKill"); N3.EffectDescription = TEXT("Minion kill -> +10 Mana."); N3.ResourceGen = 10.0f;
     N3.AIUsageRule = TEXT("Sustain off minion kills."); N3.RequiredLevel = 5;
 
-    FTalentNode& N4 = AddTalent(EClass::Necromancer, ETalentLayer::ClassFoundation,
+    FTalentNode& N4 = AddTalent(EClass::Necroturge, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Decay"), 2, 1,
         TEXT("Placeholder — Curse target (8s): Shadow DoT; heals nearby minions for 20% of the damage."));
     N4.Affinity1 = EWeaponStatusEffect::Shadow; N4.TriggerEvent = TEXT("OnCast"); N4.EffectDescription = TEXT("Curse: Shadow DoT, heal minions 20%."); N4.CooldownMod = 6.0f;
     N4.AIUsageRule = TEXT("Sustain your army."); N4.RequiredLevel = 5;
 
-    FTalentNode& N5 = AddTalent(EClass::Necromancer, ETalentLayer::ClassFoundation,
+    FTalentNode& N5 = AddTalent(EClass::Necroturge, ETalentLayer::ClassFoundation,
         ETalentNodeType::ProcReaction, TEXT("Necrotic Surge"), 3, 0,
         TEXT("Placeholder — 20% on minion attack to summon a free temporary skeleton (10s)."));
     N5.Affinity1 = EWeaponStatusEffect::Shadow; N5.TriggerEvent = TEXT("OnMinionAttack"); N5.EffectDescription = TEXT("20%: free skeleton 10s."); N5.ProcChance = 0.20f;
     N5.AIUsageRule = TEXT("Passive army snowball."); N5.RequiredLevel = 8;
 
-    FTalentNode& N6 = AddTalent(EClass::Necromancer, ETalentLayer::ClassFoundation,
+    FTalentNode& N6 = AddTalent(EClass::Necroturge, ETalentLayer::ClassFoundation,
         ETalentNodeType::Keystone, TEXT("Lichdom"), 3, 1,
-        TEXT("Placeholder — While 3+ minions are active, Necromancer's spells cost -30% and deal +15%."));
+        TEXT("Placeholder — While 3+ minions are active, Necroturge's spells cost -30% and deal +15%."));
     N6.TriggerEvent = TEXT("OnConditionMet"); N6.ActivationCondition = TEXT("Minions >= 3"); N6.EffectDescription = TEXT("3+ minions: spells -30% cost, +15% dmg."); N6.AIUsageRule = TEXT("Maintain an army for the buff."); N6.RequiredLevel = 10; N6.bRequiresKeystone = true;
 }
 
-void UEclipseTalentSystem::InitDruidTalents()
+void UEclipseTalentSystem::InitEarthweaverTalents()
 {
-    FTalentNode& N1 = AddTalent(EClass::Druid, ETalentLayer::ClassFoundation,
+    FTalentNode& N1 = AddTalent(EClass::Earthweaver, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Bear Form"), 1, 0,
         TEXT("Placeholder — Transform (toggle): +40% HP, +30% armor, melee attacks; can't cast spells."));
     N1.Affinity1 = EWeaponStatusEffect::Earth; N1.TriggerEvent = TEXT("OnCast"); N1.EffectDescription = TEXT("Bear: +40% HP, +30% armor, melee only."); N1.CooldownMod = 2.0f;
     N1.AIUsageRule = TEXT("Tank form for melee pressure."); N1.RequiredLevel = 1;
 
-    FTalentNode& N2 = AddTalent(EClass::Druid, ETalentLayer::ClassFoundation,
+    FTalentNode& N2 = AddTalent(EClass::Earthweaver, ETalentLayer::ClassFoundation,
         ETalentNodeType::ActiveAbility, TEXT("Rejuvenation"), 1, 1,
         TEXT("Placeholder — Heal-over-time (8s) on target; moving breaks it."));
     N2.Affinity1 = EWeaponStatusEffect::Water; N2.TriggerEvent = TEXT("OnCast"); N2.EffectDescription = TEXT("HoT 8s; breaks if target moves."); N2.CooldownMod = 6.0f;
     N2.ResourceType = EResourceType::Mana; N2.AIUsageRule = TEXT("HoT a stationary tank."); N2.RequiredLevel = 1;
 
-    FTalentNode& N3 = AddTalent(EClass::Druid, ETalentLayer::ClassFoundation,
+    FTalentNode& N3 = AddTalent(EClass::Earthweaver, ETalentLayer::ClassFoundation,
         ETalentNodeType::Utility, TEXT("Entangling Roots"), 2, 0,
         TEXT("Placeholder — Roots in 4m: immobilize 2s + Nature DoT."));
     N3.TriggerEvent = TEXT("OnCast"); N3.EffectDescription = TEXT("Roots: immobilize 2s + Nature DoT."); N3.CooldownMod = 10.0f;
     N3.AIUsageRule = TEXT("Lock a pack."); N3.RequiredLevel = 5;
 
-    FTalentNode& N4 = AddTalent(EClass::Druid, ETalentLayer::ClassFoundation,
+    FTalentNode& N4 = AddTalent(EClass::Earthweaver, ETalentLayer::ClassFoundation,
         ETalentNodeType::ResourceMod, TEXT("Nature's Bounty"), 2, 1,
         TEXT("Placeholder — Caster form: +3 Mana/sec; Bear form: +5 Stamina/sec."));
     N4.TriggerEvent = TEXT("OnForm"); N4.EffectDescription = TEXT("Caster +3 Mana/sec; Bear +5 Stamina/sec."); N4.ResourceGen = 5.0f;
     N4.AIUsageRule = TEXT("Form-based sustain."); N4.RequiredLevel = 5;
 
-    FTalentNode& N5 = AddTalent(EClass::Druid, ETalentLayer::ClassFoundation,
+    FTalentNode& N5 = AddTalent(EClass::Earthweaver, ETalentLayer::ClassFoundation,
         ETalentNodeType::Defensive, TEXT("Swift Mend"), 3, 0,
         TEXT("Placeholder — Shapeshifting removes 1 debuff and heals 5% max HP."));
     N5.TriggerEvent = TEXT("OnShapeshift"); N5.EffectDescription = TEXT("Form swap: cleanse + heal 5%."); N5.EffectValue = 0.05f;
     N5.AIUsageRule = TEXT("Swap forms to dispel."); N5.RequiredLevel = 8;
 
-    FTalentNode& N6 = AddTalent(EClass::Druid, ETalentLayer::ClassFoundation,
+    FTalentNode& N6 = AddTalent(EClass::Earthweaver, ETalentLayer::ClassFoundation,
         ETalentNodeType::Keystone, TEXT("Primal Adaptation"), 3, 1,
         TEXT("Placeholder — +10% to the current form's strength (Bear=defense, Caster=healing)."));
     N6.TriggerEvent = TEXT("OnForm"); N6.EffectDescription = TEXT("+10% to current form's specialty."); N6.EffectValue = 0.10f;

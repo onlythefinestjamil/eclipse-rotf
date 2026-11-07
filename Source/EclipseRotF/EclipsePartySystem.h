@@ -29,7 +29,7 @@ struct FPartyMember
     UPROPERTY(BlueprintReadWrite) int32 SlotIndex = 0;
     UPROPERTY(BlueprintReadWrite) EPartySlot SlotType = EPartySlot::Empty;
     UPROPERTY(BlueprintReadWrite) FString Name = "";
-    UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Bulwark;
     UPROPERTY(BlueprintReadWrite) EClassRole Role = EClassRole::DPS;
     UPROPERTY(BlueprintReadWrite) ERaidRole RaidRole = ERaidRole::MeleeDPS;
     UPROPERTY(BlueprintReadWrite) float Health = 100.0f;

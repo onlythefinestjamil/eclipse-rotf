@@ -203,8 +203,8 @@ void UEclipseQuestSystem::InitMainCampaign()
 	// 5 — Heart of Thorns (branching choice)
 	{
 		FQuest q = Q(5, TEXT("Heart of Thorns"), EQuestType::MainCampaign,
-			TEXT("Vaelwood"), TEXT("Druid Thaenor"), 12, 1500, 400,
-			TEXT("The Heart of Thorns pulses with the fracture's energy. Druid Thaenor offers two paths."));
+			TEXT("Vaelwood"), TEXT("Earthweaver Thaenor"), 12, 1500, 400,
+			TEXT("The Heart of Thorns pulses with the fracture's energy. Earthweaver Thaenor offers two paths."));
 		Prereq(q, {4});
 		Obj(q, EObjectiveType::CollectItems, TEXT("Gather Verdant Essences"), 5, TEXT("Verdant Essence"), TEXT("Vaelwood"));
 		Obj(q, EObjectiveType::ChooseOption, TEXT("Choose how to deal with the Heart"), 1);
@@ -220,7 +220,7 @@ void UEclipseQuestSystem::InitMainCampaign()
 	// 6 — The Living Sanctum (boss unlock + kill)
 	{
 		FQuest q = Q(6, TEXT("The Living Sanctum"), EQuestType::MainCampaign,
-			TEXT("Vaelwood"), TEXT("Druid Thaenor"), 15, 2000, 500,
+			TEXT("Vaelwood"), TEXT("Earthweaver Thaenor"), 15, 2000, 500,
 			TEXT("Sylvanthal, the Heart of Thorns given form, must be defeated to seal the second fracture."));
 		Prereq(q, {5});
 		Obj(q, EObjectiveType::DefeatBoss, TEXT("Defeat Sylvanthal, Heart of Thorns"), 1, TEXT("Sylvanthal"), TEXT("Vaelwood"));
@@ -349,7 +349,7 @@ void UEclipseQuestSystem::InitSideQuests()
 	// Vaelwood side quests (6)
 	AddSide(106, TEXT("The Mossy Path"), TEXT("Vaelwood"), TEXT("Herbalist Fen"), 9, 350, 80, EObjectiveType::CollectItems, TEXT("Gather Moon-Moss"), 6, TEXT("Moon-Moss"), TEXT("Fen needs moss for her remedies."));
 	AddSide(107, TEXT("Thorned Wings"), TEXT("Vaelwood"), TEXT("Ranger Sylv"), 11, 400, 100, EObjectiveType::KillTarget, TEXT("Slay Thorn-Wasps"), 10, TEXT("Thorn-Wasp"), TEXT("The wasps infest the grove."));
-	AddSide(108, TEXT("The Heart-Tree"), TEXT("Vaelwood"), TEXT("Druid Thaenor"), 13, 500, 120, EObjectiveType::TalkToNPC, TEXT("Commune with the Heart-Tree"), 1, TEXT("Heart-Tree"), TEXT("Speak with the ancient tree."));
+	AddSide(108, TEXT("The Heart-Tree"), TEXT("Vaelwood"), TEXT("Earthweaver Thaenor"), 13, 500, 120, EObjectiveType::TalkToNPC, TEXT("Commune with the Heart-Tree"), 1, TEXT("Heart-Tree"), TEXT("Speak with the ancient tree."));
 	AddSide(109, TEXT("Root-Deep"), TEXT("Vaelwood"), TEXT("Herbalist Fen"), 15, 600, 150, EObjectiveType::DiscoverSecret, TEXT("Find the Root-Deep Cavern"), 1, TEXT("Root-Deep Cavern"), TEXT("A hidden cavern beneath the grove."));
 	AddSide(110, TEXT("The Blooming Path"), TEXT("Vaelwood"), TEXT("Gardener Lyra"), 17, 700, 200, EObjectiveType::CollectItems, TEXT("Collect Verdant Blooms"), 8, TEXT("Verdant Bloom"), TEXT("Rare blooms for the garden."));
 	AddSide(111, TEXT("Thornheart Memories"), TEXT("Vaelwood"), TEXT("Historian Vael"), 18, 800, 250, EObjectiveType::DiscoverSecret, TEXT("Find the Thornheart Archive"), 1, TEXT("Thornheart Archive"), TEXT("Records of the old sanctum."));
@@ -391,8 +391,8 @@ void UEclipseQuestSystem::InitClassQuests()
 {
 	struct ClassQuestDef { EClass Class; FString Name; FString Giver; FString Target; };
 	ClassQuestDef Defs[17] = {
-		{EClass::Vanguard,       TEXT("The Unbreakable Wall"),    TEXT("Captain Korvan"),  TEXT("Vanguard Master")},
-		{EClass::UmbralAssassin, TEXT("Shadow's Edge"),           TEXT("Night-Blade Sera"), TEXT("Umbral Master")},
+		{EClass::Bulwark,       TEXT("The Unbreakable Wall"),    TEXT("Captain Korvan"),  TEXT("Bulwark Master")},
+		{EClass::Duskblade, TEXT("Shadow's Edge"),           TEXT("Night-Blade Sera"), TEXT("Umbral Master")},
 		{EClass::Arcanist,       TEXT("The Arcane Thesis"),        TEXT("Archmage Vael"),   TEXT("Arcanist Master")},
 		{EClass::Riftwalker,     TEXT("Between Worlds"),          TEXT("Rift-Walker Kael"), TEXT("Riftwalker Master")},
 		{EClass::Dreadknight,    TEXT("The Blood Oath"),          TEXT("Dread-Lord Morvan"), TEXT("Dreadknight Master")},
@@ -405,9 +405,9 @@ void UEclipseQuestSystem::InitClassQuests()
 		{EClass::Berserker,     TEXT("Rage Unleashed"),           TEXT("Berserker Korvan"),  TEXT("Berserker Master")},
 		{EClass::Shadowblade,   TEXT("The Silent Cut"),           TEXT("Shadow-Blade Sera"), TEXT("Shadowblade Master")},
 		{EClass::Spellblade,    TEXT("Steel and Sorcery"),         TEXT("Spell-Blade Vael"),  TEXT("Spellblade Master")},
-		{EClass::Warlord,       TEXT("The War-Banner"),           TEXT("Warlord Thael"),    TEXT("Warlord Master")},
-		{EClass::Necromancer,   TEXT("The Final Command"),         TEXT("Necromancer Morvan"), TEXT("Necromancer Master")},
-		{EClass::Druid,         TEXT("Shape of the Wild"),         TEXT("Archdruid Lyrael"),  TEXT("Druid Master")},
+		{EClass::Warthane,       TEXT("The War-Banner"),           TEXT("Warthane Thael"),    TEXT("Warthane Master")},
+		{EClass::Necroturge,   TEXT("The Final Command"),         TEXT("Necroturge Morvan"), TEXT("Necroturge Master")},
+		{EClass::Earthweaver,         TEXT("Shape of the Wild"),         TEXT("Archdruid Lyrael"),  TEXT("Earthweaver Master")},
 	};
 
 	for (int32 i = 0; i < 17; i++)

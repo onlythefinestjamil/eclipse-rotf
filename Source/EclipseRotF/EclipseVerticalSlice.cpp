@@ -73,7 +73,7 @@ void AEclipseVerticalSlice::InitializeAllSystems()
 void AEclipseVerticalSlice::SetupCharacter()
 {
     UE_LOG(LogTemp, Log, TEXT("[VerticalSlice] Setting up Aetherborn hero..."));
-    // Character defaults: Aetherborn, Vanguard class, Hybrid movement
+    // Character defaults: Aetherborn, Bulwark class, Hybrid movement
 }
 
 void AEclipseVerticalSlice::SetupCombat()

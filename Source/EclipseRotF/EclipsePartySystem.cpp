@@ -239,7 +239,7 @@ FCompanionProfile UEclipsePartySystem::GenerateAICompanion(int32 SlotIndex, ERai
     case ERaidRole::MainTank:
     case ERaidRole::OffTank:
         Profile.Role = EClassRole::Tank;
-        Profile.CharacterClass = (Role == ERaidRole::MainTank) ? EClass::Vanguard : EClass::Dreadknight;
+        Profile.CharacterClass = (Role == ERaidRole::MainTank) ? EClass::Bulwark : EClass::Dreadknight;
         Profile.RaidRole = Role;
         Profile.Health = 200.0f;
         Profile.MaxHealth = 200.0f;

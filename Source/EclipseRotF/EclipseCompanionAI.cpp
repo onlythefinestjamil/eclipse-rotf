@@ -276,7 +276,7 @@ void UEclipseCompanionAI::UpdateDPSBehavior(float DeltaTime, FVector PlayerLocat
     // Position at optimal range based on class
     float OptimalRange = 250.0f; // Melee
     if (Profile.Role == EClassRole::DPS && (Profile.CharacterClass == EClass::Arcanist || 
-        Profile.CharacterClass == EClass::Stormcaller || Profile.CharacterClass == EClass::Necromancer))
+        Profile.CharacterClass == EClass::Stormcaller || Profile.CharacterClass == EClass::Necroturge))
     {
         OptimalRange = 600.0f; // Ranged/caster
     }
