@@ -39,7 +39,7 @@ struct FResourceBar
 {
     GENERATED_BODY()
 
-    UPROPERTY(BlueprintReadWrite) EResourceType Type = EResourceType::Health;
+    UPROPERTY(BlueprintReadWrite) EResourceType Type = EResourceType::None;
     UPROPERTY(BlueprintReadWrite) float Current = 100.0f;
     UPROPERTY(BlueprintReadWrite) float Max = 100.0f;
     UPROPERTY(BlueprintReadWrite) float RegenRate = 5.0f; // per second

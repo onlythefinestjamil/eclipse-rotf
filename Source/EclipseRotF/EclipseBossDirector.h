@@ -115,7 +115,7 @@ struct FBoss
     UPROPERTY(BlueprintReadWrite) int32 CurrentPhaseIndex = 0;
 
     // Attacks (per phase)
-    UPROPERTY(BlueprintReadWrite) TArray<FBossAttack> PhaseAttacks; // [Phase][Attack]
+    TArray<TArray<FBossAttack>> PhaseAttacks; // [Phase][Attack]
 
     // Enrage
     UPROPERTY(BlueprintReadWrite) float EnrageTimerTotal = 600.0f; // 10 min default

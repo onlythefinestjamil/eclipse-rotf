@@ -163,7 +163,7 @@ void UEclipseVisualPipeline::ApplyCinematicPostProcess(UPostProcessComponent* PP
     PPComponent->Settings.AutoExposureMaxBrightness = 8.0f;
     PPComponent->Settings.AutoExposureSpeedDown = 3.0f;
     PPComponent->Settings.AutoExposureSpeedUp = 8.0f;
-    PPComponent->Settings.AutoExposureCalibrationConstant = 1.0f;
+    // PPComponent->Settings.AutoExposureCalibrationConstant = 1.0f; // Not in UE5.8
 
     // Depth of field — cinematic shallow DOF
     PPComponent->Settings.DepthOfFieldFocalDistance = 200.0f;

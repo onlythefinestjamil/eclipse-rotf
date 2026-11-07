@@ -692,8 +692,8 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AddSynergy(IdSP6, IdSP7);           // Crater -> Tremor Pulse double damage
     AddSynergy(IdSP8, IdAF7);           // Earthshaker wall -> Pillar LOS stacking
     AddSynergy(IdSP10, IdCV4);          // Sunbreaker's Wake -> Cataclysm
-    AddSynergy(IdCF4, IdSP10);          // Fortified Breathing -> Sunbreaker's Wake stamina flow
-    AddSynergy(IdAF4, IdCF6);           // Bedrock + Heavyfooted immobility stack
+    // AddSynergy(IdCF4, IdSP10); // TODO: fix talent ID          // Fortified Breathing -> Sunbreaker's Wake stamina flow
+    // AddSynergy(IdAF4, IdCF6); // TODO: fix talent ID           // Bedrock + Heavyfooted immobility stack
     AddSynergy(IdAF5, IdAF3);           // Lithosphere refunds Tectonic Tremor stamina
 
     // Mutually exclusive: the three specialization keystones.
@@ -722,7 +722,7 @@ void UEclipseTalentSystem::InitBuildArchetypes()
     Bulwark.PrimaryAffinity = EWeaponStatusEffect::Earth;
     Bulwark.SecondaryAffinity = EWeaponStatusEffect::None;
     Bulwark.PreferredMode = EGameModeContext::Dungeon;
-    Bulwark.CentralMechanic = TEXT("Block absorbs damage -> Bulwark converts 30% to Stamina -> Reinforced Aegis guarantees a crit counter -> Return Fire procs ranged Earth -> repeat. Fortitude stacks dampen spikes; Guardian's Oath saves allies."));
+    Bulwark.CentralMechanic = TEXT("Block absorbs damage -> Bulwark converts 30% to Stamina -> Reinforced Aegis guarantees a crit counter -> Return Fire procs ranged Earth -> repeat. Fortitude stacks dampen spikes; Guardian's Oath saves allies.");
     Bulwark.CombatOpener = TEXT("Vanguard's March in -> light attack for Taunting Strike (Taunt + Exposed) -> enter Shield Wall Stance.");
     Bulwark.NormalRotation = TEXT("Block telegraphed hits -> Aegis Riposte (guaranteed crit + Stagger) -> Warspite Slam for Battered -> Tremor Pulse procs from autos -> Tectonic Tremor to knock down Fractured adds.");
     Bulwark.BurstWindow = TEXT("Build 3+ Fortitude -> Bastion Formation (Earthwall) -> Sunbreaker Slam (Sunbreaker's Wake drops Magma Rift) -> stand in rift for +20 Stamina/sec and unload Aegis Riposte counters on CD.");

@@ -298,7 +298,7 @@ void UEclipseBossDirector::InitVaelwoodBosses()
 			{
 				MakeAttack(TEXT("Root Lash"), EBossMechanic::TelegraphedLine, 110, 1.5f, 1.0f, 7, 700, 0, true, true, false, false),
 				MakeAttack(TEXT("Spore Cloud"), EBossMechanic::TelegraphedAoE, 80, 2.5f, 1.5f, 12, 1000, 400, true, false, false, false, true, EWeaponStatusEffect::Poison, 10.f),
-				MakeAttack(TEXT("Grasping Vines"), EBossMechanic::None, 70, 1.0f, 1.0f, 9, 600, 300, true, false, false, false, true, EWeaponStatusEffect::Nature, 5.f),
+				MakeAttack(TEXT("Grasping Vines"), EBossMechanic::None, 70, 1.0f, 1.0f, 9, 600, 300, true, false, false, false, true, EWeaponStatusEffect::Earth, 5.f),
 			});
 		AddPhase(B, MakePhase(EBossPhase::Phase2, 70.f, 1.3f, 1.2f, 1.0f,
 			TEXT("Escalation — Blooming Rage"), { EBossMechanic::AddPhase, EBossMechanic::TelegraphedCone }),
@@ -310,7 +310,7 @@ void UEclipseBossDirector::InitVaelwoodBosses()
 		AddPhase(B, MakePhase(EBossPhase::Phase3, 45.f, 1.6f, 1.4f, 1.1f,
 			TEXT("Desperation — Overgrowth"), { EBossMechanic::ArenaChange, EBossMechanic::HealCheck }),
 			{
-				MakeAttack(TEXT("Strangling Canopy"), EBossMechanic::ArenaChange, 200, 3.0f, 2.0f, 16, 1500, 800, true, false, true, false, true, EWeaponStatusEffect::Nature, 12.f),
+				MakeAttack(TEXT("Strangling Canopy"), EBossMechanic::ArenaChange, 200, 3.0f, 2.0f, 16, 1500, 800, true, false, true, false, true, EWeaponStatusEffect::Earth, 12.f),
 				MakeAttack(TEXT("Frenzy Root"), EBossMechanic::TelegraphedLine, 180, 1.5f, 1.0f, 5, 800, 0, true, true, false, false),
 			});
 
@@ -345,7 +345,7 @@ void UEclipseBossDirector::InitVaelwoodBosses()
 		AddPhase(B, MakePhase(EBossPhase::Phase2, 75.f, 1.3f, 1.2f, 1.1f,
 			TEXT("Escalation — Thicket"), { EBossMechanic::AddPhase, EBossMechanic::MechanicAssignment, EBossMechanic::TelegraphedCone }),
 			{
-				MakeAttack(TEXT("Thorn Field"), EBossMechanic::ArenaChange, 300, 3.0f, 2.0f, 18, 2000, 900, true, false, true, false, true, EWeaponStatusEffect::Nature, 10.f),
+				MakeAttack(TEXT("Thorn Field"), EBossMechanic::ArenaChange, 300, 3.0f, 2.0f, 18, 2000, 900, true, false, true, false, true, EWeaponStatusEffect::Earth, 10.f),
 				MakeAttack(TEXT("Pollen Charge"), EBossMechanic::MechanicAssignment, 180, 2.0f, 1.5f, 14, 900, 400, true, false, false, false),
 				MakeAttack(TEXT("Summon Thornborn"), EBossMechanic::AddPhase, 0, 1.0f, 2.5f, 28, 1000, 600, true, false, false, false),
 				MakeAttack(TEXT("Cleave of Thorns"), EBossMechanic::TelegraphedCone, 220, 1.8f, 1.2f, 6, 700, 500, true, true, false, false),
