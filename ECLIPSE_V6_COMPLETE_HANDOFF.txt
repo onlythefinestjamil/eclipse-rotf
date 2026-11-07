@@ -1,0 +1,586 @@
+ECLIPSE: REALMS OF THE FRACTURED
+MOMENTUM LABS | HERMES / MALENE / FORGE
+COMPLETE CONSOLIDATED CONVERSATION HANDOFF & PROMPT LIBRARY
+Compiled from this ChatGPT conversation | November 6, 2026
+Plain-text UTF-8 | Prepared for iMessage and agent ingestion
+
+IMPORTANT READ-ME
+=================
+This is one consolidated, sendable handoff covering the directions, prompts, decisions, workflows, estimates, agent assignments, and tool inventory discussed throughout this thread, not merely the latest three assistant messages. It reorganizes repeated advice into a coherent single reference instead of duplicating overlapping wording. All substantive instructions and prompt requirements have been retained or integrated. It is not an automatic literal export of the chat interface, and it is not proof that any reported source code, tool integration, or game feature works. The latest MASTER GAME BIBLE V6 is authoritative; older V3 documents are historical only. The full contents of V6 have NOT been directly inspected in this chat. Read the real V6 file before implementing canonical content.
+
+HOW TO USE
+==========
+1. Send this complete file to Hermes. Ask Hermes to read it completely, create a task registry, and compare directives with Master Game Bible V6 and the actual Unreal project.
+2. Have Hermes distinguish DIRECTIVES / PROPOSALS / CONFIRMED USER DECISIONS / UNVERIFIED AGENT REPORTS.
+3. Do not execute every prompt at the same time. Follow prerequisite order, avoid overlapping file ownership, and limit active coding agents to roughly 3-5 initially.
+4. Never claim a feature is complete because files exist. Compile, load in editor, test in game, validate an executable, then mark complete.
+5. This is a specification packet, NOT a request for autonomous spending, system installations, unsafe repo modifications, or public deployment.
+
+====================================================================
+PART A — CONFIRMED GAME VISION, DECISIONS, AND TECHNICAL DIRECTION
+====================================================================
+
+A1. FINAL PRODUCT VISION
+------------------------
+Title: Eclipse: Realms of the Fractured, developed under Momentum Labs.
+The latest authoritative design is MASTER GAME BIBLE V6.
+The immediate product is a COMPLETE, gorgeous, fully playable SINGLE-PLAYER Windows action RPG, not a disposable tech demo. The player must be able to launch it locally, create/load a character, explore the full planned game world, fight, quest, progress, equip gear, run dungeons and raids supported by intelligent AI companions, defeat all approved bosses, save/load and enjoy polished presentation. Implement multiplayer later, after the local game is polished and validated. Design interfaces now so networking need not require a total rewrite.
+
+Future vision: geographically separated persistent MMORPG realms (NA East initially, NA West, Europe, Asia Pacific as demand warrants). Seamless outdoor travel between cities, wilderness and regions with no loading screens within the continuous overworld. Instanced dungeons, raids, arenas and battlegrounds MAY have loading screens. Region determines hosting geography, realm determines distinct persistent world population, guilds and economy. Future regional cross-realm instanced matchmaking. Characters have home realms and no more than FIVE lifetime realm transfers PER CHARACTER; transfer restrictions/cooldowns and treatment of guild/leaderboard memberships and regional differences still require formal design. Avoid paying for public servers at this stage.
+
+Current play-first architecture: one PC plays the game alone. Later, optional LAN with friend on same home network using a listen server, followed by dedicated authoritative servers. Although LAN and hosted online features are later phases, separate game rules from presentation, AI control from participant execution, and persistence from UI today. Run an EARLY SMALL TWO-CLIENT technical spike where sensible, not complete multiplayer development. Distinguish a playable offline game from a production online MMO: replication, latency, anti-cheat, matchmaking and live ops are significant later work.
+
+A2. COMBAT IDENTITY
+-------------------
+Hybrid Elden Ring / Black Myth: Wukong / World of Warcraft inspired combat, with original Eclipse content. Heavy melee carries weight, commitment and risk. Combos flow smoothly with buffered inputs, deliberate cancel windows, precise contact timing and responsive defensive reactions. WoW-like strategic ability depth, GCD on eligible abilities, cast bars, resources, cooldowns, diminishing returns (DR), integrated UI tracking, target/focus frames. Basic attacks, dodges, blocks and appropriately flagged reactive moves remain responsive as off-GCD actions. Manual mastery and timing should reward weak-point critical opportunities and mitigated damage/parries/dodges, but do not make every arbitrary manual strike an unconditional critical hit. Design intuitive game feel and readable VFX, not copied animations or protected assets.
+
+A3. HERO AND FIRST SHOWCASE
+--------------------------
+Hero: muscular Aetherborn ancestry/character design previously approved, with luminous fracture markings across skin and ENERGY WINGS matching the fracture coloration. Preserve a broad range of skin tones, authentic textured hairstyles (locs, braids, afros, twists), and inclusive customization. Choose class from V6; Aetherborn is presumed ancestry unless V6 says otherwise.
+First location: Solara Cathedral, exterior courtyard and neighboring ruins, Gothic architecture, atmospheric coherent Lumen lighting, Nanite where useful, volumetric fog, intentional combat readability. Continuous playable courtyard/exterior/cathedral route; separate instanced boss chamber may use loading transition.
+Showcase encounter: choose canonical Solara/Cathedral-appropriate boss from V6 14-boss list. DON'T invent a fifteenth boss. Three phases if compatible with V6. Fracture/temporal arena mechanics, telegraphed readable attacks, AI party coordination, cinematic finishing beat, loot and save outcome.
+
+A4. KNOWN GAME SCOPE AND UNVERIFIED STATUS
+------------------------------------------
+Latest report FROM HERMES (NOT VERIFIED HERE): Unreal Engine 5.8 Eclipse project stored on K: drive; C++ systems first reported as 18 systems with 37 source files, later 49 source files; Lumen/Nanite/cinematic postprocessing/fog and DefaultEngine.ini and DefaultGame.ini written and pushed; spell subagent reportedly working on 400+ spells spanning 17 classes and 45 dual-affinity combinations; reports may include 19th Spell System under construction. Do not treat source count as functionality. Audit actual files, build logs and packaged gameplay.
+Historical named C++ systems reportedly built:
+EclipseCharacter; EclipseDRSystem; EclipseCombatSystem; EclipseSolaraLevel; EclipseChatSystem; EclipseGameMode; EclipseLootSystem; EclipseDamageRotation; EclipseTargetingSystem; EclipseClassRoles; EclipseWeaponSwap; EclipseHUDSystem; EclipseSaveSystem; EclipseEnemyAI; EclipseVerticalSlice; EclipseCompanionAI; EclipsePartySystem; EclipseClassAbilities; EclipseSpellSystem (work in progress when reported).
+Current V6 design apparently includes 17 classes, 45 dual-affinity combinations, 400+ spells and 14 canonical bosses. V3 referred to 8 classes, 24 specs, 6 biomes, 5-story acts. DO NOT silently carry historical roster counts into V6; validate the actual V6 roster and regions before building. The V3 historical biomes were Solara, Vaelwood, Morvath, Aetheris, Nhalor, Umbryss. The historical story centered on reality Fractures and seven celestial domains (Life, Death, Time, Memory, Dominion, Chaos, Creation), alternate timelines, meaningful decisions, changing world states and branching narrative. Treat as context to verify against V6, not a license to overwrite it.
+
+A5. SOLO RAID AND DUNGEON AI
+----------------------------
+A complete playable single-player edition must support 5-player dungeons with 1 human + 4 AI and 10-player raids with 1 human + 9 AI. AI companions use the SAME combat attributes, gear, talents, resources, legal abilities, encounter rules and party slots as humans. Separate participants and characters from their control source (player vs AI controller). Later replace individual AI slots with connected human players without rewriting encounters; actual multiplayer replication still needs implementation. Tank swaps, healer triage, interrupts, dispels, spread/stack positioning, role assignments, threat, target priorities, encounter resets, raid commands and debug explanations are necessary. Companions can become recruitable characters with identities, customizable builds, equipment and progression, but avoid requiring the player to micromanage nine avatars. Optional companion AI automation profiles and tactical command wheel. PvP and raids need later human balance testing.
+
+A6. PRODUCTION PRINCIPLE
+------------------------
+First ship a real packaged Windows game loop:
+Launch -> Create/Load Aetherborn -> Explore Solara -> Talk to NPC -> Receive quest -> Fight with abilities -> Recruit companions -> Enter dungeon -> Defeat multi-phase canonical boss -> Gain loot -> Progress character -> Save -> Quit -> Reload with integrity.
+A fully playable ten-minute slice is more valuable than 100 more unverified source files. Treat the slice as the production-grade foundation for the whole game. Then expand every region, story act, boss, spell, class and encounter using reusable templates. Preserve the ability to publish a worthy standalone single-player RPG before launching an MMO.
+
+A7. ECONOMICS AND TIMELINE (ILLUSTRATIVE, NOT QUOTES)
+--------------------------------------------------
+Initial online MMO planning: $50,000 target for substantial alpha, with $3,000 first 90-day proof of concept. That plan shifted when user clarified full offline game first.
+Offline-first indicative *cumulative* cash ranges, excluding user salary:
+- Basic playable prototype: $3k-$8k or $5k-$15k depending scope.
+- Very polished vertical slice: $20k-$40k (sometimes $20k-$60k for fuller first region).
+- Expanded local alpha: $40k-$100k.
+- Broadly complete local/offline edition: $100k-$300k+, potentially much higher for bespoke AAA content.
+- Outsourced highly custom production: $300k-$750k+ possible.
+Indicative times: 3-9mo core local combat, 12-24mo polished region, 2-4yr substantial game, 4-8+ years complete ambitious game. These are uncertain, depend on skill, time, content/asset reuse and actual agent delivery, and are not promises. One sample $100k allocation: $35k characters/art/animation; $20k combat/boss/gameplay; $15k quests/world/cinematics; $12k QA/optimization; $8k tools/audio/infrastructure; $10k contingency. Another $50k alpha budget had $10k specialists/QA, $8k testing hosting, $7k 3D assets, $7k contingency, $4.5k AI tools, $4k marketing, $3.5k audio/UI, $3k hardware, $3k legal/admin. These are alternative scenarios, NOT additive amounts.
+Cost drivers: high-quality character meshes/rigs/armor/hair; environments; several phases/animations/VFX/audio per boss; 400+ spells integrated not merely declared; 45 dual-affinity interactions, talents and balance; AI companion intelligence; narrative/quests; content integration, debugging and testing; hardware/time; commercial licenses. Local development reduces LIVE SERVER costs but not content and labor. Use reusable spell archetypes (projectile, beam, AOE, aura, summon, shield, ground hazards, transformations) and data assets, shared rig/VFX/materials, targeted contractors and staged spending. Avoid premature purchases; validate existing pipeline first. A goal is first $5k proving the full character->engine->combat->boss production process. Value developer labor separately; 4,000 hours at hypothetical $25/hr = $100k of labor.
+Historic hypothetical online operating cost ranges: local $0-$50/mo, small prototype $75-$250, one realm $250-$900, regional alpha $500-$2k, multi-region live $2k-$8k+/mo. Actual costs require benchmarking, vendor estimates, region selection, bandwidth/load tests.
+
+====================================================================
+PART B — USER'S COMPLETE REPORTED HARDWARE / PROGRAM INVENTORY
+====================================================================
+
+GAME ENGINE: Unreal Engine 5.8 (Nanite, Lumen, Niagara, MetaHuman, Motion Matching, Groom Hair, World Partition, Enhanced Input, Gameplay Ability System, Virtual Shadow Maps, Volumetric Fog, Chaos Physics/Cloth, Behavior Trees, AI Perception, Blackboard, EQS); Aura by Ramen plugin.
+3D MODELING: Blender 4.2 LTS; ZBrush 2025 trial; Houdini Indie (reported as free under $100k but LICENSE/COST MUST BE VERIFIED; Houdini Indie is not generally free).
+TEXTURING: Substance 3D Painter trial; Sampler trial; Designer trial; Modeler trial; Stager trial.
+CLOTH: Marvelous Designer trial.
+ANIMATION: Mixamo (account-based animation library and auto-rigging, licensing and motion-specific availability to verify); UE5 Motion Matching and Animation Blueprints.
+AI MESH: Meshy AI API ($20/mo reported); Rodin/Hyper3D API ($30/mo trial reported).
+ENVIRONMENT ASSETS: Quixel Megascans / Fab, rights and pricing to verify under current terms.
+CHARACTERS: MetaHuman, Groom hair for textured hairstyles.
+VFX: UE Niagara.
+AUDIO: Suno AI Free music generation and 24 cue prompts reportedly ready; UE MetaSounds and Quartz. Suno free-tier music not suitable for commercial release without qualifying rights. License every cue.
+VIDEO: Vast.ai rented A100 80GB for Wan 2.2 trailer; RX 6800 16GB local LTX Video/HunyuanVideo testing. Confirm compatibility and feasibility.
+CREATIVE: Photoshop 2024, Premiere Pro 2024, Illustrator 2024, Media Encoder 2024, Character Animator 2026.
+AI AGENTS: Hermes Agent (Nous Research), Aura by Ramen (tryaura.dev). Other roles called Malene, Forge and specialist subagents; actual platform capabilities must be checked.
+HARDWARE: AMD Ryzen 9 7900X 12C/24T; 128 GB DDR5 RAM; AMD Radeon RX 6800 16 GB; Windows 11 Pro; ~9.9 TB over six drives, K: 4 TB game-development SSD.
+SOURCE CONTROL: Git, private GitHub repo 'onlythefinestjamil/eclipse-rotf' (as provided by user).
+OTHER AI/MCP SERVICES: ImagineArt, ACE Studio, BeatStars, REA, Creatify, Tripo.
+REPORTED ONGOING COST: $20/month Meshy only, all other offerings free or trial according to user. Validate real billing and limits.
+INSTALLERS reported awaiting installation in C:\Downloads: Substance, ZBrush, Marvelous, Houdini. Downloaded is NOT installed or licensed.
+
+TOOLCHAIN CAVEATS DISCUSSED:
+- Blender 4.2 LTS support ended July 2026; test migration to supported compatible LTS rather than break working files blindly.
+- Houdini Indie is a paid product subject to restrictions, not simply free under $100k.
+- Quixel/Fab licensing and free availability can change; check current terms and preserve license evidence.
+- Suno free-tier generated songs generally lack commercial-use permission; do not put them in commercial build without rights.
+- GitHub LFS storage/bandwidth limits require monitoring; keep separately backed up irreplaceable source assets.
+- Experimental Unreal 5.8 MCP editor integration may automate materials/actors/lighting/tests in compatible client setups, but verify compatibility; run only with a backup/test project, do not expose unauthenticated local services publicly, avoid parallel conflicting editor operations. Aura is separate; test overlap.
+- MetaHuman feature compatibility may depend on GPU/feature; RX 6800 not RX 6800 XT; benchmark before any GPU purchase.
+- Benchmark Lumen, Nanite, volumetric fog, Groom, Niagara and nine AI companions on actual PC. 60 FPS is a desired target on a specified reference profile, not guaranteed at cinematic settings.
+- Don't run local video generation simultaneously with heavy Unreal shader compilation or peak rendering unless resource measurements prove safe.
+- Unreal World Partition streams world content but does not solve seamless multiservers. Later large-population MMO needs authoritative server architecture and seamless handoff research.
+
+APPROVED RESPONSIBILITY MATRIX:
+Game code/combat: Unreal C++/Blueprint/GAS with Hermes/Forge/Aura.
+Hero models: Blender/ZBrush, AI mesh providers as starting points.
+Textures: Substance Painter/Sampler/Designer; Photoshop.
+Garments: Marvelous Designer and Blender.
+Digital faces: MetaHuman/Control Rig.
+Animation: Mixamo assets where authorized, UE Animation BP/Control Rig/Motion Matching.
+Worlds: UE PCG, Houdini, Blender, Megascans/Fab.
+Effects: Niagara, Houdini as appropriate; materials and dynamic illumination.
+Audio: MetaSounds/Quartz with licensed, original audio assets.
+Cinematics: Unreal Sequencer and editing suite.
+Validation: Unreal automation, Forge/Hermes and independent QA.
+VCS: Git/GitHub and Git LFS plus tested backups.
+
+====================================================================
+PART C — MASTER AGENT SYSTEM & PROMPT 01: STUDIO ORCHESTRATOR
+====================================================================
+
+PROMPT 01 — ECLIPSE V6 MASTER STUDIO ORCHESTRATOR
+-------------------------------------------------
+TITLE: ECLIPSE V6: MASTER AI STUDIO ORCHESTRATOR
+Momentum Labs | Hermes | Malene | Forge | Unreal Engine 5.8
+
+MISSION:
+Operate as a disciplined AAA-quality game-development organization working toward the complete playable single-player edition of Eclipse: Realms of the Fractured. Master Game Bible V6 is authoritative for lore, classes, affinities, enemies, bosses, regions and visual direction. Online services and MMO realms are future phases. The product is a complete, polished offline RPG with AI dungeon and raid companions and future multiplayer-ready boundaries.
+
+PHASE 0 — INVESTIGATE BEFORE DELEGATING:
+1. Locate/read V6 and inspect the actual UE project on K:.
+2. Identify all agents, jobs, files, status and blockers.
+3. Audit reportedly 49 C++ source files, all config files, and the Spell System subagent.
+4. Verify engine/plugin/toolchain compatibility and source control.
+5. Distinguish design-only, code authored, compiled, editor-tested, gameplay-tested, packaged-tested, production-ready.
+6. Produce evidence-backed audit and risks. Do not pretend code is already functional.
+
+PHASE 1 — AGENT REGISTRY:
+For each existing agent capture name, role, objective, system/file ownership, dependencies, work in progress, blockers, last deliverables, next integration handoff. Reuse existing agents before spawning a new one. Do not interrupt active subagents without a safe handoff; do not overwrite Spell System files.
+
+PHASE 2 — STUDIO STRUCTURE:
+You, the human user, are Creative Director and approve meaningful art/lore/budget milestones. Hermes handles planning, dependencies and dispatch. Malene handles architecture, V6 compliance and review. Forge owns technical implementation/build integration. Specialists cover combat, spells, talent/buildcraft, character art, animation, VFX, world, bosses, companion AI, quests, progression, UI, audio, QA, performance. Start with at most 3-5 actively changing code/assets concurrently. More agents do NOT automatically mean more progress.
+
+PHASE 3 — PRODUCTION ARTIFACTS:
+Maintain version-controlled: V6 compliance matrix; agent ownership registry; feature/content backlog; dependency DAG; canonical IDs; task ledger; risk/blocker register; asset provenance/license ledger; integration/test matrix; performance budget; build validation report; decision log; daily production report. No credentials in repo.
+
+PHASE 4 — AGENT CONTRACT:
+Each assignment needs ID, exact V6 reference, owner, owned files, interfaces consumed/produced, dependencies, input assets, expected output, acceptance criteria, resource limits, test evidence, handoff/merge plan. Shared systems have a single writer/owner. Use branches/worktrees, small commits, review and test before merging.
+
+PHASE 5 — EXECUTION:
+First create a recoverable baseline, then complete a production-quality Solara Cathedral playable slice; when approved, scale content. Do not deploy public hosting, live accounts or matchmaking now. Escalate decisions changing canonical V6, player experience, licensing or budget. Never claim actions were started if agent platform doesn't support them; instead queue tasks explicitly.
+
+PHASE 6 — DAILY REPORT:
+What changed; active agent tasks; compile/test status; actual gameplay evidence; new bugs; resource use; costs; blockers; next 3-5 tasks; user-required actions; decisions needing approval. Optimize for a better PLAYABLE GAME, not bigger file counts.
+
+FIRST ACTION: Investigate current project and report agent registry/status; do not launch every specialist at once.
+
+====================================================================
+PART D — SPECIALIST AGENT PROMPTS & DEPLOYMENT
+====================================================================
+
+PROMPT 02 — SPECIALIST AGENT DEPLOYMENT PLAN
+-------------------------------------------
+TITLE: ECLIPSE V6: SPECIALIST AGENT DEPLOYMENT
+Inspect existing agents; assign or redirect to these distinct departments. Use existing specialists if present. Checkpoint before redirection. Every agent has scoped file ownership and a proof-of-work contract.
+
+01 BUILD GUARDIAN (Forge or dedicated): source compilation, Unreal modules/plugins, project files, packaged Windows builds, crash logs and automated checks. First deliverable: verified working build or exact blockers.
+02 COMBAT ARCHITECT: hybrid combat, dodge/parry, combos, GCD/casts/resources, targeting, interrupts, DR and damage/mitigation. First deliverable: polished melee-versus-magic test.
+03 SPELL INTEGRATION DIRECTOR: reuse current Spell System subagent; validate 400+ spells/17 classes/45 affinity combinations against V6; templates, IDs, GAS tags, animations, VFX/SFX and QA. Do not overwrite active ownership. First deliverable: small working spell batch.
+04 CHARACTER ART DIRECTOR: Aetherborn model, energy wings/markings, inclusive ancestry customization, gear, textures, hair, rigs and optimization. Deliverable: game-ready hero.
+05 ANIMATION DIRECTOR: locomotion, combat stances, combos, hit reactions, root motion, motion warping, Animation BP, retargeting, rig tests. Deliverable: playable hero animation set.
+06 WORLD ART DIRECTOR: Solara Cathedral/courtyard/ruins, World Partition, modular architecture, materials, Lumen/Nanite, fog, storytelling, HLOD and streaming budgets. Deliverable: playable coherent environment.
+07 BOSS ENCOUNTER DIRECTOR: V6 14-boss registry, phases, attacks, arena, loot, wipe/reset, companion role mechanics. Deliverable: Solara canonical showcase boss.
+08 COMPANION AI DIRECTOR: party coordination, tank/healer/DPS/support roles, tactical commands, same skill/build systems as player, threat, interrupts, move assignments, future human-compatible slots. Deliverable: solo player + 4 AI dungeon.
+09 QUEST & NARRATIVE DIRECTOR: V6 continuity, quests, dialogue, cinematics, choices, world flags, rewards, boss triggers and save. Deliverable: full Solara quest chain.
+10 PROGRESSION & ECONOMY DIRECTOR: XP, levels, talents, inventory, equipment, loot, crafting, vendors, rewards, save. Deliverable: quest->combat->loot->upgrade loop.
+11 VFX DIRECTOR: Niagara spell/weapon effects, fracture energy/wings, boss telegraphs, illumination/material interaction, readability/GPU budgets. Deliverable: in-game reusable VFX library.
+12 UI/UX DIRECTOR: HUD, health/resources, cast bars, GCD, DR, cooldowns, party/raid/target/focus frames, inventory, talents, options, controller and accessibility. Deliverable: functional combat UI.
+13 AUDIO DIRECTOR: region/combat/phase music, spatial audio, spell/weapon, environment, UI, voice pipeline and licensing. Deliverable: coherent Cathedral soundscape.
+14 QA/BALANCE DIRECTOR: tests, errors, class/build simulations, saves, crash reproduction, gameplay logs and regressions. Deliverable: repeatable slice tests.
+15 PERFORMANCE DIRECTOR: CPU/GPU/memory profiling, animation/AI/Niagara cost, scalability, shader stutter and build benchmarks. Deliverable: measured baseline/bottleneck report.
+
+Activate Build Guardian and V6 registry first; then bounded combat/character/world tasks. Boss+companion integration follows dependency readiness. Never spawn all 15 agents simultaneously.
+
+====================================================================
+PART E — PRODUCTION TECHNICAL PROMPTS
+====================================================================
+
+PROMPT 03 — NEXT DEVELOPMENT DIRECTIVE (FIRST NEW SYSTEMS)
+---------------------------------------------------------
+TITLE: ECLIPSE V6: NEXT DEVELOPMENT DIRECTIVE
+Momentum Labs | UE5.8 | Single-player-first
+
+Continue development while Spell System subagent works. Do NOT modify its files. Verify all against V6.
+TASK 1 AUDIT: Confirm 18 reported C++ systems compile; inspect implementation vs scaffold, links across combat, character, loot, targeting, companions, party, saves; source-control backup; compile logs/errors/next fixes. Never call code-only systems finished.
+TASK 2 EclipseBossDirector: data-driven reusable phases, health/time/event transitions, telegraphs, AOEs, interrupts, positioning, threat, tank swaps, environmental hazards, fractured-reality mechanics, enrage, reset, checkpoints, boss loot/difficulty/story signals; implement one fully functioning test boss.
+TASK 3 EclipseRaidDirector: shared 5/10-player party/participant IDs, roles (tank/healer/DPS/support/flex), group subdivisions, squad UI, role assignments, tank swaps, dispels, interrupts, movement, adaptive AI and command wheel; same action execution framework for future humans; 1 human + 9 AI raid.
+TASK 4 EclipseQuestSystem: main/side quests, NPC objectives, branching dialogue and consequences, prerequisites, quest rewards, reputation, persistent history, cinematic and boss triggers; full Solara questline.
+TASK 5 VISUAL PIPELINE: character rigs/armor, motion, Niagara, environmental/material/lighting, UI/cinematics/audio; licensed assets, provenance, repeatable templates.
+TASK 6 INTEGRATE: when spell agent ready, validate canonical roster/IDs, import representative batch first, check animations/targeting/damage/cooldown/resources/AI/save, profile 9 AI vs boss, build packaged Windows executable.
+MANDATORY REPORT per milestone: files, compile status, gameplay tested, proof screenshots/video, issues, next work. Preserve project and code owner boundaries. The first deliverable is a polished dungeon with AI companions, boss, gear, progress, loot and save.
+
+PROMPT 04 — CONTINUOUS INTEGRATION & AGENT HANDOFF
+------------------------------------------------
+TITLE: ECLIPSE V6: CONTINUOUS INTEGRATION & AGENT HANDOFF
+Hermes/Malene/Forge.
+Every change declares ID, dependencies, owner, exact files, public interfaces, acceptance tests. Reject uncoordinated overlapping writers. Create recovery baseline; use isolated branches; static validation; compile changed modules in ACTUAL Unreal; automated tests; in-game regression; performance check; review before merge; update registry. If editor/compiler unavailable, flag unverified and prepare exact local commands, don't fabricate logs. For spell work, establish GAS/attribute/gameplay event/Niagara/animation contract; integrate small validated batches. When merge fails, isolate specific change, keep logs, revert only safely, assign fix to owner and re-run tests. Build repeatable path from agent output to packaged Windows build.
+
+PROMPT 05 — SINGLE-SESSION UNREAL INTEGRATION PREPARATION
+--------------------------------------------------------
+TITLE: ECLIPSE V6: SINGLE-SESSION UNREAL INTEGRATION
+Forge/Build Guardian.
+Goal minimize clicks/user input. Check project generation, toolchain paths, Unreal Python/editor scripting, MCP where appropriate, asset import manifests, materials, Blueprints, retargeting, input, packaging, test maps, crash collection, screenshots/profiling. Programmatically do what supported APIs allow. Do not install unapproved software or change security controls. Output preflight report; automated scripts; clear ordered GUI instructions grouped by app; expected results; failure recovery; packaging and first-play checklist. Do not claim operation success before real editor/package test.
+
+PROMPT 06 — DAY 1 VISUAL SLICE DIRECTIVE
+---------------------------------------
+TITLE: ECLIPSE V6: DAY 1 VISUAL SLICE | UE5.8
+HERO: muscular Aetherborn, glowing skin-integrated fracture markings, matching ethereal energy wings, inclusive customization, class verified against V6.
+ENVIRONMENT: Solara Cathedral, exterior courtyard and ruins; coherent Gothic level with navigation, Lumen lighting, Nanite where appropriate, atmospheric volumetric fog, gameplay collision and readability. Seamless outdoor-to-cathedral route; instanced boss loading transition allowed.
+BOSS: exact canonical cathedral-compatible boss from V6 14; do not invent lore. Up to three phases as lore supports; telegraphs, boss AI, reactive arena, AI companions, loot, victory/wipe, visuals/music.
+COMBAT: heavy committed attacks + fluid combos + strategic cooldowns/GCD/cast bars/DR and manual timing skill; proper contact notifies, reactive parries/dodges, blend, motion, lock-on. High-quality yet readable VFX and lighting.
+USER SESSION: prepare one guided computer/UE GUI session. Before then work independently on material collections, Niagara spell archetypes, Enhanced Input definitions, Build.cs/packaging, animation specs, party/boss interfaces and build validation scripts. No shared-file collisions.
+PROOF: actual compile; playable Aetherborn; functional combat and animations; complete Cathedral; boss+companions; inventory/loot/save; packaged executable; actual gameplay/video/metrics. This is real product content, not disposable cinematic demo.
+
+PROMPT 07 — COMBAT EXCELLENCE DIRECTIVE
+--------------------------------------
+TITLE: ECLIPSE V6: COMBAT EXCELLENCE
+Combat Architect + Animation + VFX + Malene interface review.
+COMBAT GOAL: heavy melee commitment; fluent combos, controlled buffer/cancel, responsive dodge/parry; cast bars, GCD/off-GCD, cooldown, resources, interrupt, DR, original class identity and bright but readable effects. Avoid copying protected animations.
+FEATURES: light/heavy/charged/special; combo windows; dodge/block/parry/guard break/stagger; counters, recovery; cast/channel; GCD rules; action bars/target modes; damage/heal/shield/mitigation/crit; aggro, defense, CC; weapon-specific locomotion; companion use of same ability rules.
+ARCHITECTURE: separate input -> validation -> execution -> animation -> VFX/SFX -> UI -> events -> saves -> future authority. GAS appropriate. Contact timing via notifies, root motion carefully, no animation deadlocks or attack cancellation glitches.
+TEST: melee/caster/durable/ranged/interruptible dummy arena; record real play; assess latency, input/action response, combo clarity, effects and perf. Deliver tuneable parameters and defects.
+
+PROMPT 08 — AAA GAME FEEL DIRECTOR
+---------------------------------
+TITLE: ECLIPSE V6: AAA-QUALITY GAME FEEL DIRECTOR
+Create/assign Game Feel specialist with Combat/Camera/Animation/VFX/SFX/QA.
+MOVEMENT: acceleration/deceleration, orientation/turning, strafing, sprint, dodge, jump/fall/landing, casting movement, committed attack movement rules.
+IMPACT: collision-accurate hits, appropriate hit-stop, modest camera impulses/shakes, recoils/stagger, directional reactions, armor/surface SFX, anticipation and recovery, distinctive light/heavy weight.
+RESPONSIVENESS: input buffering, combo timing, queued casts, legal cancels, GCD/off-GCD, animation interruption, targeting, lock-on, controller support.
+SYNC: weapon trails actual blade movement; impacts actual collision; spell release animation; sensible lighting and spatial audio; readable dangerous telegraphs.
+Measure with instrumentation where possible; record gameplay, inspect snapping/timing, missed inputs and legibility; test in actual game. Deliver runnable feel lab + tuning profiles.
+
+PROMPT 09 — ASSET PRODUCTION PIPELINE / CHARACTER & ENVIRONMENT FACTORY
+---------------------------------------------------------------------
+TITLE: ECLIPSE V6: CHARACTER AND ENVIRONMENT ASSET FACTORY
+Production Director for assets.
+HERO workflow: V6 concept reference -> consistent front/side/back orthos -> model or approved generated base -> sculpt/anatomy -> retopo/UV -> PBR materials -> rig/weights -> clothes/armor/hair -> physics/collision -> retarget/animate -> import Unreal -> playtest -> profile/license manifest.
+ENVIRONMENT: V6 geography -> blockout -> modular architecture/terrain -> texturing/materials -> lighting -> vegetation/staging -> interactables -> destructible/reactive props -> collision/nav -> HLOD/streaming/performance -> gameplay validation.
+SPELL: ability behavior/telegraph -> Niagara archetype -> material/light interaction -> audio -> profile -> combat test.
+AETHERBORN: muscular silhouette, fracture markings integrated in skin, energy wings attachment/color/motion/visibility, no severe gear clipping, inclusive skin tones/hair.
+ART APPROVAL: do not approve concept as production mesh, or static render as playable asset. Record legal provenance, quality, collision, rig compatibility, Nanite/LOD suitability, perf and actual in-engine screenshots.
+
+PROMPT 10 — VISUAL IDENTITY & ART PRODUCTION
+-------------------------------------------
+TITLE: ECLIPSE V6: VISUAL IDENTITY & ART PRODUCTION
+Character/Animation/World/VFX specialists.
+Define one original coherent art bible covering proportions, silhouettes, armor, palettes by faction/region/affinity, fracture energy behavior, metals/cloth/leather/stone/skin shaders, ethnic feature range and hairstyles, creatures/bosses, lighting/fog/contrast, animation/VFX look and UI. First exemplar Aetherborn and Solara Cathedral. Strong lighting supports navigable gameplay, not just dark cinematic shots. Use Lumen/Nanite/postprocess/fog with scalability, measure GPU budgets, avoid copy-paste art style across incompatible generators. Approve front/back/side reference, shader/rig/animation tests, Unreal screenshots and profile. Scale style guide after first exemplar.
+
+PROMPT 11 — REACTIVE WORLD & SPELL INTERACTION SYSTEM
+----------------------------------------------------
+TITLE: ECLIPSE V6: REACTIVE WORLD & SPELL INTERACTIONS
+World Systems/Combat/VFX/Physics/Performance.
+Create data-driven surface and material response framework for stone/masonry, metal/armor, wood, vegetation, soil, water, cloth, ice and other V6 materials. Abilities can produce context-appropriate marks, sparks, scorch, debris, ripples, frost, dust, wind displacement, particle response, sound and dynamic light where supported. Differentiate temporary decals from persistent state; cap memory, debris, collision and VFX density. Environment interaction is meaningful when gameplay warrants it (line-of-sight, hazards, breakable covers, traversal/puzzle mechanics), not arbitrary destruction everywhere. Fracture reality shifts should be a canonical unique effect. Trigger from authoritative game events and data tags; no gameplay decision must depend on a purely cosmetic effect. Ensure NPC AI/nav/collision responds only where needed. Make the effects readable, consistent and scalable; benchmark multi-spell combat in Solara.
+
+PROMPT 12 — CHARACTER ANIMATION / MOTION PIPELINE
+------------------------------------------------
+TITLE: ECLIPSE V6: MOTION AND ANIMATION QUALITY
+Animation Director + Combat/Character.
+Inventory valid Mixamo/licensed animation library and existing rigs. Set skeleton/retarget standards, motion sets for Aetherborn and sample enemy. Implement locomotion, turn-in-place, strafe, sprint, stop/start, jump, dodge, guard, parry, melee combos, casting, stagger, death, revived/interactions. Define upper/lower-body layering and combat stance transitions, animation state contracts, notifies and hit windows. Use UE Motion Matching where it measurably improves motion; use conventional state machines otherwise. Control root motion and replicability boundaries. Test in actual camera angle with equipment, wings, cloth and hairstyle physics. Fix clipping and sliding. Avoid assuming 2,500+ downloadable animations are all useful/available under present licenses; curate selectively.
+
+PROMPT 13 — ADVANCED AI PARTY & RAID INTELLIGENCE
+------------------------------------------------
+TITLE: ECLIPSE V6: ADVANCED AI PARTY & RAID INTELLIGENCE
+Companion AI/Boss/Combat/QA.
+Shared participant model: stable ID, character/class, party slot, role, equipment/talents, attributes/statuses, position, encounter assignment, controller type. AI and human control same validated gameplay actions, not separate combat implementations.
+DECISION LAYERS: survival/dodge hazards; role rotations; encounter assignments; player command interpretation; recovery from blocked paths/fallen allies/failed mechanics. Tanks threat/defensive/tank swaps; healers triage/dispels/saves; DPS burst/interrupt/target switching; support buffs/debuffs.
+COMMANDS: follow, stay, regroup, defend, focus, interrupt, assignment, spread/stack, positioning markers via tactical wheel.
+DEBUG: expose reasons for AI action, cooldown/status/target; behavior tree/blackboard/EQS or fit-for-purpose utility AI. Do not give bots omniscient knowledge; difficulty-adjusted reaction times. Companion builds and progression work and survive save/load.
+TEST: solo+4 dungeon and solo+9 raid, interrupts, tank swaps, healer priorities, hazards, mechanics needing concurrent agents, wipe and rejoin. Future humans may occupy same slots but replication later. Report actual play evidence.
+
+PROMPT 14 — COMPLETE BOSS PRODUCTION SYSTEM
+------------------------------------------
+TITLE: ECLIPSE V6: COMPLETE BOSS PRODUCTION SYSTEM
+Boss/Companion/Animation/VFX/QA.
+Read V6's EXACT 14 canonical bosses. Registry entries: ID/name, region/type, lore, visual identity, recommended level, arena, attacks, phase triggers, telegraphs/counters, party assignments, animation/VFX/audio, wipe/reset/checkpoint, loot/story flags, test cases.
+Framework: aggro, phase transitions, ability scheduling, AOE, environmental hazards, fracture transformations, summoned adds, interrupt windows, role tasks, recovery and rewards. Build Solara Cathedral canonical boss first (three phases if lore permits) with polished animation/VFX/music/AI coordination, then scale to remaining thirteen. Boss must be fair, legible, challenging, complete without exploits, reliably reset, and save rewards. Difficulty is not just health scaling. Never introduce fifteenth boss unintentionally. Keep per-boss evidence and status.
+
+PROMPT 15 — QUEST / FULL RPG CONTENT PIPELINE
+---------------------------------------------
+TITLE: ECLIPSE V6: COMPLETE GAMEPLAY CONTENT PIPELINE
+Narrative/Progression/World/QA.
+Canonical content registry: regions, settlements, dungeons, raids, bosses, NPCs, quests, factions, classes, specs, spells, loot, crafting resources, story/world flags, dependencies. Reuse stable IDs.
+CORE LOOP: explore -> discover -> quest -> combat -> loot -> improve -> affect world -> save.
+First full Solara sequence: arrive/explore, meet NPC, understand motivation, quest objective, fight/investigate, recruit companions, dungeon, major boss, loot and progression, persistent consequence, successful save/reload. Integrate all UI triggers and progression.
+Derive leveling, talents, gear/crafting from V6; proposed numbers if missing must be approved. Tune early/mid/end-game. Meaningful narrative decisions, consistent alternate world states, diverse quest types, cinematic and dialogue. Don't fill big open world with repetitive filler. Success means completing the playable sequence in packaged Windows build without editor cheats or manual save edits. Track authored/implemented/playable/polished/tested separately.
+
+PROMPT 16 — INDEPENDENT QA & PERFORMANCE LAB
+--------------------------------------------
+TITLE: ECLIPSE V6: INDEPENDENT QA & PERFORMANCE LAB
+Separate independent agents; feature author is not sole approver.
+AUTOMATED: compile/startup, duplicate IDs/missing refs, invalid spells/GCD/procs, save schema/migrations, quest/reward flags, item exploits, attributes, AI role tasks, boss states, damage/heal limits, keybind/UI errors.
+PLAY: new character, combat responsiveness, combos/talents, AI dungeon and raid, boss wipe, inventory, quests, persistence, edge cases.
+PERF SCENARIOS: outdoor, Cathedral, particle-heavy fights, 1+4/1+9 AI, encounter peaks, streaming and loading. Measure frame-time CPU/GPU, VRAM/RAM, shaders/stutters, VFX/AI animation cost, crash rates. 60FPS target on documented reference PC, scalability presets, not fantasy claims. Report defects with repro, expected/observed, logs, owner, regression test. Critical issues block release. Validate real packaged release.
+
+====================================================================
+PART F — TALENT TREE / BUILDS / AFFINITY SYNERGY PROMPTS
+====================================================================
+
+PROMPT 17 — MASTER TALENT TREE, BUILDCRAFT & AFFINITY SYNERGY
+------------------------------------------------------------
+TITLE: ECLIPSE V6: MASTER TALENT TREE, BUILDCRAFT & AFFINITY SYNERGY DIRECTIVE
+Momentum Labs | Hermes | Malene | Forge | UE5.8
+
+MISSION: Deep, interconnected, strategic character builds inspired conceptually by WoW's class/spec/hero trees, but original Eclipse implementation. 17 classes and 45 dual affinities as V6 confirms; 400+ spell program under construction. A talent should change play, not merely add generic percentage stats. Talents within each tree, across trees and across affinities must mutually reinforce chosen playstyle, combo sequences, mechanics and mode.
+
+PHASE 0 AUDIT: Read V6 and verify exactly approved classes/specs/affinities/spell IDs; inspect current EclipseClassRoles, EclipseClassAbilities, EclipseSpellSystem, EclipseCombatSystem, EclipseDamageRotation, EclipseDRSystem, EclipseHUDSystem and EclipseSaveSystem and existing progression/talent systems; preserve spell agent file ownership. Don't invent canonical systems.
+
+PHASE 1 LAYERS:
+(A) Class Foundation: class identity, survival, movement, universal utility/resources/core abilities.
+(B) Specialization: role, rotation, key abilities, keystones and capstones with distinctive playstyle.
+(C) Affinity: mechanic that determines element/reality control, debuffs, resources, interactions.
+(D) Dual-affinity Convergence: nodes that make two affinity mechanics cooperate, with benefits AND tradeoffs; may transform current abilities or unlock convergence action.
+(E) Game Mode Adaptation: solo, 5-player, 10-player, world boss, arena, battleground; same core fantasy but alternative utility, burst/sustain, defense and counterplay. PvE and PvP tuning profiles where needed, no uniform damage parity for different roles.
+
+PHASE 2 NODE TYPES: active unlock, passive change, ability transform, proc/reaction, resource generator/spender, cast/cooldown interaction, conditional dmg/heal, defense/mobility, CC/utility, ability synergy, cross-affinity convergence, choice node, keystone, capstone. Do not use filler +5% nodes where dynamic mechanics are possible.
+
+PHASE 3 SYNERGY GRAPH: Before drawing trees, map producers and consumers of statuses/resources, triggers, procs, cooldown dependencies, setup->payoff combos, defensive/utility interactions, team synergies, mutual exclusion, prerequisites and cross-affinity conversions. Classify dependency/direct synergy/optional complement/situational synergy/anti-synergy. Detect cycles, unreachable nodes, contradictory effects, impossible spell references.
+
+PHASE 4 TREE PLACEMENT: Coherent branches, thematic progression, logical prerequisites, understandable early/mid/capstone nodes, meaningful cross-branch points without mandatory unrelated filler. For each branch specify combat fantasy, rotation, resources, role, strengths/weaknesses, keystone, capstone, complementary talents, affinity links, PvE/PvP. Avoid universal mandatory nodes and no-choice math traps. Baseline survival/utility available at reasonable cost.
+
+PHASE 5 EVERY TALENT DATA CONTRACT:
+Canonical talent ID; name/description; class/spec; affinity/pair; node type; tier/branch/position; point/max rank; unlock/prereqs; spells affected; gameplay tags; exact trigger/activation; effect and numbers; resource/cast/GCD/cooldown; proc/ICD/stacks; PvE/PvP overrides; synergy and conflict links; icon/tooltips; VFX/SFX/animation; companion AI usage; save ID; tests.
+
+PHASE 6 BUILD ARCHETYPES:
+For every V6 class/spec, purposeful builds across approved affinities/modes. Each build has name, class/spec/pair/role/mode, actual point allocation, central mechanic, core rotation/opening/burst/defensive plan, resource sustainability, talents and why each selected, companion/team synergy, recommended gear stats, weaknesses/counters, substitutes, expected targets and verification status. Not "optimal" absent evidence.
+
+PHASE 7 BALANCE LAB:
+Test sustained/burst/split/AOE DPS, heals, mitigation, sustain, CC/control, mobility, survival, role group support, resource loops, cooldown timings, progression tiers. Include mobile/armored/interrupt-heavy multi-target/long-fight raid/arena profiles. Seed randomness for reproducibility. Detect infinite proc loops, unreachable abilities, overpowered/no-value nodes and broken combinations. Pair simulation with subjective feel review. Assess relative role-specific ranges, not flatten identities.
+
+PHASE 8 TALENT UI:
+Branch connecting lines, affinity colors/icons, rank/prerequisites/lock reasons, detailed accurate tooltips, real point tracking, preview/undo/reset, saved loadouts, versioned build import/export, compare builds, recommended starters, controller + accessibility, optional synergy highlight overlays. In-game trackers for DR/cooldowns/important buffs/debuffs; no addon needed.
+
+PHASE 9 PROGRESSION/SAVES: V6-derived points/levels/respec/affinity unlocks; if unspecified submit tunable proposal. Handle saved allocations, alternate loadouts, safe respec, validations, migration when nodes retire/change, invalid IDs and exploit prevention.
+
+PHASE 10 AI: AI companions use legal talent-enhanced actions; understand combos, CDs, resources and role priorities. Their actions follow same engine rules as player's.
+
+PHASE 11 ENGINEERING: data-driven nodes/graph, reusable effect execution, GAS when fit, isolated data/UI/logic, future server authority boundary, single writer per schema, Forge integration + QA independence. Do NOT generate all trees until one sample family is proven in engine.
+
+FIRST DELIVERABLE: ONE V6-verified class + specialization + dual-affinity pair; interconnected class/spec/affinity/convergence paths; >=3 mechanically distinct playable builds; rotations; functional combos and UI; save/load; AI usage; automated tests and actual gameplay. Then scale to remaining V6 roster.
+
+DEFINITION OF DONE FOR TALENT: canonical ID; valid prereqs; implemented effect; correct ability/talent interaction; resource/CD/GCD; companion support; UI; persistence; tests; in-engine proof.
+
+ILLUSTRATIVE NONCANONICAL EXAMPLE: Fire + Time (ONLY if pair exists in V6 or explicitly approved). Burn stacks -> Temporal Echo repeats qualifying ability -> synergy advances Burn tick -> capstone Paradox Inferno detonates accumulated Burn. The important principle is setup/interaction/payoff across trees. Do NOT write this as canonical if V6 does not authorize the pair.
+
+PROMPT 18 — DEDICATED BUILDCRAFT & SYNERGY ARCHITECT AGENT
+---------------------------------------------------------
+TITLE: ECLIPSE V6: BUILDCRAFT & SYNERGY DESIGN AGENT
+Reuse existing responsible agent or create Eclipse Buildcraft Architect with nonoverlapping file scope. Work alongside Spell System, don't rewrite spell files.
+GOAL: ensure meaningful, mechanically coherent, diverse class/spec/affinity/mode builds with recognizable rotations and counterplay.
+RULES: each major build has central mechanic; related talents mechanically enhance it; setup/finisher combos require skill and resources; branches have internal purpose; cross-branch choices are meaningful; dual affinity rewards BOTH affinities without gaining all strengths for free; avoid dominant/no-choice or dead branches; comply with DR, cooldown, proc and resource limits; solo/dungeon/raid/arena/BG differences without losing build identity; AI can execute.
+SCORE: mechanical coherence, accessibility, rotation completeness, resource sustainability, offense, defense, CC/utility, encounter adaptability, counterplay, cognitive complexity, build diversity. Define score method, label simulation vs assumptions, don't invent data.
+ANALYSIS PER NODE: abilities benefiting; talents complementary/conflicting; affinities eligible; suitable modes; archetypes depending on it; new player decision created; overlap with existing talents; unreachable paths; impact on build strategy.
+OUTPUTS: synergy graphs per class/spec; affinity interaction matrix for all V6 approved pairings; sample point allocations; rotational priorities; invalid-build detection; DPS/healing/utility comparisons; underused/dominant fixes; data contracts; QA tests.
+FIRST ASSIGNMENT: one V6 class/spec/pair relevant to Solara with 3 distinct builds (sustained, high-risk burst, defense/control/support), real V6 spell IDs, full point maps, interactions, strengths/weaknesses. Independently validate before mass generation.
+
+SPECIAL GAME MODE PRINCIPLE:
+Raid emphasis often rewards sustained pressure, group mitigation, long encounter resources, coordinated mechanics; Arena emphasis rewards burst/setup, personal survival, escapes, interrupts, counterplay. Same build core identity; different supporting nodes and (when V6 allows) alternative capstone decisions. Don't automatically create separate classes for modes.
+
+TALENT QUALITY CHECKLIST:
+[ ] Build identity/mechanic clear.
+[ ] Dependencies and point budget valid.
+[ ] Affinity convergence uses both affinities.
+[ ] >=3 meaningfully different sample builds for test specialization.
+[ ] Rotation / combat priorities work.
+[ ] PvP tuning preserves counterplay.
+[ ] AI companions can use builds.
+[ ] UI, save/load and tests validated.
+
+====================================================================
+PART G — AUTONOMOUS PRODUCTION, TOOLCHAIN, AND TEST PIPELINE
+====================================================================
+
+PROMPT 19 — AUTONOMOUS GAME PRODUCTION INTELLIGENCE
+--------------------------------------------------
+TITLE: ECLIPSE V6: AUTONOMOUS GAME PRODUCTION INTELLIGENCE
+Build a dependency-aware studio with evidence-based decisions. Read V6/current Unreal/logs/agents, classify readiness (design/code/compile/editor/gameplay/packaged/production). Assign distinct files, IDs, dependencies, owners, acceptance tests, estimates and handoffs. Use isolated branches, approved interfaces, review/automated tests; architecture by Malene, integration by Forge. Diagnose failures as code bug/dependency/design conflict/tool incompatibility/asset absence/performance/creative approval. Resolve technical conflicts but escalate art/lore/budget changes. Improve templates after evidence-backed retrospective. Always know what works, what is broken, who owns it, next highest-impact task, and needed user action. No autonomous uncontrolled spending or fabricated background runs.
+
+PROMPT 20 — INTEGRATED AI GAME DEVELOPMENT PIPELINE (FULL INVENTORY)
+------------------------------------------------------------------
+TITLE: ECLIPSE V6: INTEGRATED AI GAME DEVELOPMENT PIPELINE
+Momentum Labs | Hermes | Malene | Forge | UE5.8
+MISSION: integrate available machine/software/AI into reliable, cost-aware pipeline. Finished product complete offline single-player first, AI companions; online realms/accounts later.
+PHASE 1 TOOL AUDIT: inspect actual installed software versions/executables/licenses/trials, APIs, drivers, dependencies, UE5.8, disk, source locations, billing, commercial use, plugin compatibility. C:\Downloads installer does not equal installed software. No unauthorized subscriptions/purchases/installations; don't expose secrets.
+PHASE 2 EDITOR AUTOMATION: Evaluate supported Unreal MCP experimental integration in SAFE project copy, localhost only; inspect Hermes MCP compatibility. Compare Aura separately and document overlap. ONE authorized actor/writer for editor operations to avoid collisions. Do not expose unauthenticated services to public network.
+PHASE 3 FACTORIES:
+CHARACTER: approved concept -> model -> retopo/UV -> materials -> rig -> anims -> UE -> play/profile.
+WORLD: design -> blockout -> procedural/modular -> materials -> lighting -> nav/collision -> HLOD/perf.
+BOSS: canonical V6 -> model/rig/anims -> phases/AI -> VFX/SFX -> companions -> tests.
+SPELL: canonical registry -> GAS/ability archetype -> tags -> anim/VFX/MetaSounds -> UI/test.
+EQUIPMENT: concept -> mesh/material -> attach/rig/skin -> item stats -> inventory/save.
+Each asset has manifest: origin, tools, rights, path, version and implementation status.
+PHASE 4 AGENTS: reuse existing, separate owners for Build/Gameplay/Spell/Talent/Character/Animation/World/Boss/Companions/VFX/Audio/UI/QA. Concurrency based on resources and file ownership.
+PHASE 5 RESOURCE SCHEDULER: Ryzen 7900X 12C/24T, 128GB DDR5, RX 6800 16GB, K: 4TB SSD. Check resource contention, disk space; don't run heavy generative video while Unreal shader compilation or high-VFX benchmarks; never auto-delete sources/backups.
+PHASE 6 VCS: verify private GitHub permissions; use LFS appropriately; exclude DerivedDataCache, Intermediate, Saved and other generated caches as applicable; external backups of source binaries/maps/Blueprints; test restoration. Never force push/delete/rewrite without permission.
+PHASE 7 ART IDENTITY: one shared style registry: proportions, race/class, affinity colors/signature, fracture effect, material palettes, worlds, animations, UI; all asset generators use same approved references.
+PHASE 8 PLAYABLE GAME: launch -> character -> Solara -> quest -> combat -> spells/talents -> companions -> dungeon -> boss -> loot -> save/reload. First milestone packaged Windows build.
+PHASE 9 AUTOMATED QA: build, imports, missing references, mesh/animation compatibility, spells/talents, combat, boss phases, companion logic, inventory, quests, save, crashes, performance; track generated/integrated/tested/approved separately.
+PHASE 10 OPTIMIZE: after each gate inspect bottlenecks, redundant subscriptions/tools, manual automation, agent conflicts, asset quality, templates, resource use. First audit tools and demonstrate ONE validated tool-to-Unreal asset handoff for Aetherborn, Cathedral and boss. Return actions needed by user.
+
+PROMPT 21 — DAILY EXECUTIVE PRODUCTION REVIEW
+--------------------------------------------
+TITLE: ECLIPSE V6: DAILY EXECUTIVE PRODUCTION REVIEW
+Hermes, inspect ACTUAL project and agent logs. Report: (1) implemented since last review; (2) verified Unreal functional features; (3) player-visible changes; (4) active agents/tasks; (5) conflicts; (6) errors/regressions/performance/quality issues; (7) highest-impact milestone; (8) safely parallelizable tasks; (9) user-computer/approval needs; (10) opportunities to avoid costs/duplicates. Clearly label code-authored, compiling, editor-tested, packaged-tested, production-ready. Recommend at most 5 next active independent assignments by dependency. Never fabricate results. Deliver better playable RPG, not more status pages.
+
+PROMPT 22 — SEVEN WORK PACKAGES / FIRST TECHNICAL WEEK
+------------------------------------------------------
+These are ordered work packages NOT guaranteed 24-hour deliverables:
+DAY 1: audit 49 source files, real build, plugins, licenses, source control.
+DAY 2: test editor automation via Unreal MCP/Aura in safe clone; decide interface owner.
+DAY 3: game-ready Aetherborn model/rig/materials/animation pipeline.
+DAY 4: playable Cathedral with collision, navigation, modularity, lighting.
+DAY 5: connect representative spells/talents to character and test in combat.
+DAY 6: canonical boss and 4 companion roles/encounter behaviors.
+DAY 7: attempt packaged Windows build, full loop, benchmarks and defect report.
+Dependencies supersede calendar. Nothing is 'done' without evidence.
+
+PROMPT 23 — FIRST 90 DAY DEVELOPMENT CHECKLIST
+----------------------------------------------
+Weeks 1-2: create reliable project/source control; compile and launch a build.
+Weeks 3-4: player movement, replicated-architecture-ready combat, two-client technical spike when appropriate.
+Weeks 5-6: local save/character persistence, inventory, reconnect/save recovery contracts.
+Weeks 7-8: small seamless outdoor playable region.
+Weeks 9-10: local dungeon transition, AI party, planned future instance boundary; optional early networking validation.
+Weeks 11-12: load, latency (if 2-client test), crashes, performance, packaged-build QA. Major content work continues only after gates pass.
+
+====================================================================
+PART H — ADDITIONAL GAME-WIDE FEATURES / OPEN PRODUCTION QUESTIONS
+====================================================================
+
+H1. COMPLETE GAME REQUIREMENTS TO TRACK
+---------------------------------------
+- Deep combat hit detection/telegraphs/dodge/block/parry/stagger/weapon swaps/targeting/motion and cooldown/cast/DR UI.
+- Companion intelligence including tactical wheel, role abilities, recruitment, builds and personalities.
+- Every V6 approved boss with phases, storytelling, cinematics and rewards.
+- Levels, stats, class/spec/affinity, talent trees, multi-loadout builds, respecs and balance.
+- Inventory, equippable armor, upgrades, rarity, crafting, materials, vendors, money.
+- Quests, dialogue, branching decisions, cinematics, faction reputation, world-state changes, persistent consequences.
+- World geography, mounts, fast travel, interactions, procedural+authored environments, weather, exploration and navigation.
+- Dungeons, grand dungeons, raids and boss battles (instanced loading screens allowed).
+- AI fill for all dungeon/raid slots, with human controller replacement architecture.
+- Solo PvP test facilities/bots and eventual online Arena/BG modes; competitive ranking and matchmaking later.
+- Player-facing HUD, cast bars, DR, buffs/debuffs, threat, timers, raid markers, party frames, damage/ability trackers so no addon is necessary.
+- Art direction and asset provenance; detailed characters with full skin-tone representation and textured hair.
+- Spell effects that physically respond to surroundings via light, decals, particles and measured surface effects.
+- Original soundtrack/ambient/SFX and cinematic sequencing.
+- Key rebinding, controller, colorblind/contrast, subtitles, scalable UI, accessibility, difficulty profiles, recovery from softlocks, crash recovery and save migrations.
+- 60FPS aspirational documented performance profile and graphics scalability.
+- Developer debug tools, automated tests, QA, telemetry local logs, release checklist.
+- Ability to complete whole game offline; no auth requirement.
+- Future MMO boundaries: separate character control from action execution; simulation from presentation; stable IDs, versioned saves; clear network authority contracts; later dedicated servers, regions/realms, transfers, anti-cheat, social systems.
+
+H2. DESIGN FEATURE: FRACTURED WORLD IDENTITY
+-------------------------------------------
+Build unique fractured-reality mechanics rooted in V6 lore (verify before canonizing): zones changing across history/alternate reality, paths/enemies/puzzles revealed under special conditions, bosses manipulating time and arena states, personalized consequences of campaign choices, memory/time/reality as game mechanics. For eventual multiplayer, personal world layers must have a shared-world compatible plan rather than silently desynchronizing players. Keep dramatic effects legible and performance-safe.
+
+H3. APP-SPECIFIC INTEGRATION RULES
+---------------------------------
+Meshy/Rodin: generate candidates, manually/automatically inspect topology/rigging/UV and licensing; do not claim finished hero on generation alone.
+Blender/ZBrush: cleanup/sculpt anatomy and armor, bake/correct normal maps, retopo, rig and validate weight deformation.
+Substance: author calibrated PBR; verify license/trials and UE export presets; central material libraries.
+Marvelous: garment simulation/export, optimized game topology, cloth runtime budgets.
+Houdini: PCG/terrain/destruction/VFX only if valid license and toolchain, otherwise Blender + UE PCG first.
+Mixamo: reference animation candidates; retarget/harmonize to one standard skeleton, fix foot slide, clip armor/wings, check current rights.
+Niagara: scalable templates and GPU budgets, gameplay tags and exposed parameters.
+MetaSounds/Quartz: legal music/audio cues, dynamic state mixing and frame-aligned game events.
+Unreal MCP/Aura: isolate, one editor writer, audit plugin/client compatibility, no public exposure, reversible operations.
+GitHub/Git LFS: private repo, clean ignores, license/provenance manifests and backups. Git source control is not automatically a sufficient asset backup.
+
+H4. MAJOR ARCHITECTURAL RISKS
+----------------------------
+- Huge V6 scope: 17 classes, 45 pairings, 400+ spells, 14 bosses implies enormous integration and balancing matrix.
+- Content concurrency: more agents can generate conflicts or many files that cannot compile.
+- Building complete solo RPG then adding multiplayer: save money on live services but network architecture can become costly if controller/camera/save assumptions are hardcoded. Keep future compatible systems and an early 2-client spike.
+- World Partition isn't multi-server replication; long-term MMO needs separate dedicated infrastructure and load testing.
+- AI raid bots need shared mechanics, acceptable reactions, actual pathfinding, tactical debugging and suitable challenge not free victories.
+- High-res Groom, Lumen/Nanite/VFX on RX6800 may force scalability. Avoid GPU upgrade before benchmark.
+- Proprietary/trial licenses and generated audio/assets require commercial permissions.
+- Heavy dependence on agent promises without in-game evidence; demand packaged builds, video, logs and restore checks.
+
+====================================================================
+PART I — DIRECT COPY/PASTE EXECUTIVE ORDERS
+====================================================================
+
+EXECUTIVE ORDER A — WHAT TO DO RIGHT NOW
+---------------------------------------
+Hermes: Use Master Game Bible V6, not V3. Read this entire handoff and inspect the real project and active agent registry. Preserve all active Spell System and other subagent ownership. Before creating more systems, verify build and source control, identify unfinished implementations, create a single canonical V6 registry for classes/specs/affinities/spells/bosses, and report exact blockers. Assign at most five nonconflicting work packages: Build Guardian; V6 Registry; Combat/Animation; Aetherborn Asset Pipeline; Solara Cathedral. Do not prematurely build every boss or every talent tree. Once their interfaces work, implement one canonical boss with a working 1+4 AI party, functional quest/loot/save and package a Windows playable slice. Capture in-game proof and benchmark.
+
+EXECUTIVE ORDER B — COMPANION/FUTURE MULTIPLAYER CONTRACT
+--------------------------------------------------------
+Every 5-player dungeon and 10-player raid must be completable with intelligent AI companions filling missing players. Use a universal participant/party contract so later humans can take the same slots without rewriting encounter logic. AI uses exactly the legal player combat systems and talent builds. Controllers differ, validated ability execution does not. Solo-first implementation now; networking later, but design for authoritative multiplayer. No fake claims that future network support already exists.
+
+EXECUTIVE ORDER C — SPELL/TALENT CONTRACT
+-----------------------------------------
+The 400+ spell/17-class/45-affinity report must be reconciled against V6 and real Spell System output. Build a registry of stable spell IDs, tags, resources, GCD/cooldown, ownership and interaction. Separate mechanics from VFX. Create a data-driven multi-layer talent tree: class, spec, affinity, convergence and mode variations. Model combos as graphs of setup/effect/consumption, avoid dead/broken nodes and balance PvE/PvP. Prove three coherent playable builds for ONE class/pair before generating full-scale trees. AI companions should understand the same build logic. Do not overwrite active spell files.
+
+EXECUTIVE ORDER D — ART-TO-GAME PIPELINE
+---------------------------------------
+Generate one APPROVED Aetherborn game-ready asset, one compelling playable Solara Cathedral region and one canonical 3-phase boss (where V6 permits), using the appropriate model, retopo, texturing, animation, procedural, VFX and UE engine tools. Retain inclusive character standards and distinctive wing/fracture markings. Verify licensing and proprietary/trial tool restrictions. Produce real in-engine screenshots, recorded gameplay and profiling, not stand-alone concept images. Reuse approved asset pipeline across every future V6 content item.
+
+EXECUTIVE ORDER E — DAILY TRUTH REPORT
+--------------------------------------
+For each system report: design status, code status, compilation, editor behavior, packaged-build behavior, test coverage, performance, defect severity, source paths, owner and direct proof. Clearly distinguish unverified reports from measured output. Next step must improve actual gameplay. Flag human-required GUI steps as an ordered single-session checklist. Never fabricate agent runs, editor actions, links, logs, screenshots, budgets or successful tests.
+
+====================================================================
+PART J — ACCEPTANCE MATRIX / CHECKPOINTS
+====================================================================
+
+GATE 0: V6 authoritative file found/read; agent registry; clean baseline and backup; tool/licenses audited; source compiles OR precise blockers documented.
+GATE 1: executable player with stable controls, combat, enemy AI, abilities, inventory and local save.
+GATE 2: Aetherborn character production mesh/rig/materials/wings and cohesive Gothic Solara Cathedral playable environment with camera/collision/nav.
+GATE 3: five-player party with player+4 legal AI companions; complete Solara dungeon; canonical boss phases/telegraphs/reset/loot.
+GATE 4: complete integrated quest->combat->loot->progression->save/reload; UI/audio/VFX; packaged Windows proof.
+GATE 5: 10-player raid with 1 human+9 AI; all mechanics, tank swaps, heal priorities, interrupts, role tasks, behavior debug and performance.
+GATE 6: reusable class/spec/affinity talents with V6 verified ID graph, three builds tested; integrate representative spells first, then bulk.
+GATE 7: expand finished pipeline across remaining V6 campaign/regions/bosses/classes/spells/gear/dungeons/raids; repeat QA gates per content item.
+GATE 8: comprehensive local single-player game quality pass, full campaign, every canonical boss, balance, accessibility, saves, performance and commercial licenses.
+GATE 9 (LATER): optional LAN with friend, replication, authoritative simulation, player replacing AI controller, reconnect/data safety.
+GATE 10 (MUCH LATER): hosted MMO services, NA-East then additional geographic regions, realm economics, cross-realm instances, guilds/rankings/anti-cheat, up to 5 lifetime character transfers, scaling and live operations.
+
+EXAMPLE EVIDENCE FORMAT:
+Feature: ECL-XXXX | Owner: agent | V6 requirement: section/page | Branch/commit: ... | Files: ... | Source authored? | Compiler command and log | Editor test logs | Packaged build path | User-visible test recording/screenshots | Perf measurements | QA results | Blockers | Next action. Do not auto-fill success values.
+
+====================================================================
+PART K — WHAT THE USER SHOULD BE ASKED TO DO LOCALLY
+====================================================================
+
+When physical/GUI work is unavoidable, prepare ONE guided session with exact sequential steps and expected result/failure recovery:
+- Confirm Unreal 5.8 project/Visual Studio C++ toolchain and open editor to generate project files/build only when needed.
+- Approve installer/license prompts for selected tools after verifying commercial terms.
+- Validate plugin security and editor automation on a copy.
+- Import approved hero/enemy/animation/level assets if automation cannot handle it.
+- Create/assign necessary Blueprint subclasses, materials, Animation Blueprints and controllers only where scripting cannot reliably do so.
+- Launch playable map, record screenshots/video, profile performance, package and smoke-test Windows executable.
+- Verify saves, combat, spells, AI party, boss completion and loot.
+Hermes should not repeatedly interrupt the user for easily batched actions, and cannot claim GUI actions performed without access.
+
+====================================================================
+PART L — FULL PROGRAM STRATEGY AND REMAINING PRIORITIES
+====================================================================
+
+The earliest discussion asked: Can one solo developer make an MMO? YES, a small online RPG or MMO-inspired game is achievable, but a WoW-size production requires enormous content, live operations and backend security/scaling. The recommended plan evolved to an OFFLINE SINGLE-PLAYER-FIRST COMPLETE GAME. This shift does not diminish the game ambition. It deliberately defers server expenses and public live infrastructure while the existing systems, boss roster and world are built and polished.
+
+Technical early architecture recommendations:
+- Unreal 5.8 C++ plus Blueprints, GAS, Enhanced Input and Animation Blueprints; world streaming with World Partition/HLOD; Niagara effects; Behavior Trees/EQS where useful; local versioned saves.
+- Backend ideas for later (NOT needed now): dedicated UE servers, C#/.NET or Go, PostgreSQL, Epic Online Services for relevant services, GameLift/PlayFab only when production need is proven.
+- Gameplay systems should have explicit ownership and clean APIs; choose network-safe designs where inexpensive without building the MMO today.
+- A hybrid of original art direction and reliable reusable licensed content may reduce budget dramatically. No need for more subscriptions until existing tools validated.
+
+Future regional realm rules currently proposed:
+- One game account across regions later.
+- Character progression bound to home realm.
+- Guilds and economy predominantly realm-specific.
+- Local overworld PvP realm-specific.
+- Dungeons/raids regional cross-realm matchmaking.
+- Ranked arenas regional; cross-region optional after latency tests.
+- Up to 5 lifetime transfers per character, with cooldowns and transfer limitations; do not finalize unapproved costs or paid transfer rules.
+- Don't open many empty realms; expand by measured concurrent demand.
+
+Creative priorities:
+- Eclipse should have a distinctive identity from Fracture, Time, Memory, other celestial domains, world consequences and compelling raid mechanics.
+- Aetherborn wings should be matching energy, not ordinary bird wings, consistent with skin fracture marks.
+- Full skin tone range and authentic textured hairstyles across selectable races.
+- AAA quality means coherent art, exceptional animation/game feel, encounter polish and performance, not simply cinematic config presets.
+- Unique, original names/systems and licensed assets only; reference games are inspirations rather than sources to copy.
+- The game must remain fun alone with smart AI companions, not require external online services for the main campaign.
+
+FINAL INSTRUCTION TO HERMES
+===========================
+Please ingest this consolidated handoff in full. Read the REAL Eclipse Master Game Bible V6, compare with active project and agent registry, and provide (a) an evidence-based current project audit, (b) a conflict/unknowns list, (c) the next five owner-scoped tasks in dependency order, (d) which prompts you will dispatch to existing agents or new supported subagents, (e) the exact first playable acceptance gate and how we can verify it on the user's Windows PC. Do not send a generic confirmation or pretend this document has been automatically implemented. Start with validation and controlled integration.
+
+END OF CONSOLIDATED HANDOFF
