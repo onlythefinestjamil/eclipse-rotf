@@ -369,13 +369,33 @@ GROUP SIZES (LOCKED):
 - Arena: 1v1, 2v2, 3v3, 5v5
 - Battleground: 10v10
 
-AI COMPANIONS:
-- Fill empty party slots in dungeons/raids
+AI COMPANIONS (FILL ALL EMPTY PARTY SLOTS):
+- In dungeons and raids, AI companions fill ALL empty party
+  slots automatically so every group is always full
+- A solo player entering a 5-player dungeon gets 4 AI companions
+  (1 healer + 3 DPS if they are the tank, or 1 tank + 1 healer +
+  2 DPS if they are a DPS class)
+- A solo player entering a 10-player raid gets 9 AI companions
+  filling all remaining roles (2 tanks, 2 healers, 6 DPS total
+  minus the players own role)
+- This lets players TEST dungeons and raids solo before adding
+  actual human players
+- When a human player joins, the AI companion in their role slot
+  is replaced in real-time without interrupting the encounter
+- AI companions use the SAME combat framework as human players:
+  same abilities, same GCD, same dodge, same resources, same talents
 - 8 personalities (Stoic, Aggressive, Protective, Tactical, Reckless,
-  Cautious, Devoted, Independent)
-- Use actual class abilities (not generic attacks)
-- 10 tactical commands (follow, attack, defend, retreat, focus, etc.)
-- Replaceable in real-time when human players join
+  Cautious, Devoted, Independent) affect AI behavior style
+- 10 tactical commands: Follow, Attack, Defend, Retreat, Focus
+  Target, Heal Priority, Spread Out, Group Up, Hold Position, Advance
+- AI companions are recruitable characters with names, personalities,
+  equipment, and progression - NOT generic bots
+- AI companions can be recruited at city taverns/bounty boards
+- Each AI companion has a class, level, gear, and talent build
+- AI companions level up alongside the player or can be hired at
+  the players current level for a gold cost
+- In PvP arenas, AI companions can fill practice matches
+  (1v1 vs AI, 2v2 vs AI, etc.) for training before real PvP
 
 ============================================================
   SECTION 11: BOSSES (14)
