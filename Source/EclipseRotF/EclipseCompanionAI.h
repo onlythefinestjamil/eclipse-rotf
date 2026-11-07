@@ -67,6 +67,7 @@ struct FCompanionProfile
 
     // Identity
     UPROPERTY(BlueprintReadWrite) FString Name = "";
+    UPROPERTY(BlueprintReadWrite) int32 SlotIndex = 0;
     UPROPERTY(BlueprintReadWrite) ECompanionPersonality Personality = ECompanionPersonality::Stoic;
     UPROPERTY(BlueprintReadWrite) EAncestry Ancestry = EAncestry::Solari;
     UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
