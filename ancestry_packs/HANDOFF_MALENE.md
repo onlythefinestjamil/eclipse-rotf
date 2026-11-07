@@ -51,3 +51,15 @@ SPECS: 30.08s, 1920x1080, HEVC 10-bit, 24fps, 14.2 Mbps, stereo AAC — 51MB.
 USE: this is the first full-length render — reference it for pacing, VO timing, and the
 ancestry montage when we do the Runway Gen-4 / higher-fidelity pass. Extract individual
 shot feedback from Jamil before any re-render.
+
+## UPDATE 4 — EXPANDED CANON: 20 BOSS + ENEMY CONTACT SHEETS
+
+`ancestry_packs/bosses/` — 20 Runway Agent contact sheets for the expanded-canon roster
+(19 bosses + 1 enemy type): Abyssal Maw, Aether Titan, Ashen Karthul, Bramblevil, Cruxaris,
+Fracture Cultist (enemy), Frostjaw, Glacier King, Ironcoil, Maw of Despair, Mycelial Queen,
+Nethermind, Pyre-Warden Velkor, Skyshatter, Solarion, Stormcaller Vex, The Eclipsed Sovereign,
+Veilweaver, Wyldheart, Zar-thul.
+
+USE: matches the 24-boss Expanded Canon lore sheet. Same rule as the ancestry sheets —
+design-lock starting points, validate each against the roster entry before accepted
+front/back references. The Eclipsed Sovereign is the flagship boss.
