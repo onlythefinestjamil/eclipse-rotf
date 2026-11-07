@@ -1,0 +1,79 @@
+{
+  "agents": [
+    {
+      "name": "Hermes",
+      "role": "Studio Orchestrator",
+      "objective": "Coordinate all agents, manage dependencies, schedule integration",
+      "files_owned": ["ECLIPSE_STUDIO_ORCHESTRATOR.md", "ECLIPSE_PROJECT_AUDIT.json"],
+      "dependencies": [],
+      "wip": "Project audit complete. Deploying first specialists.",
+      "blockers": [],
+      "validation_status": "N/A (coordinator)",
+      "deliverables": ["Project audit", "Agent registry", "Governance artifacts"],
+      "next_integration": "After Build Guardian + V6 Registry report back"
+    },
+    {
+      "name": "Forge",
+      "role": "Lead Implementation + Build Engineer",
+      "objective": "Verify compilation, establish build baseline, fix EclipseSaveSystem header",
+      "files_owned": ["Source/EclipseRotF/EclipseRotF.Build.cs", "Source/EclipseRotF/EclipseSaveSystem.*"],
+      "dependencies": ["UE5.8 installation", "Visual Studio build tools"],
+      "wip": "Pending deployment — Build Guardian task",
+      "blockers": ["EclipseSaveSystem.cpp missing .h header", "Compilation never attempted"],
+      "validation_status": "BLOCKED — no compilation attempted yet",
+      "deliverables": [],
+      "next_integration": "Report compilation status to Hermes"
+    },
+    {
+      "name": "Malene",
+      "role": "Technical Architect + V6 Compliance",
+      "objective": "Reconcile V6 content IDs (17 classes, 45 affinities, 14 bosses) against code",
+      "files_owned": [],
+      "dependencies": ["V6 Bible PDF", "All Eclipse*.h files"],
+      "wip": "Pending deployment — V6 Registry task",
+      "blockers": [],
+      "validation_status": "PENDING",
+      "deliverables": [],
+      "next_integration": "Report V6 compliance matrix to Hermes"
+    },
+    {
+      "name": "Combat Architect",
+      "role": "Hybrid Combat + Animation Contracts",
+      "objective": "Wire combat systems into playable form",
+      "files_owned": [],
+      "dependencies": ["Build Guardian verification", "V6 Registry"],
+      "wip": "NOT STARTED — waiting on build verification",
+      "blockers": ["Needs compilation verification first"],
+      "validation_status": "NOT STARTED",
+      "deliverables": [],
+      "next_integration": "After build + registry complete"
+    },
+    {
+      "name": "Character Art Director",
+      "role": "Aetherborn Hero Production",
+      "objective": "Produce playable Aetherborn with rig, materials, animations",
+      "files_owned": [],
+      "dependencies": ["Build Guardian", "Combat Architect interfaces"],
+      "wip": "NOT STARTED",
+      "blockers": ["Needs build baseline"],
+      "validation_status": "NOT STARTED",
+      "deliverables": [],
+      "next_integration": "After combat contracts defined"
+    },
+    {
+      "name": "World Art Director",
+      "role": "Solara Cathedral Environment",
+      "objective": "Build playable Solara Cathedral with Lumen + Nanite",
+      "files_owned": [],
+      "dependencies": ["Build Guardian"],
+      "wip": "NOT STARTED",
+      "blockers": ["Needs build baseline"],
+      "validation_status": "NOT STARTED",
+      "deliverables": [],
+      "next_integration": "After build verified"
+    }
+  ],
+  "active_count": 0,
+  "max_concurrent": 5,
+  "next_deployments": ["Forge/Build Guardian", "Malene/V6 Registry"]
+}
