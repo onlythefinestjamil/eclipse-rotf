@@ -75,3 +75,18 @@ NOTE: these are TEXT-ONLY generations (no reference images attached). Valid desi
 starting points for unnamed regions; for the Solara Cathedral and any stage already in UE5
 production, hold final acceptance until the image-to-video pass with the 15 reference
 images from HANDOFF_FORGE_ENVIRONMENT (still not pushed to GitHub as of this commit).
+
+## UPDATE 6 — FULL BESTIARY + NPC ROSTER (26 sheets)
+
+`ancestry_packs/enemies/` — 11 enemy types: Abyssal Scavenger, Blight Monstrosity, Eclipse
+Berserker, Fracture Executioner, Frost Reaver, Mycelial Sporeling, Rift Sentinel, Solar
+Inquisitor, Stonebound Brute, Thornling, Void Stalker.
+
+`ancestry_packs/npcs/` — 15 NPCs: Aether Warden, Alchemist, Banker, Blacksmith, Bounty
+Master, City Guard, Crafting Master, Faction Emissary, Guild Officer, Healer, Innkeeper,
+Lorekeeper, Portal Guide, Quest Giver, Trade Vendor.
+
+These complete the visual chain for Unreal/Aura: ancestries (13) + bosses (19+enemy) +
+enemies (11) + NPCs (15) + stage plates (20) = the full aesthetics reference library.
+Same rule: design-lock starting points — validate against lore entries before UE5/Aura
+production passes.
