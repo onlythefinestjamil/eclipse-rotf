@@ -291,13 +291,13 @@ bool UEclipseInputSystem::TryActivateSlot(EActionBarSlot Slot)
     // Action bar slots are GCD-locked (spells/abilities)
     if (bGCDActive)
     {
-        UE_LOG(LogTemp, Log, TEXT("[Input] Action bar slot %d blocked by GCD", (int32)Slot));
+        UE_LOG(LogTemp, Log, TEXT("[Input] Action bar slot %d blocked by GCD"), (int32)Slot);
         return false;
     }
     
     if (bAnimationLocked)
     {
-        UE_LOG(LogTemp, Log, TEXT("[Input] Action bar slot %d blocked by animation lock", (int32)Slot));
+        UE_LOG(LogTemp, Log, TEXT("[Input] Action bar slot %d blocked by animation lock"), (int32)Slot);
         return false;
     }
     
@@ -308,7 +308,7 @@ bool UEclipseInputSystem::TryActivateSlot(EActionBarSlot Slot)
     {
         // Trigger GCD for the activated spell/ability
         TriggerGCD(GCDDuration);
-        UE_LOG(LogTemp, Log, TEXT("[Input] Action bar slot %d activated — GCD triggered", (int32)Slot));
+        UE_LOG(LogTemp, Log, TEXT("[Input] Action bar slot %d activated — GCD triggered"), (int32)Slot);
     }
     
     return bActivated;

@@ -56,31 +56,31 @@ struct FActionBarEntry
     GENERATED_BODY()
 
     UPROPERTY(BlueprintReadWrite) EActionBarSlot Slot = EActionBarSlot::Slot1;
-    UProperty(BlueprintReadWrite) EActionType ActionType = EActionType::Spell;
-    UProperty(BlueprintReadWrite) int32 ActionID = 0; // Spell ID, Ability type, Item ID, or Macro ID
-    UProperty(BlueprintReadWrite) FString DisplayName = "";
-    UProperty(BlueprintReadWrite) FString Keybind = "";
-    UProperty(BlueprintReadWrite) FString IconPath = "";
-    UProperty(BlueprintReadWrite) float CooldownRemaining = 0.0f;
-    UProperty(BlueprintReadWrite) float CooldownMax = 0.0f;
-    UProperty(BlueprintReadWrite) bool bIsOnCooldown = false;
-    UProperty(BlueprintReadWrite) bool bIsUsable = true;
-    UProperty(BlueprintReadWrite) float ResourceCost = 0.0f;
-    UProperty(BlueprintReadWrite) EResourceType ResourceType = EResourceType::Mana;
-    UProperty(BlueprintReadWrite) bool bRequiresFlow = false;
-    UProperty(BlueprintReadWrite) float FlowCost = 0.0f;
+    UPROPERTY(BlueprintReadWrite) EActionType ActionType = EActionType::Spell;
+    UPROPERTY(BlueprintReadWrite) int32 ActionID = 0; // Spell ID, Ability type, Item ID, or Macro ID
+    UPROPERTY(BlueprintReadWrite) FString DisplayName = "";
+    UPROPERTY(BlueprintReadWrite) FString Keybind = "";
+    UPROPERTY(BlueprintReadWrite) FString IconPath = "";
+    UPROPERTY(BlueprintReadWrite) float CooldownRemaining = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float CooldownMax = 0.0f;
+    UPROPERTY(BlueprintReadWrite) bool bIsOnCooldown = false;
+    UPROPERTY(BlueprintReadWrite) bool bIsUsable = true;
+    UPROPERTY(BlueprintReadWrite) float ResourceCost = 0.0f;
+    UPROPERTY(BlueprintReadWrite) EResourceType ResourceType = EResourceType::Mana;
+    UPROPERTY(BlueprintReadWrite) bool bRequiresFlow = false;
+    UPROPERTY(BlueprintReadWrite) float FlowCost = 0.0f;
 };
 
 USTRUCT(BlueprintType)
-struct FKeybind
+struct FEclipseKeybind
 {
     GENERATED_BODY()
 
-    UProperty(BlueprintReadWrite) FString Action = ""; // e.g. "CastSlot1", "Dodge", "Parry"
-    UProperty(BlueprintReadWrite) FString Key = ""; // e.g. "1", "Q", "Space", "LMB"
-    UProperty(BlueprintReadWrite) FString Modifier = ""; // e.g. "Shift", "Ctrl", "Alt"
-    UProperty(BlueprintReadWrite) FString Label = ""; // e.g. "Fireball", "Dodge Roll"
-    UProperty(BlueprintReadWrite) bool bRebindable = true;
+    UPROPERTY(BlueprintReadWrite) FString Action = ""; // e.g. "CastSlot1", "Dodge", "Parry"
+    UPROPERTY(BlueprintReadWrite) FString Key = ""; // e.g. "1", "Q", "Space", "LMB"
+    UPROPERTY(BlueprintReadWrite) FString Modifier = ""; // e.g. "Shift", "Ctrl", "Alt"
+    UPROPERTY(BlueprintReadWrite) FString Label = ""; // e.g. "Fireball", "Dodge Roll"
+    UPROPERTY(BlueprintReadWrite) bool bRebindable = true;
 };
 
 UCLASS(Blueprintable)
@@ -161,11 +161,11 @@ public:
 
     // Get all keybinds
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Keybinds")
-    TArray<FKeybind> GetAllKeybinds() const;
+    TArray<FEclipseKeybind> GetAllKeybinds() const;
 
     // Get keybind for an action
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Keybinds")
-    FKeybind GetKeybind(const FString& Action) const;
+    FEclipseKeybind GetKeybind(const FString& Action) const;
 
     // Reset to defaults
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Keybinds")
@@ -181,7 +181,7 @@ public:
 
 private:
     TArray<FActionBarEntry> ActionBarSlots; // 20 slots
-    TArray<FKeybind> Keybinds;
+    TArray<FEclipseKeybind> Keybinds;
 
     // Combat action keybinds (separate from action bar)
     void InitializeCombatKeybinds();

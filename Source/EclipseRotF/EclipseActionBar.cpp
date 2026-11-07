@@ -351,7 +351,7 @@ void UEclipseActionBar::InitializeDefaultKeybinds()
     FString NumberKeys[] = {"1","2","3","4","5","6","7","8","9","0"};
     for (int32 i = 0; i < 10; i++)
     {
-        FKeybind kb;
+        FEclipseKeybind kb;
         kb.Action = FString::Printf(TEXT("CastSlot%d"), i + 1);
         kb.Key = NumberKeys[i];
         kb.Label = FString::Printf(TEXT("Action Bar Slot %d"), i + 1);
@@ -362,7 +362,7 @@ void UEclipseActionBar::InitializeDefaultKeybinds()
     FString LetterKeys[] = {"Q","E","R","F","V"};
     for (int32 i = 0; i < 5; i++)
     {
-        FKeybind kb;
+        FEclipseKeybind kb;
         kb.Action = FString::Printf(TEXT("CastSlot%d"), i + 11);
         kb.Key = LetterKeys[i];
         kb.Label = FString::Printf(TEXT("Action Bar Slot %d"), i + 11);
@@ -373,7 +373,7 @@ void UEclipseActionBar::InitializeDefaultKeybinds()
     FString ShiftKeys[] = {"1","2","3","Q","E"};
     for (int32 i = 0; i < 5; i++)
     {
-        FKeybind kb;
+        FEclipseKeybind kb;
         kb.Action = FString::Printf(TEXT("CastSlot%d"), i + 16);
         kb.Key = ShiftKeys[i];
         kb.Modifier = "Shift";
@@ -385,7 +385,7 @@ void UEclipseActionBar::InitializeDefaultKeybinds()
 void UEclipseActionBar::InitializeCombatKeybinds()
 {
     // Manual combat actions (not on action bar, separate keybinds)
-    FKeybind CombatBinds[] = {
+    FEclipseKeybind CombatBinds[] = {
         {"LightAttack", "LMB", "", "Light Attack (R1)", true},
         {"HeavyAttack", "RMB", "", "Heavy Attack (R2)", true},
         {"ChargedAttack", "RMB", "Hold", "Charged Attack (Hold R2)", true},
@@ -410,7 +410,7 @@ void UEclipseActionBar::InitializeCombatKeybinds()
     }
 
     // Party/raid commands
-    FKeybind PartyBinds[] = {
+    FEclipseKeybind PartyBinds[] = {
         {"PartyCommandFollow", "F1", "", "Party: Follow Me", true},
         {"PartyCommandAttack", "F2", "", "Party: Attack My Target", true},
         {"PartyCommandHold", "F3", "", "Party: Hold Position", true},
@@ -427,7 +427,7 @@ void UEclipseActionBar::InitializeCombatKeybinds()
     }
 
     // UI toggles
-    FKeybind UIBinds[] = {
+    FEclipseKeybind UIBinds[] = {
         {"ToggleInventory", "I", "", "Inventory", true},
         {"ToggleCharacter", "C", "", "Character Sheet", true},
         {"ToggleSkills", "K", "", "Skills/Talents", true},
@@ -463,19 +463,19 @@ bool UEclipseActionBar::RebindKey(const FString& Action, const FString& NewKey, 
     return false;
 }
 
-TArray<FKeybind> UEclipseActionBar::GetAllKeybinds() const
+TArray<FEclipseKeybind> UEclipseActionBar::GetAllKeybinds() const
 {
     return Keybinds;
 }
 
-FKeybind UEclipseActionBar::GetKeybind(const FString& Action) const
+FEclipseKeybind UEclipseActionBar::GetKeybind(const FString& Action) const
 {
     for (const auto& kb : Keybinds)
     {
         if (kb.Action == Action)
             return kb;
     }
-    return FKeybind();
+    return FEclipseKeybind();
 }
 
 void UEclipseActionBar::ResetKeybinds()

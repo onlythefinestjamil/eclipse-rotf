@@ -17,9 +17,9 @@ void AEclipseGameMode::BeginPlay()
 {
     Super::BeginPlay();
 
-    UE_LOG(LogEclipse, Log, TEXT("Eclipse Game Mode: %s"), *UEnum::GetValueAsString(CurrentMode));
-    UE_LOG(LogEclipse, Log, TEXT("Movement Style: %s"), *UEnum::GetValueAsString(MovementStyle));
-    UE_LOG(LogEclipse, Log, TEXT("Online: %s"), bIsOnline ? TEXT("Yes") : TEXT("No"));
+    UE_LOG(LogTemp, Log, TEXT("Eclipse Game Mode: %s"), *UEnum::GetValueAsString(CurrentMode));
+    UE_LOG(LogTemp, Log, TEXT("Movement Style: %s"), *UEnum::GetValueAsString(MovementStyle));
+    UE_LOG(LogTemp, Log, TEXT("Online: %s"), bIsOnline ? TEXT("Yes") : TEXT("No"));
 }
 
 void AEclipseGameMode::SetGameMode(EGameModeType Mode)
@@ -31,38 +31,38 @@ void AEclipseGameMode::SetGameMode(EGameModeType Mode)
     case EGameModeType::OfflineStory:
         bIsOnline = false;
         MaxPlayers = 1;
-        UE_LOG(LogEclipse, Log, TEXT("Mode: Offline Solo Story"));
+        UE_LOG(LogTemp, Log, TEXT("Mode: Offline Solo Story"));
         break;
 
     case EGameModeType::OnlineCoop:
         bIsOnline = true;
         MaxPlayers = 4;
-        UE_LOG(LogEclipse, Log, TEXT("Mode: Online Co-op (max 4)"));
+        UE_LOG(LogTemp, Log, TEXT("Mode: Online Co-op (max 4)"));
         break;
 
     case EGameModeType::OnlinePvE:
         bIsOnline = true;
         MaxPlayers = 10;
-        UE_LOG(LogEclipse, Log, TEXT("Mode: Online PvE (max 10)"));
+        UE_LOG(LogTemp, Log, TEXT("Mode: Online PvE (max 10)"));
         break;
 
     case EGameModeType::OnlinePvP:
         bIsOnline = true;
         MaxPlayers = 10;
-        UE_LOG(LogEclipse, Log, TEXT("Mode: Online PvP Arena"));
+        UE_LOG(LogTemp, Log, TEXT("Mode: Online PvP Arena"));
         break;
 
     case EGameModeType::OfflineCouch:
         bIsOnline = false;
         bIsCouchCoop = true;
         MaxPlayers = 4;
-        UE_LOG(LogEclipse, Log, TEXT("Mode: Offline Couch Co-op (1-4 local)"));
+        UE_LOG(LogTemp, Log, TEXT("Mode: Offline Couch Co-op (1-4 local)"));
         break;
 
     case EGameModeType::OfflineTraining:
         bIsOnline = false;
         MaxPlayers = 1;
-        UE_LOG(LogEclipse, Log, TEXT("Mode: Offline Training"));
+        UE_LOG(LogTemp, Log, TEXT("Mode: Offline Training"));
         break;
     }
 }
@@ -74,13 +74,13 @@ void AEclipseGameMode::SetOnline(bool bOnline)
     {
         CurrentMode = EGameModeType::OfflineStory;
     }
-    UE_LOG(LogEclipse, Log, TEXT("Online: %s"), bOnline ? TEXT("Enabled") : TEXT("Disabled"));
+    UE_LOG(LogTemp, Log, TEXT("Online: %s"), bOnline ? TEXT("Enabled") : TEXT("Disabled"));
 }
 
 void AEclipseGameMode::SetMovementStyle(EMovementStyle Style)
 {
     MovementStyle = Style;
-    UE_LOG(LogEclipse, Log, TEXT("Movement Style: %s"), *UEnum::GetValueAsString(Style));
+    UE_LOG(LogTemp, Log, TEXT("Movement Style: %s"), *UEnum::GetValueAsString(Style));
 }
 
 float AEclipseGameMode::GetDodgeIFrameDuration() const

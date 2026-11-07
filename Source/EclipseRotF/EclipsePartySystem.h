@@ -26,18 +26,18 @@ struct FPartyMember
 {
     GENERATED_BODY()
 
-    UProperty(BlueprintReadWrite) int32 SlotIndex = 0;
-    UProperty(BlueprintReadWrite) EPartySlot SlotType = EPartySlot::Empty;
-    UProperty(BlueprintReadWrite) FString Name = "";
-    UProperty(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
-    UProperty(BlueprintReadWrite) EClassRole Role = EClassRole::DPS;
-    UProperty(BlueprintReadWrite) ERaidRole RaidRole = ERaidRole::MeleeDPS;
-    UProperty(BlueprintReadWrite) float Health = 100.0f;
-    UProperty(BlueprintReadWrite) float MaxHealth = 100.0f;
-    UProperty(BlueprintReadWrite) bool bIsAlive = true;
-    UProperty(BlueprintReadWrite) bool bIsAI = true;
-    UProperty(BlueprintReadWrite) bool bReady = false;
-    UProperty(BlueprintReadWrite) FCompanionProfile CompanionProfile;
+    UPROPERTY(BlueprintReadWrite) int32 SlotIndex = 0;
+    UPROPERTY(BlueprintReadWrite) EPartySlot SlotType = EPartySlot::Empty;
+    UPROPERTY(BlueprintReadWrite) FString Name = "";
+    UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClassRole Role = EClassRole::DPS;
+    UPROPERTY(BlueprintReadWrite) ERaidRole RaidRole = ERaidRole::MeleeDPS;
+    UPROPERTY(BlueprintReadWrite) float Health = 100.0f;
+    UPROPERTY(BlueprintReadWrite) float MaxHealth = 100.0f;
+    UPROPERTY(BlueprintReadWrite) bool bIsAlive = true;
+    UPROPERTY(BlueprintReadWrite) bool bIsAI = true;
+    UPROPERTY(BlueprintReadWrite) bool bReady = false;
+    UPROPERTY(BlueprintReadWrite) FCompanionProfile CompanionProfile;
 };
 
 UCLASS(Blueprintable)

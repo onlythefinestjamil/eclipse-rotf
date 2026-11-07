@@ -34,7 +34,7 @@ void AEclipseVerticalSlice::InitializeAllSystems()
     UE_LOG(LogTemp, Log, TEXT("[VerticalSlice] Initializing all 14 systems..."));
 
     // Create all systems
-    CharacterSystem = NewObject<UEclipseCharacter>(this);
+    CharacterSystem = NewObject<AEclipseCharacter>(this);
     CombatSystem = NewObject<UEclipseCombatSystem>(this);
     DamageRotation = NewObject<UEclipseDamageRotation>(this);
     TargetingSystem = NewObject<UEclipseTargetingSystem>(this);

@@ -183,8 +183,8 @@ struct FBuildArchetype
     UPROPERTY(BlueprintReadWrite) FString CentralMechanic = "";
     UPROPERTY(BlueprintReadWrite) EClass Class = EClass::Vanguard;
     UPROPERTY(BlueprintReadWrite) EClassRole Role = EClassRole::DPS;
-    UPROPERTY(BlueprintReadWrite) EWeaponStatusElement PrimaryAffinity = EWeaponStatusEffect::None;
-    UPROPERTY(BlueprintReadWrite) EWeaponStatusElement SecondaryAffinity = EWeaponStatusEffect::None;
+    UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect PrimaryAffinity = EWeaponStatusEffect::None;
+    UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect SecondaryAffinity = EWeaponStatusEffect::None;
     UPROPERTY(BlueprintReadWrite) EGameModeContext PreferredMode = EGameModeContext::AllModes;
 
     UPROPERTY(BlueprintReadWrite) TArray<int32> AllocatedTalentIDs;

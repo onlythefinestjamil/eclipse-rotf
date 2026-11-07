@@ -3,11 +3,11 @@
 
 #pragma once
 #include "CoreMinimal.h"
+#include "EclipseCharacter.h"
 #include "GameFramework/GameModeBase.h"
 #include "EclipseVerticalSlice.generated.h"
 
 // Forward declarations
-class UEclipseCharacter;
 class UEclipseCombatSystem;
 class UEclipseDamageRotation;
 class UEclipseTargetingSystem;
@@ -48,7 +48,7 @@ public:
 
     // All systems
     UPROPERTY(BlueprintReadWrite, Category = "Eclipse|Slice")
-    UEclipseCharacter* CharacterSystem = nullptr;
+    AEclipseCharacter* CharacterSystem = nullptr;
 
     UPROPERTY(BlueprintReadWrite, Category = "Eclipse|Slice")
     UEclipseCombatSystem* CombatSystem = nullptr;

@@ -67,6 +67,7 @@ enum class EElementalAffinity : uint8
 UENUM(BlueprintType)
 enum class EResourceType : uint8
 {
+    None,
     Mana, Stamina, Rage, Reagents, Aether, Chi,
 };
 

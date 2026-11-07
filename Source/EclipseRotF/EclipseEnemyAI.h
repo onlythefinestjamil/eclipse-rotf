@@ -37,15 +37,15 @@ struct FEnemyStats
     UPROPERTY(BlueprintReadWrite) float Health = 100.0f;
     UPROPERTY(BlueprintReadWrite) float MaxHealth = 100.0f;
     UPROPERTY(BlueprintReadWrite) float Damage = 20.0f;
-    UProperty(BlueprintReadWrite) float MoveSpeed = 300.0f;
-    UProperty(BlueprintReadWrite) float AttackRange = 200.0f;
-    UProperty(BlueprintReadWrite) float AttackSpeed = 1.0f;
-    UProperty(BlueprintReadWrite) float Poise = 50.0f;
-    UProperty(BlueprintReadWrite) float MaxPoise = 50.0f;
-    UProperty(BlueprintReadWrite) float DetectionRange = 1500.0f;
-    UProperty(BlueprintReadWrite) int32 KillRewardFlow = 5;
-    UProperty(BlueprintReadWrite) int32 KillRewardGold = 10;
-    UProperty(BlueprintReadWrite) EEnemyType Type = EEnemyType::FracturedDrone;
+    UPROPERTY(BlueprintReadWrite) float MoveSpeed = 300.0f;
+    UPROPERTY(BlueprintReadWrite) float AttackRange = 200.0f;
+    UPROPERTY(BlueprintReadWrite) float AttackSpeed = 1.0f;
+    UPROPERTY(BlueprintReadWrite) float Poise = 50.0f;
+    UPROPERTY(BlueprintReadWrite) float MaxPoise = 50.0f;
+    UPROPERTY(BlueprintReadWrite) float DetectionRange = 1500.0f;
+    UPROPERTY(BlueprintReadWrite) int32 KillRewardFlow = 5;
+    UPROPERTY(BlueprintReadWrite) int32 KillRewardGold = 10;
+    UPROPERTY(BlueprintReadWrite) EEnemyType Type = EEnemyType::FracturedDrone;
 };
 
 UCLASS(Blueprintable)

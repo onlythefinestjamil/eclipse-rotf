@@ -64,7 +64,7 @@ struct FEncounterResult
     UPROPERTY(BlueprintReadWrite) int32 HumanCount = 0;
     UPROPERTY(BlueprintReadWrite) int32 Deaths = 0;
     UPROPERTY(BlueprintReadWrite) int32 RevivesUsed = 0;
-    UPROPERTY(BlueprintReadWrite) TArray<FDropEntry> LootDistributed;
+    UPROPERTY(BlueprintReadWrite) TArray<FLootDrop> LootDistributed;
     UPROPERTY(BlueprintReadWrite) int32 BossID = 0;
     UPROPERTY(BlueprintReadWrite) FString EncounterName = "";
 };

@@ -373,7 +373,7 @@ void UEclipseDamageRotation::StartAimingSpell(int32 SpellSlot)
     {
         AimedSpellSlot = SpellSlot;
         bIsAiming = true;
-        UE_LOG(LogTemp, Log, TEXT("[Rotation] Aiming spell %d...", SpellSlot));
+        UE_LOG(LogTemp, Log, TEXT("[Rotation] Aiming spell %d..."), SpellSlot);
     }
 }
 
@@ -388,6 +388,6 @@ float UEclipseDamageRotation::ReleaseAimedSpell()
     float Damage = CastSpell(AimedSpellSlot, 100.0f);
     AimedSpellSlot = -1;
 
-    UE_LOG(LogTemp, Log, TEXT("[Rotation] Aimed spell released — Damage: %.1f", ));
+    UE_LOG(LogTemp, Log, TEXT("[Rotation] Aimed spell released — Damage: %.1f"), Damage);
     return Damage;
 }

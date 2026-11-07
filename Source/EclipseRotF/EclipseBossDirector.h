@@ -7,7 +7,7 @@
 #include "UObject/NoExportTypes.h"
 
 #include "EclipseCharacter.h"
-#include "EclipseLootSystem.h" // For ERarity, FDropEntry
+#include "EclipseLootSystem.h" // For ERarity, FLootDrop
 #include "EclipseSpellSystem.h" // For FSpell
 #include "EclipseBossDirector.generated.h"
 
@@ -115,7 +115,7 @@ struct FBoss
     UPROPERTY(BlueprintReadWrite) int32 CurrentPhaseIndex = 0;
 
     // Attacks (per phase)
-    UPROPERTY(BlueprintReadWrite) TArray<TArray<FBossAttack>> PhaseAttacks; // [Phase][Attack]
+    UPROPERTY(BlueprintReadWrite) TArray<FBossAttack> PhaseAttacks; // [Phase][Attack]
 
     // Enrage
     UPROPERTY(BlueprintReadWrite) float EnrageTimerTotal = 600.0f; // 10 min default
@@ -123,8 +123,8 @@ struct FBoss
     UPROPERTY(BlueprintReadWrite) bool bIsEnraged = false;
 
     // Loot
-    UPROPERTY(BlueprintReadWrite) TArray<FDropEntry> GuaranteedDrops;
-    UPROPERTY(BlueprintReadWrite) TArray<FDropEntry> RandomDrops;
+    UPROPERTY(BlueprintReadWrite) TArray<FLootDrop> GuaranteedDrops;
+    UPROPERTY(BlueprintReadWrite) TArray<FLootDrop> RandomDrops;
     UPROPERTY(BlueprintReadWrite) int32 MinDrops = 2;
     UPROPERTY(BlueprintReadWrite) int32 MaxDrops = 5;
 
@@ -223,7 +223,7 @@ public:
 
     // Get boss loot on death
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Boss")
-    TArray<FDropEntry> GetLoot() const;
+    TArray<FLootDrop> GetLoot() const;
 
     // Reset boss for retry
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Boss")

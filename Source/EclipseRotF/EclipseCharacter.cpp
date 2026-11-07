@@ -10,7 +10,7 @@ AEclipseCharacter::AEclipseCharacter()
 void AEclipseCharacter::BeginPlay()
 {
     Super::BeginPlay();
-    UE_LOG(LogEclipse, Log, TEXT("Eclipse Character spawned - Ancestry: %d, Class: %d"), 
+    UE_LOG(LogTemp, Log, TEXT("Eclipse Character spawned - Ancestry: %d, Class: %d"), 
         (int32)Ancestry, (int32)CharacterClass);
 }
 
@@ -47,7 +47,7 @@ void AEclipseCharacter::AddKill(bool bIsHonorKill, bool bIsBossKill)
     if (NewLevel > WeaponLevel)
     {
         WeaponLevel = NewLevel;
-        UE_LOG(LogEclipse, Log, TEXT("Weapon leveled up to %d! (Kills: %d, Honor: %d, Boss: %d)"),
+        UE_LOG(LogTemp, Log, TEXT("Weapon leveled up to %d! (Kills: %d, Honor: %d, Boss: %d)"),
             WeaponLevel, TotalKills, HonorKills, BossKills);
     }
 }

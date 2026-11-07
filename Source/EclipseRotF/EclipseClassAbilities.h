@@ -40,12 +40,12 @@ struct FClassAbility
     UPROPERTY(BlueprintReadWrite) EAbilityType Type = EAbilityType::LightAttack;
     UPROPERTY(BlueprintReadWrite) float Cooldown = 5.0f;
     UPROPERTY(BlueprintReadWrite) float Damage = 50.0f;
-    UProperty(BlueprintReadWrite) float ResourceCost = 20.0f; // Mana/Aether/Rage cost
-    UProperty(BlueprintReadWrite) EResourceType ResourceType = EResourceType::Mana;
-    UProperty(BlueprintReadWrite) float Range = 200.0f; // 0 = melee
-    UProperty(BlueprintReadWrite) float CastTime = 0.0f; // 0 = instant
-    UProperty(BlueprintReadWrite) bool bIsInstant = true;
-    UProperty(BlueprintReadWrite) FString Description = "";
+    UPROPERTY(BlueprintReadWrite) float ResourceCost = 20.0f; // Mana/Aether/Rage cost
+    UPROPERTY(BlueprintReadWrite) EResourceType ResourceType = EResourceType::Mana;
+    UPROPERTY(BlueprintReadWrite) float Range = 200.0f; // 0 = melee
+    UPROPERTY(BlueprintReadWrite) float CastTime = 0.0f; // 0 = instant
+    UPROPERTY(BlueprintReadWrite) bool bIsInstant = true;
+    UPROPERTY(BlueprintReadWrite) FString Description = "";
 };
 
 UCLASS(Blueprintable)

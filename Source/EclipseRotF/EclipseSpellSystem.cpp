@@ -4,8 +4,8 @@
 //   WeaponArt(2), Defensive(3), Utility(3), Ritual(2)
 // Class abilities from EclipseClassAbilities.cpp are reflected as spells here.
 
-#include "EclipseClassRoles.h" // For EClassRole (required by header)
 #include "EclipseSpellSystem.h"
+#include "EclipseClassRoles.h" // For EClassRole (required by header)
 
 // ============================================================================
 // Static Helpers

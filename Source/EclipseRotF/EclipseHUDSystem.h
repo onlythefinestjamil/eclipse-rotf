@@ -6,16 +6,7 @@
 #include "UObject/NoExportTypes.h"
 #include "EclipseHUDSystem.generated.h"
 
-UENUM(BlueprintType)
-enum class EResourceType : uint8
-{
-    Health      UMETA(DisplayName = "Health - damage taken, death at 0"),
-    Stamina     UMETA(DisplayName = "Stamina - dodging, blocking, heavy attacks"),
-    Mana        UMETA(DisplayName = "Mana - spell casting"),
-    Rage        UMETA(DisplayName = "Rage - builds from taking damage, spend on berserker abilities"),
-    Aether      UMETA(DisplayName = "Aether/Chi-Ki - celestial energy, class-specific"),
-    Flow        UMETA(DisplayName = "Fracture Flow - builds from skillful play, spend on finishers"),
-};
+// EResourceType is defined in EclipseCharacter.h
 
 UENUM(BlueprintType)
 enum class EHUDWidget : uint8
@@ -49,12 +40,12 @@ struct FResourceBar
     GENERATED_BODY()
 
     UPROPERTY(BlueprintReadWrite) EResourceType Type = EResourceType::Health;
-    UProperty(BlueprintReadWrite) float Current = 100.0f;
-    UProperty(BlueprintReadWrite) float Max = 100.0f;
-    UProperty(BlueprintReadWrite) float RegenRate = 5.0f; // per second
-    UProperty(BlueprintReadWrite) float RegenDelay = 2.0f; // delay after use
-    UProperty(BlueprintReadWrite) FLinearColor BarColor = FLinearColor::White;
-    UProperty(BlueprintReadWrite) bool bVisible = true;
+    UPROPERTY(BlueprintReadWrite) float Current = 100.0f;
+    UPROPERTY(BlueprintReadWrite) float Max = 100.0f;
+    UPROPERTY(BlueprintReadWrite) float RegenRate = 5.0f; // per second
+    UPROPERTY(BlueprintReadWrite) float RegenDelay = 2.0f; // delay after use
+    UPROPERTY(BlueprintReadWrite) FLinearColor BarColor = FLinearColor::White;
+    UPROPERTY(BlueprintReadWrite) bool bVisible = true;
 };
 
 USTRUCT(BlueprintType)
@@ -63,10 +54,10 @@ struct FCooldownEntry
     GENERATED_BODY()
 
     UPROPERTY(BlueprintReadWrite) FString AbilityName = "";
-    UProperty(BlueprintReadWrite) float CooldownRemaining = 0.0f;
-    UProperty(BlueprintReadWrite) float CooldownMax = 5.0f;
-    UProperty(BlueprintReadWrite) int32 SlotIndex = 0;
-    UProperty(BlueprintReadWrite) UTexture2D* Icon = nullptr;
+    UPROPERTY(BlueprintReadWrite) float CooldownRemaining = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float CooldownMax = 5.0f;
+    UPROPERTY(BlueprintReadWrite) int32 SlotIndex = 0;
+    UPROPERTY(BlueprintReadWrite) UTexture2D* Icon = nullptr;
 };
 
 USTRUCT(BlueprintType)
@@ -75,10 +66,10 @@ struct FDebuffEntry
     GENERATED_BODY()
 
     UPROPERTY(BlueprintReadWrite) FString DebuffName = "";
-    UProperty(BlueprintReadWrite) float DurationRemaining = 0.0f;
-    UProperty(BlueprintReadWrite) float Stacks = 1.0f;
-    UProperty(BlueprintReadWrite) EWeaponStatusEffect ElementType = EWeaponStatusEffect::None;
-    UProperty(BlueprintReadWrite) FLinearColor IconColor = FLinearColor::Red;
+    UPROPERTY(BlueprintReadWrite) float DurationRemaining = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float Stacks = 1.0f;
+    UPROPERTY(BlueprintReadWrite) EWeaponStatusEffect ElementType = EWeaponStatusEffect::None;
+    UPROPERTY(BlueprintReadWrite) FLinearColor IconColor = FLinearColor::Red;
 };
 
 UCLASS(Blueprintable)

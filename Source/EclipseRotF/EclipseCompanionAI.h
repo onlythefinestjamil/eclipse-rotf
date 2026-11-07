@@ -67,32 +67,32 @@ struct FCompanionProfile
 
     // Identity
     UPROPERTY(BlueprintReadWrite) FString Name = "";
-    UProperty(BlueprintReadWrite) ECompanionPersonality Personality = ECompanionPersonality::Stoic;
-    UProperty(BlueprintReadWrite) EAncestry Ancestry = EAncestry::Solari;
-    UProperty(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
-    UProperty(BlueprintReadWrite) EClassRole Role = EClassRole::Tank;
-    UProperty(BlueprintReadWrite) ERaidRole RaidRole = ERaidRole::MainTank;
+    UPROPERTY(BlueprintReadWrite) ECompanionPersonality Personality = ECompanionPersonality::Stoic;
+    UPROPERTY(BlueprintReadWrite) EAncestry Ancestry = EAncestry::Solari;
+    UPROPERTY(BlueprintReadWrite) EClass CharacterClass = EClass::Vanguard;
+    UPROPERTY(BlueprintReadWrite) EClassRole Role = EClassRole::Tank;
+    UPROPERTY(BlueprintReadWrite) ERaidRole RaidRole = ERaidRole::MainTank;
     
     // Progression (companions have their own builds)
-    UProperty(BlueprintReadWrite) int32 Level = 1;
-    UProperty(BlueprintReadWrite) FString WeaponName = "Iron Greatsword";
-    UProperty(BlueprintReadWrite) int32 WeaponLevel = 1;
-    UProperty(BlueprintReadWrite) TArray<FString> Equipment;
-    UProperty(BlueprintReadWrite) int32 TalentPoints = 0;
-    UProperty(BlueprintReadWrite) TArray<FString> UnlockedAbilities;
+    UPROPERTY(BlueprintReadWrite) int32 Level = 1;
+    UPROPERTY(BlueprintReadWrite) FString WeaponName = "Iron Greatsword";
+    UPROPERTY(BlueprintReadWrite) int32 WeaponLevel = 1;
+    UPROPERTY(BlueprintReadWrite) TArray<FString> Equipment;
+    UPROPERTY(BlueprintReadWrite) int32 TalentPoints = 0;
+    UPROPERTY(BlueprintReadWrite) TArray<FString> UnlockedAbilities;
     
     // Stats (derived from class + level + equipment)
-    UProperty(BlueprintReadWrite) float Health = 100.0f;
-    UProperty(BlueprintReadWrite) float MaxHealth = 100.0f;
-    UProperty(BlueprintReadWrite) float Stamina = 100.0f;
-    UProperty(BlueprintReadWrite) float Mana = 50.0f;
-    UProperty(BlueprintReadWrite) float Flow = 0.0f;
+    UPROPERTY(BlueprintReadWrite) float Health = 100.0f;
+    UPROPERTY(BlueprintReadWrite) float MaxHealth = 100.0f;
+    UPROPERTY(BlueprintReadWrite) float Stamina = 100.0f;
+    UPROPERTY(BlueprintReadWrite) float Mana = 50.0f;
+    UPROPERTY(BlueprintReadWrite) float Flow = 0.0f;
     
     // Combat behavior
-    UProperty(BlueprintReadWrite) float AggressionLevel = 0.5f; // 0 = passive, 1 = aggressive
-    UProperty(BlueprintReadWrite) float SurvivalInstinct = 0.5f; // 0 = reckless, 1 = cautious
-    UProperty(BlueprintReadWrite) float MechanicAwareness = 0.8f; // 0 = ignores mechanics, 1 = perfect
-    UProperty(BlueprintReadWrite) float CoordinationScore = 0.7f; // 0 = loner, 1 = team player
+    UPROPERTY(BlueprintReadWrite) float AggressionLevel = 0.5f; // 0 = passive, 1 = aggressive
+    UPROPERTY(BlueprintReadWrite) float SurvivalInstinct = 0.5f; // 0 = reckless, 1 = cautious
+    UPROPERTY(BlueprintReadWrite) float MechanicAwareness = 0.8f; // 0 = ignores mechanics, 1 = perfect
+    UPROPERTY(BlueprintReadWrite) float CoordinationScore = 0.7f; // 0 = loner, 1 = team player
 };
 
 USTRUCT(BlueprintType)
@@ -100,12 +100,12 @@ struct FPartySlot
 {
     GENERATED_BODY()
 
-    UProperty(BlueprintReadWrite) EPartySlot SlotType = EPartySlot::Empty;
-    UProperty(BlueprintReadWrite) FCompanionProfile Companion;
-    UProperty(BlueprintReadWrite) int32 SlotIndex = 0;
-    UProperty(BlueprintReadWrite) bool bIsHuman = false;
-    UProperty(BlueprintReadWrite) FString PlayerName = "";
-    UProperty(BlueprintReadWrite) bool bReady = false;
+    UPROPERTY(BlueprintReadWrite) EPartySlot SlotType = EPartySlot::Empty;
+    UPROPERTY(BlueprintReadWrite) FCompanionProfile Companion;
+    UPROPERTY(BlueprintReadWrite) int32 SlotIndex = 0;
+    UPROPERTY(BlueprintReadWrite) bool bIsHuman = false;
+    UPROPERTY(BlueprintReadWrite) FString PlayerName = "";
+    UPROPERTY(BlueprintReadWrite) bool bReady = false;
 };
 
 UCLASS(Blueprintable)
