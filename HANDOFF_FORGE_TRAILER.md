@@ -132,3 +132,58 @@ THE LIGHT BROKE. WE DID NOT.
 
 — Malene / Windows
 November 6, 2026
+
+## CANVAS API KEYS (ALL 7 — FOR FORGE)
+All Canvas API keys are stored locally at:
+C:/Users/Tap/AppData/Local/hermes/cache/scratch/canvas_keys.txt
+
+Keys available:
+1. VITE_OPENAI_API_KEY — OpenAI (GPT, DALL-E, Sora)
+2. VITE_RUNWAY_API_KEY — Runway Gen-3 (video generation)
+3. VITE_STABILITY_API_KEY — Stability AI (Stable Diffusion)
+4. VITE_FAL_KEY — fal.ai (fast image generation)
+5. VITE_MINIMAX_API_KEY — MiniMax (text + video)
+6. VITE_CLOUDFLARE_TOKEN — Cloudflare (CDN, R2 storage)
+7. VITE_GOOGLE_API_KEY — Google (Gemini, Imagen)
+
+These are for The Canvas desktop app and can be used for:
+- Eclipse trailer re-rendering (Runway Gen-3)
+- Eclipse concept art generation (Stability, OpenAI)
+- Eclipse VFX generation (fal.ai)
+- Video upscaling (MiniMax)
+- Asset hosting (Cloudflare R2)
+
+Do NOT expose these keys in git, chat, or any external upload.
+Do NOT spend money without Jamil's explicit approval.
+
+### RUNWAY TRAILER RE-RENDER INSTRUCTIONS
+Previous trailer clips were generated at 720p using Wan 2.2 5B on Vast.ai.
+Jamil rejected the quality. The upgrade path is Runway Gen-3 for specific shots.
+
+Runway API:
+- Base URL: https://api.runwayml.com/v1
+- Auth: Bearer {key from runway_key.txt}
+- Endpoint: POST /text_to_video
+- Parameters:
+  - promptText: (use the 12-shot prompts from SHOT_LIST.csv)
+  - ratio: "16:9"
+  - duration: 5 (seconds)
+  - model: "gen3-alpha"
+
+### WHAT TO DO
+1. Read the Runway key from C:/Users/Tap/AppData/Local/hermes/cache/scratch/runway_key.txt
+2. For each of the 12 shots in SHOT_LIST.csv, call Runway Gen-3 to re-render
+3. Use the shot descriptions as prompts
+4. Download the re-rendered clips
+5. Upload to gofile.io and text Jamil the link
+6. Do NOT modify any game code — this is trailer only
+
+### PREVIOUS RUNWAY ISSUES
+- All Runway models previously returned "not enough credits"
+- Check if credits have been added to the Runway account
+- If still no credits, use the Vast.ai A100 14B script instead (already uploaded)
+
+### COST
+- Runway Gen-3: $0.68/sec at 1080p = ~$4 per 5-second clip = ~$48 for all 12 shots
+- Vast.ai 14B: Free (already paid $19.43 balance)
+- Jamil must approve any spending before running

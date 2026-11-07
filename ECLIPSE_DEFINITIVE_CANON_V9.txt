@@ -36,8 +36,9 @@ Wukong's fluidity, and World of Warcraft's class depth.
 THE ECLIPSE: A cosmic event that shattered reality across 6 regions.
 No one knows what caused it. This mystery is the central narrative
 thread and is NEVER answered in the base game. The final boss is
-the Eclipse Avatar — a manifestation of the Eclipse's raw power
-trying to reform itself by consuming all life.
+the Eclipsed Sovereign - a fallen god who consumed the Eclipse's
+raw power and used the Fracture to gain godhood. Defeating it
+doesn't answer the mystery; it saves the world from being consumed.
 
 THE FRACTURE: The wounds left in reality by the Eclipse. Each region
 has its own fracture — a visible tear in the sky/ground that pulses
@@ -45,11 +46,11 @@ with elemental energy. These fractures are the source of all magic.
 
 THE 6 REGIONS (Locked Canon):
 1. Solara — Sun-scorched cathedral lands. Fire + Holy aligned.
-2. Vaelwood — Ancient forest. Nature + Wind aligned.
+2. Vaelwood - Ancient forest. Earth + Wind aligned.
 3. Morvath — Shadow-drenched wastes. Shadow + Poison aligned.
 4. Aetheris — Floating islands of pure energy. Lightning + Soul aligned.
 5. Nhalor — Frozen peaks. Ice + Earth aligned.
-6. Umbryss — Abyssal deep. Water + Temporal aligned.
+6. Umbryss — Abyssal deep. Water + Temporal aligned. (CANON — Temporal restored)
 
 Each region has: 1 major city, 2-3 dungeons, 1 raid, 1 world boss,
 1 fracture questline, 1 regional boss.
@@ -68,7 +69,7 @@ creation. Full melaninated skin as default. 50+ hairstyles across
 all ancestries (locs, braids, twists, afros, fades, cultural).
 
   #  Name        Description              Racial Passive
-  1  Aetherborn  Lunarian energy beings   Fracture Sight (see hidden paths)
+  1  Aetherborn  Aetherborn                 Fracture Sight (see hidden paths)
   2  Solari      Sunforged humans          Solar Regen (+25% HP regen in sunlight)
   3  Vyrael      Elven kindred             Arcane Attunement (+15% spell power)
   4  Tharuk      Titanborn giants          Titanic Frame (+20% poise/stagger resist)
@@ -139,10 +140,10 @@ ALL 17 CLASSES HAVE:
 Blender pipeline running for retopology.
 
 ============================================================
-  SECTION 5: ELEMENTAL AFFINITIES (10 — FINAL)
+  SECTION 5: ELEMENTAL AFFINITIES (11 — FINAL)
 ============================================================
 
-10 elemental affinities. All 45 dual combinations are allowed.
+11 elemental affinities. All 55 dual combinations are allowed.
 Each dual combo has a unique hybrid kill bonus.
 
   1. Fire       — Burn DoT, spreads to nearby enemies
@@ -155,23 +156,32 @@ Each dual combo has a unique hybrid kill bonus.
   8. Poison     — Toxic DoT, stacks to lethal
   9. Soul       — Drain (steal enemy resource), fear
  10. Wind       — Push/pull, mobility boost, deflect projectiles
+ 11. Temporal   — Time manipulation (slow, rewind, hasten, echo)
 
-45 DUAL COMBINATIONS (C(10,2) = 45):
+55 DUAL COMBINATIONS (C(11,2) = 55):
 Fire+Ice, Fire+Lightning, Fire+Shadow, Fire+Holy, Fire+Earth,
-Fire+Water, Fire+Poison, Fire+Soul, Fire+Wind,
+Fire+Water, Fire+Poison, Fire+Soul, Fire+Wind, Fire+Temporal,
 Ice+Lightning, Ice+Shadow, Ice+Holy, Ice+Earth, Ice+Water,
-Ice+Poison, Ice+Soul, Ice+Wind,
+Ice+Poison, Ice+Soul, Ice+Wind, Ice+Temporal,
 Lightning+Shadow, Lightning+Holy, Lightning+Earth, Lightning+Water,
-Lightning+Poison, Lightning+Soul, Lightning+Wind,
-Shadow+Holy, Shadow+Earth, Shadow+Water, Shadow+Poison, Shadow+Soul, Shadow+Wind,
-Holy+Earth, Holy+Water, Holy+Poison, Holy+Soul, Holy+Wind,
-Earth+Water, Earth+Poison, Earth+Soul, Earth+Wind,
-Water+Poison, Water+Soul, Water+Wind,
-Poison+Soul, Poison+Wind,
-Soul+Wind
+Lightning+Poison, Lightning+Soul, Lightning+Wind, Lightning+Temporal,
+Shadow+Holy, Shadow+Earth, Shadow+Water, Shadow+Poison, Shadow+Soul, Shadow+Wind, Shadow+Temporal,
+Holy+Earth, Holy+Water, Holy+Poison, Holy+Soul, Holy+Wind, Holy+Temporal,
+Earth+Water, Earth+Poison, Earth+Soul, Earth+Wind, Earth+Temporal,
+Water+Poison, Water+Soul, Water+Wind, Water+Temporal,
+Poison+Soul, Poison+Wind, Poison+Temporal,
+Soul+Wind, Soul+Temporal,
+Wind+Temporal
 
-REMOVED: Nature (merged into Earth), Temporal (cut — too complex for V1).
-If Temporal returns, it's a future expansion affinity, not base game.
+REMOVED: Nature (merged into Earth — trees, roots, poison covered by Earth + Poison).
+
+TEMPORAL IS CANON. Time manipulation is core to the Eclipse:
+- The Fracture broke time itself. Some zones loop, some rewind,
+  some are frozen in a single moment.
+- Temporal affinity: slow enemies, hasten allies, rewind your
+  own position (undo last 3 seconds), echo (repeat last spell).
+- The final boss (Eclipsed Sovereign) uses Temporal in Phase 1
+  (rewinds your dodge) and Phase 4 (Fracture collapse = time breaks).
 
 ============================================================
   SECTION 6: RESOURCE SYSTEM (5 — FINAL)
@@ -438,7 +448,7 @@ in EclipseClassAbilities.cpp.
 
 6 REGIONS (Locked Canon):
   1. Solara — Cathedral, desert, sun temples, fire/holy zones
-  2. Vaelwood — Ancient forest, ruins, nature/wind zones
+  2. Vaelwood - Ancient forest, ruins, earth/wind zones
   3. Morvath — Shadow wastes, corrupted ruins, shadow/poison
   4. Aetheris — Floating islands, energy storms, lightning/soul
   5. Nhalor — Frozen peaks, ice caves, ice/earth
@@ -587,6 +597,8 @@ NEXT MILESTONES:
 7. BLACK REPRESENTATION — Full melaninated skin as default across
    all ancestries. Authentic textured hair (locs, braids, twists).
    All skin tones available in character creation.
+   AETHERBORN SPECIFIC: White hair, deep melanin skin,
+   luminous fracture markings, crystalline energy wings.
 8. HONEST STATUS — Never claim a system is "done" because source
    files exist. Done = compiles + runs in PIE + tested + evidence.
 9. ONE CANON — This document. If a prior PDF contradicts this,
@@ -594,6 +606,88 @@ NEXT MILESTONES:
 10. NO RETCONS — Lore is locked. What happened happened. New
     content expands the world; it doesn't rewrite what's established.
 
+AETHERBORN HERO VISUAL REFERENCE (LOCKED):
+- Deep melanin skin (dark brown)
+- WHITE hair (dreadlocks with gold beads)
+- Luminous violet/indigo fracture markings under skin
+- Crystalline energy wings (purple, NOT feathers — neural/crystal)
+- Dark weathered metal armor with ornate filigree
+- Tattered skirt, heavy boots
+- Muscular athletic build
+- Purple lightning cracks illuminate skin on face, neck, arms
+- Gold beads in white dreadlocks
+- Front view, back view, and head/shoulder closeup confirmed
+
 ============================================================
   END OF DEFINITIVE CANON V9.1
+============================================================
+
+============================================================
+  PROPOSED ADDITIONS (V9.2 — PENDING APPROVAL)
+============================================================
+
+PROPOSED BOSSES (5 new — not canon until approved):
+  15. Cinderheart - Volcanic overlord (Solara expansion)
+  16. Thalassor - Deep-sea predator (Umbryss)
+  17. Ironthrone - Forge colossus (Grimstarr region)
+  18. Mycelix - Fungal matriarch (Vaelwood)
+  19. Gravebinder - Necrotic archon (Morvath)
+
+NPC TYPES (per city — proposed):
+  - Quest givers (identifiable outfit + interaction marker)
+  - Blacksmiths (functional forge + equipment)
+  - Merchants (trade interface)
+  - Alchemists (potion/buff vendor)
+  - Healers (recovery service)
+  - Innkeepers (rest/save point)
+  - Bounty brokers (repeatable quest givers)
+  - Faction leaders (reputation/quest hub)
+  - Guards (city defense, low combat complexity)
+  - Portal keepers (fast travel between regions)
+
+LEVELING MOBS BY REGION (24 types — proposed):
+  Solara:
+    - Sunblade Sentinels (elite)
+    - Cathedral Acolytes (common)
+    - Emberlings (common)
+    - Radiant Constructs (elite)
+  Vaelwood:
+    - Wildling Stalkers (common)
+    - Thornback Ravagers (elite)
+    - Sporelings (common)
+    - Briarfiends (elite)
+  Morvath:
+    - Shade Striders (common)
+    - Void Cultists (elite)
+    - Despair Wraiths (common)
+    - Soul Leeches (elite)
+  Aetheris:
+    - Aetheric Wardens (elite)
+    - Stormbound Adepts (common)
+    - Arc Shards (common)
+    - Riftborn (elite)
+  Nhalor:
+    - Frost Revenants (elite)
+    - Iceclaw Hunters (common)
+    - Glacier Wurms (common)
+    - Rime Stalkers (elite)
+  Umbryss:
+    - Abyssal Stalkers (common)
+    - Drowned Revenants (elite)
+    - Tidecallers (common)
+    - Void Tendrils (elite)
+
+ENEMY PRODUCTION TIERS (5 tiers — proposed):
+  1. Common mobs - Simple AI, basic animation, low damage
+  2. Elite enemies - Complex AI, better animation, moderate damage
+  3. Dungeon minibosses - Multi-phase, telegraphed attacks, mechanics
+  4. Raid bosses - Full mechanic suite, enrage timers, loot tables
+  5. Peaceful NPCs - Idle animation, interaction markers, no combat
+
+NOTE: These are 2D concept art proposals, not finished 3D models.
+Each requires: front/side/rear turnarounds, rigs, materials,
+animation sets, and Aura combat validation before production-ready.
+
+============================================================
+  END OF PROPOSED ADDITIONS
 ============================================================

@@ -7,7 +7,7 @@ UENUM(BlueprintType)
 enum class EAncestry : uint8
 {
     // Core 8 (V4 canonical)
-    Aetherborn UMETA(DisplayName = "Aetherborn - Lunarian"),
+    Aetherborn UMETA(DisplayName = "Aetherborn"),
     Solari UMETA(DisplayName = "Solari - Sunforged Human"),
     Vyrael UMETA(DisplayName = "Vyrael - Elven Kindred"),
     Tharuk UMETA(DisplayName = "Tharuk - Titanborn"),
@@ -56,7 +56,7 @@ UENUM(BlueprintType)
 enum class EElementalAffinity : uint8
 {
     Fire, Ice, Lightning, Shadow, Holy,
-    Water, Soul, Earth, Wind, Poison,
+    Water, Soul, Earth, Wind, Poison, Temporal,
 };
 
 UENUM(BlueprintType)

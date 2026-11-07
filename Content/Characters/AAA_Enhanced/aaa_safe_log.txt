@@ -1,0 +1,554 @@
+[AAA] ==================================================
+[AAA] AAA ENHANCEMENT — MEMORY SAFE (NO SUBDIVISION)
+[AAA] ==================================================
+[AAA] Processing 30 models...
+[AAA] 
+[1/30] AETHERBORN_MALE_AAA.glb
+05:18:19 | INFO: Data are loaded, start creating Blender stuff
+05:18:19 | INFO: Blender create Mesh node 0
+05:18:24 | INFO: glTF import finished in 5.39s
+[AAA]   Original: 2176760 verts, 4007360 faces
+[AAA]   Decimated: 760056 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1722398 verts
+C:\Users\Tap\EclipseRotF\Content\Python\aaa_safe.py:101: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+[AAA]   PBR: Material_0
+INFO Draco is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at C:\Program Files\Blender Foundation\Blender 5.2\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+05:19:33 | INFO: Starting glTF 2.0 export
+05:19:33 | INFO: Extracting primitive: Mesh_0
+05:19:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:19:35 | INFO: Primitives created: 1
+05:19:35 | INFO: Finished glTF 2.0 export in 2.711198568344116 s
+
+[AAA]   Exported GLB: 93.9 MB
+[AAA] 
+[2/30] AETHERBORN_FEMALE_HQ.glb
+05:19:35 | INFO: Data are loaded, start creating Blender stuff
+05:19:35 | INFO: Blender create Mesh node 0
+05:19:39 | INFO: glTF import finished in 4.10s
+[AAA]   Original: 1709499 verts, 3142406 faces
+[AAA]   Decimated: 598018 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1345308 verts
+[AAA]   PBR: Material_0
+05:20:31 | INFO: Starting glTF 2.0 export
+05:20:31 | INFO: Extracting primitive: Mesh_0
+05:20:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:20:33 | INFO: Primitives created: 1
+05:20:33 | INFO: Finished glTF 2.0 export in 2.0772621631622314 s
+
+[AAA]   Exported GLB: 75.0 MB
+[AAA] 
+[3/30] AETHERBORN_MALE_HQ.glb
+05:20:33 | INFO: Data are loaded, start creating Blender stuff
+05:20:33 | INFO: Blender create Mesh node 0
+05:20:36 | INFO: glTF import finished in 3.20s
+[AAA]   Original: 1360022 verts, 2512330 faces
+[AAA]   Decimated: 473987 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 903151 verts
+[AAA]   PBR: Material_0
+05:21:15 | INFO: Starting glTF 2.0 export
+05:21:15 | INFO: Extracting primitive: Mesh_0
+05:21:15 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:21:16 | INFO: Primitives created: 1
+05:21:16 | INFO: Finished glTF 2.0 export in 1.4023778438568115 s
+
+[AAA]   Exported GLB: 52.4 MB
+[AAA] 
+[4/30] ALCHEMIST_HQ.glb
+05:21:16 | INFO: Data are loaded, start creating Blender stuff
+05:21:16 | INFO: Blender create Mesh node 0
+05:21:18 | INFO: glTF import finished in 2.15s
+[AAA]   Original: 941851 verts, 1768666 faces
+[AAA]   Decimated: 320025 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 604771 verts
+[AAA]   PBR: Material_0
+05:21:44 | INFO: Starting glTF 2.0 export
+05:21:44 | INFO: Extracting primitive: Mesh_0
+05:21:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:21:45 | INFO: Primitives created: 1
+05:21:45 | INFO: Finished glTF 2.0 export in 0.9484004974365234 s
+
+[AAA]   Exported GLB: 36.8 MB
+[AAA] 
+[5/30] ARCANIST_HQ.glb
+05:21:45 | INFO: Data are loaded, start creating Blender stuff
+05:21:45 | INFO: Blender create Mesh node 0
+05:21:47 | INFO: glTF import finished in 2.70s
+[AAA]   Original: 1188304 verts, 2206292 faces
+[AAA]   Decimated: 411873 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 778823 verts
+[AAA]   PBR: Material_0
+05:22:20 | INFO: Starting glTF 2.0 export
+05:22:20 | INFO: Extracting primitive: Mesh_0
+05:22:20 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:22:21 | INFO: Primitives created: 1
+05:22:21 | INFO: Finished glTF 2.0 export in 1.221571683883667 s
+
+[AAA]   Exported GLB: 44.1 MB
+[AAA] 
+[6/30] BERSERKER_HQ.glb
+05:22:21 | INFO: Data are loaded, start creating Blender stuff
+05:22:21 | INFO: Blender create Mesh node 0
+05:22:24 | INFO: glTF import finished in 3.09s
+[AAA]   Original: 1308812 verts, 2448442 faces
+[AAA]   Decimated: 446686 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 900197 verts
+[AAA]   PBR: Material_0
+05:23:01 | INFO: Starting glTF 2.0 export
+05:23:01 | INFO: Extracting primitive: Mesh_0
+05:23:02 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:23:02 | INFO: Primitives created: 1
+05:23:02 | INFO: Finished glTF 2.0 export in 1.4317212104797363 s
+
+[AAA]   Exported GLB: 52.8 MB
+[AAA] 
+[7/30] BULWARK_HQ.glb
+05:23:02 | INFO: Data are loaded, start creating Blender stuff
+05:23:02 | INFO: Blender create Mesh node 0
+05:23:06 | INFO: glTF import finished in 3.24s
+[AAA]   Original: 1390421 verts, 2633886 faces
+[AAA]   Decimated: 465230 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 974096 verts
+[AAA]   PBR: Material_0
+05:23:47 | INFO: Starting glTF 2.0 export
+05:23:47 | INFO: Extracting primitive: Mesh_0
+05:23:48 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:23:48 | INFO: Primitives created: 1
+05:23:48 | INFO: Finished glTF 2.0 export in 1.5842339992523193 s
+
+[AAA]   Exported GLB: 56.5 MB
+[AAA] 
+[8/30] DRAVEN_HQ.glb
+05:23:48 | INFO: Data are loaded, start creating Blender stuff
+05:23:48 | INFO: Blender create Mesh node 0
+05:23:51 | INFO: glTF import finished in 2.75s
+[AAA]   Original: 1191907 verts, 2239686 faces
+[AAA]   Decimated: 404205 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 846477 verts
+[AAA]   PBR: Material_0
+05:24:25 | INFO: Starting glTF 2.0 export
+05:24:25 | INFO: Extracting primitive: Mesh_0
+05:24:26 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:24:26 | INFO: Primitives created: 1
+05:24:26 | INFO: Finished glTF 2.0 export in 1.3553967475891113 s
+
+[AAA]   Exported GLB: 49.0 MB
+[AAA] 
+[9/30] DREADKNIGHT_HQ.glb
+05:24:27 | INFO: Data are loaded, start creating Blender stuff
+05:24:27 | INFO: Blender create Mesh node 0
+05:24:31 | INFO: glTF import finished in 4.09s
+[AAA]   Original: 1706544 verts, 3151022 faces
+[AAA]   Decimated: 594856 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1186689 verts
+[AAA]   PBR: Material_0
+05:25:20 | INFO: Starting glTF 2.0 export
+05:25:20 | INFO: Extracting primitive: Mesh_0
+05:25:21 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:25:22 | INFO: Primitives created: 1
+05:25:22 | INFO: Finished glTF 2.0 export in 1.864394187927246 s
+
+[AAA]   Exported GLB: 66.0 MB
+[AAA] 
+[10/30] DUSKBLADE_HQ.glb
+05:25:22 | INFO: Data are loaded, start creating Blender stuff
+05:25:22 | INFO: Blender create Mesh node 0
+05:25:24 | INFO: glTF import finished in 1.97s
+[AAA]   Original: 826897 verts, 1557012 faces
+[AAA]   Decimated: 279906 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 507472 verts
+[AAA]   PBR: Material_0
+05:25:46 | INFO: Starting glTF 2.0 export
+05:25:46 | INFO: Extracting primitive: Mesh_0
+05:25:46 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:25:46 | INFO: Primitives created: 1
+05:25:46 | INFO: Finished glTF 2.0 export in 0.8076925277709961 s
+
+[AAA]   Exported GLB: 31.1 MB
+[AAA] 
+[11/30] EARTHWEAVER_HQ.glb
+05:25:46 | INFO: Data are loaded, start creating Blender stuff
+05:25:46 | INFO: Blender create Mesh node 0
+05:25:51 | INFO: glTF import finished in 4.76s
+[AAA]   Original: 1960624 verts, 3588044 faces
+[AAA]   Decimated: 692368 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1535391 verts
+[AAA]   PBR: Material_0
+05:26:51 | INFO: Starting glTF 2.0 export
+05:26:52 | INFO: Extracting primitive: Mesh_0
+05:26:52 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:26:54 | INFO: Primitives created: 1
+05:26:54 | INFO: Finished glTF 2.0 export in 2.4111852645874023 s
+
+[AAA]   Exported GLB: 83.6 MB
+[AAA] 
+[12/30] FORGEBORN_HQ.glb
+05:26:54 | INFO: Data are loaded, start creating Blender stuff
+05:26:54 | INFO: Blender create Mesh node 0
+05:26:57 | INFO: glTF import finished in 3.23s
+[AAA]   Original: 1407330 verts, 2626012 faces
+[AAA]   Decimated: 482180 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1028421 verts
+[AAA]   PBR: Material_0
+05:27:38 | INFO: Starting glTF 2.0 export
+05:27:38 | INFO: Extracting primitive: Mesh_0
+05:27:39 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:27:39 | INFO: Primitives created: 1
+05:27:39 | INFO: Finished glTF 2.0 export in 1.6308567523956299 s
+
+[AAA]   Exported GLB: 59.5 MB
+[AAA] 
+[13/30] GRIMSTARR_HQ.glb
+05:27:40 | INFO: Data are loaded, start creating Blender stuff
+05:27:40 | INFO: Blender create Mesh node 0
+05:27:43 | INFO: glTF import finished in 3.20s
+[AAA]   Original: 1359377 verts, 2601816 faces
+[AAA]   Decimated: 446143 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 970127 verts
+[AAA]   PBR: Material_0
+05:28:23 | INFO: Starting glTF 2.0 export
+05:28:23 | INFO: Extracting primitive: Mesh_0
+05:28:24 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:28:24 | INFO: Primitives created: 1
+05:28:25 | INFO: Finished glTF 2.0 export in 1.568310260772705 s
+
+[AAA]   Exported GLB: 56.4 MB
+[AAA] 
+[14/30] HELLSWORN_HQ.glb
+05:28:25 | INFO: Data are loaded, start creating Blender stuff
+05:28:25 | INFO: Blender create Mesh node 0
+05:28:26 | INFO: glTF import finished in 1.81s
+[AAA]   Original: 782751 verts, 1478190 faces
+[AAA]   Decimated: 263432 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 480373 verts
+[AAA]   PBR: Material_0
+05:28:47 | INFO: Starting glTF 2.0 export
+05:28:47 | INFO: Extracting primitive: Mesh_0
+05:28:47 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:28:47 | INFO: Primitives created: 1
+05:28:47 | INFO: Finished glTF 2.0 export in 0.7585811614990234 s
+
+[AAA]   Exported GLB: 29.7 MB
+[AAA] 
+[15/30] KAZARI_HQ.glb
+05:28:47 | INFO: Data are loaded, start creating Blender stuff
+05:28:47 | INFO: Blender create Mesh node 0
+05:28:54 | INFO: glTF import finished in 6.81s
+[AAA]   Original: 2882382 verts, 5296290 faces
+[AAA]   Decimated: 1008545 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   PBR: Material_0
+05:30:18 | INFO: Starting glTF 2.0 export
+05:30:18 | INFO: Extracting primitive: Mesh_0
+05:30:20 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:30:21 | INFO: Primitives created: 1
+05:30:22 | INFO: Finished glTF 2.0 export in 3.7649381160736084 s
+
+[AAA]   Exported GLB: 125.4 MB
+[AAA] 
+[16/30] MYCELIAR_HQ.glb
+05:30:22 | INFO: Data are loaded, start creating Blender stuff
+05:30:22 | INFO: Blender create Mesh node 0
+05:30:26 | INFO: glTF import finished in 4.13s
+[AAA]   Original: 1675879 verts, 3110360 faces
+[AAA]   Decimated: 579381 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1123782 verts
+[AAA]   PBR: Material_0
+05:31:13 | INFO: Starting glTF 2.0 export
+05:31:13 | INFO: Extracting primitive: Mesh_0
+05:31:14 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:31:15 | INFO: Primitives created: 1
+05:31:15 | INFO: Finished glTF 2.0 export in 1.7575397491455078 s
+
+[AAA]   Exported GLB: 63.0 MB
+[AAA] 
+[17/30] NECREVAN_HQ.glb
+05:31:15 | INFO: Data are loaded, start creating Blender stuff
+05:31:15 | INFO: Blender create Mesh node 0
+05:31:18 | INFO: glTF import finished in 2.93s
+[AAA]   Original: 1298701 verts, 2397512 faces
+[AAA]   Decimated: 453338 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 878253 verts
+[AAA]   PBR: Material_0
+05:31:54 | INFO: Starting glTF 2.0 export
+05:31:54 | INFO: Extracting primitive: Mesh_0
+05:31:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:31:55 | INFO: Primitives created: 1
+05:31:55 | INFO: Finished glTF 2.0 export in 1.3004124164581299 s
+
+[AAA]   Exported GLB: 50.3 MB
+[AAA] 
+[18/30] NECROTURGE_HQ.glb
+05:31:55 | INFO: Data are loaded, start creating Blender stuff
+05:31:55 | INFO: Blender create Mesh node 0
+05:31:59 | INFO: glTF import finished in 4.54s
+[AAA]   Original: 1895462 verts, 3488222 faces
+[AAA]   Decimated: 663766 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1365527 verts
+[AAA]   PBR: Material_0
+05:32:55 | INFO: Starting glTF 2.0 export
+05:32:55 | INFO: Extracting primitive: Mesh_0
+05:32:56 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:32:57 | INFO: Primitives created: 1
+05:32:57 | INFO: Finished glTF 2.0 export in 2.0948243141174316 s
+
+[AAA]   Exported GLB: 75.6 MB
+[AAA] 
+[19/30] ORACLE_HQ.glb
+05:32:57 | INFO: Data are loaded, start creating Blender stuff
+05:32:57 | INFO: Blender create Mesh node 0
+05:33:00 | INFO: glTF import finished in 2.64s
+[AAA]   Original: 1133015 verts, 2131206 faces
+[AAA]   Decimated: 383638 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 658216 verts
+[AAA]   PBR: Material_0
+05:33:30 | INFO: Starting glTF 2.0 export
+05:33:30 | INFO: Extracting primitive: Mesh_0
+05:33:31 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:33:31 | INFO: Primitives created: 1
+05:33:31 | INFO: Finished glTF 2.0 export in 1.0548875331878662 s
+
+[AAA]   Exported GLB: 39.4 MB
+[AAA] 
+[20/30] RIFTWALKER_HQ.glb
+05:33:31 | INFO: Data are loaded, start creating Blender stuff
+05:33:31 | INFO: Blender create Mesh node 0
+05:33:32 | INFO: glTF import finished in 0.88s
+[AAA]   Original: 388200 verts, 722606 faces
+[AAA]   Decimated: 134213 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 265234 verts
+[AAA]   PBR: Material_0
+05:33:41 | INFO: Starting glTF 2.0 export
+05:33:41 | INFO: Extracting primitive: Mesh_0
+05:33:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:33:42 | INFO: Primitives created: 1
+05:33:42 | INFO: Finished glTF 2.0 export in 0.4314277172088623 s
+
+[AAA]   Exported GLB: 18.3 MB
+[AAA] 
+[21/30] SHADOWBLADE_HQ.glb
+05:33:42 | INFO: Data are loaded, start creating Blender stuff
+05:33:42 | INFO: Blender create Mesh node 0
+05:33:44 | INFO: glTF import finished in 2.18s
+[AAA]   Original: 948251 verts, 1805046 faces
+[AAA]   Decimated: 314738 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 557117 verts
+[AAA]   PBR: Material_0
+05:34:09 | INFO: Starting glTF 2.0 export
+05:34:09 | INFO: Extracting primitive: Mesh_0
+05:34:09 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:34:09 | INFO: Primitives created: 1
+05:34:10 | INFO: Finished glTF 2.0 export in 0.8783717155456543 s
+
+[AAA]   Exported GLB: 33.5 MB
+[AAA] 
+[22/30] SOLARI_HQ.glb
+05:34:10 | INFO: Data are loaded, start creating Blender stuff
+05:34:10 | INFO: Blender create Mesh node 0
+05:34:12 | INFO: glTF import finished in 2.61s
+[AAA]   Original: 1128606 verts, 2152902 faces
+[AAA]   Decimated: 372605 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 747236 verts
+[AAA]   PBR: Material_0
+05:34:44 | INFO: Starting glTF 2.0 export
+05:34:44 | INFO: Extracting primitive: Mesh_0
+05:34:45 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:34:45 | INFO: Primitives created: 1
+05:34:45 | INFO: Finished glTF 2.0 export in 1.2099025249481201 s
+
+[AAA]   Exported GLB: 44.5 MB
+[AAA] 
+[23/30] SOULBINDER_HQ.glb
+05:34:45 | INFO: Data are loaded, start creating Blender stuff
+05:34:45 | INFO: Blender create Mesh node 0
+05:34:48 | INFO: glTF import finished in 2.26s
+[AAA]   Original: 955819 verts, 1790264 faces
+[AAA]   Decimated: 326089 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 636476 verts
+[AAA]   PBR: Material_0
+05:35:15 | INFO: Starting glTF 2.0 export
+05:35:15 | INFO: Extracting primitive: Mesh_0
+05:35:15 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:35:16 | INFO: Primitives created: 1
+05:35:16 | INFO: Finished glTF 2.0 export in 1.0476961135864258 s
+
+[AAA]   Exported GLB: 38.5 MB
+[AAA] 
+[24/30] SPELLBLADE_HQ.glb
+05:35:16 | INFO: Data are loaded, start creating Blender stuff
+05:35:16 | INFO: Blender create Mesh node 0
+05:35:18 | INFO: glTF import finished in 1.88s
+[AAA]   Original: 807099 verts, 1529576 faces
+[AAA]   Decimated: 269949 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 565075 verts
+[AAA]   PBR: Material_0
+05:35:41 | INFO: Starting glTF 2.0 export
+05:35:41 | INFO: Extracting primitive: Mesh_0
+05:35:41 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:35:42 | INFO: Primitives created: 1
+05:35:42 | INFO: Finished glTF 2.0 export in 0.9499683380126953 s
+
+[AAA]   Exported GLB: 34.7 MB
+[AAA] 
+[25/30] STORMCALLER_HQ.glb
+05:35:42 | INFO: Data are loaded, start creating Blender stuff
+05:35:42 | INFO: Blender create Mesh node 0
+05:35:45 | INFO: glTF import finished in 3.09s
+[AAA]   Original: 1329493 verts, 2460556 faces
+[AAA]   Decimated: 462429 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 875589 verts
+[AAA]   PBR: Material_0
+05:36:22 | INFO: Starting glTF 2.0 export
+05:36:22 | INFO: Extracting primitive: Mesh_0
+05:36:23 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:36:23 | INFO: Primitives created: 1
+05:36:23 | INFO: Finished glTF 2.0 export in 1.3947079181671143 s
+
+[AAA]   Exported GLB: 49.6 MB
+[AAA] 
+[26/30] TEMPLAR_HQ.glb
+05:36:23 | INFO: Data are loaded, start creating Blender stuff
+05:36:23 | INFO: Blender create Mesh node 0
+05:36:26 | INFO: glTF import finished in 2.14s
+[AAA]   Original: 881836 verts, 1682518 faces
+[AAA]   Decimated: 291363 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 570402 verts
+[AAA]   PBR: Material_0
+05:36:50 | INFO: Starting glTF 2.0 export
+05:36:50 | INFO: Extracting primitive: Mesh_0
+05:36:50 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:36:51 | INFO: Primitives created: 1
+05:36:51 | INFO: Finished glTF 2.0 export in 0.9433860778808594 s
+
+[AAA]   Exported GLB: 35.5 MB
+[AAA] 
+[27/30] UMBRALIS_HQ.glb
+05:36:51 | INFO: Data are loaded, start creating Blender stuff
+05:36:51 | INFO: Blender create Mesh node 0
+05:36:52 | INFO: glTF import finished in 1.80s
+[AAA]   Original: 784845 verts, 1466414 faces
+[AAA]   Decimated: 268869 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 551956 verts
+[AAA]   PBR: Material_0
+05:37:14 | INFO: Starting glTF 2.0 export
+05:37:14 | INFO: Extracting primitive: Mesh_0
+05:37:14 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:37:15 | INFO: Primitives created: 1
+05:37:15 | INFO: Finished glTF 2.0 export in 0.8900895118713379 s
+
+[AAA]   Exported GLB: 33.6 MB
+[AAA] 
+[28/30] VYRAEL_HQ.glb
+05:37:15 | INFO: Data are loaded, start creating Blender stuff
+05:37:15 | INFO: Blender create Mesh node 0
+05:37:17 | INFO: glTF import finished in 2.17s
+[AAA]   Original: 924820 verts, 1697358 faces
+[AAA]   Decimated: 325445 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 651738 verts
+[AAA]   PBR: Material_0
+05:37:42 | INFO: Starting glTF 2.0 export
+05:37:42 | INFO: Extracting primitive: Mesh_0
+05:37:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:37:43 | INFO: Primitives created: 1
+05:37:43 | INFO: Finished glTF 2.0 export in 0.9866983890533447 s
+
+[AAA]   Exported GLB: 39.6 MB
+[AAA] 
+[29/30] WARTHANE_HQ.glb
+05:37:43 | INFO: Data are loaded, start creating Blender stuff
+05:37:43 | INFO: Blender create Mesh node 0
+05:37:47 | INFO: glTF import finished in 4.60s
+[AAA]   Original: 1844453 verts, 3471504 faces
+[AAA]   Decimated: 622978 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 1373417 verts
+[AAA]   PBR: Material_0
+05:38:44 | INFO: Starting glTF 2.0 export
+05:38:45 | INFO: Extracting primitive: Mesh_0
+05:38:45 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:38:46 | INFO: Primitives created: 1
+05:38:47 | INFO: Finished glTF 2.0 export in 2.1716854572296143 s
+
+[AAA]   Exported GLB: 77.1 MB
+[AAA] 
+[30/30] WILDWARDEN_HQ.glb
+05:38:47 | INFO: Data are loaded, start creating Blender stuff
+05:38:47 | INFO: Blender create Mesh node 0
+05:38:50 | INFO: glTF import finished in 3.48s
+[AAA]   Original: 1465287 verts, 2733210 faces
+[AAA]   Decimated: 502010 verts
+[AAA]   Smooth shading applied
+[AAA]   Beveled edges
+[AAA]   Sculpt detail: 956829 verts
+[AAA]   PBR: Material_0
+05:39:31 | INFO: Starting glTF 2.0 export
+05:39:32 | INFO: Extracting primitive: Mesh_0
+05:39:32 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:39:33 | INFO: Primitives created: 1
+05:39:33 | INFO: Finished glTF 2.0 export in 1.546738624572754 s
+
+[AAA]   Exported GLB: 54.6 MB
+[AAA] 
+==================================================
+[AAA] COMPLETE: 30 OK, 0 FAILED
+[AAA] ==================================================
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit
