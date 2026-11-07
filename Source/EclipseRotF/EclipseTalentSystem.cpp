@@ -694,8 +694,8 @@ void UEclipseTalentSystem::InitVanguardTalents()
     AddSynergy(IdSP6, IdSP7);           // Crater -> Tremor Pulse double damage
     AddSynergy(IdSP8, IdAF7);           // Earthshaker wall -> Pillar LOS stacking
     AddSynergy(IdSP10, IdCV4);          // Sunbreaker's Wake -> Cataclysm
-    // AddSynergy(IdCF4, IdSP10); // TODO: fix talent ID          // Fortified Breathing -> Sunbreaker's Wake stamina flow
-    // AddSynergy(IdAF4, IdCF6); // TODO: fix talent ID           // Bedrock + Heavyfooted immobility stack
+    AddSynergy(IdCF4, IdSP10);          // Fortified Breathing -> Sunbreaker's Wake stamina flow
+    AddSynergy(IdAF4, IdCF6);           // Bedrock + Heavyfooted immobility stack
     AddSynergy(IdAF5, IdAF3);           // Lithosphere refunds Tectonic Tremor stamina
 
     // Mutually exclusive: the three specialization keystones.

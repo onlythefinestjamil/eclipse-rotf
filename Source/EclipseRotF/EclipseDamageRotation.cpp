@@ -117,7 +117,7 @@ float UEclipseDamageRotation::ProcessAction(EInputAction Action, bool bHitWeakPo
     case EInputAction::LightAttack:
         Damage = LightDamage * DamageMultiplier;
         FlowGain = 5.0f;
-        AdvanceCombo:
+        // AdvanceCombo (was a label, removed)
         if (CanChainLight())
         {
             ComboStep++;
