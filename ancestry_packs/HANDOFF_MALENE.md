@@ -29,3 +29,14 @@ Both packs are now ALSO unpacked in-repo (no unzipping needed):
 - ancestry_packs/Eclipse_13_Ancestries_Full_Toolchain_Pack/ (full toolchain pipeline)
 
 The zips remain for intact transfer. Duplicate Downloads copies (" 2" / " 3") were ignored — one canonical copy each.
+
+## UPDATE 2 — RUNWAY AGENT 13 CHARACTER CONTACT SHEETS
+
+`Runway Agent - 13 generations.zip` — 13 high-res character contact sheets generated from the
+global references, one per ancestry: Aetherborn (hero), Solari, Vyrael, Tharuk, Kazari, Umbralis,
+Draven, Grimstarr, Nereyth, Myceliar, Forgeborn, Hellsworn, Necrevan.
+
+USE: these are GENERATED CONTACT SHEETS from Runway's Agent — treat them as strong visual
+starting points for Phase 1 (design lock), not as accepted front/back deliverables. Cross-check
+each against its ancestry folder's identity-locked prompt before generating the accepted
+FRONT/BACK references. Filenames map 1:1 to the ancestry folders.
