@@ -1306,7 +1306,7 @@ void UEclipseTalentSystem::InitShadowbladeTalents()
         ETalentNodeType::ActiveAbility, TEXT("Shadow Strike"), 1, 0,
         TEXT("Placeholder — From stealth, teleport to target and strike for +60% as Shadow damage."));
     N1.Affinity1 = EWeaponStatusEffect::Shadow; N1.TriggerEvent = TEXT("OnStealthAttack"); N1.EffectDescription = TEXT("Stealth: teleport strike +60%."); N1.CooldownMod = 8.0f;
-    N1.ResourceType = EResourceType::Chi; N1.AIUsageRule = TEXT("Open from stealth."); N1.RequiredLevel = 1;
+    N1.ResourceType = EResourceType::Aether; N1.AIUsageRule = TEXT("Open from stealth."); N1.RequiredLevel = 1;
 
     FTalentNode& N2 = AddTalent(EClass::Shadowblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::Utility, TEXT("Vanish"), 1, 1,
@@ -1322,8 +1322,8 @@ void UEclipseTalentSystem::InitShadowbladeTalents()
 
     FTalentNode& N4 = AddTalent(EClass::Shadowblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::ResourceMod, TEXT("Shadowsong"), 2, 1,
-        TEXT("Placeholder — Each stealth attack generates 15 Chi."));
-    N4.TriggerEvent = TEXT("OnStealthAttack"); N4.EffectDescription = TEXT("Stealth attack -> +15 Chi."); N4.ResourceGen = 15.0f;
+        TEXT("Placeholder — Each stealth attack generates 15 Aether."));
+    N4.TriggerEvent = TEXT("OnStealthAttack"); N4.EffectDescription = TEXT("Stealth attack -> +15 Aether."); N4.ResourceGen = 15.0f;
     N4.AIUsageRule = TEXT("Sustain via stealth loops."); N4.RequiredLevel = 5;
 
     FTalentNode& N5 = AddTalent(EClass::Shadowblade, ETalentLayer::ClassFoundation,
@@ -1334,8 +1334,8 @@ void UEclipseTalentSystem::InitShadowbladeTalents()
 
     FTalentNode& N6 = AddTalent(EClass::Shadowblade, ETalentLayer::ClassFoundation,
         ETalentNodeType::Keystone, TEXT("Umbral Reaper"), 3, 1,
-        TEXT("Placeholder — Killing a Weakened target resets Vanish CD and refunds 30 Chi."));
-    N6.TriggerEvent = TEXT("OnKill"); N6.ActivationCondition = TEXT("Target was Weakened"); N6.EffectDescription = TEXT("Weakened kill -> reset Vanish, +30 Chi."); N6.ResourceGen = 30.0f;
+        TEXT("Placeholder — Killing a Weakened target resets Vanish CD and refunds 30 Aether."));
+    N6.TriggerEvent = TEXT("OnKill"); N6.ActivationCondition = TEXT("Target was Weakened"); N6.EffectDescription = TEXT("Weakened kill -> reset Vanish, +30 Aether."); N6.ResourceGen = 30.0f;
     N6.AIUsageRule = TEXT("Weaken, kill, re-stealth, repeat."); N6.RequiredLevel = 10; N6.bRequiresKeystone = true;
 }
 

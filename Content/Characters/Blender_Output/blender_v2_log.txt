@@ -1,0 +1,123 @@
+[ECLIPSE] ============================================================
+[ECLIPSE] ECLIPSE BLENDER PIPELINE — MEMORY-SAFE
+[ECLIPSE] Blender 5.2.3 LTS
+[ECLIPSE] ============================================================
+[ECLIPSE] Found 29 HQ models
+[ECLIPSE] To process: 29
+[ECLIPSE] 
+[1/29] AETHERBORN_FEMALE_HQ.glb
+[ECLIPSE] --- AETHERBORN_FEMALE_HQ ---
+01:59:47 | INFO: Data are loaded, start creating Blender stuff
+01:59:47 | INFO: Blender create Mesh node 0
+01:59:51 | INFO: glTF import finished in 4.12s
+[ECLIPSE]   Original: 1709499 verts, 3142406 faces
+[ECLIPSE]   Decimated: 3142406 -> 1099842 faces
+Info: Removed 117496 vertices
+[ECLIPSE]   Cleaned doubles + normals: 561713 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 109.9 MB
+[ECLIPSE] 
+[2/29] AETHERBORN_MALE_HQ.glb
+[ECLIPSE] --- AETHERBORN_MALE_HQ ---
+02:00:30 | INFO: Data are loaded, start creating Blender stuff
+02:00:30 | INFO: Blender create Mesh node 0
+02:00:34 | INFO: glTF import finished in 3.19s
+[ECLIPSE]   Original: 1360022 verts, 2512330 faces
+[ECLIPSE]   Decimated: 2512330 -> 879315 faces
+Info: Removed 91383 vertices
+[ECLIPSE]   Cleaned doubles + normals: 446976 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 87.6 MB
+[ECLIPSE] 
+[3/29] ALCHEMIST_HQ.glb
+[ECLIPSE] --- ALCHEMIST_HQ ---
+02:01:04 | INFO: Data are loaded, start creating Blender stuff
+02:01:04 | INFO: Blender create Mesh node 0
+02:01:06 | INFO: glTF import finished in 2.21s
+[ECLIPSE]   Original: 941851 verts, 1768666 faces
+[ECLIPSE]   Decimated: 1768666 -> 619033 faces
+Info: Removed 52383 vertices
+[ECLIPSE]   Cleaned doubles + normals: 312508 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 60.5 MB
+[ECLIPSE] 
+[4/29] ARCANIST_HQ.glb
+[ECLIPSE] --- ARCANIST_HQ ---
+02:01:27 | INFO: Data are loaded, start creating Blender stuff
+02:01:27 | INFO: Blender create Mesh node 0
+02:01:30 | INFO: glTF import finished in 2.90s
+[ECLIPSE]   Original: 1188304 verts, 2206292 faces
+[ECLIPSE]   Decimated: 2206292 -> 772201 faces
+Info: Removed 76211 vertices
+[ECLIPSE]   Cleaned doubles + normals: 391885 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 76.5 MB
+[ECLIPSE] 
+[5/29] ASSASSIN_HQ.glb
+[ECLIPSE] --- ASSASSIN_HQ ---
+02:01:57 | INFO: Data are loaded, start creating Blender stuff
+02:01:57 | INFO: Blender create Mesh node 0
+02:01:59 | INFO: glTF import finished in 1.91s
+[ECLIPSE]   Original: 826897 verts, 1557012 faces
+[ECLIPSE]   Decimated: 1557012 -> 544954 faces
+Info: Removed 44148 vertices
+[ECLIPSE]   Cleaned doubles + normals: 275186 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 53.0 MB
+[ECLIPSE] 
+[6/29] BERSERKER_HQ.glb
+[ECLIPSE] --- BERSERKER_HQ ---
+02:02:17 | INFO: Data are loaded, start creating Blender stuff
+02:02:17 | INFO: Blender create Mesh node 0
+02:02:20 | INFO: glTF import finished in 3.03s
+[ECLIPSE]   Original: 1308812 verts, 2448442 faces
+[ECLIPSE]   Decimated: 2448442 -> 856953 faces
+Info: Removed 74837 vertices
+[ECLIPSE]   Cleaned doubles + normals: 434213 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 84.9 MB
+[ECLIPSE] 
+[7/29] DRAVEN_HQ.glb
+[ECLIPSE] --- DRAVEN_HQ ---
+02:02:50 | INFO: Data are loaded, start creating Blender stuff
+02:02:50 | INFO: Blender create Mesh node 0
+02:02:53 | INFO: glTF import finished in 2.78s
+[ECLIPSE]   Original: 1191907 verts, 2239686 faces
+[ECLIPSE]   Decimated: 2239686 -> 783890 faces
+Info: Removed 65025 vertices
+[ECLIPSE]   Cleaned doubles + normals: 396078 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 77.2 MB
+[ECLIPSE] 
+[8/29] DREADKNIGHT_HQ.glb
+[ECLIPSE] --- DREADKNIGHT_HQ ---
+02:03:19 | INFO: Data are loaded, start creating Blender stuff
+02:03:19 | INFO: Blender create Mesh node 0
+02:03:24 | INFO: glTF import finished in 4.14s
+[ECLIPSE]   Original: 1706544 verts, 3151022 faces
+[ECLIPSE]   Decimated: 3151022 -> 1102857 faces
+Info: Removed 113933 vertices
+[ECLIPSE]   Cleaned doubles + normals: 561733 verts
+[ECLIPSE]   Skin detail added
+[ECLIPSE]   GLB export error: Converting py args to operator properties:: keyword "export_textures" unrecognized
+Info: File exported successfully
+[ECLIPSE]   Exported OBJ: 110.3 MB
+[ECLIPSE] 
+[9/29] DRUID_HQ.glb
+[ECLIPSE] --- DRUID_HQ ---
+02:04:03 | INFO: Data are loaded, start creating Blender stuff
+02:04:03 | INFO: Blender create Mesh node 0

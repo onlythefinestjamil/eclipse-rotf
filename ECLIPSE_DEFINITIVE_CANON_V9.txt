@@ -1,0 +1,599 @@
+# ECLIPSE: REALMS OF THE FRACTURED
+# DEFINITIVE CANON — V9.1 FINAL
+# Source of Truth: Compiled C++ Source Code + This Document
+# Created: November 7, 2026 1:30 AM EST
+# Status: AUTHORITATIVE — All prior PDFs/docs are DRAFTS. This is CANON.
+#
+# If anything contradicts this document, this document wins.
+# The C++ code must match this document. If code disagrees, code is wrong.
+
+============================================================
+  SECTION 1: WHAT ECLIPSE IS
+============================================================
+
+Eclipse: Realms of the Fractured is a dark fantasy action-MMORPG
+with hybrid combat inspired by Elden Ring's weight, Black Myth:
+Wukong's fluidity, and World of Warcraft's class depth.
+
+- Engine: Unreal Engine 5.8 (Nanite + Lumen + Path Tracing)
+- Platform: PC (Windows), PS5, Xbox Series X
+- Developer: Momentum Labs / Illustrators Entertainment LLC
+- Lead Developer: Hermes Agent
+- Creative Director: Jamil Mateen Johnson
+
+- Offline-first: Complete single-player RPG, add MMO later
+- No direct copying of any game's assets, code, or IP
+- Original world, original lore, original characters
+
+- Min Spec: 16 GB RAM, GTX 1070 / RX 580, 50 GB storage
+- Rec Spec: 32 GB RAM, RTX 3070 / RX 6800, 50 GB storage SSD
+- Target: 1080p60 on recommended, 4K30 on high-end
+
+============================================================
+  SECTION 2: THE FRACTURE (CORE LORE)
+============================================================
+
+THE ECLIPSE: A cosmic event that shattered reality across 6 regions.
+No one knows what caused it. This mystery is the central narrative
+thread and is NEVER answered in the base game. The final boss is
+the Eclipse Avatar — a manifestation of the Eclipse's raw power
+trying to reform itself by consuming all life.
+
+THE FRACTURE: The wounds left in reality by the Eclipse. Each region
+has its own fracture — a visible tear in the sky/ground that pulses
+with elemental energy. These fractures are the source of all magic.
+
+THE 6 REGIONS (Locked Canon):
+1. Solara — Sun-scorched cathedral lands. Fire + Holy aligned.
+2. Vaelwood — Ancient forest. Nature + Wind aligned.
+3. Morvath — Shadow-drenched wastes. Shadow + Poison aligned.
+4. Aetheris — Floating islands of pure energy. Lightning + Soul aligned.
+5. Nhalor — Frozen peaks. Ice + Earth aligned.
+6. Umbryss — Abyssal deep. Water + Temporal aligned.
+
+Each region has: 1 major city, 2-3 dungeons, 1 raid, 1 world boss,
+1 fracture questline, 1 regional boss.
+
+NO RETCONS. This is the only canon. All prior versions (V1-V8) are
+drafts. If a prior document contradicts this, the prior document
+is wrong.
+
+============================================================
+  SECTION 3: ANCESTRIES (13 — FINAL)
+============================================================
+
+13 ancestries. Each is a playable race with unique visual identity,
+lore, and racial passive. All skin tones available in character
+creation. Full melaninated skin as default. 50+ hairstyles across
+all ancestries (locs, braids, twists, afros, fades, cultural).
+
+  #  Name        Description              Racial Passive
+  1  Aetherborn  Lunarian energy beings   Fracture Sight (see hidden paths)
+  2  Solari      Sunforged humans          Solar Regen (+25% HP regen in sunlight)
+  3  Vyrael      Elven kindred             Arcane Attunement (+15% spell power)
+  4  Tharuk      Titanborn giants          Titanic Frame (+20% poise/stagger resist)
+  5  Kazari      Beastblood feline-kin     Predatory Instinct (+10% crit chance)
+  6  Umbralis    Void-touched              Void Step (short-range teleport on dodge)
+  7  Draven      Draconic dragon-kin       Dragon Scales (+15% fire resist)
+  8  Grimstarr   Forge dwarves             Forge Heart (+20% stamina regen)
+  9  Nereyth     Aquatic kin               Tideborn (underwater breathing + swim speed)
+ 10  Myceliar    Fungal verdant kin        Spore Network (heal when near allies)
+ 11  Forgeborn   Arcane constructs        Modular Frame (swap 1 ability slot)
+ 12  Hellsworn   Demon-blooded             Infernal Wrath (+25% damage below 30% HP)
+ 13  Necrevan    Oath-bound undead         Deathless (respawn with 25% HP once per fight)
+
+REMOVED FROM CANON (do not implement):
+- Nhalori (merged into Solari variant)
+- Stormfang (merged into Kazari variant)
+- Ashfallen (merged into Draven variant)
+- Tidecaller (merged into Nereyth variant)
+- Duskborn (merged into Necrevan variant)
+
+3D MODELS: All 13 have Meshy 7 Flagship PBR models.
+Blender pipeline running for retopology + cleanup.
+Aetherborn Male + Female have HQ models imported into UE5.8.
+
+============================================================
+  SECTION 4: CLASSES (17 — FINAL)
+============================================================
+
+17 classes. Each has 5+ unique abilities, unique VFX color palette,
+unique animation family, and unique playstyle. NO DUPLICATES.
+
+  #  Name         Role           Primary Resource  Signature Mechanic
+  1  Bulwark      Tank           Stamina           Shield Wall (block all frontal)
+  2  Duskblade    Burst/Stealth  Stamina           Shadow Step (blink + backstab)
+  3  Arcanist     Ranged DPS     Mana              Spell Weave (chain spells)
+  4  Riftwalker   Mobility       Mana              Rift Blink (teleport + weaken)
+  5  Dreadknight  Drain Tank     Rage              Soul Drain (heal on damage dealt)
+  6  Templar      Tank/Healer     Mana              Divine Aura (team-wide shield)
+   7  Soulbinder   Healer         Mana             Soul Link (redirect damage to pet)
+  8  Wildwarden   Ranger/Hybrid  Stamina           Beast Companion (tamed pet)
+  9  Stormcaller  Ranged Burst   Mana              Storm Surge (chain lightning AoE)
+ 10  Oracle       Support        Mana              Foresight (reveal boss mechanics)
+ 11  Alchemist    Utility        Reagents          Potion Craft (consumable buffs)
+ 12  Berserker    Plate DPS      Rage              Bloodlust (attack speed scales with missing HP)
+ 13  Shadowblade  Stealth DPS    Stamina           Shadow Clone (decoy that taunts)
+ 14  Spellblade   Hybrid DPS     Mana/Stamina      Enchanted Blade (melee + spell weave)
+ 15  Warthane     Tank/Protector Stamina           War Banner (aura: +10% team damage)
+ 16  Necroturge   Summoner       Mana             Raise Dead (summon skeleton army)
+ 17  Earthweaver   Hybrid/Shapeshifter  Aether    Earth Form (transform into beast)
+
+DUSKBLADE vs SHADOWBLADE — DIFFERENTIATED:
+- Duskblade: Blink-based burst. Teleports behind enemy, backstab,
+  then teleports out. High mobility, low sustained damage.
+  VFX: Purple/black afterimage trail.
+- Shadowblade: Decoy-based stealth. Leaves a shadow clone that
+  taunts enemies while the real blade repositions for a charged
+  strike. Sustained stealth damage.
+  VFX: Grey/silver smoke and shadow tendrils.
+
+ALL 17 CLASSES HAVE:
+- 5+ unique abilities (Ability1, Ability2, Ability3, Ultimate, WeaponArt)
+- Unique VFX color palette
+- Unique animation set (retargeted from Aetherborn rig)
+- Mixamo auto-rig + animation assignment
+- PBR material setup in UE5.8
+
+3D MODELS: All 17 have Meshy 7 Flagship PBR models generated.
+Blender pipeline running for retopology.
+
+============================================================
+  SECTION 5: ELEMENTAL AFFINITIES (10 — FINAL)
+============================================================
+
+10 elemental affinities. All 45 dual combinations are allowed.
+Each dual combo has a unique hybrid kill bonus.
+
+  1. Fire       — Burn DoT, spreads to nearby enemies
+  2. Ice        — Freeze, shatter for bonus damage
+  3. Lightning   — Chain to 3 nearby targets, stun chance
+  4. Shadow     — Curse (reduces enemy damage), life steal
+  5. Holy       — Smite (bonus vs undead), heal on kill
+  6. Earth      — Stagger, armor break, knockback
+  7. Water      — Slow, drown (DoT in water zones)
+  8. Poison     — Toxic DoT, stacks to lethal
+  9. Soul       — Drain (steal enemy resource), fear
+ 10. Wind       — Push/pull, mobility boost, deflect projectiles
+
+45 DUAL COMBINATIONS (C(10,2) = 45):
+Fire+Ice, Fire+Lightning, Fire+Shadow, Fire+Holy, Fire+Earth,
+Fire+Water, Fire+Poison, Fire+Soul, Fire+Wind,
+Ice+Lightning, Ice+Shadow, Ice+Holy, Ice+Earth, Ice+Water,
+Ice+Poison, Ice+Soul, Ice+Wind,
+Lightning+Shadow, Lightning+Holy, Lightning+Earth, Lightning+Water,
+Lightning+Poison, Lightning+Soul, Lightning+Wind,
+Shadow+Holy, Shadow+Earth, Shadow+Water, Shadow+Poison, Shadow+Soul, Shadow+Wind,
+Holy+Earth, Holy+Water, Holy+Poison, Holy+Soul, Holy+Wind,
+Earth+Water, Earth+Poison, Earth+Soul, Earth+Wind,
+Water+Poison, Water+Soul, Water+Wind,
+Poison+Soul, Poison+Wind,
+Soul+Wind
+
+REMOVED: Nature (merged into Earth), Temporal (cut — too complex for V1).
+If Temporal returns, it's a future expansion affinity, not base game.
+
+============================================================
+  SECTION 6: RESOURCE SYSTEM (5 — FINAL)
+============================================================
+
+5 resource types. Each class uses 1-2 primary resources.
+
+  1. Mana       — Spellcaster resource. Regenerates over time.
+  2. Stamina     — Physical resource. Used for dodge, sprint, abilities.
+  3. Rage        — Builds on damage taken/dealt. Spent on heavy attacks.
+  4. Reagents    — Consumed by Alchemist for potions/buffs.
+  5. Aether      — Combo resource. Builds by chaining abilities.
+                  (Also called Chi — same resource, different name
+                   per cultural context. Aether = cosmic, Chi = internal.)
+
+============================================================
+  SECTION 7: COMBAT SYSTEM
+============================================================
+
+HYBRID COMBAT (Elden Ring weight + Wukong fluidity + WoW depth):
+
+MOVEMENT:
+- Camera-relative locomotion (WASD + mouse)
+- Sprint (hold shift)
+- Jump (spacebar)
+- Dodge: 8-direction grounded, 100-160ms input buffer,
+  2.5-4m travel, 24-34 frames total, 8-13 i-frames at 60fps.
+  Stamina cost on activation (once). Fails safely if no stamina.
+  Dodge only from idle/recovery/approved cancel windows.
+  NO universal cancel — cannot dodge during committed attacks or CC.
+- Perfect Dodge: Triggers when a threatening attack passes through
+  a narrow timing window. Plays temporal afterimage VFX.
+  Modest reward (small damage boost). Cooldown + anti-spam.
+  Visual afterimage ≠ true invulnerability.
+
+COMBAT:
+- Light attack (left click) — chains into combos (3-5 hits)
+- Heavy attack (right click) — longer commitment, higher damage
+- Charge attack (hold) — wind up for bonus damage
+- Block (right-click hold with shield) — reduces damage
+- Perfect Parry (block within 3-frame window) — deflects, opens guard counter
+- Guard Counter — heavy attack after successful block/parry
+- Lock-on (middle mouse) — target lock for melee
+- Stagger/Poise — poise stat determines if hit interrupts.
+  Poise breaks → enemy staggers → open for crit
+- Weapon Arts (class-specific signature move)
+
+NO AUTO-ATTACK. Every action is manual input. High skill ceiling.
+
+GCD (Global Cooldown):
+- 1.0s default. Locks abilities during GCD.
+- Basic attacks, dodge, block, parry stay responsive during GCD.
+- WoW-style 20-slot action bar for abilities.
+
+ACTION BAR:
+- 20 slots. 1-0 keys + Shift+1-0 for second row.
+- Abilities drag-drop into slots.
+- Shows cooldown overlays, resource costs, keybinds.
+
+KEYBINDS (45 total across 7 input contexts):
+- WASD: Movement
+- Mouse: Camera
+- Space: Dodge
+- LMB: Light attack
+- RMB: Heavy attack / Block
+- Shift: Sprint
+- Q-E: Ability 1-2
+- R: Ultimate
+- F: Weapon Art
+- Tab: Character sheet
+- I: Inventory
+- K: Skill tree
+- M: Map
+- C: Class menu
+- V: Party menu
+- Esc: Menu
+
+============================================================
+  SECTION 8: GEAR SYSTEM
+============================================================
+
+WEAPON LEVELS: 50 max.
+- Level 1-10: Common materials (iron, wood, leather)
+- Level 11-25: Rare materials (steel, enchanted leather, bone)
+- Level 26-40: Epic materials (dragonscale, voidsteel, runed bone)
+- Level 41-50: Legendary materials (starfall ore, fracture shards)
+
+KILL REQUIREMENTS for max level:
+- 50,000 total kills (any enemy)
+- 5,000 Honor Kills (PvP kills)
+- 250 Boss Kills
+
+RARITY TIERS (7):
+  1. Common      (white)    — base stats
+  2. Uncommon    (green)     — +5% stats
+  3. Rare        (blue)      — +15% stats, 1 affix
+  4. Epic        (purple)    — +30% stats, 2 affixes
+  5. Legendary   (orange)    — +50% stats, 3 affixes, unique mechanic
+  6. Mythic      (red)       — +75% stats, 4 affixes, unique mechanic
+  7. Eclipse     (iridescent) — +100% stats, 5 affixes, game-changing
+
+LOOT SYSTEM:
+- Percentage-based drops (not guaranteed)
+- Class items drop for ALL classes simultaneously
+  (if a boss drops a weapon, it drops versions for every class)
+- Binding:
+  - Common-Rare: BoE (Bind on Equip — tradeable until equipped)
+  - Epic: Mixed (some BoE, some Soulbound)
+  - Legendary/Mythic: Soulbound on Pickup (can't trade)
+  - Eclipse: Account Bound (scales with character)
+
+NO HOSTILE MECHANICS:
+- NO forced screen vibration on other players
+- NO forced character trembling/kneeling
+- NO color desaturation of other players' screens
+- NO hesitation delay based on gear tier difference
+- Gear differences affect YOUR stats, not the OPPONENT'S screen.
+  (Removed per design review — hostile UX kills PvP games.)
+
+============================================================
+  SECTION 9: PROGRESSION
+============================================================
+
+LEVEL CAP: 50
+
+PRESTIGE: Reset level to 1 for permanent bonus.
+- Each prestige: +5% to all stats (max 10 prestiges = +50%)
+- Cap: 10 prestiges. After that, no more stat gains.
+- Prestige requires Level 50 + completed main quest.
+
+TALENT TREES:
+- Class Foundation Tree (core abilities, identity, utility)
+- Specialization Tree (role, rotation, playstyle)
+- Affinity Tree (elemental mechanics + synergies)
+- Dual-Affinity Convergence (hybrid abilities, cross-tree synergies)
+
+129 talent nodes total across all trees.
+Valid prerequisites. No dead branches. At least 3 viable builds
+per specialization. PvP tuning preserves counterplay.
+
+BALANCE (FIXED):
+- NO 5x damage multiplier for affinity combos
+- NO 10x damage for class co-op combos
+- Dual-affinity bonus: +15% damage when using both affinities
+- Co-op combo bonus: +25% damage when 2+ classes coordinate
+- Prestige bonus: +5% per prestige (max +50%)
+- Weapon bonus: +10% per 10 weapon levels (max +50%)
+- Maximum theoretical stat bonus: +50% (prestige) + +50% (weapon)
+  + +15% (dual affinity) + +25% (co-op) = +140% total
+  (Not +500% or +1000% — those were broken and are removed.)
+
+============================================================
+  SECTION 10: GAME MODES (6)
+============================================================
+
+  1. Offline Story      — Solo campaign, full story + side quests
+  2. Online Co-op       — 1-4 players, shared story progression
+  3. Online PvE         — 5-player dungeons, 10-player raids, world bosses
+  4. Online PvP         — Arena (1v1, 2v2, 3v3, 5v5) + Battleground (10v10)
+  5. Offline Couch      — Split-screen 2-player
+  6. Offline Training   — Practice mode, target dummies, ability testing
+
+GROUP SIZES (LOCKED):
+- Dungeon: 5 players (1 tank, 1 healer, 3 DPS)
+- Raid: 10 players (2 tanks, 2 healers, 6 DPS)
+- Arena: 1v1, 2v2, 3v3, 5v5
+- Battleground: 10v10
+
+AI COMPANIONS:
+- Fill empty party slots in dungeons/raids
+- 8 personalities (Stoic, Aggressive, Protective, Tactical, Reckless,
+  Cautious, Devoted, Independent)
+- Use actual class abilities (not generic attacks)
+- 10 tactical commands (follow, attack, defend, retreat, focus, etc.)
+- Replaceable in real-time when human players join
+
+============================================================
+  SECTION 11: BOSSES (14)
+============================================================
+
+14 bosses across 6 regions. Each has 3-4 phases, telegraphed
+attacks, enrage timers, and unique loot tables.
+
+SOLARA (3 bosses):
+  1. Ashen Karthul — Cathedral guardian. Phase 1: Shield wall.
+     Phase 2: Flame waves. Phase 3: Enrage + ground split.
+  2. Pyre-Warden Velkor — Cathedral boss. Phase 1: Sword combo.
+     Phase 2: Destructible arena (pillars fall). Phase 3: Time
+     manipulation (rewinds your dodge). Enrage at 5 minutes.
+  3. Solarion the Dawn-Bringer — World boss. Phase 1: Solar rays.
+     Phase 2: Summon sun-blessed adds. Phase 3: Supernova (raid wipe
+     if not interrupted).
+
+VAELWOOD (2 bosses):
+  4. Brambleveil — Forest ent. Phase 1: Root grasp. Phase 2: Spore
+     cloud (Poison). Phase 3: Regrowth (heals if not interrupted).
+  5. Wyldheart — Ancient treant world boss.
+
+MORVATH (2 bosses):
+  6. Maw of Despair — Shadow beast. Phase 1: Shadow leaps.
+     Phase 2: Fear aura. Phase 3: Devour (instant kill if caught).
+  7. Veilweaver — Shadow mage world boss.
+
+AETHERIS (3 bosses):
+  8. Stormcaller Vex — Lightning mage.
+  9. Aether Titan — Construct boss.
+ 10. Skyshatter — World boss (floating island fight).
+
+NHALOR (2 bosses):
+ 11. Frostjaw — Ice beast.
+ 12. Glacier King — World boss.
+
+UMBRYSS (2 bosses):
+ 13. Abyssal Maw — Deep sea boss.
+ 14. The Eclipsed Sovereign — FINAL BOSS.
+
+FINAL BOSS: The Eclipsed Sovereign
+- NOT the being who caused the Fracture. The cause of the Eclipse
+  is UNKNOWN and never revealed. The Sovereign is the being that
+  CONSUMED the Eclipse's power — a fallen god who used the
+  Fracture to gain godhood. Defeating it doesn't answer the
+  mystery; it saves the world from being consumed.
+- Phase 1: Reality warping (arena shifts between regions)
+- Phase 2: Echo summon (summons versions of all 13 prior bosses)
+- Phase 3: Fracture collapse (arena breaks apart, platforming)
+- Phase 4: Eclipse core (burn the heart of the Fracture)
+- Enrage: 7 minutes → Sovereign consumes remaining arena energy
+
+============================================================
+  SECTION 12: SPELL SYSTEM
+============================================================
+
+400+ spells planned. Framework exists in C++ (EclipseSpellSystem.h).
+Currently a framework — spells are defined as data structures,
+not yet fully implemented with VFX/audio/gameplay per spell.
+
+SPELL TIERS (10):
+  1. Cantrip      — Free, no resource cost
+  2. Basic        — Low cost, low cooldown
+  3. Intermediate  — Medium cost, medium cooldown
+  4. Advanced      — High cost, high damage
+  5. Ultimate      — Class signature, long cooldown
+  6. Dual-Affinity — Combines two affinities, hybrid effect
+  7. Weapon Art    — Class-specific melee/magic hybrid
+  8. Defensive     — Block, shield, damage reduction
+  9. Utility       — Mobility, buffs, debuffs, non-combat
+ 10. Ritual        — Out-of-combat (teleport, summon mount, etc.)
+
+SPELL SHAPES (12):
+Projectile, Beam, Nova (AoE around caster), Ground (AoE on target
+location), Aura (persistent around caster), Wall (linear barrier),
+Zone (persistent ground area), Missile (multiple projectiles),
+Wave (directional spread), Storm (random strikes in area),
+Chain (jumps between targets), Curse (applied to target).
+
+HONEST STATUS: Framework only. Spells need VFX, audio, balancing,
+and testing per spell. 400+ is the TARGET, not the current count.
+Current implemented: ~85 abilities across 17 classes (5 per class)
+in EclipseClassAbilities.cpp.
+
+============================================================
+  SECTION 13: ENVIRONMENT + DUNGEONS
+============================================================
+
+6 REGIONS (Locked Canon):
+  1. Solara — Cathedral, desert, sun temples, fire/holy zones
+  2. Vaelwood — Ancient forest, ruins, nature/wind zones
+  3. Morvath — Shadow wastes, corrupted ruins, shadow/poison
+  4. Aetheris — Floating islands, energy storms, lightning/soul
+  5. Nhalor — Frozen peaks, ice caves, ice/earth
+  6. Umbryss — Abyssal depths, underwater, water/temporal
+
+EACH REGION HAS:
+- 1 major city (hub for quests, vendors, social)
+- 2-3 dungeons (5-player instanced content)
+- 1 raid (10-player instanced content)
+- 1 world boss (open world, any number of players)
+- 1 fracture questline (main story for that region)
+- Environmental hazards (lava, ice, void, poison, etc.)
+
+SOLARA CATHEDRAL (Day 1 Vertical Slice Target):
+- Gothic architecture, volumetric fog, Lumen GI
+- Nanite geometry for fine stone detail
+- Cathedral interior + exterior + boss chamber
+- Destructible pillars (for Pyre-Warden Velkor fight)
+- Warm directional sunlight through stained glass windows
+
+ENVIRONMENTAL HAZARDS (per region):
+- Solara: Fire patches, falling debris, lava rivers
+- Vaelwood: Poisonous spores, thorn traps, entangling roots
+- Morvath: Shadow pools (slow + blind), curse zones (DoT)
+- Aetheris: Lightning strikes, void gaps (fall = death)
+- Nhalor: Ice slides, freezing winds (slow), avalanche
+- Umbryss: Water currents, pressure changes, abyssal darkness
+
+NO HOSTILE MECHANICS (REMOVED):
+- No "environmental reaction" that forces other players to tremble
+- No forced kneeling based on gear
+- No screen desaturation from other players' presence
+- Hazards affect the PLAYER in the hazard, not bystanders
+
+============================================================
+  SECTION 14: MONETIZATION (FINAL)
+============================================================
+
+BASE GAME: $59.99 (PC/PS5/Xbox)
+- Full offline campaign (50+ hours)
+- All 13 ancestries, 17 classes, 6 regions, 14 bosses
+- Online co-op, dungeons, raids, PvP arenas
+- No microtransactions in base game
+
+COSMETICS SHOP (optional, no gameplay advantage):
+- Character appearance customization (hair, face, markings)
+- Mount skins
+- Weapon visual effects (cosmetic only)
+- $2.99-$9.99 per item
+
+NO BATTLE PASS (FINAL DECISION):
+- No battle pass. No seasonal FOMO. No daily login requirements.
+- "No patches, no expansions, no battle pass" tagline is REMOVED
+  because expansions ARE planned (see below).
+
+FUTURE EXPANSIONS (planned, not in base game):
+- Expansion 1: "The Fracture Deepens" — New region, 2 ancestries,
+  3 classes, 2 bosses. $39.99.
+- Expansion 2: "Eclipse Eternal" — Endgame zone, raid boss,
+  prestige+ content. $39.99.
+
+============================================================
+  SECTION 15: TECHNICAL STATUS (HONEST)
+============================================================
+
+WHAT EXISTS AND COMPILES:
+✅ 56 C++ source files compiled in UE5.8 (GATE 0 passed)
+✅ UE5.8 project loads and runs
+✅ Lumen + Nanite + volumetric fog configured
+✅ PythonScriptPlugin enabled
+✅ Aura plugin connected (MCP server running)
+✅ Aetherborn Male HQ model imported into UE5.8
+✅ 29 Meshy 7 Flagship PBR models generated (4.6GB)
+✅ Blender retopology pipeline running (3/29 done)
+✅ MMO server infrastructure (Go + PostgreSQL + Redis + Docker)
+
+WHAT EXISTS BUT IS NOT YET TESTED IN-ENGINE:
+⚠️ 28 C++ systems (combat, spells, talents, bosses, quests, loot,
+   party, companion AI, targeting, input, game feel, visual pipeline)
+⚠️ 85 class abilities (5 per class × 17 classes)
+⚠️ 400+ spell framework (structure only, not populated)
+⚠️ 14 boss definitions (3 named, 11 need names + mechanics)
+⚠️ 129 talent nodes (framework, not tested)
+⚠️ 6 game modes (defined, not playable)
+
+WHAT DOES NOT EXIST YET:
+❌ Playable character controller (no PIE movement)
+❌ Dodge mechanic (coded but not tested in-engine)
+❌ Stamina bar UI (not built)
+❌ Enemy AI (coded but not spawned/tested)
+❌ Combat feel (hit-stop, camera shake — coded but not tested)
+❌ Spell VFX (not created)
+❌ Animation sets (Mixamo not yet applied)
+❌ Dungeon levels (cathedral script exists but not run)
+❌ Multiplayer (server code exists but not deployed)
+❌ Save/load (coded but not tested)
+❌ PvP arena matchmaking (coded but not functional)
+
+NEXT MILESTONES:
+  GATE 1: Playable Aetherborn in PIE (movement + camera + dodge)
+  GATE 2: Combat (light/heavy attack, block, parry, enemy)
+  GATE 3: Spellcasting (Arcanist, cast bar, mana, VFX)
+  GATE 4: Multiplayer (2-client dedicated server test)
+  GATE 5: Dungeon + raid (5-player + 10-player with AI companions)
+  GATE 6: Full 17-class scale + PvP arenas
+
+============================================================
+  SECTION 16: AGENT TEAM
+============================================================
+
+12 active agents + Hermes + Jamil:
+
+  Agent              Role                           Schedule
+  Hermes             Studio Orchestrator (code)     Active
+  Jamil              Creative Director              Always
+  Kai                Lore Director + Cinematic      Every 12h
+  Lumen Scribes      Art Direction + Coloring      Every 12h
+  Video Editor       Cinematics + Cutscenes         Daily 6pm
+  Dreadnottz         Audio + Music Director         Every 6h
+  Herm's Heavy       World-building + Business      Every 6h
+  Brand Outreach     Sponsorships                   Every 2h
+  Ad Specialist      Marketing Research             Daily 12pm
+  Credit + Finance   Budget + Credit Repair         Daily 10pm
+  Eclipse Combat Dir Combat Balance                 Every 12h
+  Eclipse World Dir  Environments + Zones           Every 12h
+  Eclipse Char Dir   Character Pipeline             Every 12h
+  Eclipse QA Dir     Double-checks Everything       Every 12h
+  Accountability     Self-care Reminders            Daily 9am
+
+============================================================
+  SECTION 17: DESIGN PRINCIPLES (LOCKED)
+============================================================
+
+1. OFFLINE FIRST — Complete game playable solo. MMO is additive.
+2. NO HOSTILE UX — Never take control from the player because of
+   another player's gear/stats. Hazards affect the player in them.
+3. MANUAL COMBAT — No auto-attack. Every action is player input.
+4. HIGH SKILL CEILING — Perfect dodge, perfect parry, combo chains,
+   timing windows reward skilled play. But not so hard that casual
+   players can't enjoy the story.
+5. FAIR PvP — Gear matters but skill matters more. A skilled Epic-
+   geared player CAN beat a Legendary-geared player. No mechanic
+   makes this impossible.
+6. ORIGINAL IP — No copying Elden Ring, Wukong, WoW assets, code,
+   animations, audio, or UI. Study their principles, build our own.
+7. BLACK REPRESENTATION — Full melaninated skin as default across
+   all ancestries. Authentic textured hair (locs, braids, twists).
+   All skin tones available in character creation.
+8. HONEST STATUS — Never claim a system is "done" because source
+   files exist. Done = compiles + runs in PIE + tested + evidence.
+9. ONE CANON — This document. If a prior PDF contradicts this,
+   the PDF is wrong. If the C++ code contradicts this, fix the code.
+10. NO RETCONS — Lore is locked. What happened happened. New
+    content expands the world; it doesn't rewrite what's established.
+
+============================================================
+  END OF DEFINITIVE CANON V9.1
+============================================================

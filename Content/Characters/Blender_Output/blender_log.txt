@@ -1,0 +1,21 @@
+[ECLIPSE BLENDER] ============================================================
+[ECLIPSE BLENDER] ECLIPSE BLENDER ART PIPELINE — ALL 29 MODELS
+[ECLIPSE BLENDER] Blender 5.2.3 LTS
+[ECLIPSE BLENDER] ============================================================
+[ECLIPSE BLENDER] Found 29 HQ models
+[ECLIPSE BLENDER] 
+[1/29] AETHERBORN_FEMALE_HQ.glb
+[ECLIPSE BLENDER] 
+--- AETHERBORN_FEMALE_HQ ---
+01:57:12 | INFO: Data are loaded, start creating Blender stuff
+01:57:12 | INFO: Blender create Mesh node 0
+01:57:23 | INFO: glTF import finished in 11.20s
+[ECLIPSE BLENDER]   Imported 1 mesh objects
+[ECLIPSE BLENDER]   Original: 1709499 verts, 3142406 faces
+Malloc returns null: len=8184 in mempool chunk, total 3044202816
+Error   : EXCEPTION_ACCESS_VIOLATION
+Address : 0x00007FF674A9B64E
+Module  : blender.exe
+Thread  : 00038b70
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+Writing: C:\Users\Tap\AppData\Local\Temp\blender.crash.txt

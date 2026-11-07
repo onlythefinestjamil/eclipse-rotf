@@ -14,18 +14,13 @@ enum class EAncestry : uint8
     Kazari UMETA(DisplayName = "Kazari - Beastblood"),
     Umbralis UMETA(DisplayName = "Umbralis - Void-Touched"),
     Draven UMETA(DisplayName = "Draven - Draconic"),
-    Nhalori UMETA(DisplayName = "Nhalori - Coldland"),
-    // Expansion 10
+    // Expansion 5 (13 total — V9.1 Final Canon)
     Grimstarr UMETA(DisplayName = "Grimstarr - Forge Dwarf"),
     Nereyth UMETA(DisplayName = "Nereyth - Aquatic Kin"),
     Myceliar UMETA(DisplayName = "Myceliar - Verdant Kin"),
     Forgeborn UMETA(DisplayName = "Forgeborn - Arcane Construct"),
     Hellsworn UMETA(DisplayName = "Hellsworn - Demon-Blooded"),
     Necrevan UMETA(DisplayName = "Necrevan - Oath-Bound Dead"),
-    Stormfang UMETA(DisplayName = "Stormfang - Wolf-Kin Shapeshifter"),
-    Ashfallen UMETA(DisplayName = "Ashfallen - Volcanic Ash"),
-    Tidecaller UMETA(DisplayName = "Tidecaller - Deep Sea Merfolk"),
-    Duskborn UMETA(DisplayName = "Duskborn - Twilight Halfling"),
 };
 
 UENUM(BlueprintType)
@@ -61,14 +56,14 @@ UENUM(BlueprintType)
 enum class EElementalAffinity : uint8
 {
     Fire, Ice, Lightning, Shadow, Holy,
-    Water, Nature, Soul, Earth, Wind, Poison, Temporal,
+    Water, Soul, Earth, Wind, Poison,
 };
 
 UENUM(BlueprintType)
 enum class EResourceType : uint8
 {
     None,
-    Mana, Stamina, Rage, Reagents, Aether, Chi,
+    Mana, Stamina, Rage, Reagents, Aether,
 };
 
 UENUM(BlueprintType)
