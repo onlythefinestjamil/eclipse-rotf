@@ -293,17 +293,32 @@ LOOT SYSTEM:
   - Legendary/Mythic: Soulbound on Pickup (can't trade)
   - Eclipse: Account Bound (scales with character)
 
-ATMOSPHERIC PRESENCE (POWERFUL CHARACTERS):
-- NO forced screen vibration on other players
-- NO forced character trembling/kneeling
-- NO hesitation delay based on gear tier difference
-- YES atmospheric presence: powerful characters have visible auras,
-  ground cracks, ambient particles, and local lighting shifts
-  that other players can SEE without being debuffed
-- Gear differences affect YOUR stats, not the OPPONENTS controls
-- The atmosphere effect scales: Epic = faint glow, Legendary = visible
-  aura + ground cracks, Mythic = full atmospheric distortion nearby,
-  Eclipse = reality warping within 5m (visual only, no debuff)
+ATMOSPHERIC PRESENCE (SIGNATURE ECLIPSE FEATURE):
+- Powerful characters (Epic+ geared or Level 40+) have a visible
+  aura and environmental presence that other players can SEE and FEEL:
+  - The air around them shimmers with elemental energy
+  - The ground cracks with fracture lines beneath their feet
+  - Their weapon leaves a faint trail of light when drawn
+  - Ambient particles (embers, frost, shadow wisps) emanate from them
+  - The local lighting shifts (warmer for Fire, colder for Ice, etc.)
+  - The air feels heavier near powerful characters
+- The atmosphere effect scales with gear tier AND character level:
+  - Level 40+ / Epic gear: Faint glow, subtle particles
+  - Level 45+ / Legendary gear: Visible aura, ground cracks, weapon trail
+  - Level 50 / Mythic gear: Full atmospheric distortion nearby, air feels heavy
+  - Level 50 + Prestige 5+ / Eclipse gear: Reality warping within 5m,
+    other players feel the pressure of their presence
+- This is VISUAL/ATMOSPHERIC only:
+  - Does NOT take control from other players
+  - Does NOT desaturate other players screens
+  - Does NOT force other players to tremble or kneel
+  - Does NOT add hesitation delay or input lag
+  - Does NOT debuff other players stats
+- It signals power and creates organic intimidation/fear through
+  visual storytelling, not mechanical debuffs
+- UNIQUE TO ECLIPSE - no other MMO has this system
+- In PvP arenas, this creates a natural "boss arrival" feeling
+  when a top-geared player enters the arena
 
 ============================================================
   SECTION 9: PROGRESSION
@@ -605,10 +620,22 @@ NEXT MILESTONES:
 ============================================================
 
 1. OFFLINE FIRST — Complete game playable solo. MMO is additive.
-2. ATMOSPHERIC PRESENCE - Powerful characters have visible auras
-   and environmental effects (ground cracks, particles, lighting
-   shifts) that other players can SEE. This creates organic
-   intimidation without taking control from other players.
+2. ATMOSPHERIC PRESENCE (SIGNATURE ECLIPSE FEATURE) -
+   Powerful characters have visible auras and environmental
+   effects that other players can SEE and FEEL. This is unique
+   to Eclipse - no other MMO has this. When a high-level player
+   enters an area, other players feel the pressure through:
+   - Visible aura shimmering with elemental energy around the player
+   - Ground cracks with fracture lines beneath their feet
+   - Ambient particles (embers, frost, shadow wisps) emanating from them
+   - Local lighting shifts (warmer for Fire, colder for Ice, etc.)
+   - The air feels heavier near powerful characters
+   - Weapon leaves a faint trail of light when drawn
+   NO stat debuffs. NO control taken from other players.
+   NO screen desaturation. NO forced trembling/kneeling.
+   NO hesitation delay or input lag.
+   The pressure is FELT through atmosphere, not mechanics.
+   Other games dont have this. Eclipse does.
 3. MANUAL COMBAT — No auto-attack. Every action is player input.
 4. HIGH SKILL CEILING — Perfect dodge, perfect parry, combo chains,
    timing windows reward skilled play. But not so hard that casual
