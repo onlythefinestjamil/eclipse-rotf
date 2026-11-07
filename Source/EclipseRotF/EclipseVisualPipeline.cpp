@@ -194,7 +194,7 @@ void UEclipseVisualPipeline::ApplyCinematicPostProcess(UPostProcessComponent* PP
 
     // Film grain — subtle texture
     PPComponent->Settings.FilmGrainIntensity = 0.15f;
-    PPComponent->Settings.FilmGrainScale = 0.5f;
+    PPComponent->Settings.FilmGrainScale = FVector2f(0.5f, 0.5f);
     PPComponent->Settings.bOverride_FilmGrainIntensity = true;
 
     // Color grading — warm highlights, cool shadows
@@ -233,14 +233,14 @@ void UEclipseVisualPipeline::ConfigureVolumetricFog(AExponentialHeightFog* FogAc
     FogComp->FogHeightFalloff = 0.8f;
     FogComp->FogMaxOpacity = 0.8f;
     FogComp->StartDistance = 500.0f;
-    FogComp->FogInscatteringColor = FLinearColor(0.02f, 0.02f, 0.04f, 1.0f); // Dark blue
-    FogComp->FogInscatteringColorMax = FLinearColor(0.05f, 0.05f, 0.08f, 1.0f);
+    // FogComp->FogInscatteringColor = FLinearColor(0.02f, 0.02f, 0.04f, 1.0f); // Dark blue
+    // // FogComp->FogInscatteringColorMax = FLinearColor(0.05f, 0.05f, 0.08f, 1.0f);
 
     // Enable volumetric fog
     FogComp->bEnableVolumetricFog = true;
-    FogComp->VolumetricFogScatterDistribution = 1.0f;
-    FogComp->VolumetricFogScatteringDistribution = 0.9f;
-    FogComp->VolumetricFogAlbedo = FLinearColor(0.8f, 0.8f, 0.9f, 1.0f);
+    // FogComp->VolumetricFogScatterDistribution = 1.0f;
+    // FogComp->VolumetricFogScatteringDistribution = 0.9f;
+    // FogComp->VolumetricFogAlbedo = FLinearColor(0.8f, 0.8f, 0.9f, 1.0f);
     FogComp->VolumetricFogExtinctionScale = 1.0f;
     FogComp->VolumetricFogDistance = 5000.0f;
 
