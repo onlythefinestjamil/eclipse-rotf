@@ -40,3 +40,14 @@ USE: these are GENERATED CONTACT SHEETS from Runway's Agent — treat them as st
 starting points for Phase 1 (design lock), not as accepted front/back deliverables. Cross-check
 each against its ancestry folder's identity-locked prompt before generating the accepted
 FRONT/BACK references. Filenames map 1:1 to the ancestry folders.
+
+## UPDATE 3 — THE 30-SECOND TRAILER (SEEDANCE 2.5 RENDER)
+
+`eclipse_trailer_seedance_30s.mp4` — the full 30-second cinematic trailer rendered through
+Seedance 2.5 from the canon trailer prompt (all 13 ancestries, hero lock, lore summary).
+
+SPECS: 30.08s, 1920x1080, HEVC 10-bit, 24fps, 14.2 Mbps, stereo AAC — 51MB.
+
+USE: this is the first full-length render — reference it for pacing, VO timing, and the
+ancestry montage when we do the Runway Gen-4 / higher-fidelity pass. Extract individual
+shot feedback from Jamil before any re-render.
