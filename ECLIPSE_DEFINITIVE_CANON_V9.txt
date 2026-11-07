@@ -722,7 +722,129 @@ NEXT MILESTONES:
   GATE 6: Full 17-class scale + PvP arenas
 
 ============================================================
-  SECTION 16: AGENT TEAM
+  SECTION 16: TOOLS + PROGRAMS + PRODUCTION PIPELINE
+============================================================
+
+GAME ENGINE:
+- Unreal Engine 5.8 (Nanite, Lumen, Path Tracing, Virtual Shadow Maps,
+  Volumetric Fog, World Partition, Chaos Physics/Cloth,
+  Enhanced Input, Gameplay Ability System, MetaHuman,
+  Motion Matching, Groom Hair, Behavior Trees, AI Perception)
+
+3D MODELING:
+- Blender 5.2 LTS (headless Python scripting for retopology, UV,
+  displacement, sculpt detail, PBR material enhancement, exports)
+- ZBrush 2025 (fine sculpting: pores, veins, muscle definition,
+  armor engraving, facial detail, scars, magical markings)
+- Meshy AI 7 Flagship ($20/mo, image-to-3D with PBR, API)
+- Rodin/Hyper3D ($30/mo, 3D generation, API)
+- Tripo AI (multi-view 3D generation, API)
+
+TEXTURING:
+- Substance 3D Painter (4K PBR: albedo, normal, roughness,
+  metallic, AO, SSS, curvature maps)
+- Substance 3D Designer (procedural material generation)
+- Substance 3D Sampler (material capture)
+
+CLOTH + HAIR:
+- Marvelous Designer (garment simulation, cloth patterns)
+- Houdini (hair grooming, procedural hair, cloth simulation,
+  VFX, environmental effects)
+- UE5 Groom Hair (card-based and spline-based hair rendering)
+
+RIGGING + ANIMATION:
+- Mixamo (auto-rigging, 600+ animation library, web-based, free)
+- UE5 Control Rig (skeletal rigging, IK retargeting)
+- MetaHuman (facial blendshapes, body proportions, skin shaders)
+- UE5 Motion Matching (animation selection by movement input)
+
+VFX + AUDIO:
+- UE5 Niagara (particle VFX, spell effects, environmental)
+- UE5 MetaSounds (procedural audio, combat sounds, UI sounds)
+- UE5 Quartz (audio timing, music queuing)
+- Suno AI (music generation, 24 cue prompts ready, needs Pro for commercial)
+
+VIDEO + CINEMATIC:
+- Runway Gen-3/Gen-4 (AI video generation, API credits requested)
+- Vast.ai A100 80GB (Wan 2.2 model, trailer generation, $19.43 balance)
+- UE5 Sequencer (cinematic camera, cutscene direction)
+- Premiere Pro 2024 (video editing, trailer assembly)
+- Media Encoder 2024 (export, rendering)
+
+ENVIRONMENT ASSETS:
+- Quixel Megascans / Fab (photoreal environment assets, free with UE5)
+- UE5 PCG (Procedural Content Generation for world building)
+
+CREATIVE SOFTWARE:
+- Photoshop 2024 (concept art, texture editing, UI design)
+- Illustrator 2024 (logo design, vector graphics, UI assets)
+- Character Animator 2026 (facial animation, lip sync)
+
+AI TOOLS (The Canvas):
+- OpenAI (GPT-4 code, DALL-E images, Sora video - credits requested)
+- Stability AI (Stable Diffusion 3 / SDXL for concept art)
+- fal.ai (fast image generation for rapid iteration)
+- MiniMax (text-to-video for B-roll)
+- ACE Studio (AI vocal synthesis for character voiceovers)
+- Cloudflare (CDN, R2 storage for asset hosting)
+- Google (Gemini, Imagen)
+
+MCP SERVERS:
+- ImagineArt, ACE Studio, BeatStars, REA, Creatify, Tripo
+  (all connected to Hermes config.yaml)
+
+INFRASTRUCTURE:
+- Go (gateway server, world services, matchmaking)
+- PostgreSQL 16 (persistent data, 15 tables)
+- Redis 7 (caching, sessions, rate limiting)
+- Docker + Docker Compose (containerized deployment)
+- Kubernetes (auto-scaling, 2-20 gateways, 1-10 zone servers)
+- Nginx (load balancing, reverse proxy)
+- Hermes Agent (Nous Research, agent orchestration)
+- Aura by Ramen (UE5.8 AI agent, MCP server, editor control)
+
+SOURCE CONTROL:
+- Git (private GitHub: onlythefinestjamil/eclipse-rotf)
+- Git LFS (10GB free on GitHub for binary assets)
+
+HARDWARE:
+- AMD Ryzen 9 7900X (12C/24T)
+- 128 GB DDR5 RAM
+- AMD Radeon RX 6800 16 GB VRAM
+- Windows 11 Pro (Build 26300)
+- 9 drives (~9.9TB total, K: 4TB SSD dev drive)
+
+PRODUCTION PIPELINE (12 stages per ancestry):
+  00. Canon validation - Lock appearance and reference images
+  01. Character concept - Matching front, back, and side views
+  02. Base modeling - Anatomy, proportions, equipment (Blender)
+  03. High-detail sculpting - Skin, muscles, armor (ZBrush)
+  04. Retopology and UVs - Game-ready geometry (Blender)
+  05. Texturing - PBR maps (Substance 3D Painter)
+  06. Hair and cloth - Locs, fur, robes (Houdini, Marvelous)
+  07. Rigging - Skeleton, facial expressions (MetaHuman, Mixamo)
+  08. Combat animation - Combos, dodge, casting (Mixamo, Aura)
+  09. Unreal integration - Materials, spells, lighting (UE5.8)
+  10. Multiplayer validation - Replication (UE5.8 dedicated server)
+  11. Optimization - LODs, performance (UE5.8 Insights)
+  12. Final QA - Compare against references (Hermes + Aura)
+
+API KEYS (stored locally, NOT in git):
+- Meshy: scratch/eclipse_api_keys.env
+- Rodin/Hyper3D: scratch/eclipse_api_keys.env
+- Aura OpenAI: scratch/eclipse_api_keys.env
+- Canvas (7 keys): scratch/canvas_keys.txt
+  (OpenAI, Runway, Stability, fal.ai, MiniMax, Cloudflare, Google)
+- HuggingFace: H:/Downloads/hugging face token.txt
+- Runway: scratch/runway_key.txt + HANDOFF_FORGE_TRAILER.md
+
+LICENSE REQUESTS SENT (8 emails from malene@illustratorsent.com):
+- Runway, Meshy, Stability AI, fal.ai, MiniMax, ACE Studio,
+  Tripo AI, OpenAI
+- All requesting 90-120 day evaluation licenses with API credits
+
+============================================================
+  SECTION 17: AGENT TEAM
 ============================================================
 
 12 active agents + Hermes + Jamil:
