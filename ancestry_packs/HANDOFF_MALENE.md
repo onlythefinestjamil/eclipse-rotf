@@ -90,3 +90,15 @@ These complete the visual chain for Unreal/Aura: ancestries (13) + bosses (19+en
 enemies (11) + NPCs (15) + stage plates (20) = the full aesthetics reference library.
 Same rule: design-lock starting points — validate against lore entries before UE5/Aura
 production passes.
+
+## UPDATE 7 — SECOND WAVE: DUEL CIRCLE / SOVEREIGN RIFT / VERDANT DEEP / GOTHIC CITY / FRACTURE + FOUNDRY + 8 CLIPS
+
+environments/ now 80 plates: adds full 4-shot sets for Duel Circle, Sovereigns Rift,
+Verdant Deep, Gothic City, The Fracture + Forgeborn Foundry-Temple set + duplicate set
+preserved (_dup2 suffix = identical second download; use either).
+
+environment_clips/ — 8 VIDEO clips (image-to-video environment motion): gothic city
+aerial drift, time-broken cathedral nave push-in, cosmic arena push-in, frost monastery,
+desert cathedral facade crane, fractured continent aerial, submerged gothic city,
+forge dungeon dolly (molten metal). These are MOTION references for level ambience,
+matinee sequences, and the Gen-4 trailer pass.
