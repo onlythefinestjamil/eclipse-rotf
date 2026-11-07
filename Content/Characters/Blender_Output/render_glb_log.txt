@@ -1,0 +1,55 @@
+[RENDER] ==================================================
+[RENDER] ECLIPSE CHARACTER RENDERS — FROM GLB (PBR)
+[RENDER] ==================================================
+[RENDER] 
+[1] AETHERBORN_MALE_HQ
+02:29:52 | INFO: Data are loaded, start creating Blender stuff
+02:29:52 | INFO: Blender create Mesh node 0
+02:29:56 | INFO: glTF import finished in 3.82s
+C:\Users\Tap\EclipseRotF\Content\Python\render_glb.py:78: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+[RENDER]   Rendering AETHERBORN_MALE_HQ 3/4...
+00:12.515  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\AETHERBORN_MALE_HQ_3quarter.png'
+[RENDER]   Rendering AETHERBORN_MALE_HQ front...
+00:17.703  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\AETHERBORN_MALE_HQ_front.png'
+[RENDER] 
+[2] AETHERBORN_FEMALE_HQ
+02:30:07 | INFO: Data are loaded, start creating Blender stuff
+02:30:07 | INFO: Blender create Mesh node 0
+02:30:12 | INFO: glTF import finished in 4.86s
+[RENDER]   Rendering AETHERBORN_FEMALE_HQ 3/4...
+00:29.000  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\AETHERBORN_FEMALE_HQ_3quarter.png'
+[RENDER]   Rendering AETHERBORN_FEMALE_HQ front...
+00:34.906  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\AETHERBORN_FEMALE_HQ_front.png'
+[RENDER] 
+[3] SOLARI_HQ
+02:30:24 | INFO: Data are loaded, start creating Blender stuff
+02:30:24 | INFO: Blender create Mesh node 0
+02:30:27 | INFO: glTF import finished in 3.25s
+[RENDER]   Rendering SOLARI_HQ 3/4...
+00:42.984  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\SOLARI_HQ_3quarter.png'
+[RENDER]   Rendering SOLARI_HQ front...
+00:47.469  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\SOLARI_HQ_front.png'
+[RENDER] 
+[4] KAZARI_HQ
+02:30:37 | INFO: Data are loaded, start creating Blender stuff
+02:30:37 | INFO: Blender create Mesh node 0
+02:30:45 | INFO: glTF import finished in 8.34s
+[RENDER]   Rendering KAZARI_HQ 3/4...
+01:05.187  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\KAZARI_HQ_3quarter.png'
+[RENDER]   Rendering KAZARI_HQ front...
+01:13.922  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\KAZARI_HQ_front.png'
+[RENDER] 
+[5] DRAVEN_HQ
+02:31:03 | INFO: Data are loaded, start creating Blender stuff
+02:31:03 | INFO: Blender create Mesh node 0
+02:31:06 | INFO: glTF import finished in 3.33s
+[RENDER]   Rendering DRAVEN_HQ 3/4...
+01:22.265  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\DRAVEN_HQ_3quarter.png'
+[RENDER]   Rendering DRAVEN_HQ front...
+01:26.859  render           | Saved: 'C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders\DRAVEN_HQ_front.png'
+[RENDER] 
+Done! Renders in: C:\Users\Tap\EclipseRotF\Content\Characters\Blender_Output\Renders
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:37:16)
+
+Blender quit

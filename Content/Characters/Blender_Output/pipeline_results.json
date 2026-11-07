@@ -46,5 +46,73 @@
   {
     "file": "HELLSWORN_HQ.glb",
     "status": "OK"
+  },
+  {
+    "file": "KAZARI_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "MYCELIAR_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "NECREVAN_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "NECROMANCER_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "ORACLE_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "RIFTWALKER_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "SHADOWBLADE_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "SOLARI_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "SOULBINDER_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "SPELLBLADE_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "STORMCALLER_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "TEMPLAR_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "UMBRALIS_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "VANGUARD_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "VYRAEL_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "WARLORD_HQ.glb",
+    "status": "OK"
+  },
+  {
+    "file": "WILDWARDEN_HQ.glb",
+    "status": "OK"
   }
 ]
