@@ -6,6 +6,7 @@
 #include "Engine/World.h"
 #include "Components/PostProcessComponent.h"
 #include "Engine/ExponentialHeightFog.h"
+#include "Components/ExponentialHeightFogComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
 
 void UEclipseVisualPipeline::ApplyDarkFantasyRendering(EVisualQualityPreset Quality)

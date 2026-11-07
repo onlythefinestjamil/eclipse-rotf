@@ -58,7 +58,7 @@ void UEclipseWeaponSwap::SwapWeapon()
     // Dual affinity burst: if both weapons have different elements, swapping triggers a burst
     if (bDualAffinityOnSwap && oldEffect != EWeaponStatusEffect::None && newEffect != EWeaponStatusEffect::None && oldEffect != newEffect)
     {
-        UE_LOG(LogTemp, Log, TEXT("[WeaponSwap] DUAL AFFINITY BURST! %d + %d", (int32)oldEffect, (int32)newEffect));
+        UE_LOG(LogTemp, Log, TEXT("[WeaponSwap] DUAL AFFINITY BURST! %d + %d"), (int32)oldEffect, (int32)newEffect);
         // Apply both status effects in a burst around the player
         ApplyStatusEffect(oldEffect, 50.0f, 3.0f);
         ApplyStatusEffect(newEffect, 50.0f, 3.0f);
@@ -81,8 +81,8 @@ void UEclipseWeaponSwap::ApplyStatusEffect(EWeaponStatusEffect Effect, float Pow
 {
     if (Effect == EWeaponStatusEffect::None) return;
 
-    UE_LOG(LogTemp, Log, TEXT("[WeaponSwap] Applying status effect: %d (Power: %.1f, Duration: %.1fs)",
-        (int32)Effect, Power, Duration));
+    UE_LOG(LogTemp, Log, TEXT("[WeaponSwap] Applying status effect: %d (Power: %.1f, Duration: %.1fs"),
+        (int32)Effect, Power, Duration);
 
     // Status effect behavior:
     // Fire: burn damage over time, can spread to nearby enemies
