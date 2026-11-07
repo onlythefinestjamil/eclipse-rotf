@@ -203,6 +203,23 @@ TEMPORAL IS CANON. Time manipulation is core to the Eclipse:
 
 HYBRID COMBAT (Elden Ring weight + Wukong fluidity + WoW depth):
 
+Every move has a state diagram, event timeline, cost, recovery, hitbox
+window, cue, input buffering, server-authority mapping, and tests.
+
+COMBAT FEEL (Game Feel):
+- Hit-stop: 0.05-0.15s freeze on hit contact (scales by weapon weight)
+- Camera shake: scales by hit weight (small for light, heavy for boss)
+- Input buffering: 0.15s window (inputs during recovery queue)
+- Combo chaining: 0.20s window, max 5 hits, chains scale damage
+- Dodge i-frames: 8-13 frames invulnerable during dodge
+- Parry window: 3 frames for perfect parry, 6 for partial
+- Slow-motion: 0.3x on perfect dodge, 0.4x on critical hit
+- Stamina management: costs on dodge, sprint, abilities, attacks
+- Poise/Stagger: poise stat, break = stagger = open for crit
+- Animation commitment: heavy attacks lock longer than light
+- Footstep audio synced to animation
+- Weapon trail VFX on swing
+
 MOVEMENT:
 - Camera-relative locomotion (WASD + mouse)
 - Sprint (hold shift)
@@ -486,12 +503,12 @@ in EclipseClassAbilities.cpp.
 ============================================================
 
 6 REGIONS (Locked Canon):
-  1. Solara — Cathedral, desert, sun temples, fire/holy zones
+  1. Solara - Cathedral, desert, sun temples, fire/holy zones
   2. Vaelwood - Ancient forest, ruins, earth/wind zones
-  3. Morvath — Shadow wastes, corrupted ruins, shadow/poison
-  4. Aetheris — Floating islands, energy storms, lightning/soul
-  5. Nhalor — Frozen peaks, ice caves, ice/earth
-  6. Umbryss — Abyssal depths, underwater, water/temporal
+  3. Morvath - Shadow wastes, corrupted ruins, shadow/poison
+  4. Aetheris - Floating islands, energy storms, lightning/soul
+  5. Nhalor - Frozen peaks, ice caves, ice/earth
+  6. Umbryss - Abyssal depths, underwater, water/temporal
 
 EACH REGION HAS:
 - 1 major city (hub for quests, vendors, social)
@@ -515,6 +532,98 @@ ENVIRONMENTAL HAZARDS (per region):
 - Aetheris: Lightning strikes, void gaps (fall = death)
 - Nhalor: Ice slides, freezing winds (slow), avalanche
 - Umbryss: Water currents, pressure changes, abyssal darkness
+
+SAVE SYSTEM:
+- Grace Sites (rest + save + respawn points, like bonfires)
+- Auto-save on zone transition
+- Boss checkpoints (retry from boss room after wipe)
+- Save stores: character level, XP, inventory, equipment,
+  talents, spell unlocks, quest state, world flags, currency,
+  faction reputation, guild membership, achievements
+- Save is server-authoritative in multiplayer
+
+CRAFTING + BLACKSMITH SYSTEM:
+- Blacksmiths in each city upgrade weapons (Level 1-50)
+- Upgrade materials drop from enemies and bosses
+- Rare materials: found in dungeons
+- Epic materials: dropped by bosses
+- Legendary materials: dropped by raid bosses
+- Eclipse materials: dropped by world bosses
+- Alchemist crafts consumables (potions, buffs, elixirs)
+- Craftable items: weapon upgrades, armor enhancements,
+  consumables, enchantments, cosmetic dyes
+
+MOUNT SYSTEM:
+- Mounts for fast travel across open world
+- Mount types: default mount (per ancestry), faction mounts,
+  boss drop mounts, cosmetic shop mounts
+- Mounts can be summoned via Ritual spell
+- No mount in dungeons/raids/arenas (instant dismount on entry)
+- Mount skins in cosmetics shop ($2.99-$9.99)
+
+DIMINISHING RETURNS (DR) SYSTEM:
+- 6 CC categories: Stun, Silence, Root, Fear, Sleep, Disarm
+- First CC: full duration
+- Second same-category CC within 15s: 50% duration
+- Third same-category CC within 15s: 25% duration
+- Fourth+ same-category CC within 15s: immune (DR immunity)
+- DR resets after 15s without CC
+- Different CC categories do NOT share DR
+- PvP-specific DR: separate from PvE, tuned for competitive play
+
+CHARACTER CREATION:
+- Choose ancestry (13 options)
+- Choose class (17 options)
+- Skin tone slider (full melanin spectrum, all tones)
+- Hair style (50+ options: locs, braids, twists, afros, fades,
+  cultural styles, ancestry-specific variants)
+- Hair color (including white for Aetherborn)
+- Face shape, eye color, facial hair, markings
+- Body type (athletic, muscular, slender, heavy)
+- Height/weight sliders
+- Voice type
+- Starting equipment (based on class)
+- Starting region (based on ancestry)
+
+TARGETING SYSTEM:
+- Manual aiming (free aim with mouse)
+- Auto-lock (middle mouse, snaps to nearest enemy)
+- Weak point targeting (head, joints, exposed areas)
+- Weak point crit: bonus damage for precision hits
+- Lock-on indicator: visible lock icon on target
+- Tab-targeting option for ability targeting
+- Camera-relative targeting for AoE spells
+
+QUEST SYSTEM:
+- 9 quest types: Main Campaign, Side Quest, Class Quest,
+  Faction Quest, Companion Quest, Boss Quest, Fracture Quest,
+  Hidden Quest, Daily/Repeatable
+- 135+ quests total
+- Branching choices with consequences
+- Faction reputation system (6 factions)
+- World flags (persistent state changes)
+- Fracture quests (main story per region)
+- Quest rewards: XP, gold, gear, abilities, reputation,
+  companions, mounts, cosmetic unlocks
+
+CHAT SYSTEM:
+- 8 channels: Local, Party, Raid, Guild, Whisper, Region,
+  Global/Trade, System
+- Chat moderation, rate limits, profanity filter
+- Party chat: 5-player group
+- Raid chat: 10-player group
+- Guild chat: guild members only
+- Whisper: 1-on-1 private message
+- Macros: customizable text macros
+
+SOCIAL SYSTEMS:
+- Friends list (add, remove, block, online status)
+- Guild creation (name, crest, ranks, permissions)
+- Guild bank (shared storage)
+- Guild progression (levels, perks, achievements)
+- Auction house (buy/sell items, gold economy)
+- In-game mail (item attachments, currency)
+- Trade (player-to-player item exchange)
 
 ATMOSPHERIC PRESENCE (POWERFUL CHARACTERS):
 - Powerful characters (Mythic/Eclipse geared) have a visible aura
@@ -745,7 +854,7 @@ LEVELING MOBS BY REGION (24 types — proposed):
   Umbryss:
     - Abyssal Stalkers (common)
     - Drowned Revenants (elite)
-    - Tidecallers (common)
+    - Depthcallers (common)
     - Void Tendrils (elite)
 
 ENEMY PRODUCTION TIERS (5 tiers — proposed):
