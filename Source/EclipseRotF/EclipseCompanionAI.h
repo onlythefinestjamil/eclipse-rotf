@@ -6,10 +6,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseCompanionAI.generated.h"
 
 #include "EclipseCharacter.h" // For EClass, EAncestry, EClassRole
 #include "EclipseEnemyAI.h" // For EAIState
+#include "EclipseCompanionAI.generated.h"
 
 UENUM(BlueprintType)
 enum class ECompanionPersonality : uint8

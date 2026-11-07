@@ -5,13 +5,13 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseActionBar.generated.h"
 
 #include "EclipseCharacter.h" // For EClass
 #include "EclipseClassAbilities.h" // For EAbilityType
 #include "EclipseSpellSystem.h" // For ESpellTier, FSpell
 #include "EclipseWeaponSwap.h" // For EWeaponStatusEffect
 #include "EclipseChatSystem.h" // For macros
+#include "EclipseActionBar.generated.h"
 
 UENUM(BlueprintType)
 enum class EActionBarSlot : uint8
@@ -43,7 +43,7 @@ enum class EActionType : uint8
 {
     Spell          UMETA(DisplayName = "Spell - cast a spell from spellbook"),
     Ability         UMETA(DisplayName = "Ability - class ability (light/heavy/charged/weapon art)"),
-    Item           UMMETA(DisplayName = "Item - use consumable (potion, scroll, reagent)"),
+    Item           UMETA(DisplayName = "Item - use consumable (potion, scroll, reagent)"),
     Macro          UMETA(DisplayName = "Macro - execute a chat macro"),
     WeaponSwap     UMETA(DisplayName = "Weapon Swap - switch weapon slots"),
     Emote           UMETA(DisplayName = "Emote - character animation"),

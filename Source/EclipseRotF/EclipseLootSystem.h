@@ -5,9 +5,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseLootSystem.generated.h"
 
 #include "EclipseCharacter.h" // For EClass, ERarityTier enums
+#include "EclipseLootSystem.generated.h"
 
 UENUM(BlueprintType)
 enum class EBindingType : uint8

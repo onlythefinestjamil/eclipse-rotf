@@ -5,11 +5,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseSpellSystem.generated.h"
 
 #include "EclipseCharacter.h" // For EClass, EAncestry, EResourceType
 #include "EclipseWeaponSwap.h" // For EWeaponStatusEffect (elements)
 #include "EclipseClassRoles.h" // For EClassRole
+#include "EclipseSpellSystem.generated.h"
 
 UENUM(BlueprintType)
 enum class ESpellTier : uint8

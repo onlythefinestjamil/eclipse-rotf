@@ -5,9 +5,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseClassAbilities.generated.h"
 
 #include "EclipseCharacter.h" // For EClass
+#include "EclipseClassAbilities.generated.h"
 
 UENUM(BlueprintType)
 enum class EAbilityType : uint8

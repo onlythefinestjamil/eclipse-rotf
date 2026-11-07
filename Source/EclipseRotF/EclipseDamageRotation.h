@@ -5,9 +5,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseDamageRotation.generated.h"
 
 #include "EclipseCharacter.h" // For EClass, EResourceType
+#include "EclipseDamageRotation.generated.h"
 
 UENUM(BlueprintType)
 enum class EInputAction : uint8

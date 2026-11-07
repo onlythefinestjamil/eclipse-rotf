@@ -5,12 +5,12 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseTalentSystem.generated.h"
 
 #include "EclipseCharacter.h"    // EClass, EAncestry, EResourceType
 #include "EclipseClassRoles.h"   // EClassRole
 #include "EclipseWeaponSwap.h"    // EWeaponStatusEffect (elements)
 #include "EclipseSpellSystem.h"   // FSpell, ESpellTier
+#include "EclipseTalentSystem.generated.h"
 
 UENUM(BlueprintType)
 enum class ETalentLayer : uint8

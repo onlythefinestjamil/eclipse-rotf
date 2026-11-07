@@ -10,42 +10,42 @@ UENUM(BlueprintType)
 enum class EQuestType : uint8
 {
     MainCampaign   UMETA(DisplayName = "Main Campaign — Critical path, locked canon"),
-    SideQuest      UMMETA(DisplayName = "Side Quest — Optional, world-building"),
-    ClassQuest     UMMETA(DisplayName = "Class Quest — Class-specific progression"),
-    FactionQuest   UMMETA(DisplayName = "Faction Quest — Reputation-based"),
-    CompanionQuest  UMMETA(DisplayName = "Companion Quest — Companion loyalty arc"),
-    BossQuest      UMMETA(DisplayName = "Boss Quest — Unlocks/progresses boss encounters"),
-    WorldQuest      UMMETA(DisplayName = "World Quest — Repeatable, dynamic"),
-    HiddenQuest    UMMETA(DisplayName = "Hidden Quest — Secret discovery"),
-    FractureQuest   UMMETA(DisplayName = "Fracture Quest — Alters world state"),
+    SideQuest      UMETA(DisplayName = "Side Quest — Optional, world-building"),
+    ClassQuest     UMETA(DisplayName = "Class Quest — Class-specific progression"),
+    FactionQuest   UMETA(DisplayName = "Faction Quest — Reputation-based"),
+    CompanionQuest  UMETA(DisplayName = "Companion Quest — Companion loyalty arc"),
+    BossQuest      UMETA(DisplayName = "Boss Quest — Unlocks/progresses boss encounters"),
+    WorldQuest      UMETA(DisplayName = "World Quest — Repeatable, dynamic"),
+    HiddenQuest    UMETA(DisplayName = "Hidden Quest — Secret discovery"),
+    FractureQuest   UMETA(DisplayName = "Fracture Quest — Alters world state"),
 };
 
 UENUM(BlueprintType)
 enum class EQuestState : uint8
 {
-    Locked         UMMETA(DisplayName = "Locked — Prerequisites not met"),
-    Available      UMMETA(DisplayName = "Available — Can be accepted"),
-    Active         UMMETA(DisplayName = "Active — In progress"),
-    Completed      UMMETA(DisplayName = "Completed — Turned in, rewards given"),
-    Failed         UMMETA(DisplayName = "Failed — Failed, may have consequences"),
-    Abandoned      UMMETA(DisplayName = "Abandoned — Player gave up"),
+    Locked         UMETA(DisplayName = "Locked — Prerequisites not met"),
+    Available      UMETA(DisplayName = "Available — Can be accepted"),
+    Active         UMETA(DisplayName = "Active — In progress"),
+    Completed      UMETA(DisplayName = "Completed — Turned in, rewards given"),
+    Failed         UMETA(DisplayName = "Failed — Failed, may have consequences"),
+    Abandoned      UMETA(DisplayName = "Abandoned — Player gave up"),
 };
 
 UENUM(BlueprintType)
 enum class EObjectiveType : uint8
 {
-    KillTarget      UMMETA(DisplayName = "Kill — Kill specific enemy/boss"),
-    CollectItems    UMMETA(DisplayName = "Collect — Gather N items"),
-    ReachLocation    UMMETA(DisplayName = "Reach — Travel to location"),
-    TalkToNPC        UMMETA(DisplayName = "Talk — Speak with NPC"),
-    EscortNPC        UMMETA(DisplayName = "Escort — Protect NPC from A to B"),
-    DefendLocation   UMMETA(DisplayName = "Defend — Survive waves at location"),
-    ActivateObject   UMMETA(DisplayName = "Activate — Interact with object/mechanism"),
-    ChooseOption     UMMETA(DisplayName = "Choose — Branching dialogue choice"),
-    SurviveTime      UMMETA(DisplayName = "Survive — Survive for N seconds"),
-    DefeatBoss       UMMETA(DisplayName = "Boss — Defeat specific boss"),
-    CraftItem        UMMETA(DisplayName = "Craft — Craft specific item"),
-    DiscoverSecret   UMMETA(DisplayName = "Discover — Find hidden area/secret"),
+    KillTarget      UMETA(DisplayName = "Kill — Kill specific enemy/boss"),
+    CollectItems    UMETA(DisplayName = "Collect — Gather N items"),
+    ReachLocation    UMETA(DisplayName = "Reach — Travel to location"),
+    TalkToNPC        UMETA(DisplayName = "Talk — Speak with NPC"),
+    EscortNPC        UMETA(DisplayName = "Escort — Protect NPC from A to B"),
+    DefendLocation   UMETA(DisplayName = "Defend — Survive waves at location"),
+    ActivateObject   UMETA(DisplayName = "Activate — Interact with object/mechanism"),
+    ChooseOption     UMETA(DisplayName = "Choose — Branching dialogue choice"),
+    SurviveTime      UMETA(DisplayName = "Survive — Survive for N seconds"),
+    DefeatBoss       UMETA(DisplayName = "Boss — Defeat specific boss"),
+    CraftItem        UMETA(DisplayName = "Craft — Craft specific item"),
+    DiscoverSecret   UMETA(DisplayName = "Discover — Find hidden area/secret"),
 };
 
 USTRUCT(BlueprintType)

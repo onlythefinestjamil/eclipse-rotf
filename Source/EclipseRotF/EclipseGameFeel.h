@@ -33,6 +33,8 @@ enum class ECameraShakeIntensity : uint8
 USTRUCT(BlueprintType)
 struct FGameFeelProfile
 {
+    GENERATED_BODY()
+
     // Movement
     UPROPERTY(BlueprintReadWrite) float WalkAccel = 2048.0f;
     UPROPERTY(BlueprintReadWrite) float WalkDecel = 4096.0f;

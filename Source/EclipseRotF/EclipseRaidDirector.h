@@ -5,11 +5,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseRaidDirector.generated.h"
 
 #include "EclipseBossDirector.h"
 #include "EclipsePartySystem.h"
 #include "EclipseLootSystem.h"
+#include "EclipseRaidDirector.generated.h"
 
 UENUM(BlueprintType)
 enum class EEncounterType : uint8
@@ -18,7 +18,7 @@ enum class EEncounterType : uint8
     Dungeon         UMETA(DisplayName = "Dungeon — 5 players (1 Tank, 1 Healer, 3 DPS)"),
     Raid            UMETA(DisplayName = "Raid — 10 players (2 Tanks, 2 Healers, 6 DPS)"),
     WorldBoss       UMETA(DisplayName = "World Boss — Open world, 1-10 players"),
-    Arena           UMMETA(DisplayName = "Arena — PvP 1v1, 2v2, 3v3, 5v5"),
+    Arena           UMETA(DisplayName = "Arena — PvP 1v1, 2v2, 3v3, 5v5"),
 };
 
 UENUM(BlueprintType)

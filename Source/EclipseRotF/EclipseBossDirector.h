@@ -5,11 +5,11 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseBossDirector.generated.h"
 
 #include "EclipseCharacter.h"
 #include "EclipseLootSystem.h" // For ERarity, FDropEntry
 #include "EclipseSpellSystem.h" // For FSpell
+#include "EclipseBossDirector.generated.h"
 
 UENUM(BlueprintType)
 enum class EBossPhase : uint8
@@ -29,17 +29,17 @@ enum class EBossMechanic : uint8
     TelegraphedAoE     UMETA(DisplayName = "Telegraphed AoE — Ground circle, dodge or die"),
     TelegraphedCone    UMETA(DisplayName = "Telegraphed Cone — Frontal, sidestep"),
     TelegraphedLine    UMETA(DisplayName = "Telegraphed Line — Charge/laser, dodge sideways"),
-    AddPhase           UMMETA(DisplayName = "Add Phase — Summon minions, burn adds or boss"),
+    AddPhase           UMETA(DisplayName = "Add Phase — Summon minions, burn adds or boss"),
     TankSwap           UMETA(DisplayName = "Tank Swap — 2 tanks required, debuff swap at stacks"),
     MechanicAssignment UMETA(DisplayName = "Mechanic Assignment — Party members assigned to pillars/levers"),
     SpreadMechanic      UMETA(DisplayName = "Spread — Party spreads, avoid chaining damage"),
     StackMechanic       UMETA(DisplayName = "Stack — Party stacks, shared damage"),
     SilenceMechanic     UMETA(DisplayName = "Silence — No spells for duration, melee only"),
-    ArenaChange         UMMETA(DisplayName = "Arena Change — Floor collapses or environment shifts"),
+    ArenaChange         UMETA(DisplayName = "Arena Change — Floor collapses or environment shifts"),
     TimeManipulation    UMETA(DisplayName = "Time Manipulation — Boss slows/reverses time"),
     FractureShift       UMETA(DisplayName = "Fracture Shift — Arena shifts to alternate reality"),
     DPSCheck            UMETA(DisplayName = "DPS Check — Burn boss or wipe"),
-    HealCheck           UMMETA(DisplayName = "Heal Check — Survive massive AoE, heal through it"),
+    HealCheck           UMETA(DisplayName = "Heal Check — Survive massive AoE, heal through it"),
     Untargetable        UMETA(DisplayName = "Untargetable — Boss immune, handle mechanic first"),
 };
 

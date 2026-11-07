@@ -5,10 +5,10 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipseInputSystem.generated.h"
 
 #include "EclipseActionBar.h"      // 20-slot action bar
 #include "EclipseDamageRotation.h" // GCD, manual attacks, ability cooldowns
+#include "EclipseInputSystem.generated.h"
 
 UENUM(BlueprintType)
 enum class EInputContext : uint8

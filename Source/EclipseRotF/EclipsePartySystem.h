@@ -4,9 +4,9 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
-#include "EclipsePartySystem.generated.h"
 
 #include "EclipseCompanionAI.h" // For FCompanionProfile, EPartySlot
+#include "EclipsePartySystem.generated.h"
 
 UENUM(BlueprintType)
 enum class EGroupType : uint8
