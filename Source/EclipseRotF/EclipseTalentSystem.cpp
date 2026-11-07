@@ -614,7 +614,9 @@ void UEclipseTalentSystem::InitVanguardTalents()
         return FindIDByName(AllTalents, Name);
     };
 
+    const int32 IdCF4 = ID(TEXT("Fortified Breathing"));
     const int32 IdCF5 = ID(TEXT("Taunting Strike"));
+    const int32 IdCF6 = ID(TEXT("Heavyfooted"));
     const int32 IdSP1 = ID(TEXT("Bulwark"));
     const int32 IdSP2 = ID(TEXT("Reinforced Aegis"));
     const int32 IdSP3 = ID(TEXT("Return Fire"));

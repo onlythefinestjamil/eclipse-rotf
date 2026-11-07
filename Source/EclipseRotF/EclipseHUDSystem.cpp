@@ -13,13 +13,13 @@ void UEclipseHUDSystem::InitializeResources()
 {
     // Health
     FResourceBar Health;
-    Health.Type = EResourceType::Health;
+    Health.Type = EResourceType::None;
     Health.Current = 100.0f;
     Health.Max = 100.0f;
     Health.RegenRate = 0.0f; // No passive health regen
     Health.RegenDelay = 0.0f;
     Health.BarColor = FLinearColor(0.8f, 0.1f, 0.1f, 1.0f); // Red
-    Resources.Add(EResourceType::Health, Health);
+    Resources.Add(EResourceType::None, Health);
 
     // Stamina
     FResourceBar Stamina;
