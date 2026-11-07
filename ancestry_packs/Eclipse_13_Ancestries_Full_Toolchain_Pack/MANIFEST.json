@@ -1,0 +1,134 @@
+{
+  "project": "Eclipse: Realms of the Fractured",
+  "ancestries": [
+    {
+      "name": "Aetherborn",
+      "folder": "01_Aetherborn",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Solari",
+      "folder": "02_Solari",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Vyrael",
+      "folder": "03_Vyrael",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Tharuk",
+      "folder": "04_Tharuk",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Kazari",
+      "folder": "05_Kazari",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Umbralis",
+      "folder": "06_Umbralis",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Draven",
+      "folder": "07_Draven",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Grimstarr",
+      "folder": "08_Grimstarr",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Nereyth",
+      "folder": "09_Nereyth",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Myceliar",
+      "folder": "10_Myceliar",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Forgeborn",
+      "folder": "11_Forgeborn",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Hellsworn",
+      "folder": "12_Hellsworn",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Necrevan",
+      "folder": "13_Necrevan",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    }
+  ],
+  "package_version": "2.0_FULL_TOOLCHAIN",
+  "stage_ids": [
+    "00",
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12"
+  ],
+  "tools_expected": [
+    "Hermes",
+    "Aura AI for Unreal",
+    "Unreal Engine 5.8",
+    "Niagara",
+    "Lumen",
+    "Nanite where supported",
+    "MetaHuman where suitable",
+    "Motion Matching/Pose Search",
+    "Gameplay Ability System",
+    "Enhanced Input",
+    "Control Rig / IK Retargeter",
+    "Groom",
+    "Chaos Cloth",
+    "Blender 4.2 LTS",
+    "ZBrush 2025 if licensed",
+    "Houdini Indie if licensed",
+    "Substance 3D Painter if licensed",
+    "Unreal Insights / Profilers",
+    "Unreal dedicated server / replication",
+    "PostgreSQL / Redis for backend where relevant"
+  ]
+}

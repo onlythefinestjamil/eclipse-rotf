@@ -1,0 +1,2 @@
+AVAILABLE: low-resolution 2-view concept crop from multi-ancestry sheet; detailed Hermes prompts.
+NOT YET AVAILABLE: individual high-resolution orthographic front image, individual high-resolution matching back image, approved 3D geometry, rig/UE assets.

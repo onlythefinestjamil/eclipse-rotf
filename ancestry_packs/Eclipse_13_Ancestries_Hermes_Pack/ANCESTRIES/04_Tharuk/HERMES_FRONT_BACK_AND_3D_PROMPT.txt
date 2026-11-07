@@ -1,0 +1,36 @@
+ECLIPSE: REALMS OF THE FRACTURED
+CANON ANCESTRY: THARUK
+LORE: Titanborn giants
+
+VISUAL IDENTITY LOCK (do not substitute another ancestry):
+towering giant with extremely wide powerful bone structure, thick neck and heavy hands, dark skin and robust muscular anatomy, deep beard and tied hair, weathered layered furs, blackened steel and old-gold plated armor, runic engraved axe and belt plates; non-dwarven proportions.
+
+SOURCE OF TRUTH / REFERENCE PRIORITY:
+1. Attached original concept art clearly showing this ancestry (including the provided roster), for colors, identity, body type and ornaments.
+2. 00_roster_front_back_PREVIEW_ONLY.png is a LOW-RESOLUTION concept crop, NOT a precise orthographic reference. The generated rear design must be explicitly authored, checked, and approved.
+3. User-approved high-resolution front/back turnaround once created. Never treat guessed obscured geometry as canon.
+
+GENERAL VISUAL DIRECTIVE:
+Create a top-tier cinematic AAA dark-cosmic-fantasy character with rich believable skin/material microdetail, sophisticated gold or worn-metal engraving, anatomically coherent musculature, individually modeled accessories, believable costume construction, separate layers for body, underclothes, armor, jewelry, props, hair and magic. Sculpt and texture realistically. Do not flatten intricate details into a single diffuse image. Maintain silhouette, physical scale, proportions, motifs, scars, markings, and accessory placement through all views. Avoid random redesign and visual drift.
+
+FRONT VIEW IMAGE PROMPT:
+Generate ONE high-resolution, true full-body, front-facing 3D character production reference for Tharuk, following the identity lock above. Neutral A-pose with arms separated 25 degrees from torso, fingers visible, both feet fully in frame, wings/tails/tendrils fully included if present. Front orthographic studio camera, neutral 85mm-like projection without fisheye, eye-level; full figure and all appendages uncut, even illumination plus mild rim, neutral medium-gray background, no perspective hero pose, no background scene, no text. Dense high-frequency material detail visible on face, back-to-front body anatomy, garments, armor and footwear.
+
+BACK VIEW IMAGE PROMPT:
+Using the APPROVED front image and same 3D identity (do not generate as a fresh random character), generate ONE high-resolution direct REAR full-body orthographic view of the SAME Tharuk character in IDENTICAL neutral A-pose and world-space scale, same lighting and background. Preserve exact heights, shoulder widths, body silhouette, hair length, color, braided hair organization, garment seams and layered hems, left/right unique accessories, fasteners, wing root attachment sites, scale/fur coverage, and prop placement. Reveal honest back-of-head, spinal anatomy or construct articulation, backplates, cloth underside, wing/tail/tendril attachment and leg armor. Entire figure, feet, and every appendage fully in frame. NO mirrored front image, NO newly invented components and NO hidden rear detail claimed canonical without signoff.
+
+ADDITIONAL VIEWS:
+Generate true left profile, right profile, face front/three-quarter/profile close-up, body anatomy without detachable equipment, separate armor/gear breakdown, hair and rear neckline close-up, dedicated UV-friendly material swatches, unique anatomy detail close-up, wings/horns/tail/roots/tendrils engineering views where applicable, weapons front/side/back, plus expression sheet. These must all be the SAME character identity.
+
+3D PRODUCTION HANDOFF TO HERMES / AURA:
+- Generate blockout; detailed sculpt (Blender/ZBrush) from approved multiview art; enforce physically plausible silhouettes.
+- Retopologize with deformation-friendly geometry around eyes, mouth, shoulders, hips, knees, elbows, wrists, hands, and unique anatomical joints. Provide actual editable mesh, not a 2D render disguised as a model.
+- Bake tangent normal, ambient occlusion, curvature, thickness; author physically based base-color, roughness, metalness, normal, and emissive masks; use separate procedural VFX for magic.
+- Create UVs, named mesh components, modular wearable sockets, material instances, groom/hair cards, cloth and hair physics, skin weights and compatible skeletal rig.
+- Implement Unreal Engine skeletal mesh, skeleton and Physics Asset; animation retargeting as anatomy permits; LODs, performance budgets, camera-distance VFX tiers; network-safe gameplay effects.
+- Material targets: cinematic close-up hero 4K to 8K source sets where justified, runtime sets sized to budget. Specify actual platform memory limits; do not require every player avatar to render cinematic textures.
+- For transformed non-human anatomy, custom rigs are expected. Never force MetaHuman proportions onto dwarves, beastkin, constructs, giant or non-human physiologies.
+- Build a QA contact sheet showing front, back, left, right in same neutral pose and an overlay proportionality check. Reject if details drift, limbs change size, armor disappears, rear differs from front, designs cross-pollinate or the back is a duplicated/mirrored front.
+- Store source geometry, source textures, exported FBX/GLB as applicable, preview PNGs, rig, UE assets, validation logs in consistent folders with metadata and versions.
+
+QUALITY GATE: Do not mark this ancestry complete before high-resolution front AND back views and all critical occluded surfaces are designed and approved, and an actual rigged model has been successfully tested in engine.

@@ -1,0 +1,96 @@
+{
+  "project": "Eclipse: Realms of the Fractured",
+  "ancestries": [
+    {
+      "name": "Aetherborn",
+      "folder": "01_Aetherborn",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Solari",
+      "folder": "02_Solari",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Vyrael",
+      "folder": "03_Vyrael",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Tharuk",
+      "folder": "04_Tharuk",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Kazari",
+      "folder": "05_Kazari",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Umbralis",
+      "folder": "06_Umbralis",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Draven",
+      "folder": "07_Draven",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Grimstarr",
+      "folder": "08_Grimstarr",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Nereyth",
+      "folder": "09_Nereyth",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Myceliar",
+      "folder": "10_Myceliar",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Forgeborn",
+      "folder": "11_Forgeborn",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Hellsworn",
+      "folder": "12_Hellsworn",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    },
+    {
+      "name": "Necrevan",
+      "folder": "13_Necrevan",
+      "preview_only": true,
+      "individual_high_res_front_completed": false,
+      "individual_high_res_back_completed": false
+    }
+  ]
+}

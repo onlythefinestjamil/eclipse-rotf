@@ -1,0 +1,130 @@
+ECLIPSE: REALMS OF THE FRACTURED
+CANON ANCESTRY: NECREVAN
+LORE: Oath-bound undead
+
+VISUAL IDENTITY LOCK (do not substitute another ancestry):
+undead humanoid retaining will and intelligence, gray desaturated decayed skin or bone, necrotic violet glowing patterns, pallid eyes, aged hair and partially skeletal facial landmarks, layered black-purple ancient oath armor and cloth, skeletal symbolism and black metal staff, restrained violet necromancy wisps.
+
+SOURCE OF TRUTH / REFERENCE PRIORITY:
+1. Attached original concept art clearly showing this ancestry (including the provided roster), for colors, identity, body type and ornaments.
+2. 00_roster_front_back_PREVIEW_ONLY.png is a LOW-RESOLUTION concept crop, NOT a precise orthographic reference. The generated rear design must be explicitly authored, checked, and approved.
+3. User-approved high-resolution front/back turnaround once created. Never treat guessed obscured geometry as canon.
+
+GENERAL VISUAL DIRECTIVE:
+Create a top-tier cinematic AAA dark-cosmic-fantasy character with rich believable skin/material microdetail, sophisticated gold or worn-metal engraving, anatomically coherent musculature, individually modeled accessories, believable costume construction, separate layers for body, underclothes, armor, jewelry, props, hair and magic. Sculpt and texture realistically. Do not flatten intricate details into a single diffuse image. Maintain silhouette, physical scale, proportions, motifs, scars, markings, and accessory placement through all views. Avoid random redesign and visual drift.
+
+FRONT VIEW IMAGE PROMPT:
+Generate ONE high-resolution, true full-body, front-facing 3D character production reference for Necrevan, following the identity lock above. Neutral A-pose with arms separated 25 degrees from torso, fingers visible, both feet fully in frame, wings/tails/tendrils fully included if present. Front orthographic studio camera, neutral 85mm-like projection without fisheye, eye-level; full figure and all appendages uncut, even illumination plus mild rim, neutral medium-gray background, no perspective hero pose, no background scene, no text. Dense high-frequency material detail visible on face, back-to-front body anatomy, garments, armor and footwear.
+
+BACK VIEW IMAGE PROMPT:
+Using the APPROVED front image and same 3D identity (do not generate as a fresh random character), generate ONE high-resolution direct REAR full-body orthographic view of the SAME Necrevan character in IDENTICAL neutral A-pose and world-space scale, same lighting and background. Preserve exact heights, shoulder widths, body silhouette, hair length, color, braided hair organization, garment seams and layered hems, left/right unique accessories, fasteners, wing root attachment sites, scale/fur coverage, and prop placement. Reveal honest back-of-head, spinal anatomy or construct articulation, backplates, cloth underside, wing/tail/tendril attachment and leg armor. Entire figure, feet, and every appendage fully in frame. NO mirrored front image, NO newly invented components and NO hidden rear detail claimed canonical without signoff.
+
+ADDITIONAL VIEWS:
+Generate true left profile, right profile, face front/three-quarter/profile close-up, body anatomy without detachable equipment, separate armor/gear breakdown, hair and rear neckline close-up, dedicated UV-friendly material swatches, unique anatomy detail close-up, wings/horns/tail/roots/tendrils engineering views where applicable, weapons front/side/back, plus expression sheet. These must all be the SAME character identity.
+
+3D PRODUCTION HANDOFF TO HERMES / AURA:
+- Generate blockout; detailed sculpt (Blender/ZBrush) from approved multiview art; enforce physically plausible silhouettes.
+- Retopologize with deformation-friendly geometry around eyes, mouth, shoulders, hips, knees, elbows, wrists, hands, and unique anatomical joints. Provide actual editable mesh, not a 2D render disguised as a model.
+- Bake tangent normal, ambient occlusion, curvature, thickness; author physically based base-color, roughness, metalness, normal, and emissive masks; use separate procedural VFX for magic.
+- Create UVs, named mesh components, modular wearable sockets, material instances, groom/hair cards, cloth and hair physics, skin weights and compatible skeletal rig.
+- Implement Unreal Engine skeletal mesh, skeleton and Physics Asset; animation retargeting as anatomy permits; LODs, performance budgets, camera-distance VFX tiers; network-safe gameplay effects.
+- Material targets: cinematic close-up hero 4K to 8K source sets where justified, runtime sets sized to budget. Specify actual platform memory limits; do not require every player avatar to render cinematic textures.
+- For transformed non-human anatomy, custom rigs are expected. Never force MetaHuman proportions onto dwarves, beastkin, constructs, giant or non-human physiologies.
+- Build a QA contact sheet showing front, back, left, right in same neutral pose and an overlay proportionality check. Reject if details drift, limbs change size, armor disappears, rear differs from front, designs cross-pollinate or the back is a duplicated/mirrored front.
+- Store source geometry, source textures, exported FBX/GLB as applicable, preview PNGs, rig, UE assets, validation logs in consistent folders with metadata and versions.
+
+QUALITY GATE: Do not mark this ancestry complete before high-resolution front AND back views and all critical occluded surfaces are designed and approved, and an actual rigged model has been successfully tested in engine.
+
+
+ANCESTRY-SPECIFIC TOOL IMPLEMENTATION CHECKS
+Preserved undead anatomy, necrotic sigils, desaturated skin/ossified elements and spectral accents, expressive face rig despite undead design; restrained bones/cloth clipping.
+
+
+===== MANDATORY FULL PRODUCTION TOOLCHAIN, EXECUTE ALL STAGES FOR THIS ANCESTRY =====
+This stage-by-stage checklist supplements (never replaces) the anatomy and design lock above. Hermes is the coordinator, asset DCCs author geometry, and Aura works inside Unreal. Do not claim a tool has produced an artifact until the actual file and validation log exist. Use versions that are installed and tested; Blender 4.2 LTS, ZBrush 2025, and UE 5.8 are the project's stated targets, but verify tool installations and licenses. Unreal feature capabilities and plugin compatibility are to be confirmed rather than assumed.
+
+STAGE 00 — HERMES: CANON, LICENSE AND SOURCE INGEST
+Tools: Hermes; project bible/reference image folder; manifest JSON; image inspection; optional version control Git LFS/Perforce after availability verification.
+Actions: parse 13-race final canon; identify exact named ancestry; distinguish ancestry, Muscalar subtype and combat class; register all reference filenames and hashes; map references to feature-level design decisions; record tool versions and licenses; flag all ambiguous rear/underside details for artist approval. Never invent missing reference details or merge races.
+Outputs: CANON_LOCK.md, sources.json, lookdev_checklist.csv, provenance_license.csv, approval_requests.md.
+Gate: exact ancestry name/visual DNA and all source files linked; missing canon decisions marked UNAPPROVED.
+
+STAGE 01 — HERMES + CONCEPT GENERATOR: FULL MULTIVIEW DESIGN
+Tools: approved reference artwork; image generation tool if available; Krita/Photoshop only if actually installed, otherwise Blender image editor or an equivalent available editor.
+Actions: generate a front orthographic full-body neutral A-pose; approved matching back orthographic at same body measurements and same pose; left/right profiles; front and back without detached gear; face details; hands/feet; equipment close-ups; unique body features and material swatches. Match exact seams, armor fasteners, color blocks, grooming and asymmetry. For equipment/appendages that obscure anatomy provide isolate views. Original roster crops are low-resolution concepts, not final accurate ortho masters.
+Outputs: 01_Concepts/front.png, back.png, left.png, right.png, front_no_gear.png, back_no_gear.png, faces.png, anatomy.png, weapons.png, materials.png, ortho_dimensions.json.
+Gate: overlay front/rear/side proportions and limb landmarks, check consistent features; do not proceed until coherent rear design is approved.
+
+STAGE 02 — BLENDER: SCALE BLOCKOUT AND ASSET DECOMPOSITION
+Tools: Blender 4.2 LTS (mesh, UV, camera, measurement, modifiers; Python scripting optional); optional procedural Houdini Indie only if installed/licensed.
+Actions: use centimeters for Unreal handoff (Blender scene units/export conversion explicitly validated), realistic anatomy and race-specific proportions; build independently editable head, body, underlayer, armor pieces, straps, fasteners, cloth, hair groups, weapons, appendages, and VFX attachment markers; camera-calibrated front/back/side checks; no fusing accessories into body.
+Outputs: 02_Blockout/Necrevan_blockout.blend, dimension_report.json, turntable.mp4, component_manifest.json.
+Gate: silhouette and scale match ortho, correct anatomy/limb counts, equipment removable, no interpenetrating baseline meshes.
+
+STAGE 03 — ZBRUSH + BLENDER: HIGH-RES SCULPT
+Tools: ZBrush 2025 if licensed and working, otherwise Blender multires/sculpt; Houdini Indie for approved procedural scales/growth/engraving masks where appropriate.
+Actions: high-frequency faces, pores, hair guides, muscle attachment, scale/bark/stone, forged metal ornamentation, stitched cloth seams and wear; sculpt real silhouette-shaping detail in geometry; use non-destructive sculpt layers/subtools by part. Do not derive exact back topology from front-only concept guesswork.
+Outputs: 03_HighPoly/*.ztl or *.zpr where used, highpoly.blend, named subtool export set, detail_contact_sheet.png.
+Gate: close-up inspection in neutral lighting, consistency with concept, 360 inspection and clean part boundaries.
+
+STAGE 04 — BLENDER: RETOPO, UV, BAKE, LOD BASES
+Tools: Blender modeling/retopo/UV; optional ZBrush ZRemesher as starting point only; Substance Painter baking or Blender baking; Houdini when procedural LOD assistance is validated.
+Actions: deformable topology around eye/mouth/jaw, shoulder/hips/knees/elbows/fingers and unique anatomy; accurate tangent space; nonoverlapping UVs (except deliberately mirrored parts); UV density policy; high-to-low normal, AO, curvature, ID, thickness bakes; clean material slots and equipment separation. UV seam correctness over decorative symmetry.
+Outputs: 04_GameMesh/base_low.blend, UV_layouts.png, *_normal.*, *_AO.*, *_curvature.*, bake_report.json, LOD_plan.json.
+Gate: no broken normals, islands, holes, flipped UVs, bake artifacts or nonmanifold geometry in export meshes.
+
+STAGE 05 — SUBSTANCE 3D PAINTER + UNREAL MATERIAL EDITOR: PBR
+Tools: Substance 3D Painter (trial only while valid/license confirmed); Blender shader/bake workflow as fallback; UE 5.8 Material Editor and Material Instances.
+Actions: layered skin with believable subsurface, pores, natural roughness and color; proper metallic response on metals, fabric weave, leather, obsidian, bone, crystal; use albedo without fake baked rim lighting; BaseColor, Normal, Roughness/Metallic/AO or ORM, masks, thickness/subsurface where required. Add separate controlled emissive masks for runes, cracks, eyes and core. Use 4K/8K only where cinematic detail warrants, runtime textures as measured budgets allow.
+Outputs: 05_Materials/source_project.spp if applicable; /textures/* maps; material_parameters.json; studio_light_validation.png; gameplay_light_validation.png.
+Gate: matching material response under neutral, moon, sun, torch, combat VFX and fog; no texture-only fake 3D silhouette.
+
+STAGE 06 — BLENDER / HOUDINI / GROOM + CHAOS CLOTH: SECONDARY ASSETS
+Tools: Blender curves/hair cards; Houdini Indie procedural hair/growth/cloth only if installed and licensed; Unreal Groom and binding workflow; Chaos Cloth for selective garments; physics bodies/constraints.
+Actions: prepare distinct hair/loc/feather/fur clumps or cards; scalable groom LOD; cloth pattern thickness, layered meshes and weight painting; named sockets for separate horns/tails/wings and accessories; no capes through legs during sprint/dodge. Optimize most players for cards/low-cost simulation rather than unbounded strand grooms.
+Outputs: 06_GroomCloth/groom source files, hair_cards.blend, cloth_source.blend, sim_profiles.json, collision_report.mp4.
+Gate: representative idles, sprints, turns, attacks and jumps free of unacceptable clipping or runaway simulation costs.
+
+STAGE 07 — METAHUMAN / CONTROL RIG / IK RETARGETER: BODY AND FACE
+Tools: UE 5.8 MetaHuman for compatible humanlike bases ONLY; Blender armatures and weight painting; UE Control Rig, IK Rig / IK Retargeter, Physics Asset; Animation Blueprints.
+Actions: choose approved humanoid/shared skeleton or custom skeleton for giant, dwarf, feline, dragon, aquatic, undead special features, and mechanical constructs. Author facial expression targets, eyelids, lips, ears if relevant, jaw, tail and wing controls; twist bones, weapon sockets, hit zones, cloth constraints and collision capsules. Test pose extremes. MetaHuman proportions may not be forced onto nonhuman anatomy.
+Outputs: 07_Rig/body_skeleton.fbx, rig_source.blend, facial_rig_spec.json, socket_map.json, retarget_report.json, bend_tests.mp4.
+Gate: clean skin weights, expressive face, full range of motion, no collapsing fingers/elbows/hips and stable appendage rig.
+
+STAGE 08 — AURA + UE MOTION MATCHING: GAMEPLAY ANIMATION AND COMBAT
+Tools: Aura AI inside Unreal, UE Animation Blueprint, Motion Matching/Pose Search if engine/project configuration supports it, Control Rig, Enhanced Input, Gameplay Ability System (GAS).
+Actions: orchestrate idle, walk, strafing, sprint, pivot, jump, land, dodge and iframe windows, guard/block, guard break, stagger, death/revive, three-hit light chain, heavy attacks, weapon swaps, spell windup/cast/release/channel, heal and interact. Lock attack tell/collision/weapon trail to animation not camera cheats. GCD, queued inputs, castbar, resource consumption, movement-cancel/animation-cancel permissions and diminishing returns follow the game bible; do not invent balance constants. Manual-aim critical/mitigation rules require server-validated hit results. Aura should not be expected to author high-poly source assets or replace DCC sculpting.
+Outputs: 08_Animations/*.uasset within project, motion_matching_eval.json, animation_event_timing.csv, combo_preview.mp4, cast_and_gcd_tests.json.
+Gate: attacks transition seamlessly without teleporting, interrupt windows consistent, replication-safe events, UI castbar and cooldown data correctly wired.
+
+STAGE 09 — UNREAL 5.8: CHARACTER, VFX AND WORLD INTEGRATION
+Tools: UE 5.8 SkeletalMesh, Materials, Animation/Character Blueprints, GAS, Enhanced Input, Niagara, Lumen lighting, groom/cloth where supported. Nanite for supported static components only after specific compatibility validation; World Partition world placement if relevant.
+Actions: import source geometry, create race-specific skeletal components, equipment slots and customization morphs, collision, trace sockets and physical assets. Niagara: reactive fracture lines, energy wings, solar corona, shadow tendrils, magma cracks, spores, or aquatic glow with attachment to bones, opacity/particle tiers, synchronized sound and light as feasible; dynamic material parameters control effects. Simulate equipment swaps and mount/camera scale. Lumen illumination can be subtle and dynamic, never assumed free; cinematic and gameplay rendering profiles separately.
+Outputs: 09_Unreal/Game/Eclipse/Characters/Necrevan/..., Niagara systems, material instances, character blueprint, replication interface, import_log.txt, UE_test_map.umap.
+Gate: imported models retain source silhouette, textures, dynamic lighting, facial controls and correct combat attachments in real gameplay camera.
+
+STAGE 10 — NETWORK + MULTIPLAYER VALIDATION
+Tools: Unreal dedicated server and clients, replication profiling, GAS prediction/authority validation; Hermes server infrastructure (gateway, zone services, PostgreSQL/Redis services only for their relevant player/world data). Do NOT send meshes, textures or particle state through database systems.
+Actions: verify movement, ability outcomes, equipped asset IDs, cosmetic changes, wing toggles, status auras and player identity are represented through authoritative game state as appropriate. Niagara-only cosmetic particles should be spawned locally from replicated gameplay events/state; do not replicate thousands of particles. Validate 2+ client observation and late-join consistency. Distinguish 100–1000 connected accounts from number visible in a fight.
+Outputs: 10_Network/server_client_capture.mp4, network_validation.json, replicated_state_matrix.csv, error_logs.txt.
+Gate: ability/cosmetic state matches clients, bandwidth/CPU within benchmark; no client-authoritative damage exploit.
+
+STAGE 11 — PERFORMANCE, LOD AND ACCESSIBILITY QA
+Tools: UE Unreal Insights, GPU profiler, Stat commands, Shader Complexity, LOD Preview, scalability controls, automated asset validators, Blender statistics.
+Actions: cinematic/selection/gameplay/crowd profiles, progressive skeletal mesh LOD0-LOD3+ as needed, hair cards and reduced simulations/FX at distance, shader instruction count, overdraw, dynamic light cost, draw calls, texture pool, GPU/CPU costs. Validate under crowded player scenarios, different platforms and quality presets, third-person visibility, color differentiation, photosensitivity choices for flashing effects. Record actual measurements; don't invent fixed cost targets without benchmark hardware.
+Outputs: 11_Optimization/benchmarks.csv, screenshots, insights_trace, LOD_comparisons.png, defects.csv.
+Gate: meets project-defined visual and frame-time budgets; if not, revise and retest.
+
+STAGE 12 — HERMES REVIEW, AURA REGRESSION, DELIVERY
+Tools: Hermes orchestration/QA, Aura in-engine test runner, Blender/ZBrush/Substance source projects, Unreal content, archive and version control.
+Actions: overlay front/back/side on approved concepts, validate material under varied light, test mesh source editability, rig, every required move, VFX, multiplayer, LOD; compare directly to original user references; record known gaps and provenance. Do not mark complete for only an image, procedural preview, single-view 3D or unverified import.
+Outputs: 12_Delivery/QA_REPORT.md, approvals.json, final_asset_manifest.json, source geometry, texture source, exported FBX, UE assets, screenshots, test videos, licensing log.
+Gate: human art-direction approval AND automated technical acceptance. Failed gates return to the responsible stage; no silent shortcut.
+
+SYSTEM RULES FOR HERMES:
+1. For this specific ancestry, run every stage in order; parallelize only when inputs and identity locks are stable.
+2. Log exact tool invocation, input paths, output paths, versions, issues, fixes and approval for each stage.
+3. If ZBrush, Substance, Houdini, Aura or engine plugins are unavailable or restricted, STOP THAT STEP, document the blocker, use a named supported fallback with approval, and NEVER claim it ran.
+4. Distinguish generated concept art from working 3D mesh and from successfully imported, network-tested playable avatar.
+5. Preserve technical artifacts as well as beauty renders and keep immutable original references.
+6. Each ancestry has the same production completeness gates, with race-specific sculpting, rigging and shader needs.
