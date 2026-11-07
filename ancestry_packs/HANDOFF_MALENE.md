@@ -63,3 +63,15 @@ Veilweaver, Wyldheart, Zar-thul.
 USE: matches the 24-boss Expanded Canon lore sheet. Same rule as the ancestry sheets —
 design-lock starting points, validate each against the roster entry before accepted
 front/back references. The Eclipsed Sovereign is the flagship boss.
+
+## UPDATE 5 — 20 ENVIRONMENT / STAGE PLATES (RUNWAY TEXT-ONLY PASS)
+
+`ancestry_packs/environments/` — 20 plates named STAGE_<name>_<view> per the schema:
+- SOLARA CATHEDRAL (5): exterior_courtyard, entrance_lowangle, nave_interior_hero, stained_glass_detail, temporal_collapse_interior — MATCH THESE AGAINST THE IN-PROGRESS UE5 BUILD
+- ASHEN FORGE (4): wide_establishing, walkway_highangle, anvil_row_floor, anvil_closeup — matches the canon forge concept
+- Plus: gothic_city (aerial), desert_cathedral, forge_dungeon, duel_circle, cosmic_void_arena, shadow_wasteland, verdant_deep, abyssal_depths, frost_peaks, floating_isles, fracture_vista (aerial)
+
+NOTE: these are TEXT-ONLY generations (no reference images attached). Valid design-lock
+starting points for unnamed regions; for the Solara Cathedral and any stage already in UE5
+production, hold final acceptance until the image-to-video pass with the 15 reference
+images from HANDOFF_FORGE_ENVIRONMENT (still not pushed to GitHub as of this commit).
