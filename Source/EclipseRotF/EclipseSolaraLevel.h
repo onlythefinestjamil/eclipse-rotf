@@ -29,7 +29,7 @@ public:
     FVector CheckpointLocation = FVector(1500, 0, 50); // Grace Site checkpoint
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Solara")
-    FVector BossArena = FVector(2000, 0, 0); // Khorez boss arena
+    FVector BossArena = FVector(2000, 0, 0); // Pyre-Warden Velkor boss arena (Cathedral Apse)
 
     // Level dimensions
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Solara")

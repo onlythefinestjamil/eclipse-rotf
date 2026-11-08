@@ -54,6 +54,10 @@
 		{
 			"Name": "ShaderToolkit",
 			"Enabled": true
+		},
+		{
+			"Name": "MegascansPlugin",
+			"Enabled": true
 		}
 	]
 }
