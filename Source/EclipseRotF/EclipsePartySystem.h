@@ -22,7 +22,7 @@ enum class EGroupType : uint8
 };
 
 USTRUCT(BlueprintType)
-struct FPartyMember
+struct FEclipsePartyMember
 {
     GENERATED_BODY()
 
@@ -74,7 +74,7 @@ public:
 
     // Get all party members
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Party")
-    TArray<FPartyMember> GetPartyMembers() const;
+    TArray<FEclipsePartyMember> GetPartyMembers() const;
 
     // Get party size
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Party")
@@ -124,7 +124,7 @@ public:
 private:
     EGroupType GroupType = EGroupType::Solo;
     int32 MaxSlots = 1;
-    TArray<FPartyMember> Members;
+    TArray<FEclipsePartyMember> Members;
 
     void InitializeDefaultAICompanions();
     FCompanionProfile GenerateAICompanion(int32 SlotIndex, ERaidRole Role);

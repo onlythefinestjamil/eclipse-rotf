@@ -8,6 +8,7 @@
 #include "UObject/NoExportTypes.h"
 
 #include "EclipseCharacter.h" // For EClass, EAncestry, EClassRole
+#include "EclipseClassRoles.h" // For EClassRole
 #include "EclipseEnemyAI.h" // For EAIState
 #include "EclipseCompanionAI.generated.h"
 

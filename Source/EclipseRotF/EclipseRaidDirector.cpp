@@ -223,7 +223,7 @@ void UEclipseRaidDirector::UpdateEncounter(float DeltaTime)
 	if (PartySystem)
 	{
 		float TotalHP = 0.f, TotalMaxHP = 0.f;
-		for (const FPartyMember& M : PartySystem->GetPartyMembers())
+		for (const FEclipsePartyMember& M : PartySystem->GetPartyMembers())
 		{
 			TotalHP += M.bIsAlive ? M.Health : 0.f;
 			TotalMaxHP += M.MaxHealth;

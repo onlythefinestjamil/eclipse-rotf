@@ -785,12 +785,12 @@ void UEclipseBossDirector::InitUmbryssBosses()
 		AllBosses.Add(B);
 	}
 
-	// Boss 14 — Umbryss, the Fractured Sovereign (Raid, 4 phases) — WORLD FINALE
+	// Boss 14 — The Eclipsed Sovereign (Raid, 4 phases) — WORLD FINALE
 	{
 		FBoss B;
-		SeedBoss(B, 14, TEXT("Umbryss, the Fractured Sovereign"), TEXT("End of All Things"),
+		SeedBoss(B, 14, TEXT("The Eclipsed Sovereign"), TEXT("End of All Things"),
 			TEXT("Umbryss"), TEXT("Fracture Core"), 800000, 300, 300, 70, true,
-			TEXT("The fracture given form. Where Umbryss stands, the world breaks. The final sovereign of a dying age."));
+			TEXT("A fallen god who consumed the Eclipse's raw power and used the Fracture to claim godhood. It did not cause the Eclipse. Defeating it saves the world from being consumed."));
 		B.bUsesFractureShift = true;
 		B.FracturePhaseTrigger = 3; // fracture shift triggers at phase 3 (50% HP)
 

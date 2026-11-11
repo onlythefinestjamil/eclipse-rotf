@@ -35,6 +35,9 @@ enum class EWeaponType : uint8
     Shield          UMETA(DisplayName = "Shield + Sword - block, guard counter, shield bash"),
     Scythe          UMETA(DisplayName = "Scythe - sweeping, soul harvest, life steal"),
     FistWeapons     UMETA(DisplayName = "Fist Weapons - rapid, combo-heavy, parry-focused"),
+    // Appended 2026-11-08 (equipment bible) - Proposed families, append-only to keep serialized values stable.
+    OneHandAxe      UMETA(DisplayName = "One-Handed Axe (Proposed) - armor shred, deliberate heavies"),
+    Tome            UMETA(DisplayName = "Tome (Proposed) - off-hand spell utility"),
 };
 
 UENUM(BlueprintType)

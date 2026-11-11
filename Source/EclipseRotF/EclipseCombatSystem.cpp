@@ -2,6 +2,7 @@
 // Hybrid precision combat — Elden Ring + WoW
 
 #include "EclipseCombatSystem.h"
+#include "EclipseCharacter.h"
 #include "Engine/Engine.h"
 #include "TimerManager.h"
 

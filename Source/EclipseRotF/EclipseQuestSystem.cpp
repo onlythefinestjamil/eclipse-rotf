@@ -3,6 +3,7 @@
 // Branching choices with consequences, faction reputation, world flags, save/load.
 
 #include "EclipseQuestSystem.h"
+#include "EclipseCharacter.h" // EClass (was previously reached only through unity-build adjacency)
 
 // ---------------------------------------------------------------------------
 // File-scope helpers — compact quest/objective/choice construction
@@ -297,7 +298,7 @@ void UEclipseQuestSystem::InitMainCampaign()
 			TEXT("Rally all factions"), TEXT("The factions unite for the final assault."),
 			12, TEXT("Factions_United"), 20.f, TEXT("Solaran Dawn"));
 		Ch(q, 2, TEXT("How will you enter the Fracture Core?"),
-			TEXT("Enter alone"), TEXT("You face the Fractured Sovereign with only your party."),
+			TEXT("Enter alone"), TEXT("You face the Eclipsed Sovereign with only your party."),
 			12, TEXT("Lone_Wolf"), 0.f, TEXT(""));
 		AllQuests.Add(q);
 	}
@@ -305,11 +306,11 @@ void UEclipseQuestSystem::InitMainCampaign()
 	// 12 — End of All Things (final boss, final choice)
 	{
 		FQuest q = Q(12, TEXT("End of All Things"), EQuestType::MainCampaign,
-			TEXT("Umbryss"), TEXT("The Fractured Sovereign"), 50, 10000, 5000,
-			TEXT("Umbryss, the Fractured Sovereign, is the fracture given form. End it. End all of it."));
+			TEXT("Umbryss"), TEXT("The Eclipsed Sovereign"), 50, 10000, 5000,
+			TEXT("The Eclipsed Sovereign consumed the Eclipse's raw power. End it, and the world is saved from being consumed."));
 		Prereq(q, {11});
 		Obj(q, EObjectiveType::ReachLocation, TEXT("Enter the Fracture Core"), 1, TEXT("Fracture Core"), TEXT("Umbryss"));
-		Obj(q, EObjectiveType::DefeatBoss, TEXT("Defeat Umbryss, the Fractured Sovereign"), 1, TEXT("Umbryss"), TEXT("Umbryss"));
+		Obj(q, EObjectiveType::DefeatBoss, TEXT("Defeat the Eclipsed Sovereign"), 1, TEXT("The Eclipsed Sovereign"), TEXT("Umbryss"));
 		Obj(q, EObjectiveType::ChooseOption, TEXT("Decide the fate of the world"), 1);
 		Ch(q, 1, TEXT("The fracture closes. What do you do with its power?"),
 			TEXT("Mend the world"), TEXT("The fractures heal; the world is made whole."),
@@ -530,7 +531,7 @@ void UEclipseQuestSystem::InitBossQuests()
 		{TEXT("Glacial Widow Velnyra"),          TEXT("Nhalor"),   63},
 		{TEXT("Nhalor, the Frozen Maw"),        TEXT("Nhalor"),   65},
 		{TEXT("Shade-Mother Nocthyra"),         TEXT("Umbryss"),  68},
-		{TEXT("Umbryss, the Fractured Sovereign"), TEXT("Umbryss"), 70},
+		{TEXT("The Eclipsed Sovereign"), TEXT("Umbryss"), 70},
 	};
 
 	for (int32 i = 0; i < 14; i++)

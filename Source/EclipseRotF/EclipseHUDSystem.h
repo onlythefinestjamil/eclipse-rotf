@@ -4,6 +4,8 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "EclipseCharacter.h"
+#include "EclipseWeaponSwap.h"
 #include "EclipseHUDSystem.generated.h"
 
 // EResourceType is defined in EclipseCharacter.h

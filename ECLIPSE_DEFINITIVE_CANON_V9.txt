@@ -935,6 +935,182 @@ PROPOSED BOSSES (5 new — not canon until approved):
   18. Mycelix - Fungal matriarch (Vaelwood)
   19. Gravebinder - Necrotic archon (Morvath)
 
+PRODUCTION TIMELINE (CANON):
+  Target: 6-12 months to ship Eclipse as a complete playable game
+  This allows faster-revenue ventures (Placement Scout, Herm's Heavy, OTF, Pocket Arcade) to generate income first.
+
+  Phase 1 (Months 1-2): Playable vertical slice
+    - Stage 1: Solara Cathedral playable (walk/run/jump/dodge/combat/spells)
+    - Pyre-Warden Velkor boss fight (3 phases)
+    - Basic HUD (health, stamina, mana, action bar, cooldowns)
+    - 1 region (Solara) with 1 dungeon + 1 boss
+    - Gathering basics (mining, skinning, herbalism in Solara)
+    - Crafting basics (Blacksmith forge, basic recipes)
+
+  Phase 2 (Months 3-4): Content expansion
+    - 3 more regions (Vaelwood, Morvath, Aetheris)
+    - 8 more bosses (2 per region)
+    - All 17 classes playable
+    - All 400+ spells implemented
+    - AI companion system (solo play with full AI party)
+    - Full gathering system (mining, skinning, herbalism, fishing, woodcutting, farming)
+    - Full crafting system (boss-hide + gathered materials + hybrid recipes)
+    - Loot system fully functional
+    - Quest system (135+ quests)
+
+  Phase 3 (Months 5-6): Polish + all content
+    - Remaining 2 regions (Nhalor, Umbryss)
+    - All 14+5 bosses
+    - World bosses + rare spawns
+    - Mount system
+    - Character creation (50+ hairstyles, skin tones, all ancestries)
+    - Keybinding system (fully remappable)
+    - Atmospheric Presence system (Level 40+ auras)
+    - Save system (Grace Sites)
+    - Social systems (guilds, auction house, mail, trade)
+    - Diminishing returns (PvP CC)
+    - All 6 game modes
+
+  Phase 4 (Months 7-9): QA + refinement
+    - Balance pass (combat, spells, loot, economy)
+    - Visual polish (Lumen/Nanite refinement, post-processing, VFX)
+    - ZBrush + Substance detail pass on all character models
+    - Environment detail (Quixel Megascans, Houdini destruction)
+    - Audio (Suno music, MetaSounds, UI sounds, combat audio)
+    - Bug fixing, edge cases, performance optimization
+    - RX 6800 1080p60 performance target met
+    - Playable start to finish with no crashes
+
+  Phase 5 (Months 10-12): Launch prep
+    - 10-player local co-op testing
+    - MMO server integration (already built, needs deployment)
+    - Steam + Epic Store page
+    - Trailer (capture from UE5.8 with Aura driving camera)
+    - Marketing assets
+    - Early access launch
+    - Post-launch: MMO features, expansions, seasonal content
+
+BOSS-HIDE CRAFTING SYSTEM (CANON):
+  When you kill a boss, you can craft weapons AND armor from its materials (fangs, scales, hides, bones, horns, claws, heart, soul).
+  Each boss drops 2-4 body parts. Each part can craft different items:
+    - Fangs -> Daggers, Longsword, Spear
+    - Claws -> Daggers, Gauntlets
+    - Scales -> Greatsword, Shield, Chestplate, Pauldrons
+    - Horns -> Greatsword, Helm, Shield
+    - Hide -> Cloak, Chestplate, Greaves
+    - Leather -> Cloak, Chestplate, Greaves, Pauldrons
+    - Bones -> Staff, Greaves, Amulet
+    - Spine -> Staff, Greaves, Pauldrons
+    - Heart -> Any weapon OR full armor set (Legendary tier)
+    - Soul -> Any weapon OR any armor piece (Mythic tier)
+    - Essence -> Amulet, Ring
+  This is ON TOP OF the affinity gain you already get from kills.
+
+GATHERING & FARMING SYSTEM (CANON):
+  Materials are not only from bosses. Players can gather raw materials throughout the world:
+
+  MINING (pickaxe + node):
+    - Iron Ore -> Common weapons, standard armor plates
+    - Silver Ore -> Uncommon weapons, refined armor
+    - Gold Ore -> Rare weapons, ornamental armor
+    - Obsidian -> Epic weapons, dark armor
+    - Moonstone -> Aetherborn weapons, crystalline armor
+    - Aether Crystal -> Legendary weapons, aether-infused armor
+    - Fractured Stone -> Mythic weapons (only at the Fracture itself)
+    - Solar Ore -> Solari weapons, fire-infused armor
+    - Voidstone -> Umbryss weapons, shadow armor
+    - Storm Quartz -> Nhalor weapons, lightning armor
+    - Frostiron -> Ice weapons, frozen armor
+    - Venomstone -> Poison weapons, toxic armor
+    - Soulrite -> Soul weapons, necrotic armor
+    - Temporal Glass -> Temporal weapons (very rare, only in Morvath ruins)
+
+  SKINNING (skinning knife + animal corpse):
+    - Wolf Hide -> Leather armor, cloaks
+    - Bear Hide -> Heavy leather armor, pauldrons
+    - Drake Scales -> Scale armor, shields, dragonbone weapons
+    - Spider Silk -> Robes, cloaks, amulets
+    - Boar Hide -> Gauntlets, boots, bracers
+    - Serpent Skin -> Light armor, daggers wraps
+    - Shadow Cat Pelt -> Stealth armor, cloaks (Umbryss)
+    - Aetherwolf Pelt -> Aether-infused leather (Aetheris)
+    - Frost Bear Pelt -> Ice resistance armor (Nhalor peaks)
+    - Venomtoad Skin -> Poison resistance armor (Vaelwood)
+
+  HERBALISM (gathering from plants):
+    - Aetherbloom -> Mana potions, spell reagents
+    - Sunpetal -> Healing potions, holy reagents
+    - Shadowcap Mushroom -> Poison potions, shadow reagents
+    - Frostleaf -> Ice potions, frost reagents
+    - Emberflower -> Fire potions, flame reagents
+    - Stormroot -> Lightning potions, storm reagents
+    - Soul Moss -> Soul potions, necrotic reagents
+    - Voidfern -> Void potions, shadow reagents (Umbryss)
+    - Fractured Lotus -> Fracture potions (rare, only near Fracture sites)
+    - Moonwort -> Aether potions, lunar reagents (Aetherborn areas)
+
+  FISHING (fishing rod + water):
+    - Common Fish -> Food (health regen)
+    - Aetherfish -> Aether reagents (Aetheris lakes)
+    - Void Eel -> Shadow reagents (Umbryss depths)
+    - Storm Bass -> Lightning reagents (Nhalor rivers)
+    - Frost Salmon -> Ice reagents (Nhalor peaks)
+    - Soul Carp -> Soul reagents (Morvath underground)
+    - Fractured Trout -> Fracture reagent (very rare, any water near Fracture)
+
+  WOODCUTTING (axe + tree):
+    - Ironwood -> Staffs, shields, greaves
+    - Shadowwood -> Shadow weapons, dark staves (Umbryss)
+    - Aetherwood -> Aether staves, crystalline weapons (Aetheris)
+    - Stormwood -> Lightning staves, storm weapons (Nhalor)
+    - Fractured Oak -> Mythic staves (rare, only near Fracture)
+
+  FARMING (player-owned farm/garden):
+    - Plant seeds gathered from herbalism
+    - Grow herbs over time (real-time: 6-24 hours per crop)
+    - Harvest for potion reagents
+    - Can crossbreed for rarer varieties
+    - Farm plots available at player housing
+
+  CRAFTING RECIPES (Blacksmith forge):
+    Mining materials -> weapons, armor plates, tools
+    Skinning materials -> leather armor, cloaks, gauntlets
+    Herbalism materials -> potions, reagents, buffs
+    Fishing materials -> food, reagents, rare potions
+    Woodcutting materials -> staves, shields, greaves
+    Boss materials -> unique boss-hide weapons + armor (highest tier)
+    Combined materials -> hybrid recipes (e.g., Obsidian + Drake Scale = Obsidian Drake Armor)
+
+  GATHERING SKILL LEVELS (0-300 per skill):
+    - Mining: 0-300 (unlocks better ores at higher levels)
+    - Skinning: 0-300 (unlocks better hides)
+    - Herbalism: 0-300 (unlocks rarer herbs)
+    - Fishing: 0-300 (unlocks rarer fish)
+    - Woodcutting: 0-300 (unlocks rarer wood)
+    - Farming: 0-300 (unlocks rarer crops + crossbreeding)
+    - Crafting: 0-300 (unlocks higher tier recipes)
+    - Each skill levels up by doing (mine ore -> mining XP)
+    - Skill level determines which nodes you can harvest
+    - Higher skill = faster gathering + higher yield + rare drops
+
+  NODE SPAWNS:
+    - Mining nodes: in caves, mountains, rock formations (region-specific)
+    - Skinning: from animal corpses (must kill animal first)
+    - Herbalism nodes: in forests, swamps, fields (region-specific)
+    - Fishing: at water edges (lakes, rivers, ocean)
+    - Woodcutting: at trees (forest areas)
+    - Nodes respawn after 5-15 minutes (real-time)
+    - Rare nodes respawn after 30-60 minutes
+    - Boss material nodes do NOT respawn (one per boss kill)
+
+  COMBINED WITH BOSS CRAFTING:
+    - Boss materials are the highest tier (Legendary/Mythic/Eclipse)
+    - Mined/skinned/gathered materials are Common through Epic
+    - You can mix: boss hide + mined obsidian = Epic armor with boss passive
+    - Pure boss materials = best items in the game
+    - Gathered materials = the economy and the grind
+    - This gives players something to do BETWEEN boss fights
+
 NPC TYPES (per city — proposed):
   - Quest givers (identifiable outfit + interaction marker)
   - Blacksmiths (functional forge + equipment)

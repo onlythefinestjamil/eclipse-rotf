@@ -68,9 +68,9 @@ struct FGameFeelProfile
     UPROPERTY(BlueprintReadWrite) float PerfectBlockReduction = 0.9f; // 90%
 
     // Hit-stop (freeze frames on impact)
-    UPROPERTY(BlueprintReadWrite) float LightHitStop = 0.02f;
+    UPROPERTY(BlueprintReadWrite) float LightHitStop = 0.035f;
     UPROPERTY(BlueprintReadWrite) float MediumHitStop = 0.05f;
-    UPROPERTY(BlueprintReadWrite) float HeavyHitStop = 0.10f;
+    UPROPERTY(BlueprintReadWrite) float HeavyHitStop = 0.13f;
     UPROPERTY(BlueprintReadWrite) float ChargedHitStop = 0.15f;
     UPROPERTY(BlueprintReadWrite) float CriticalHitStop = 0.20f;
 
@@ -85,14 +85,14 @@ struct FGameFeelProfile
     UPROPERTY(BlueprintReadWrite) float CameraLockOnAngle = 45.0f; // degrees
 
     // Input buffering
-    UPROPERTY(BlueprintReadWrite) float InputBufferWindow = 0.15f; // seconds to buffer next input
-    UPROPERTY(BlueprintReadWrite) float ComboWindow = 0.20f; // window to chain attacks
+    UPROPERTY(BlueprintReadWrite) float InputBufferWindow = 0.20f; // seconds to buffer next input
+    UPROPERTY(BlueprintReadWrite) float ComboWindow = 0.28f; // window to chain attacks
     UPROPERTY(BlueprintReadWrite) float ComboResetTime = 0.5f; // idle before combo resets
     UPROPERTY(BlueprintReadWrite) int32 MaxComboChain = 5;
 
     // Animation commitment
-    UPROPERTY(BlueprintReadWrite) float LightCommitTime = 0.15f; // can't cancel after this
-    UPROPERTY(BlueprintReadWrite) float HeavyCommitTime = 0.30f;
+    UPROPERTY(BlueprintReadWrite) float LightCommitTime = 0.25f; // can't cancel after this
+    UPROPERTY(BlueprintReadWrite) float HeavyCommitTime = 0.60f;
     UPROPERTY(BlueprintReadWrite) float ChargedCommitTime = 0.45f;
     UPROPERTY(BlueprintReadWrite) float SpellCommitTime = 0.25f;
 

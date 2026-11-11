@@ -136,7 +136,7 @@ bool UEclipsePartySystem::ReplaceHumanWithAI(int32 Slot)
     return true;
 }
 
-TArray<FPartyMember> UEclipsePartySystem::GetPartyMembers() const
+TArray<FEclipsePartyMember> UEclipsePartySystem::GetPartyMembers() const
 {
     return Members;
 }
