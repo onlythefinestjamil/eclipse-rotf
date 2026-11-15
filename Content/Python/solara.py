@@ -316,9 +316,9 @@ if pp:
         except:
             pass
         
-        # Motion blur
+        # Motion blur — OFF for 60 FPS performance (matches r.MotionBlurQuality=0 in DefaultEngine.ini)
         try:
-            settings.set_editor_property("motion_blur_intensity", 0.3)
+            settings.set_editor_property("motion_blur_intensity", 0.0)
         except:
             pass
         
