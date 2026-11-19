@@ -7,6 +7,7 @@
 #include "UObject/NoExportTypes.h"
 
 #include "EclipseCharacter.h" // For EClass
+#include "EclipseClassRoles.h" // For EClassRole
 #include "EclipseClassAbilities.generated.h"
 
 UENUM(BlueprintType)

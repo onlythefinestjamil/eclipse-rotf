@@ -3,6 +3,7 @@
 
 #pragma once
 #include "CoreMinimal.h"
+#include "EclipseCharacter.h" // For EClass enum
 #include "EclipseClassRoles.generated.h"
 
 UENUM(BlueprintType)

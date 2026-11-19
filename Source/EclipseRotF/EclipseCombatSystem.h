@@ -5,6 +5,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "EclipseCharacter.h" // For EClass enum
 #include "EclipseCombatSystem.generated.h"
 
 UENUM(BlueprintType)
