@@ -58,6 +58,10 @@
     {
       "Name": "GameplayAbilities",
       "Enabled": true
+    },
+    {
+      "Name": "MegascansPlugin",
+      "Enabled": true
     }
   ]
 }
