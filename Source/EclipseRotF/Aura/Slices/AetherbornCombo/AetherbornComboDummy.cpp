@@ -188,10 +188,10 @@ UStaticMeshComponent* AAetherbornComboDummy::MakePart(USceneComponent* InParent,
 	return Part;
 }
 
-void AAetherbornComboDummy::Hit(float Damage)
+void AAetherbornComboDummy::Hit(float InDamage)
 {
 	// dummy.js: hit(damage) -> flash = 1, recoilVel += 1.15 + min(2.4, damage * 0.09)
-	const float Dmg = FMath::IsFinite(Damage) ? Damage : 0.0f;
+	const float Dmg = FMath::IsFinite(InDamage) ? InDamage : 0.0f;
 
 	Flash = 1.0f;
 	RecoilVel += 1.15f + FMath::Min(2.4f, Dmg * 0.09f);

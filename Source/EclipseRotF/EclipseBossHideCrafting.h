@@ -1,6 +1,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CoreUObject.h"
 #include "GameFramework/Actor.h"
 #include "EclipseCharacter.h"
 #include "EclipseBossDirector.h"
@@ -85,7 +86,7 @@ struct FBossMaterialDrop
     FString BossName;
 
     UPROPERTY(BlueprintReadWrite, Category = "Boss Craft")
-    EAffinityType BossAffinity = EAffinityType::Fire;
+    EElementalAffinity BossAffinity = EElementalAffinity::Fire;
 
     UPROPERTY(BlueprintReadWrite, Category = "Boss Craft")
     int32 Quantity = 0;
@@ -118,7 +119,7 @@ struct FBossHideCraftedItem
     ECraftableType CraftedType;
 
     UPROPERTY(BlueprintReadWrite, Category = "Boss Craft")
-    EAffinityType PassiveAffinity;
+    EElementalAffinity PassiveAffinity;
 
     UPROPERTY(BlueprintReadWrite, Category = "Boss Craft")
     float PassiveBonusPercent = 10.0f;
@@ -164,7 +165,7 @@ class ECLIPSEROTF_API UEclipseBossHideCrafting : public UObject
 
 public:
     UPROPERTY(BlueprintReadWrite, Category = "Boss Craft")
-    TMap<FString, TPair<EBossMaterial, EBossPart>> BossDropMap;
+    TMap<FString, EBossMaterial> BossDropMap;
 
     UPROPERTY(BlueprintReadWrite, Category = "Boss Craft")
     TArray<FBossMaterialDrop> PlayerMaterials;
@@ -180,7 +181,7 @@ public:
     // Called when a boss is killed - drops multiple parts + grants affinity
     // Each boss drops 2-4 parts: hide + fangs/scales + rare heart/soul
     UFUNCTION(BlueprintCallable, Category = "Boss Craft")
-    TArray<FBossMaterialDrop> OnBossKilled(const FString& BossName, EAffinityType BossAffinity);
+    TArray<FBossMaterialDrop> OnBossKilled(const FString& BossName, EElementalAffinity BossAffinity);
 
     UFUNCTION(BlueprintCallable, Category = "Boss Craft")
     bool HasMaterial(EBossMaterial Material, EBossPart Part) const;
@@ -205,7 +206,7 @@ public:
     float GetPassiveBonus(EBossMaterial Material) const;
 
     UFUNCTION(BlueprintCallable, Category = "Boss Craft")
-    EAffinityType GetMaterialAffinity(EBossMaterial Material) const;
+    EElementalAffinity GetMaterialAffinity(EBossMaterial Material) const;
 
     UFUNCTION(BlueprintCallable, Category = "Boss Craft")
     int32 GetGoldCostForTier(ERarityTier Tier) const;
@@ -254,7 +255,7 @@ public:
 
 private:
     void InitializeBossDropMap();
-    EAffinityType MaterialToAffinity(EBossMaterial Material) const;
+    EElementalAffinity MaterialToAffinity(EBossMaterial Material) const;
     float GetAffinityBonusPercent(EBossMaterial Material) const;
     FString MakeMaterialKey(EBossMaterial Material, EBossPart Part) const;
     TArray<EBossPart> GetDropsForBoss(const FString& BossName) const;

@@ -1,550 +1,795 @@
-// EclipseGatheringSystem.cpp — Implementation
-// Mining, Skinning, Herbalism, Fishing, Woodcutting, Farming
+// EclipseGatheringSystem.cpp
+// Implementation of the Gathering & Farming System.
+// Mining, Skinning, Herbalism, Fishing, Woodcutting, Farming skills (0-300).
 
 #include "EclipseGatheringSystem.h"
 
-// === GATHERING COMPONENT ===
-UGatheringComponent::UGatheringComponent()
+// ---------------------------------------------------------------------------
+// Helper: clamp an enum-class index into a TMap key range
+// ---------------------------------------------------------------------------
+
+UEclipseGatheringSystem::UEclipseGatheringSystem()
 {
-    PrimaryComponentTick.bCanEverTick = false;
-    
-    // Initialize all skill levels to 0
-    MiningLevel = 0;
-    MiningXP = 0;
-    SkinningLevel = 0;
-    SkinningXP = 0;
-    HerbalismLevel = 0;
-    HerbalismXP = 0;
-    FishingLevel = 0;
-    FishingXP = 0;
-    WoodcuttingLevel = 0;
-    WoodcuttingXP = 0;
-    FarmingLevel = 0;
-    FarmingXP = 0;
+    InitializeSkills();
+    InitializeNodeDefaults();
 }
 
-void UGatheringComponent::BeginPlay()
+// ---------------------------------------------------------------------------
+// Skill initialization
+// ---------------------------------------------------------------------------
+
+void UEclipseGatheringSystem::InitializeSkills()
 {
-    Super::BeginPlay();
+    SkillLevels.Add(EGatheringSkill::Mining,       0);
+    SkillLevels.Add(EGatheringSkill::Skinning,     0);
+    SkillLevels.Add(EGatheringSkill::Herbalism,    0);
+    SkillLevels.Add(EGatheringSkill::Fishing,      0);
+    SkillLevels.Add(EGatheringSkill::Woodcutting,  0);
+    SkillLevels.Add(EGatheringSkill::Farming,      0);
+    SkillLevels.Add(EGatheringSkill::Crafting,     0);
 }
 
-// === MINING ===
-bool UGatheringComponent::CanMine(EOreType OreType) const
+int32 UEclipseGatheringSystem::GetSkillLevel(EGatheringSkill Skill) const
 {
-    const int32 RequiredLevel = GetOreRequiredLevel(OreType);
-    return MiningLevel >= RequiredLevel;
-}
-
-FGatherResult UGatheringComponent::MineOre(EOreType OreType)
-{
-    FGatherResult Result;
-    if (!CanMine(OreType))
+    if (const int32* Found = SkillLevels.Find(Skill))
     {
-        Result.bSuccess = false;
-        Result.FailureReason = TEXT("Mining level too low for this ore type.");
-        return Result;
+        return *Found;
     }
-    
-    Result.bSuccess = true;
-    Result.ItemName = GetOreName(OreType);
-    Result.Quantity = FMath::RandRange(1, 3);
-    Result.XPGained = GetOreXP(OreType);
-    
-    MiningXP += Result.XPGained;
-    CheckLevelUp(EGatheringSkill::Mining);
-    
+    return 0;
+}
+
+bool UEclipseGatheringSystem::GainSkillXP(EGatheringSkill Skill, int32 XPAmount)
+{
+    if (XPAmount <= 0)
+    {
+        return false;
+    }
+
+    int32& Level = SkillLevels.FindOrAdd(Skill);
+    Level += XPAmount;
+    if (Level > 300)
+    {
+        Level = 300;
+    }
+    return true;
+}
+
+// ---------------------------------------------------------------------------
+// Harvesting
+// ---------------------------------------------------------------------------
+
+bool UEclipseGatheringSystem::HarvestNode(FGatheringNode& Node)
+{
+    if (!CanHarvest(Node))
+    {
+        return false;
+    }
+
+    if (Node.CurrentYield <= 0)
+    {
+        return false;
+    }
+
+    // Decrement the node yield and award skill XP.
+    Node.CurrentYield -= 1;
+    Node.LastHarvestedTime = FDateTime::Now();
+
+    if (Node.CurrentYield <= 0)
+    {
+        Node.bIsAvailable = false;
+    }
+
+    // Grant XP scaled by required skill level.
+    const int32 GrantedXP = FMath::Max(5, Node.RequiredSkillLevel * 2);
+    GainSkillXP(Node.RequiredSkill, GrantedXP);
+
+    // Hand the materials to the player.
+    AddMaterial(Node.NodeType, 1, Node.Region);
+
+    // Rare drop chance: grant an extra material.
+    if (FMath::FRand() < Node.RareDropChance)
+    {
+        AddMaterial(Node.NodeType, 1, Node.Region);
+    }
+
+    return true;
+}
+
+bool UEclipseGatheringSystem::CanHarvest(const FGatheringNode& Node) const
+{
+    if (!Node.bIsAvailable)
+    {
+        return false;
+    }
+    if (Node.CurrentYield <= 0)
+    {
+        return false;
+    }
+    return GetSkillLevel(Node.RequiredSkill) >= Node.RequiredSkillLevel;
+}
+
+// ---------------------------------------------------------------------------
+// Inventory queries
+// ---------------------------------------------------------------------------
+
+TArray<FGatheredMaterial> UEclipseGatheringSystem::GetMaterialsByType(ENodeType Type) const
+{
+    TArray<FGatheredMaterial> Result;
+    for (const FGatheredMaterial& Mat : PlayerInventory)
+    {
+        if (Mat.MaterialType == Type)
+        {
+            Result.Add(Mat);
+        }
+    }
     return Result;
 }
 
-int32 UGatheringComponent::GetOreRequiredLevel(EOreType OreType) const
+TArray<FGatheredMaterial> UEclipseGatheringSystem::GetMaterialsBySkill(EGatheringSkill Skill) const
 {
-    switch (OreType)
+    TArray<FGatheredMaterial> Result;
+    for (const FGatheredMaterial& Mat : PlayerInventory)
     {
-    case EOreType::Iron:        return 1;
-    case EOreType::Copper:      return 1;
-    case EOreType::Tin:         return 5;
-    case EOreType::Silver:      return 10;
-    case EOreType::Gold:        return 25;
-    case EOreType::Voidstone:   return 50;
-    case EOreType::Shadow:     return 75;
-    case EOreType::Crystal:     return 100;
-    case EOreType::Temporal:    return 150;
-    case EOreType::Fracture:    return 200;
-    case EOreType::Aether:     return 250;
-    case EOreType::Eclipse:     return 280;
-    case EOreType::Mythic:      return 290;
-    case EOreType::Legendary:   return 300;
-    default: return 1;
+        if (Mat.SourceSkill == Skill)
+        {
+            Result.Add(Mat);
+        }
     }
-}
-
-FString UGatheringComponent::GetOreName(EOreType OreType) const
-{
-    switch (OreType)
-    {
-    case EOreType::Iron:        return TEXT("Iron Ore");
-    case EOreType::Copper:      return TEXT("Copper Ore");
-    case EOreType::Tin:         return TEXT("Tin Ore");
-    case EOreType::Silver:      return TEXT("Silver Ore");
-    case EOreType::Gold:        return TEXT("Gold Ore");
-    case EOreType::Voidstone:   return TEXT("Voidstone");
-    case EOreType::Shadow:      return TEXT("Shadow Ore");
-    case EOreType::Crystal:     return TEXT("Crystal Ore");
-    case EOreType::Temporal:    return TEXT("Temporal Glass");
-    case EOreType::Fracture:    return TEXT("Fracture Ore");
-    case EOreType::Aether:     return TEXT("Aether Ore");
-    case EOreType::Eclipse:    return TEXT("Eclipse Ore");
-    case EOreType::Mythic:     return TEXT("Mythic Ore");
-    case EOreType::Legendary:  return TEXT("Legendary Ore");
-    default: return TEXT("Unknown Ore");
-    }
-}
-
-int32 UGatheringComponent::GetOreXP(EOreType OreType) const
-{
-    switch (OreType)
-    {
-    case EOreType::Iron:        return 10;
-    case EOreType::Copper:      return 10;
-    case EOreType::Tin:         return 15;
-    case EOreType::Silver:      return 25;
-    case EOreType::Gold:        return 40;
-    case EOreType::Voidstone:   return 75;
-    case EOreType::Shadow:     return 100;
-    case EOreType::Crystal:     return 150;
-    case EOreType::Temporal:    return 225;
-    case EOreType::Fracture:    return 300;
-    case EOreType::Aether:     return 400;
-    case EOreType::Eclipse:    return 500;
-    case EOreType::Mythic:     return 600;
-    case EOreType::Legendary:  return 750;
-    default: return 10;
-    }
-}
-
-// === SKINNING ===
-bool UGatheringComponent::CanSkin(ECreatureHideType HideType) const
-{
-    return SkinningLevel >= GetHideRequiredLevel(HideType);
-}
-
-FGatherResult UGatheringComponent::SkinCreature(ECreatureHideType HideType)
-{
-    FGatherResult Result;
-    if (!CanSkin(HideType))
-    {
-        Result.bSuccess = false;
-        Result.FailureReason = TEXT("Skinning level too low.");
-        return Result;
-    }
-    
-    Result.bSuccess = true;
-    Result.ItemName = GetHideName(HideType);
-    Result.Quantity = FMath::RandRange(1, 2);
-    Result.XPGained = GetHideXP(HideType);
-    
-    SkinningXP += Result.XPGained;
-    CheckLevelUp(EGatheringSkill::Skinning);
-    
     return Result;
 }
 
-int32 UGatheringComponent::GetHideRequiredLevel(ECreatureHideType HideType) const
+void UEclipseGatheringSystem::AddMaterial(ENodeType Type, int32 Quantity, const FString& Region)
 {
-    switch (HideType)
+    if (Quantity <= 0)
     {
-    case ECreatureHideType::Wolf:    return 1;
-    case ECreatureHideType::Boar:    return 5;
-    case ECreatureHideType::Bear:    return 10;
-    case ECreatureHideType::Wraith:  return 25;
-    case ECreatureHideType::Drake:   return 50;
-    case ECreatureHideType::Golem:   return 75;
-    case ECreatureHideType::WraithLord: return 100;
-    case ECreatureHideType::Void:    return 150;
-    case ECreatureHideType::Fracture: return 200;
-    case ECreatureHideType::Eclipse: return 250;
-    default: return 1;
+        return;
+    }
+
+    // Stack into an existing entry when possible.
+    for (FGatheredMaterial& Mat : PlayerInventory)
+    {
+        if (Mat.MaterialType == Type && Mat.Region == Region)
+        {
+            Mat.Quantity += Quantity;
+            return;
+        }
+    }
+
+    FGatheredMaterial NewMat;
+    NewMat.MaterialType     = Type;
+    NewMat.MaterialName      = GetMaterialNameForNode(Type);
+    NewMat.SourceSkill       = GetSkillForNode(Type);
+    NewMat.Quantity          = Quantity;
+    NewMat.MaterialAffinity  = GetAffinityForNode(Type);
+    NewMat.Tier              = GetRarityForNode(Type);
+    NewMat.Region            = Region;
+    PlayerInventory.Add(NewMat);
+}
+
+bool UEclipseGatheringSystem::RemoveMaterial(ENodeType Type, int32 Quantity)
+{
+    if (Quantity <= 0)
+    {
+        return true;
+    }
+
+    if (!HasMaterial(Type, Quantity))
+    {
+        return false;
+    }
+
+    int32 Remaining = Quantity;
+    for (int32 i = PlayerInventory.Num() - 1; i >= 0 && Remaining > 0; --i)
+    {
+        FGatheredMaterial& Mat = PlayerInventory[i];
+        if (Mat.MaterialType != Type)
+        {
+            continue;
+        }
+
+        if (Mat.Quantity <= Remaining)
+        {
+            Remaining -= Mat.Quantity;
+            PlayerInventory.RemoveAt(i);
+        }
+        else
+        {
+            Mat.Quantity -= Remaining;
+            Remaining = 0;
+        }
+    }
+    return true;
+}
+
+bool UEclipseGatheringSystem::HasMaterial(ENodeType Type, int32 Quantity) const
+{
+    if (Quantity <= 0)
+    {
+        return true;
+    }
+
+    int32 Total = 0;
+    for (const FGatheredMaterial& Mat : PlayerInventory)
+    {
+        if (Mat.MaterialType == Type)
+        {
+            Total += Mat.Quantity;
+            if (Total >= Quantity)
+            {
+                return true;
+            }
+        }
+    }
+    return Total >= Quantity;
+}
+
+// ---------------------------------------------------------------------------
+// Node spawning / respawn
+// ---------------------------------------------------------------------------
+
+void UEclipseGatheringSystem::SpawnNodesForRegion(const FString& Region)
+{
+    if (Region.IsEmpty())
+    {
+        return;
+    }
+
+    // Spawn a handful of nodes per region call. The exact mix depends on the
+    // region string so different regions produce different material flavors.
+    const int32 NodesToSpawn = 6;
+
+    for (int32 i = 0; i < NodesToSpawn; ++i)
+    {
+        FGatheringNode Node;
+        Node.Region              = Region;
+        Node.Location            = FVector(FMath::FRand() * 10000.0f,
+                                            FMath::FRand() * 10000.0f,
+                                            0.0f);
+        Node.CurrentYield         = Node.MaxYield;
+        Node.bIsAvailable         = true;
+        Node.LastHarvestedTime    = FDateTime::MinValue();
+
+        // Deterministically pick a node type for the slot so the region feels
+        // stable across calls.
+        switch (i % 6)
+        {
+        case 0: Node.NodeType = ENodeType::IronOre;       break;
+        case 1: Node.NodeType = ENodeType::WolfHide;      break;
+        case 2: Node.NodeType = ENodeType::Aetherbloom;   break;
+        case 3: Node.NodeType = ENodeType::CommonFish;    break;
+        case 4: Node.NodeType = ENodeType::Ironwood;     break;
+        default:Node.NodeType = ENodeType::SilverOre;    break;
+        }
+
+        Node.RequiredSkill      = GetSkillForNode(Node.NodeType);
+        Node.RequiredSkillLevel = GetRequiredSkillLevel(Node.NodeType);
+        Node.RareDropChance     = 0.05f;
+        ActiveNodes.Add(Node);
     }
 }
 
-FString UGatheringComponent::GetHideName(ECreatureHideType HideType) const
+void UEclipseGatheringSystem::CheckRespawns()
 {
-    switch (HideType)
+    const FDateTime Now = FDateTime::Now();
+    for (FGatheringNode& Node : ActiveNodes)
     {
-    case ECreatureHideType::Wolf:    return TEXT("Wolf Pelt");
-    case ECreatureHideType::Boar:    return TEXT("Boar Hide");
-    case ECreatureHideType::Bear:    return TEXT("Bear Hide");
-    case ECreatureHideType::Wraith:  return TEXT("Wraith Essence");
-    case ECreatureHideType::Drake:   return TEXT("Drake Scale");
-    case ECreatureHideType::Golem:   return TEXT("Golem Core");
-    case ECreatureHideType::WraithLord: return TEXT("Wraith Lord Essence");
-    case ECreatureHideType::Void:    return TEXT("Void Leather");
-    case ECreatureHideType::Fracture: return TEXT("Fracture Hide");
-    case ECreatureHideType::Eclipse: return TEXT("Eclipse Pelt");
-    default: return TEXT("Unknown Hide");
+        if (Node.bIsAvailable)
+        {
+            continue;
+        }
+        if (Node.CurrentYield > 0)
+        {
+            Node.bIsAvailable = true;
+            continue;
+        }
+
+        // Respawn after the configured number of minutes.
+        const FTimespan RespawnSpan = FTimespan::FromMinutes(Node.RespawnTimeMinutes);
+        if (Now - Node.LastHarvestedTime >= RespawnSpan)
+        {
+            Node.CurrentYield  = Node.MaxYield;
+            Node.bIsAvailable   = true;
+        }
     }
 }
 
-int32 UGatheringComponent::GetHideXP(ECreatureHideType HideType) const
+// ---------------------------------------------------------------------------
+// Display names
+// ---------------------------------------------------------------------------
+
+FString UEclipseGatheringSystem::GetNodeDisplayName(ENodeType Type) const
 {
-    switch (HideType)
+    switch (Type)
     {
-    case ECreatureHideType::Wolf:    return 10;
-    case ECreatureHideType::Boar:    return 15;
-    case ECreatureHideType::Bear:    return 25;
-    case ECreatureHideType::Wraith:  return 40;
-    case ECreatureHideType::Drake:   return 75;
-    case ECreatureHideType::Golem:   return 100;
-    case ECreatureHideType::WraithLord: return 150;
-    case ECreatureHideType::Void:    return 225;
-    case ECreatureHideType::Fracture: return 300;
-    case ECreatureHideType::Eclipse: return 400;
-    default: return 10;
+    case ENodeType::IronOre:         return TEXT("Iron Ore");
+    case ENodeType::SilverOre:       return TEXT("Silver Ore");
+    case ENodeType::GoldOre:         return TEXT("Gold Ore");
+    case ENodeType::Obsidian:        return TEXT("Obsidian");
+    case ENodeType::Moonstone:      return TEXT("Moonstone");
+    case ENodeType::AetherCrystal:   return TEXT("Aether Crystal");
+    case ENodeType::FracturedStone:  return TEXT("Fractured Stone");
+    case ENodeType::SolarOre:        return TEXT("Solar Ore");
+    case ENodeType::Voidstone:       return TEXT("Voidstone");
+    case ENodeType::StormQuartz:     return TEXT("Storm Quartz");
+    case ENodeType::Frostiron:      return TEXT("Frostiron");
+    case ENodeType::Venomstone:     return TEXT("Venomstone");
+    case ENodeType::Soulrite:        return TEXT("Soulrite");
+    case ENodeType::TemporalGlass:   return TEXT("Temporal Glass");
+    case ENodeType::WolfHide:         return TEXT("Wolf Hide");
+    case ENodeType::BearHide:         return TEXT("Bear Hide");
+    case ENodeType::DrakeScales:      return TEXT("Drake Scales");
+    case ENodeType::SpiderSilk:      return TEXT("Spider Silk");
+    case ENodeType::BoarHide:        return TEXT("Boar Hide");
+    case ENodeType::SerpentSkin:      return TEXT("Serpent Skin");
+    case ENodeType::ShadowCatPelt:    return TEXT("Shadow Cat Pelt");
+    case ENodeType::AetherwolfPelt:  return TEXT("Aetherwolf Pelt");
+    case ENodeType::FrostBearPelt:    return TEXT("Frost Bear Pelt");
+    case ENodeType::VenomtoadSkin:    return TEXT("Venomtoad Skin");
+    case ENodeType::Aetherbloom:     return TEXT("Aetherbloom");
+    case ENodeType::Sunpetal:       return TEXT("Sunpetal");
+    case ENodeType::Shadowcap:       return TEXT("Shadowcap Mushroom");
+    case ENodeType::Frostleaf:      return TEXT("Frostleaf");
+    case ENodeType::Emberflower:     return TEXT("Emberflower");
+    case ENodeType::Stormroot:       return TEXT("Stormroot");
+    case ENodeType::SoulMoss:        return TEXT("Soul Moss");
+    case ENodeType::Voidfern:       return TEXT("Voidfern");
+    case ENodeType::FracturedLotus: return TEXT("Fractured Lotus");
+    case ENodeType::Moonwort:       return TEXT("Moonwort");
+    case ENodeType::CommonFish:     return TEXT("Common Fish");
+    case ENodeType::Aetherfish:     return TEXT("Aetherfish");
+    case ENodeType::VoidEel:        return TEXT("Void Eel");
+    case ENodeType::StormBass:      return TEXT("Storm Bass");
+    case ENodeType::FrostSalmon:    return TEXT("Frost Salmon");
+    case ENodeType::SoulCarp:       return TEXT("Soul Carp");
+    case ENodeType::FracturedTrout: return TEXT("Fractured Trout");
+    case ENodeType::Ironwood:       return TEXT("Ironwood");
+    case ENodeType::Shadowwood:     return TEXT("Shadowwood");
+    case ENodeType::Aetherwood:     return TEXT("Aetherwood");
+    case ENodeType::Stormwood:      return TEXT("Stormwood");
+    case ENodeType::FracturedOak:   return TEXT("Fractured Oak");
     }
+    return TEXT("Unknown");
 }
 
-// === HERBALISM ===
-bool UGatheringComponent::CanHarvest(EHerbType HerbType) const
-{
-    return HerbalismLevel >= GetHerbRequiredLevel(HerbType);
-}
-
-FGatherResult UGatheringComponent::HarvestHerb(EHerbType HerbType)
-{
-    FGatherResult Result;
-    if (!CanHarvest(HerbType))
-    {
-        Result.bSuccess = false;
-        Result.FailureReason = TEXT("Herbalism level too low.");
-        return Result;
-    }
-    
-    Result.bSuccess = true;
-    Result.ItemName = GetHerbName(HerbType);
-    Result.Quantity = FMath::RandRange(1, 3);
-    Result.XPGained = GetHerbXP(HerbType);
-    
-    HerbalismXP += Result.XPGained;
-    CheckLevelUp(EGatheringSkill::Herbalism);
-    
-    return Result;
-}
-
-int32 UGatheringComponent::GetHerbRequiredLevel(EHerbType HerbType) const
-{
-    switch (HerbType)
-    {
-    case EHerbType::Peacebloom:     return 1;
-    case EHerbType::Silverleaf:     return 1;
-    case EHerbType::Earthroot:      return 5;
-    case EHerbType::Mageroyal:     return 10;
-    case EHerbType::Briarthorn:    return 25;
-    case EHerbType::Swiftthistle:  return 50;
-    case EHerbType::Sungrass:      return 75;
-    case EHerbType::Dreamfoil:     return 100;
-    case EHerbType::Icecap:        return 150;
-    case EHerbType::FractureBloom:  return 200;
-    default: return 1;
-    }
-}
-
-FString UGatheringComponent::GetHerbName(EHerbType HerbType) const
-{
-    switch (HerbType)
-    {
-    case EHerbType::Peacebloom:    return TEXT("Peacebloom");
-    case EHerbType::Silverleaf:    return TEXT("Silverleaf");
-    case EHerbType::Earthroot:     return TEXT("Earthroot");
-    case EHerbType::Mageroyal:     return TEXT("Mageroyal");
-    case EHerbType::Briarthorn:    return TEXT("Briarthorn");
-    case EHerbType::Swiftthistle:  return TEXT("Swiftthistle");
-    case EHerbType::Sungrass:      return TEXT("Sungrass");
-    case EHerbType::Dreamfoil:    return TEXT("Dreamfoil");
-    case EHerbType::Icecap:        return TEXT("Icecap");
-    case EHerbType::FractureBloom: return TEXT("Fracture Bloom");
-    default: return TEXT("Unknown Herb");
-    }
-}
-
-int32 UGatheringComponent::GetHerbXP(EHerbType HerbType) const
-{
-    switch (HerbType)
-    {
-    case EHerbType::Peacebloom:    return 10;
-    case EHerbType::Silverleaf:    return 10;
-    case EHerbType::Earthroot:     return 15;
-    case EHerbType::Mageroyal:     return 25;
-    case EHerbType::Briarthorn:    return 40;
-    case EHerbType::Swiftthistle:  return 75;
-    case EHerbType::Sungrass:      return 100;
-    case EHerbType::Dreamfoil:    return 150;
-    case EHerbType::Icecap:        return 225;
-    case EHerbType::FractureBloom: return 300;
-    default: return 10;
-    }
-}
-
-// === FISHING ===
-bool UGatheringComponent::CanFish(EFishType FishType) const
-{
-    return FishingLevel >= GetFishRequiredLevel(FishType);
-}
-
-FGatherResult UGatheringComponent::CatchFish(EFishType FishType)
-{
-    FGatherResult Result;
-    if (!CanFish(FishType))
-    {
-        Result.bSuccess = false;
-        Result.FailureReason = TEXT("Fishing level too low.");
-        return Result;
-    }
-    
-    Result.bSuccess = true;
-    Result.ItemName = GetFishName(FishType);
-    Result.Quantity = 1;
-    Result.XPGained = GetFishXP(FishType);
-    
-    FishingXP += Result.XPGained;
-    CheckLevelUp(EGatheringSkill::Fishing);
-    
-    return Result;
-}
-
-int32 UGatheringComponent::GetFishRequiredLevel(EFishType FishType) const
-{
-    switch (FishType)
-    {
-    case EFishType::Common:    return 1;
-    case EFishType::Uncommon: return 10;
-    case EFishType::Rare:      return 25;
-    case EFishType::Epic:      return 50;
-    case EFishType::Legendary: return 100;
-    case EFishType::Mythic:    return 200;
-    case EFishType::Eclipse:   return 280;
-    default: return 1;
-    }
-}
-
-FString UGatheringComponent::GetFishName(EFishType FishType) const
-{
-    switch (FishType)
-    {
-    case EFishType::Common:    return TEXT("Common Fish");
-    case EFishType::Uncommon: return TEXT("Uncommon Fish");
-    case EFishType::Rare:      return TEXT("Rare Fish");
-    case EFishType::Epic:      return TEXT("Epic Fish");
-    case EFishType::Legendary: return TEXT("Legendary Fish");
-    case EFishType::Mythic:    return TEXT("Mythic Fish");
-    case EFishType::Eclipse:   return TEXT("Eclipse Fish");
-    default: return TEXT("Unknown Fish");
-    }
-}
-
-int32 UGatheringComponent::GetFishXP(EFishType FishType) const
-{
-    switch (FishType)
-    {
-    case EFishType::Common:    return 10;
-    case EFishType::Uncommon: return 25;
-    case EFishType::Rare:      return 50;
-    case EFishType::Epic:      return 100;
-    case EFishType::Legendary: return 200;
-    case EFishType::Mythic:    return 350;
-    case EFishType::Eclipse:   return 500;
-    default: return 10;
-    }
-}
-
-// === WOODCUTTING ===
-bool UGatheringComponent::CanChop(EWoodType WoodType) const
-{
-    return WoodcuttingLevel >= GetWoodRequiredLevel(WoodType);
-}
-
-FGatherResult UGatheringComponent::ChopWood(EWoodType WoodType)
-{
-    FGatherResult Result;
-    if (!CanChop(WoodType))
-    {
-        Result.bSuccess = false;
-        Result.FailureReason = TEXT("Woodcutting level too low.");
-        return Result;
-    }
-    
-    Result.bSuccess = true;
-    Result.ItemName = GetWoodName(WoodType);
-    Result.Quantity = FMath::RandRange(1, 4);
-    Result.XPGained = GetWoodXP(WoodType);
-    
-    WoodcuttingXP += Result.XPGained;
-    CheckLevelUp(EGatheringSkill::Woodcutting);
-    
-    return Result;
-}
-
-int32 UGatheringComponent::GetWoodRequiredLevel(EWoodType WoodType) const
-{
-    switch (WoodType)
-    {
-    case EWoodType::Pine:     return 1;
-    case EWoodType::Oak:      return 10;
-    case EWoodType::Ash:      return 25;
-    case EWoodType::Eclipse:  return 100;
-    case EWoodType::Fracture: return 200;
-    default: return 1;
-    }
-}
-
-FString UGatheringComponent::GetWoodName(EWoodType WoodType) const
-{
-    switch (WoodType)
-    {
-    case EWoodType::Pine:     return TEXT("Pine Wood");
-    case EWoodType::Oak:      return TEXT("Oak Wood");
-    case EWoodType::Ash:      return TEXT("Ash Wood");
-    case EWoodType::Eclipse:  return TEXT("Eclipse Wood");
-    case EWoodType::Fracture: return TEXT("Fracture Wood");
-    default: return TEXT("Unknown Wood");
-    }
-}
-
-int32 UGatheringComponent::GetWoodXP(EWoodType WoodType) const
-{
-    switch (WoodType)
-    {
-    case EWoodType::Pine:     return 10;
-    case EWoodType::Oak:      return 25;
-    case EWoodType::Ash:      return 50;
-    case EWoodType::Eclipse:  return 200;
-    case EWoodType::Fracture: return 300;
-    default: return 10;
-    }
-}
-
-// === FARMING ===
-bool UGatheringComponent::CanPlant(ESeedType SeedType) const
-{
-    return FarmingLevel >= GetSeedRequiredLevel(SeedType);
-}
-
-FGatherResult UGatheringComponent::PlantSeed(ESeedType SeedType)
-{
-    FGatherResult Result;
-    if (!CanPlant(SeedType))
-    {
-        Result.bSuccess = false;
-        Result.FailureReason = TEXT("Farming level too low.");
-        return Result;
-    }
-    
-    Result.bSuccess = true;
-    Result.ItemName = GetSeedName(SeedType);
-    Result.Quantity = 1;
-    Result.XPGained = GetSeedXP(SeedType);
-    
-    FarmingXP += Result.XPGained;
-    CheckLevelUp(EGatheringSkill::Farming);
-    
-    return Result;
-}
-
-int32 UGatheringComponent::GetSeedRequiredLevel(ESeedType SeedType) const
-{
-    switch (SeedType)
-    {
-    case ESeedType::Wheat:      return 1;
-    case ESeedType::Herb:      return 5;
-    case ESeedType::Flower:    return 10;
-    case ESeedType::Fruit:     return 25;
-    case ESeedType::Magic:     return 50;
-    case ESeedType::Fracture:  return 100;
-    default: return 1;
-    }
-}
-
-FString UGatheringComponent::GetSeedName(ESeedType SeedType) const
-{
-    switch (SeedType)
-    {
-    case ESeedType::Wheat:     return TEXT("Wheat Seed");
-    case ESeedType::Herb:     return TEXT("Herb Seed");
-    case ESeedType::Flower:   return TEXT("Flower Seed");
-    case ESeedType::Fruit:    return TEXT("Fruit Seed");
-    case ESeedType::Magic:    return TEXT("Magic Seed");
-    case ESeedType::Fracture: return TEXT("Fracture Seed");
-    default: return TEXT("Unknown Seed");
-    }
-}
-
-int32 UGatheringComponent::GetSeedXP(ESeedType SeedType) const
-{
-    switch (SeedType)
-    {
-    case ESeedType::Wheat:     return 10;
-    case ESeedType::Herb:     return 15;
-    case ESeedType::Flower:   return 25;
-    case ESeedType::Fruit:    return 40;
-    case ESeedType::Magic:    return 100;
-    case ESeedType::Fracture: return 200;
-    default: return 10;
-    }
-}
-
-// === LEVEL UP ===
-void UGatheringComponent::CheckLevelUp(EGatheringSkill Skill)
-{
-    int32* Level = nullptr;
-    int32* XP = nullptr;
-    
-    switch (Skill)
-    {
-    case EGatheringSkill::Mining:       Level = &MiningLevel;       XP = &MiningXP;       break;
-    case EGatheringSkill::Skinning:     Level = &SkinningLevel;     XP = &SkinningXP;     break;
-    case EGatheringSkill::Herbalism:    Level = &HerbalismLevel;    XP = &HerbalismXP;    break;
-    case EGatheringSkill::Fishing:      Level = &FishingLevel;      XP = &FishingXP;      break;
-    case EGatheringSkill::Woodcutting:  Level = &WoodcuttingLevel;  XP = &WoodcuttingXP;  break;
-    case EGatheringSkill::Farming:      Level = &FarmingLevel;      XP = &FarmingXP;      break;
-    }
-    
-    if (!Level || !XP) return;
-    
-    while (*XP >= GetXPForLevel(*Level + 1))
-    {
-        (*Level)++;
-    }
-}
-
-int32 UGatheringComponent::GetXPForLevel(int32 TargetLevel) const
-{
-    // XP curve: 100 * level^1.5
-    return FMath::RoundToInt(100.0f * FMath::Pow(static_cast<float>(TargetLevel), 1.5f));
-}
-
-int32 UGatheringComponent::GetSkillLevel(EGatheringSkill Skill) const
+FString UEclipseGatheringSystem::GetSkillDisplayName(EGatheringSkill Skill) const
 {
     switch (Skill)
     {
-    case EGatheringSkill::Mining:       return MiningLevel;
-    case EGatheringSkill::Skinning:     return SkinningLevel;
-    case EGatheringSkill::Herbalism:    return HerbalismLevel;
-    case EGatheringSkill::Fishing:      return FishingLevel;
-    case EGatheringSkill::Woodcutting:  return WoodcuttingLevel;
-    case EGatheringSkill::Farming:       return FarmingLevel;
-    default: return 0;
+    case EGatheringSkill::Mining:       return TEXT("Mining");
+    case EGatheringSkill::Skinning:     return TEXT("Skinning");
+    case EGatheringSkill::Herbalism:    return TEXT("Herbalism");
+    case EGatheringSkill::Fishing:      return TEXT("Fishing");
+    case EGatheringSkill::Woodcutting:  return TEXT("Woodcutting");
+    case EGatheringSkill::Farming:      return TEXT("Farming");
+    case EGatheringSkill::Crafting:     return TEXT("Crafting");
     }
+    return TEXT("Unknown");
 }
 
-int32 UGatheringComponent::GetSkillXP(EGatheringSkill Skill) const
+// ---------------------------------------------------------------------------
+// Node → skill / level / rarity / affinity mapping
+// ---------------------------------------------------------------------------
+
+EGatheringSkill UEclipseGatheringSystem::GetSkillForNode(ENodeType Type) const
 {
-    switch (Skill)
+    switch (Type)
     {
-    case EGatheringSkill::Mining:       return MiningXP;
-    case EGatheringSkill::Skinning:     return SkinningXP;
-    case EGatheringSkill::Herbalism:    return HerbalismXP;
-    case EGatheringSkill::Fishing:      return FishingXP;
-    case EGatheringSkill::Woodcutting:  return WoodcuttingXP;
-    case EGatheringSkill::Farming:      return FarmingXP;
-    default: return 0;
+    // Mining
+    case ENodeType::IronOre:
+    case ENodeType::SilverOre:
+    case ENodeType::GoldOre:
+    case ENodeType::Obsidian:
+    case ENodeType::Moonstone:
+    case ENodeType::AetherCrystal:
+    case ENodeType::FracturedStone:
+    case ENodeType::SolarOre:
+    case ENodeType::Voidstone:
+    case ENodeType::StormQuartz:
+    case ENodeType::Frostiron:
+    case ENodeType::Venomstone:
+    case ENodeType::Soulrite:
+    case ENodeType::TemporalGlass:
+        return EGatheringSkill::Mining;
+
+    // Skinning
+    case ENodeType::WolfHide:
+    case ENodeType::BearHide:
+    case ENodeType::DrakeScales:
+    case ENodeType::SpiderSilk:
+    case ENodeType::BoarHide:
+    case ENodeType::SerpentSkin:
+    case ENodeType::ShadowCatPelt:
+    case ENodeType::AetherwolfPelt:
+    case ENodeType::FrostBearPelt:
+    case ENodeType::VenomtoadSkin:
+        return EGatheringSkill::Skinning;
+
+    // Herbalism
+    case ENodeType::Aetherbloom:
+    case ENodeType::Sunpetal:
+    case ENodeType::Shadowcap:
+    case ENodeType::Frostleaf:
+    case ENodeType::Emberflower:
+    case ENodeType::Stormroot:
+    case ENodeType::SoulMoss:
+    case ENodeType::Voidfern:
+    case ENodeType::FracturedLotus:
+    case ENodeType::Moonwort:
+        return EGatheringSkill::Herbalism;
+
+    // Fishing
+    case ENodeType::CommonFish:
+    case ENodeType::Aetherfish:
+    case ENodeType::VoidEel:
+    case ENodeType::StormBass:
+    case ENodeType::FrostSalmon:
+    case ENodeType::SoulCarp:
+    case ENodeType::FracturedTrout:
+        return EGatheringSkill::Fishing;
+
+    // Woodcutting
+    case ENodeType::Ironwood:
+    case ENodeType::Shadowwood:
+    case ENodeType::Aetherwood:
+    case ENodeType::Stormwood:
+    case ENodeType::FracturedOak:
+        return EGatheringSkill::Woodcutting;
     }
+
+    return EGatheringSkill::Mining;
+}
+
+int32 UEclipseGatheringSystem::GetRequiredSkillLevel(ENodeType Type) const
+{
+    switch (Type)
+    {
+    // Tier 1 — beginner
+    case ENodeType::IronOre:
+    case ENodeType::WolfHide:
+    case ENodeType::BoarHide:
+    case ENodeType::Aetherbloom:
+    case ENodeType::Sunpetal:
+    case ENodeType::CommonFish:
+    case ENodeType::Ironwood:
+        return 0;
+
+    // Tier 2 — apprentice
+    case ENodeType::SilverOre:
+    case ENodeType::BearHide:
+    case ENodeType::Shadowcap:
+    case ENodeType::Frostleaf:
+    case ENodeType::Aetherfish:
+    case ENodeType::Shadowwood:
+        return 30;
+
+    // Tier 3 — journeyman
+    case ENodeType::GoldOre:
+    case ENodeType::DrakeScales:
+    case ENodeType::SpiderSilk:
+    case ENodeType::SerpentSkin:
+    case ENodeType::Emberflower:
+    case ENodeType::Stormroot:
+    case ENodeType::VoidEel:
+    case ENodeType::StormBass:
+    case ENodeType::Aetherwood:
+        return 60;
+
+    // Tier 4 — expert
+    case ENodeType::Obsidian:
+    case ENodeType::Moonstone:
+    case ENodeType::ShadowCatPelt:
+    case ENodeType::SoulMoss:
+    case ENodeType::FrostSalmon:
+    case ENodeType::Stormwood:
+        return 90;
+
+    // Tier 5 — master
+    case ENodeType::AetherCrystal:
+    case ENodeType::AetherwolfPelt:
+    case ENodeType::Voidfern:
+    case ENodeType::SoulCarp:
+        return 120;
+
+    // Tier 6 — grandmaster
+    case ENodeType::StormQuartz:
+    case ENodeType::Frostiron:
+    case ENodeType::FrostBearPelt:
+    case ENodeType::FracturedLotus:
+    case ENodeType::FracturedTrout:
+    case ENodeType::FracturedOak:
+        return 150;
+
+    // Tier 7 — legendary
+    case ENodeType::Venomstone:
+    case ENodeType::VenomtoadSkin:
+    case ENodeType::Moonwort:
+        return 180;
+
+    // Tier 8 — mythic
+    case ENodeType::Soulrite:
+    case ENodeType::SolarOre:
+    case ENodeType::Voidstone:
+        return 210;
+
+    // Tier 9 — eclipse
+    case ENodeType::FracturedStone:
+    case ENodeType::TemporalGlass:
+        return 240;
+    }
+
+    return 0;
+}
+
+ERarityTier UEclipseGatheringSystem::GetRarityForNode(ENodeType Type) const
+{
+    switch (Type)
+    {
+    case ENodeType::IronOre:
+    case ENodeType::WolfHide:
+    case ENodeType::BoarHide:
+    case ENodeType::Aetherbloom:
+    case ENodeType::Sunpetal:
+    case ENodeType::CommonFish:
+    case ENodeType::Ironwood:
+        return ERarityTier::Common;
+
+    case ENodeType::SilverOre:
+    case ENodeType::BearHide:
+    case ENodeType::Shadowcap:
+    case ENodeType::Frostleaf:
+    case ENodeType::Aetherfish:
+    case ENodeType::Shadowwood:
+        return ERarityTier::Uncommon;
+
+    case ENodeType::GoldOre:
+    case ENodeType::DrakeScales:
+    case ENodeType::SpiderSilk:
+    case ENodeType::SerpentSkin:
+    case ENodeType::Emberflower:
+    case ENodeType::Stormroot:
+    case ENodeType::VoidEel:
+    case ENodeType::StormBass:
+    case ENodeType::Aetherwood:
+        return ERarityTier::Rare;
+
+    case ENodeType::Obsidian:
+    case ENodeType::Moonstone:
+    case ENodeType::ShadowCatPelt:
+    case ENodeType::SoulMoss:
+    case ENodeType::FrostSalmon:
+    case ENodeType::Stormwood:
+        return ERarityTier::Epic;
+
+    case ENodeType::AetherCrystal:
+    case ENodeType::AetherwolfPelt:
+    case ENodeType::Voidfern:
+    case ENodeType::SoulCarp:
+        return ERarityTier::Legendary;
+
+    case ENodeType::StormQuartz:
+    case ENodeType::Frostiron:
+    case ENodeType::FrostBearPelt:
+    case ENodeType::FracturedLotus:
+    case ENodeType::FracturedTrout:
+    case ENodeType::FracturedOak:
+    case ENodeType::Venomstone:
+    case ENodeType::VenomtoadSkin:
+    case ENodeType::Moonwort:
+        return ERarityTier::Mythic;
+
+    case ENodeType::Soulrite:
+    case ENodeType::SolarOre:
+    case ENodeType::Voidstone:
+    case ENodeType::FracturedStone:
+    case ENodeType::TemporalGlass:
+        return ERarityTier::Eclipse;
+    }
+
+    return ERarityTier::Common;
+}
+
+EElementalAffinity UEclipseGatheringSystem::GetAffinityForNode(ENodeType Type) const
+{
+    switch (Type)
+    {
+    // Fire
+    case ENodeType::SolarOre:
+    case ENodeType::Emberflower:
+        return EElementalAffinity::Fire;
+
+    // Ice
+    case ENodeType::Frostiron:
+    case ENodeType::FrostSalmon:
+    case ENodeType::Frostleaf:
+    case ENodeType::FrostBearPelt:
+        return EElementalAffinity::Ice;
+
+    // Lightning
+    case ENodeType::StormQuartz:
+    case ENodeType::StormBass:
+    case ENodeType::Stormroot:
+    case ENodeType::Stormwood:
+        return EElementalAffinity::Lightning;
+
+    // Shadow
+    case ENodeType::Voidstone:
+    case ENodeType::Shadowwood:
+    case ENodeType::Shadowcap:
+    case ENodeType::ShadowCatPelt:
+    case ENodeType::VoidEel:
+    case ENodeType::Voidfern:
+        return EElementalAffinity::Shadow;
+
+    // Holy
+    case ENodeType::Moonstone:
+    case ENodeType::Sunpetal:
+    case ENodeType::Moonwort:
+        return EElementalAffinity::Holy;
+
+    // Water
+    case ENodeType::CommonFish:
+    case ENodeType::Aetherfish:
+        return EElementalAffinity::Water;
+
+    // Soul
+    case ENodeType::SoulMoss:
+    case ENodeType::Soulrite:
+    case ENodeType::SoulCarp:
+        return EElementalAffinity::Soul;
+
+    // Earth
+    case ENodeType::IronOre:
+    case ENodeType::SilverOre:
+    case ENodeType::GoldOre:
+    case ENodeType::Obsidian:
+    case ENodeType::Ironwood:
+    case ENodeType::FracturedStone:
+    case ENodeType::BoarHide:
+    case ENodeType::BearHide:
+    case ENodeType::WolfHide:
+        return EElementalAffinity::Earth;
+
+    // Wind
+    case ENodeType::Aetherbloom:
+    case ENodeType::Aetherwood:
+    case ENodeType::AetherwolfPelt:
+    case ENodeType::AetherCrystal:
+        return EElementalAffinity::Wind;
+
+    // Poison
+    case ENodeType::Venomstone:
+    case ENodeType::VenomtoadSkin:
+    case ENodeType::SerpentSkin:
+    case ENodeType::SpiderSilk:
+        return EElementalAffinity::Poison;
+
+    // Temporal
+    case ENodeType::TemporalGlass:
+    case ENodeType::FracturedLotus:
+    case ENodeType::FracturedTrout:
+    case ENodeType::FracturedOak:
+    case ENodeType::DrakeScales:
+        return EElementalAffinity::Temporal;
+    }
+
+    return EElementalAffinity::Earth;
+}
+
+// ---------------------------------------------------------------------------
+// Farming — planting and harvesting crops
+// ---------------------------------------------------------------------------
+
+bool UEclipseGatheringSystem::PlantSeed(ENodeType SeedType, const FString& PlotId)
+{
+    if (PlotId.IsEmpty())
+    {
+        return false;
+    }
+
+    if (GetSkillLevel(EGatheringSkill::Farming) <= 0)
+    {
+        return false;
+    }
+
+    // Replanting an already-occupied plot is not allowed.
+    for (const FGatheringNode& Node : ActiveNodes)
+    {
+        if (Node.Region == PlotId && Node.bIsAvailable && Node.CurrentYield > 0)
+        {
+            // Plot already has a growing crop — refuse.
+            return false;
+        }
+    }
+
+    FGatheringNode Crop;
+    Crop.NodeType            = SeedType;
+    Crop.RequiredSkill       = EGatheringSkill::Farming;
+    Crop.RequiredSkillLevel  = GetRequiredSkillLevel(SeedType);
+    Crop.Region              = PlotId;
+    Crop.Location            = FVector::ZeroVector;
+    Crop.CurrentYield         = 1;
+    Crop.MaxYield            = 1;
+    Crop.RespawnTimeMinutes   = 5.0f;
+    Crop.bIsAvailable         = true;
+    Crop.RareDropChance       = 0.0f;
+    Crop.LastHarvestedTime    = FDateTime::Now();
+    ActiveNodes.Add(Crop);
+
+    GainSkillXP(EGatheringSkill::Farming, 5);
+    return true;
+}
+
+bool UEclipseGatheringSystem::HarvestCrop(const FString& PlotId)
+{
+    if (PlotId.IsEmpty())
+    {
+        return false;
+    }
+
+    for (FGatheringNode& Node : ActiveNodes)
+    {
+        if (Node.Region != PlotId || Node.RequiredSkill != EGatheringSkill::Farming)
+        {
+            continue;
+        }
+        if (!IsCropMature(PlotId))
+        {
+            return false;
+        }
+
+        AddMaterial(Node.NodeType, 1, PlotId);
+        GainSkillXP(EGatheringSkill::Farming, 10);
+        Node.CurrentYield = 0;
+        Node.bIsAvailable  = false;
+        Node.LastHarvestedTime = FDateTime::Now();
+        return true;
+    }
+    return false;
+}
+
+bool UEclipseGatheringSystem::IsCropMature(const FString& PlotId) const
+{
+    if (PlotId.IsEmpty())
+    {
+        return false;
+    }
+
+    const FDateTime Now = FDateTime::Now();
+    for (const FGatheringNode& Node : ActiveNodes)
+    {
+        if (Node.Region != PlotId || Node.RequiredSkill != EGatheringSkill::Farming)
+        {
+            continue;
+        }
+        if (!Node.bIsAvailable || Node.CurrentYield <= 0)
+        {
+            return false;
+        }
+
+        // Crop is mature once the respawn timer has elapsed since planting.
+        const FTimespan MaturitySpan = FTimespan::FromMinutes(Node.RespawnTimeMinutes);
+        return (Now - Node.LastHarvestedTime) >= MaturitySpan;
+    }
+    return false;
+}
+
+// ---------------------------------------------------------------------------
+// Private helpers
+// ---------------------------------------------------------------------------
+
+void UEclipseGatheringSystem::InitializeNodeDefaults()
+{
+    // Seed the world with a small starter set of nodes so the system is useful
+    // the moment it is constructed.
+    if (ActiveNodes.Num() > 0)
+    {
+        return;
+    }
+    SpawnNodesForRegion(TEXT("Solara"));
+}
+
+FString UEclipseGatheringSystem::GetMaterialNameForNode(ENodeType Type) const
+{
+    // The material name mirrors the node display name for gathering drops.
+    return GetNodeDisplayName(Type);
 }

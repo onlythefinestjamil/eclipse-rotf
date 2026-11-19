@@ -135,7 +135,7 @@ struct FGatheredMaterial
     int32 Quantity = 0;
 
     UPROPERTY(BlueprintReadWrite, Category = "Gathering")
-    EAffinityType MaterialAffinity = EAffinityType::Earth;
+    EElementalAffinity MaterialAffinity = EElementalAffinity::Earth;
 
     UPROPERTY(BlueprintReadWrite, Category = "Gathering")
     ERarityTier Tier = ERarityTier::Common;
@@ -234,7 +234,7 @@ public:
 
     // Get affinity for a node type
     UFUNCTION(BlueprintCallable, Category = "Gathering")
-    EAffinityType GetAffinityForNode(ENodeType Type) const;
+    EElementalAffinity GetAffinityForNode(ENodeType Type) const;
 
     // Farming: plant a seed
     UFUNCTION(BlueprintCallable, Category = "Gathering")

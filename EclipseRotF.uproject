@@ -1,63 +1,63 @@
 {
-	"FileVersion": 3,
-	"EngineAssociation": "{869CFE0D-4AA7-102E-0A60-62AF49232C9E}",
-	"Category": "",
-	"Description": "Eclipse: Realms of the Fractured - A Dark Fantasy MMORPG by Momentum Labs",
-	"Modules": [
-		{
-			"Name": "EclipseRotF",
-			"Type": "Runtime",
-			"LoadingPhase": "Default"
-		}
-	],
-	"Plugins": [
-		{
-			"Name": "Aura",
-			"Enabled": true,
-			"SupportedTargetPlatforms": [
-				"Win64",
-				"Mac"
-			]
-		},
-		{
-			"Name": "Niagara",
-			"Enabled": true
-		},
-		{
-			"Name": "EnhancedInput",
-			"Enabled": true
-		},
-		{
-			"Name": "ModelContextProtocol",
-			"Enabled": true
-		},
-		{
-			"Name": "PythonScriptPlugin",
-			"Enabled": true
-		},
-		{
-			"Name": "AccumulationDOF",
-			"Enabled": true
-		},
-		{
-			"Name": "BinkMedia",
-			"Enabled": true
-		},
-		{
-			"Name": "TextureShare",
-			"Enabled": true
-		},
-		{
-			"Name": "StaticMeshEditorModeling",
-			"Enabled": true
-		},
-		{
-			"Name": "ShaderToolkit",
-			"Enabled": true
-		},
-		{
-			"Name": "MegascansPlugin",
-			"Enabled": true
-		}
-	]
+  "FileVersion": 3,
+  "EngineAssociation": "{869CFE0D-4AA7-102E-0A60-62AF49232C9E}",
+  "Category": "",
+  "Description": "Eclipse: Realms of the Fractured - A Dark Fantasy MMORPG by Momentum Labs",
+  "Modules": [
+    {
+      "Name": "EclipseRotF",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "Aura",
+      "Enabled": true,
+      "SupportedTargetPlatforms": [
+        "Win64",
+        "Mac"
+      ]
+    },
+    {
+      "Name": "Niagara",
+      "Enabled": true
+    },
+    {
+      "Name": "EnhancedInput",
+      "Enabled": true
+    },
+    {
+      "Name": "ModelContextProtocol",
+      "Enabled": true
+    },
+    {
+      "Name": "PythonScriptPlugin",
+      "Enabled": true
+    },
+    {
+      "Name": "AccumulationDOF",
+      "Enabled": true
+    },
+    {
+      "Name": "BinkMedia",
+      "Enabled": true
+    },
+    {
+      "Name": "TextureShare",
+      "Enabled": true
+    },
+    {
+      "Name": "StaticMeshEditorModeling",
+      "Enabled": true
+    },
+    {
+      "Name": "ShaderToolkit",
+      "Enabled": true
+    },
+    {
+      "Name": "GameplayAbilities",
+      "Enabled": true
+    }
+  ]
 }

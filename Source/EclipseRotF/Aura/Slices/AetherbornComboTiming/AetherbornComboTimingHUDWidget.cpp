@@ -615,7 +615,7 @@ void UAetherbornComboTimingHUDWidget::UpdateFromSnapshot(const FAetherbornComboT
 void UAetherbornComboTimingHUDWidget::UpdateTimingsCard(const FAetherbornComboTimingTuning& Tuning)
 {
 	const float Speed = FMath::Clamp(Tuning.SpeedMul, SpeedMin, SpeedMax);
-	const float Window = FMath::Clamp(Tuning.ComboWindow, ComboWindowMin, ComboWindowMax);
+	const float ClampedWindow = FMath::Clamp(Tuning.ComboWindow, ComboWindowMin, ComboWindowMax);
 
 	const int32 MaxChain = static_cast<int32>(ChainMax);
 	const int32 BaseDamage = FMath::RoundToInt(LightDamageBase);
@@ -628,7 +628,7 @@ void UAetherbornComboTimingHUDWidget::UpdateTimingsCard(const FAetherbornComboTi
 		*AetherbornComboTimingHud::Seconds(HeavyTotal),
 		HeavyHitAt,
 		HeavyRecovery,
-		*AetherbornComboTimingHud::Seconds(Window),
+		*AetherbornComboTimingHud::Seconds(ClampedWindow),
 		*AetherbornComboTimingHud::Seconds(ParryWindow),
 		LightHitStop,
 		HeavyHitStop,
@@ -642,7 +642,7 @@ void UAetherbornComboTimingHUDWidget::UpdateTimingsCard(const FAetherbornComboTi
 	// Off the default 0.28 s window the card reads as "changed".
 	if (Txt_Timings)
 	{
-		const bool bWindowMoved = FMath::Abs(Window - AetherbornComboTimingHud::DefaultComboWindow) > 1e-6f;
+		const bool bWindowMoved = FMath::Abs(ClampedWindow - AetherbornComboTimingHud::DefaultComboWindow) > 1e-6f;
 		Txt_Timings->SetColorAndOpacity(FSlateColor(bWindowMoved ? CancelWindow : Text));
 	}
 
@@ -654,7 +654,7 @@ void UAetherbornComboTimingHUDWidget::UpdateTimingsCard(const FAetherbornComboTi
 			TEXT("LIVE x%.2f - LIGHT %s - WINDOW %s - HEAVY %s"),
 			Speed,
 			*AetherbornComboTimingHud::Seconds(LightTotal * InvSpeed),
-			*AetherbornComboTimingHud::Seconds(Window),
+			*AetherbornComboTimingHud::Seconds(ClampedWindow),
 			*AetherbornComboTimingHud::Seconds(HeavyTotal * InvSpeed));
 
 		AetherbornComboTimingHud::SetText(Txt_Live, Live);

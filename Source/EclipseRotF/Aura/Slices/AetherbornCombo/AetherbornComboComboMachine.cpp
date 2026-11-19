@@ -88,9 +88,9 @@ float UComboMachine::WinLen() const
 	return FMath::Max(0.02f, Value);
 }
 
-void UComboMachine::SetCue(const FString& Text, const FString& Kind)
+void UComboMachine::SetCue(const FString& CueText, const FString& Kind)
 {
-	Cue = Text;
+	Cue = CueText;
 	CueKind = Kind.IsEmpty() ? TEXT("info") : Kind;
 	CueT = AetherbornComboTiming::CueTime;
 }
