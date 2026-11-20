@@ -261,3 +261,166 @@ bool UEclipseLootSystem::IsSoulbound(const FLootDrop& Item)
 {
     return Item.Binding == EBindingType::Soulbound || Item.Binding == EBindingType::AccountBound;
 }
+
+// === COOPERATIVE SPOILS SYSTEM ===
+// Every participant gets their own personal loot — no competing, no rolling
+// The dungeon is conquered together → spoils are earned together
+
+TArray<FLootDrop> UEclipseLootSystem::GeneratePersonalLoot(int32 PlayerLevel, EClass PlayerClass, int32 EnemyLevel, ERarityTier EnemyTier, float LuckStat)
+{
+    TArray<FLootDrop> Drops;
+    float Luck = FMath::Max(0.0f, LuckStat);
+    float LuckMod = 1.0f + (Luck * 0.01f);
+
+    // Each player rolls independently — no shared pool, no competing
+    int32 NumDrops = FMath::RandRange(1, 2);
+
+    for (int32 i = 0; i < NumDrops; i++)
+    {
+        float Roll = FMath::FRandRange(0.0f, 100.0f) / LuckMod;
+        float Cumulative = 0.0f;
+        ERarityTier DropRarity = ERarityTier::Common;
+
+        for (const auto& Pair : BaseDropRates)
+        {
+            Cumulative += Pair.Value;
+            if (Roll <= Cumulative)
+            {
+                DropRarity = Pair.Key;
+                break;
+            }
+        }
+
+        FLootDrop Drop;
+        Drop.Rarity = DropRarity;
+        Drop.ItemLevel = FMath::Max(EnemyLevel, PlayerLevel);
+        Drop.DropType = EDropType::Universal;
+        Drop.Binding = DetermineBinding(DropRarity, false);
+        Drop.DropChance = BaseDropRates[DropRarity];
+        Drops.Add(Drop);
+    }
+
+    // Minimum guarantee — every kill gives at least 1 item
+    if (Drops.Num() == 0)
+    {
+        FLootDrop Drop;
+        Drop.Rarity = ERarityTier::Common;
+        Drop.ItemLevel = EnemyLevel;
+        Drop.DropType = EDropType::Universal;
+        Drop.Binding = EBindingType::BindOnEquip;
+        Drop.DropChance = 100.0f;
+        Drops.Add(Drop);
+    }
+
+    return Drops;
+}
+
+TArray<FLootDrop> UEclipseLootSystem::GenerateBossPersonalSpoils(int32 PlayerLevel, EClass PlayerClass, int32 BossLevel, ERarityTier BossTier)
+{
+    TArray<FLootDrop> Drops;
+
+    // Each player gets 1-2 personal drops from the boss material table
+    int32 NumDrops = FMath::RandRange(1, 2);
+
+    for (int32 i = 0; i < NumDrops; i++)
+    {
+        FLootDrop Drop;
+        float Roll = FMath::FRandRange(0.0f, 100.0f);
+
+        if (Roll < 2.0f)        Drop.Rarity = ERarityTier::Eclipse;
+        else if (Roll < 8.0f)   Drop.Rarity = ERarityTier::Mythic;
+        else if (Roll < 25.0f)  Drop.Rarity = ERarityTier::Legendary;
+        else if (Roll < 55.0f)  Drop.Rarity = ERarityTier::Epic;
+        else if (Roll < 85.0f)  Drop.Rarity = ERarityTier::Rare;
+        else                     Drop.Rarity = ERarityTier::Uncommon;
+
+        Drop.ItemLevel = BossLevel;
+        Drop.DropType = EDropType::ClassSpecific;
+        Drop.Binding = EBindingType::Soulbound;
+        Drop.DropChance = 100.0f;
+        Drop.bIsCraftingMaterial = true;
+        Drops.Add(Drop);
+    }
+
+    return Drops;
+}
+
+TArray<FLootDrop> UEclipseLootSystem::GenerateCompletionBonus(int32 PlayerLevel, EClass PlayerClass, int32 DungeonLevel, ERarityTier DungeonTier)
+{
+    TArray<FLootDrop> Drops;
+
+    // Guaranteed drop for every participant who completes the dungeon
+    FLootDrop Guaranteed;
+    Guaranteed.Rarity = (DungeonTier >= ERarityTier::Epic) ? ERarityTier::Epic : ERarityTier::Rare;
+    Guaranteed.ItemLevel = FMath::Max(DungeonLevel, PlayerLevel);
+    Guaranteed.DropType = EDropType::ClassSpecific;
+    Guaranteed.Binding = EBindingType::BindOnEquip;
+    Guaranteed.bIsArmor = true;
+    Drops.Add(Guaranteed);
+
+    // 30% chance for bonus weapon
+    if (FMath::FRandRange(0.0f, 100.0f) <= 30.0f)
+    {
+        FLootDrop Bonus;
+        Bonus.Rarity = ERarityTier::Epic;
+        Bonus.ItemLevel = DungeonLevel;
+        Bonus.DropType = EDropType::ClassSpecific;
+        Bonus.Binding = EBindingType::BindOnEquip;
+        Bonus.bIsWeapon = true;
+        Drops.Add(Bonus);
+    }
+
+    return Drops;
+}
+
+TArray<FLootDrop> UEclipseLootSystem::GenerateRaidCompletionSpoils(int32 PlayerLevel, EClass PlayerClass, int32 RaidLevel, ERarityTier RaidTier)
+{
+    TArray<FLootDrop> Drops;
+
+    // Guaranteed drop 1 — armor (soulbound)
+    FLootDrop Spoil1;
+    Spoil1.Rarity = (RaidTier >= ERarityTier::Mythic) ? ERarityTier::Legendary : ERarityTier::Epic;
+    Spoil1.ItemLevel = FMath::Max(RaidLevel, PlayerLevel);
+    Spoil1.DropType = EDropType::ClassSpecific;
+    Spoil1.Binding = EBindingType::Soulbound;
+    Spoil1.bIsArmor = true;
+    Drops.Add(Spoil1);
+
+    // Guaranteed drop 2 — weapon (soulbound)
+    FLootDrop Spoil2;
+    Spoil2.Rarity = ERarityTier::Legendary;
+    Spoil2.ItemLevel = RaidLevel;
+    Spoil2.DropType = EDropType::ClassSpecific;
+    Spoil2.Binding = EBindingType::Soulbound;
+    Spoil2.bIsWeapon = true;
+    Drops.Add(Spoil2);
+
+    // 10% chance for Mythic crafting material
+    if (FMath::FRandRange(0.0f, 100.0f) <= 10.0f)
+    {
+        FLootDrop RareBonus;
+        RareBonus.Rarity = ERarityTier::Mythic;
+        RareBonus.ItemLevel = RaidLevel;
+        RareBonus.DropType = EDropType::ClassSpecific;
+        RareBonus.Binding = EBindingType::Soulbound;
+        RareBonus.bIsCraftingMaterial = true;
+        Drops.Add(RareBonus);
+    }
+
+    return Drops;
+}
+
+int32 UEclipseLootSystem::GetMinimumGuaranteedDrops(ERarityTier ContentTier) const
+{
+    switch (ContentTier)
+    {
+    case ERarityTier::Common:    return 1;
+    case ERarityTier::Uncommon:  return 1;
+    case ERarityTier::Rare:      return 1;
+    case ERarityTier::Epic:      return 2;
+    case ERarityTier::Legendary:  return 2;
+    case ERarityTier::Mythic:     return 2;
+    case ERarityTier::Eclipse:    return 3;
+    default: return 1;
+    }
+}

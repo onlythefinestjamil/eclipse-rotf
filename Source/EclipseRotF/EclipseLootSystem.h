@@ -79,6 +79,30 @@ public:
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot")
     TArray<FLootDrop> GenerateDungeonLoot(int32 DungeonLevel, ERarityTier DungeonTier);
 
+    // === COOPERATIVE SPOILS SYSTEM ===
+    // Every participant gets their own personal loot — no competing, no rolling
+    // The dungeon is conquered together → spoils are earned together
+
+    // Generate personal loot for each player in a party (no shared pool)
+    UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot|Cooperative")
+    TArray<FLootDrop> GeneratePersonalLoot(int32 PlayerLevel, EClass PlayerClass, int32 EnemyLevel, ERarityTier EnemyTier, float LuckStat);
+
+    // Generate boss personal spoils — each player gets 1-2 drops from boss material table
+    UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot|Cooperative")
+    TArray<FLootDrop> GenerateBossPersonalSpoils(int32 PlayerLevel, EClass PlayerClass, int32 BossLevel, ERarityTier BossTier);
+
+    // Generate dungeon completion bonus — guaranteed drop for every participant
+    UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot|Cooperative")
+    TArray<FLootDrop> GenerateCompletionBonus(int32 PlayerLevel, EClass PlayerClass, int32 DungeonLevel, ERarityTier DungeonTier);
+
+    // Generate raid completion spoils — guaranteed for all 10 participants
+    UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot|Cooperative")
+    TArray<FLootDrop> GenerateRaidCompletionSpoils(int32 PlayerLevel, EClass PlayerClass, int32 RaidLevel, ERarityTier RaidTier);
+
+    // Get minimum guaranteed drops for completing content
+    UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot|Cooperative")
+    int32 GetMinimumGuaranteedDrops(ERarityTier ContentTier) const;
+
     // When a class-specific item drops, it drops for ALL classes
     // Returns the class-specific versions for each class
     UFUNCTION(BlueprintCallable, Category = "Eclipse|Loot")
